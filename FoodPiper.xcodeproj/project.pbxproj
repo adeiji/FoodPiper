@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */; };
+		F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3371BD182BB00FEBE36 /* ViewController.swift */; };
+		F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC3391BD182BB00FEBE36 /* Main.storyboard */; };
+		F4CBC33D1BD182BB00FEBE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */; };
+		F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */; };
+		F4CBC34B1BD182BC00FEBE36 /* FoodPiperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC34A1BD182BC00FEBE36 /* FoodPiperTests.swift */; };
+		F4CBC3561BD182BC00FEBE36 /* FoodPiperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */; };
+		F4CBC3661BD1835900FEBE36 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4CBC3471BD182BB00FEBE36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4CBC32A1BD182BB00FEBE36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4CBC3311BD182BB00FEBE36;
+			remoteInfo = FoodPiper;
+		};
+		F4CBC3521BD182BC00FEBE36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4CBC32A1BD182BB00FEBE36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4CBC3311BD182BB00FEBE36;
+			remoteInfo = FoodPiper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4CBC3371BD182BB00FEBE36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4CBC33A1BD182BB00FEBE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4CBC33F1BD182BB00FEBE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4CBC3411BD182BB00FEBE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CBC3461BD182BB00FEBE36 /* FoodPiperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPiperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CBC34A1BD182BC00FEBE36 /* FoodPiperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPiperTests.swift; sourceTree = "<group>"; };
+		F4CBC34C1BD182BC00FEBE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CBC3511BD182BC00FEBE36 /* FoodPiperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPiperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPiperUITests.swift; sourceTree = "<group>"; };
+		F4CBC3571BD182BC00FEBE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4CBC32F1BD182BB00FEBE36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CBC3431BD182BB00FEBE36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CBC34E1BD182BC00FEBE36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4CBC3291BD182BB00FEBE36 = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3341BD182BB00FEBE36 /* FoodPiper */,
+				F4CBC3491BD182BC00FEBE36 /* FoodPiperTests */,
+				F4CBC3541BD182BC00FEBE36 /* FoodPiperUITests */,
+				F4CBC3331BD182BB00FEBE36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4CBC3331BD182BB00FEBE36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */,
+				F4CBC3461BD182BB00FEBE36 /* FoodPiperTests.xctest */,
+				F4CBC3511BD182BC00FEBE36 /* FoodPiperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */,
+				F4CBC3631BD182E800FEBE36 /* APIs */,
+				F4CBC3371BD182BB00FEBE36 /* ViewController.swift */,
+				F4CBC3391BD182BB00FEBE36 /* Main.storyboard */,
+				F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */,
+				F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */,
+				F4CBC3411BD182BB00FEBE36 /* Info.plist */,
+			);
+			path = FoodPiper;
+			sourceTree = "<group>";
+		};
+		F4CBC3491BD182BC00FEBE36 /* FoodPiperTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC34A1BD182BC00FEBE36 /* FoodPiperTests.swift */,
+				F4CBC34C1BD182BC00FEBE36 /* Info.plist */,
+			);
+			path = FoodPiperTests;
+			sourceTree = "<group>";
+		};
+		F4CBC3541BD182BC00FEBE36 /* FoodPiperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */,
+				F4CBC3571BD182BC00FEBE36 /* Info.plist */,
+			);
+			path = FoodPiperUITests;
+			sourceTree = "<group>";
+		};
+		F4CBC3631BD182E800FEBE36 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3641BD1830500FEBE36 /* Google Places */,
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		F4CBC3641BD1830500FEBE36 /* Google Places */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */,
+			);
+			name = "Google Places";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4CBC3311BD182BB00FEBE36 /* FoodPiper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CBC35A1BD182BC00FEBE36 /* Build configuration list for PBXNativeTarget "FoodPiper" */;
+			buildPhases = (
+				F4CBC32E1BD182BB00FEBE36 /* Sources */,
+				F4CBC32F1BD182BB00FEBE36 /* Frameworks */,
+				F4CBC3301BD182BB00FEBE36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodPiper;
+			productName = FoodPiper;
+			productReference = F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4CBC3451BD182BB00FEBE36 /* FoodPiperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CBC35D1BD182BC00FEBE36 /* Build configuration list for PBXNativeTarget "FoodPiperTests" */;
+			buildPhases = (
+				F4CBC3421BD182BB00FEBE36 /* Sources */,
+				F4CBC3431BD182BB00FEBE36 /* Frameworks */,
+				F4CBC3441BD182BB00FEBE36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4CBC3481BD182BB00FEBE36 /* PBXTargetDependency */,
+			);
+			name = FoodPiperTests;
+			productName = FoodPiperTests;
+			productReference = F4CBC3461BD182BB00FEBE36 /* FoodPiperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4CBC3501BD182BC00FEBE36 /* FoodPiperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4CBC3601BD182BC00FEBE36 /* Build configuration list for PBXNativeTarget "FoodPiperUITests" */;
+			buildPhases = (
+				F4CBC34D1BD182BC00FEBE36 /* Sources */,
+				F4CBC34E1BD182BC00FEBE36 /* Frameworks */,
+				F4CBC34F1BD182BC00FEBE36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4CBC3531BD182BC00FEBE36 /* PBXTargetDependency */,
+			);
+			name = FoodPiperUITests;
+			productName = FoodPiperUITests;
+			productReference = F4CBC3511BD182BC00FEBE36 /* FoodPiperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4CBC32A1BD182BB00FEBE36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Dephyned;
+				TargetAttributes = {
+					F4CBC3311BD182BB00FEBE36 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					F4CBC3451BD182BB00FEBE36 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = F4CBC3311BD182BB00FEBE36;
+					};
+					F4CBC3501BD182BC00FEBE36 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = F4CBC3311BD182BB00FEBE36;
+					};
+				};
+			};
+			buildConfigurationList = F4CBC32D1BD182BB00FEBE36 /* Build configuration list for PBXProject "FoodPiper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4CBC3291BD182BB00FEBE36;
+			productRefGroup = F4CBC3331BD182BB00FEBE36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4CBC3311BD182BB00FEBE36 /* FoodPiper */,
+				F4CBC3451BD182BB00FEBE36 /* FoodPiperTests */,
+				F4CBC3501BD182BC00FEBE36 /* FoodPiperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4CBC3301BD182BB00FEBE36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */,
+				F4CBC33D1BD182BB00FEBE36 /* Assets.xcassets in Resources */,
+				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CBC3441BD182BB00FEBE36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CBC34F1BD182BC00FEBE36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4CBC32E1BD182BB00FEBE36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
+				F4CBC3661BD1835900FEBE36 /* GoogleAPIManager.swift in Sources */,
+				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CBC3421BD182BB00FEBE36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CBC34B1BD182BC00FEBE36 /* FoodPiperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4CBC34D1BD182BC00FEBE36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CBC3561BD182BC00FEBE36 /* FoodPiperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4CBC3481BD182BB00FEBE36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4CBC3311BD182BB00FEBE36 /* FoodPiper */;
+			targetProxy = F4CBC3471BD182BB00FEBE36 /* PBXContainerItemProxy */;
+		};
+		F4CBC3531BD182BC00FEBE36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4CBC3311BD182BB00FEBE36 /* FoodPiper */;
+			targetProxy = F4CBC3521BD182BC00FEBE36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4CBC3391BD182BB00FEBE36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4CBC33A1BD182BB00FEBE36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4CBC33F1BD182BB00FEBE36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4CBC3581BD182BC00FEBE36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4CBC3591BD182BC00FEBE36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4CBC35B1BD182BC00FEBE36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FoodPiper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F4CBC35C1BD182BC00FEBE36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FoodPiper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F4CBC35E1BD182BC00FEBE36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FoodPiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodPiper.app/FoodPiper";
+			};
+			name = Debug;
+		};
+		F4CBC35F1BD182BC00FEBE36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FoodPiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodPiper.app/FoodPiper";
+			};
+			name = Release;
+		};
+		F4CBC3611BD182BC00FEBE36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FoodPiperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FoodPiper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F4CBC3621BD182BC00FEBE36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FoodPiperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FoodPiper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4CBC32D1BD182BB00FEBE36 /* Build configuration list for PBXProject "FoodPiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CBC3581BD182BC00FEBE36 /* Debug */,
+				F4CBC3591BD182BC00FEBE36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4CBC35A1BD182BC00FEBE36 /* Build configuration list for PBXNativeTarget "FoodPiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CBC35B1BD182BC00FEBE36 /* Debug */,
+				F4CBC35C1BD182BC00FEBE36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F4CBC35D1BD182BC00FEBE36 /* Build configuration list for PBXNativeTarget "FoodPiperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CBC35E1BD182BC00FEBE36 /* Debug */,
+				F4CBC35F1BD182BC00FEBE36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F4CBC3601BD182BC00FEBE36 /* Build configuration list for PBXNativeTarget "FoodPiperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4CBC3611BD182BC00FEBE36 /* Debug */,
+				F4CBC3621BD182BC00FEBE36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4CBC32A1BD182BB00FEBE36 /* Project object */;
+}
