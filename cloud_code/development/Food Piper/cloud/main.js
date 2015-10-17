@@ -22,6 +22,7 @@ Parse.Cloud.job("getRestaurants", function (request, response) {
 		}
 	});
 
+	// Call the Factual API and get all the restaurants specified within the filters of the URL
 	function getRestaurantsFromFactualAPI (url) {
 		console.log("getRestaurantsFromFactualAPI() called with url: " + url);
 		Parse.Cloud.httpRequest({
@@ -33,5 +34,9 @@ Parse.Cloud.job("getRestaurants", function (request, response) {
 			// Error
 			console.error("Request failed with response code " + httpResponse.status);
 		});
+	}
+
+	function storeRestaurantsInParse (restaurantsJSON) {
+		
 	}
 });

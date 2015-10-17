@@ -9,13 +9,21 @@
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var locationHandler:LocationHandler!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Get all the restaurants in the area from Factual
+        locationHandler = LocationHandler();
+        locationHandler.initializeLocationManager();
+        let restaurants = Restaurants();
+        restaurants.getAllRestaurants();
+        
         return true
     }
 

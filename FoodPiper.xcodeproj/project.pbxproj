@@ -15,6 +15,9 @@
 		F4CBC34B1BD182BC00FEBE36 /* FoodPiperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC34A1BD182BC00FEBE36 /* FoodPiperTests.swift */; };
 		F4CBC3561BD182BC00FEBE36 /* FoodPiperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */; };
 		F4CBC3661BD1835900FEBE36 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
+		F4CBC3691BD1B0B500FEBE36 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3681BD1B0B500FEBE36 /* APIHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		F4CBC36B1BD1BF7700FEBE36 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC36A1BD1BF7700FEBE36 /* Restaurants.swift */; settings = {ASSET_TAGS = (); }; };
+		F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPiperUITests.swift; sourceTree = "<group>"; };
 		F4CBC3571BD182BC00FEBE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
+		F4CBC3681BD1B0B500FEBE36 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		F4CBC36A1BD1BF7700FEBE36 /* Restaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
+		F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 				F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */,
 				F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */,
 				F4CBC3411BD182BB00FEBE36 /* Info.plist */,
+				F4CBC36A1BD1BF7700FEBE36 /* Restaurants.swift */,
 			);
 			path = FoodPiper;
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 		F4CBC3631BD182E800FEBE36 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				F4CBC36C1BD1C00700FEBE36 /* Location Handling */,
+				F4CBC3671BD1B09F00FEBE36 /* API Handler */,
 				F4CBC3641BD1830500FEBE36 /* Google Places */,
 			);
 			name = APIs;
@@ -142,6 +151,22 @@
 				F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */,
 			);
 			name = "Google Places";
+			sourceTree = "<group>";
+		};
+		F4CBC3671BD1B09F00FEBE36 /* API Handler */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC3681BD1B0B500FEBE36 /* APIHandler.swift */,
+			);
+			name = "API Handler";
+			sourceTree = "<group>";
+		};
+		F4CBC36C1BD1C00700FEBE36 /* Location Handling */ = {
+			isa = PBXGroup;
+			children = (
+				F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */,
+			);
+			name = "Location Handling";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CBC36B1BD1BF7700FEBE36 /* Restaurants.swift in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4CBC3661BD1835900FEBE36 /* GoogleAPIManager.swift in Sources */,
+				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
+				F4CBC3691BD1B0B500FEBE36 /* APIHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
