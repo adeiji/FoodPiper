@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>JosefinSans-Bold.ttf</string>
+		<string>JosefinSans-BoldItalic.ttf</string>
+		<string>JosefinSans-Italic.ttf</string>
+		<string>JosefinSans-Light.ttf</string>
+		<string>JosefinSans-LightItalic.ttf</string>
+		<string>JosefinSans-Regular.ttf</string>
+		<string>JosefinSans-SemiBold.ttf</string>
+		<string>JosefinSans-SemiBoldItalic.ttf</string>
+		<string>JosefinSans-Thin.ttf</string>
+		<string>JosefinSans-ThinItalic.ttf</string>
+	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need to know when you&apos;ve arrived at a restaurant that you already mentioned you would go to.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -49,5 +62,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>api.v3.factual.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSTemporaryExceptionMinimumTLSVersion</key>
+				<string>TLSv1.1</string>
+			</dict>
+		</dict>
+	</dict>
 </dict>
 </plist>

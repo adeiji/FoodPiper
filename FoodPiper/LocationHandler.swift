@@ -13,6 +13,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
 
     var currentLocation:CLLocation!
     var locationManager:CLLocationManager!
+    var isFirstRun:Bool!
     
     func initializeLocationManager () {
         locationManager = CLLocationManager();
@@ -20,6 +21,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization();
         locationManager.startUpdatingLocation()
+        isFirstRun = true;
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {

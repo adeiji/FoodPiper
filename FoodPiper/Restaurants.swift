@@ -12,11 +12,6 @@ import CoreLocation
 class Restaurants: NSObject {
 
     func getAllRestaurants() {
-        let apiHandler = APIHandler();
-        let locationHandler = LocationHandler();
-        let currentLocation = locationHandler.currentLocation;
-        
-       // apiHandler.callFactualAPI(currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
     }
     
 }
