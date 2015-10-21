@@ -20,13 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Get all the restaurants in the area from Factual
         locationHandler = LocationHandler();
         locationHandler.initializeLocationManager();
-        
-        let restaurants = Restaurants();
-        restaurants.getAllRestaurants();
         UILabel.appearance().font = UIFont(name: "Gill Sans", size: 13.0);
         UILabel.appearance().textColor = UIColor(red: 115/255, green: 115/255, blue: 155/255, alpha: 1.0);
-        let apiHandler = APIHandler();
-        apiHandler.getAllRestaurants();
         
         return true
     }

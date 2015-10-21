@@ -43,6 +43,14 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         }
         
         currentLocation = mostRecentLocation;
+        
+        // If this is the first time that were getting the current location than get all the restaurants
+        if (isFirstRun == true)
+        {
+            let apiHandler = APIHandler();
+            apiHandler.getAllRestaurantsNearLocation(currentLocation);
+            isFirstRun = false;
+        }
     }
     
 }

@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <FactualSDK/FactualAPI.h>
+#import "Constants.h"
 
 @interface APIHandler : NSObject <FactualAPIDelegate>
 
 @property (strong, nonatomic) FactualAPI *apiObject;
+
 
 /* 
  
@@ -19,6 +21,6 @@
  
  */
 
-- (void) getAllRestaurants;
+- (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation;
 
 @end

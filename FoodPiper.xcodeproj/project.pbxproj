@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
+		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */; };
 		F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3371BD182BB00FEBE36 /* ViewController.swift */; };
 		F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC3391BD182BB00FEBE36 /* Main.storyboard */; };
@@ -14,8 +16,6 @@
 		F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */; };
 		F4CBC34B1BD182BC00FEBE36 /* FoodPiperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC34A1BD182BC00FEBE36 /* FoodPiperTests.swift */; };
 		F4CBC3561BD182BC00FEBE36 /* FoodPiperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */; };
-		F4CBC3661BD1835900FEBE36 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
-		F4CBC36B1BD1BF7700FEBE36 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC36A1BD1BF7700FEBE36 /* Restaurants.swift */; settings = {ASSET_TAGS = (); }; };
 		F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */; settings = {ASSET_TAGS = (); }; };
 		F4CBC3701BD1E85C00FEBE36 /* FactualSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CBC36F1BD1E85C00FEBE36 /* FactualSDK.framework */; };
 		F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */; settings = {ASSET_TAGS = (); }; };
@@ -30,6 +30,7 @@
 		F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE61BD58B0F00109C61 /* JosefinSans-Thin.ttf */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */; settings = {ASSET_TAGS = (); }; };
+		F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4A37B571BD8103900DD5DAE /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F4A37B5A1BD8117000DD5DAE /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.h"; sourceTree = "<group>"; };
+		F4A37B5B1BD8117000DD5DAE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.m"; sourceTree = "<group>"; };
 		F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CBC3371BD182BB00FEBE36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +67,6 @@
 		F4CBC3511BD182BC00FEBE36 /* FoodPiperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodPiperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPiperUITests.swift; sourceTree = "<group>"; };
 		F4CBC3571BD182BC00FEBE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
-		F4CBC36A1BD1BF7700FEBE36 /* Restaurants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
 		F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		F4CBC36F1BD1E85C00FEBE36 /* FactualSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FactualSDK.framework; path = libraries/FactualSDK.framework; sourceTree = "<group>"; };
 		F4CBC3711BD1EAF600FEBE36 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		F4CC5AE61BD58B0F00109C61 /* JosefinSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Thin.ttf"; path = "Resources/Fonts/josefin_sans/JosefinSans-Thin.ttf"; sourceTree = "<group>"; };
 		F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ThinItalic.ttf"; path = "Resources/Fonts/josefin_sans/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperButton.swift; sourceTree = "<group>"; };
+		F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4A37B591BD8114500DD5DAE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F4A37B5A1BD8117000DD5DAE /* Constants.h */,
+				F4A37B5B1BD8117000DD5DAE /* Constants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		F4CBC3291BD182BB00FEBE36 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,8 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4A37B591BD8114500DD5DAE /* Constants */,
+				F4CC5AF71BD7FC9400109C61 /* Restaurant */,
 				F4CC5AF21BD5938700109C61 /* Custom View Classes */,
 				F4CC5ADA1BD58AE100109C61 /* Resources */,
 				F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */,
@@ -142,7 +156,6 @@
 				F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */,
 				F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */,
 				F4CBC3411BD182BB00FEBE36 /* Info.plist */,
-				F4CBC36A1BD1BF7700FEBE36 /* Restaurants.swift */,
 			);
 			path = FoodPiper;
 			sourceTree = "<group>";
@@ -178,7 +191,7 @@
 		F4CBC3641BD1830500FEBE36 /* Google Places */ = {
 			isa = PBXGroup;
 			children = (
-				F4CBC3651BD1835900FEBE36 /* GoogleAPIManager.swift */,
+				F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */,
 			);
 			name = "Google Places";
 			sourceTree = "<group>";
@@ -232,6 +245,14 @@
 				F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */,
 			);
 			name = "Custom View Classes";
+			sourceTree = "<group>";
+		};
+		F4CC5AF71BD7FC9400109C61 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				F4A37B571BD8103900DD5DAE /* Restaurant.swift */,
+			);
+			name = Restaurant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,13 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4CBC36B1BD1BF7700FEBE36 /* Restaurants.swift in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
-				F4CBC3661BD1835900FEBE36 /* GoogleAPIManager.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
+				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
+				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
+				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +478,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -501,6 +524,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -524,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,6 +569,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
