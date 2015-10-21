@@ -13,7 +13,8 @@
 @interface APIHandler : NSObject <FactualAPIDelegate>
 
 @property (strong, nonatomic) FactualAPI *apiObject;
-
+@property (strong, nonatomic) NSMutableArray *restaurants;
+@property (strong, nonatomic) NSDictionary *restaurantImages;
 
 /* 
  
@@ -22,5 +23,6 @@
  */
 
 - (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation;
+
 
 @end
