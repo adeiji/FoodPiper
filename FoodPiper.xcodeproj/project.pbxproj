@@ -12,6 +12,7 @@
 		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; settings = {ASSET_TAGS = (); }; };
 		F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */; };
 		F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3371BD182BB00FEBE36 /* ViewController.swift */; };
 		F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC3391BD182BB00FEBE36 /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 		F4A37B5B1BD8117000DD5DAE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.m"; sourceTree = "<group>"; };
 		F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ViewRestaurants.storyboard; sourceTree = "<group>"; };
 		F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantsView.xib; sourceTree = "<group>"; };
+		F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIHandler.h; sourceTree = "<group>"; };
+		F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIHandler.m; sourceTree = "<group>"; };
 		F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CBC3371BD182BB00FEBE36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +159,22 @@
 			name = "Restaurant Workflow";
 			sourceTree = "<group>";
 		};
+		F4C85F211BD85092009F3B55 /* Yelp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Yelp;
+			sourceTree = "<group>";
+		};
+		F4C85F301BD87A46009F3B55 /* FourSquare */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */,
+				F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */,
+			);
+			name = FourSquare;
+			sourceTree = "<group>";
+		};
 		F4CBC3291BD182BB00FEBE36 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +238,8 @@
 		F4CBC3631BD182E800FEBE36 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				F4C85F301BD87A46009F3B55 /* FourSquare */,
+				F4C85F211BD85092009F3B55 /* Yelp */,
 				F4CBC36C1BD1C00700FEBE36 /* Location Handling */,
 				F4CBC3671BD1B09F00FEBE36 /* API Handler */,
 				F4CBC3641BD1830500FEBE36 /* Google Places */,
@@ -477,6 +498,7 @@
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
 				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
+				F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */,
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
 			);
@@ -572,10 +594,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -612,9 +635,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -630,13 +655,24 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/libraries",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Bolts\"",
+					"\"${PODS_ROOT}/Headers/Public/Parse\"",
+					"\"/Users/adeiji/Documents/Dephyned/apps/Food Piper/FoodPiper/YelpAPISample/OAuthConsumer\"",
+					"\"/Users/adeiji/Documents/Dephyned/apps/Food Piper/FoodPiper/YelpAPISample\"",
+					"\"/Users/adeiji/Documents/Dephyned/apps/Food Piper/FoodPiper/YelpAPISample/OAuthConsumer/Categories\"",
+				);
 				INFOPLIST_FILE = FoodPiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -652,12 +688,23 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/libraries",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Bolts\"",
+					"\"${PODS_ROOT}/Headers/Public/Parse\"",
+					"\"/Users/adeiji/Documents/Dephyned/apps/Food Piper/FoodPiper/YelpAPISample/OAuthConsumer\"",
+					"\"/Users/adeiji/Documents/Dephyned/apps/Food Piper/FoodPiper/YelpAPISample\"",
+					"\"/Users/adeiji/Documents/Dephyned/apps/Food Piper/FoodPiper/YelpAPISample/OAuthConsumer/Categories\"",
+				);
 				INFOPLIST_FILE = FoodPiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

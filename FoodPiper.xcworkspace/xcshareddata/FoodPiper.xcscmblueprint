@@ -4,11 +4,13 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "37E1DD4F88874B9763C9AB992517625F7B6F0D7B" : 0,
+    "B3D5482E4FA6DDDCE9A3E368875BEEFF1804948F" : 0,
     "63A8E7D129B6E6982A246304D9950C935137BA3E" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DB7D8E06-EC53-4C35-8E6A-08E3C574284C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "37E1DD4F88874B9763C9AB992517625F7B6F0D7B" : "..\/..",
+    "B3D5482E4FA6DDDCE9A3E368875BEEFF1804948F" : "..\/..\/open-source\/yelp-api",
     "63A8E7D129B6E6982A246304D9950C935137BA3E" : "..\/whatsgoingon"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "FoodPiper",
@@ -24,6 +26,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/adeiji\/whatsgoingon.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63A8E7D129B6E6982A246304D9950C935137BA3E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Yelp\/yelp-api.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3D5482E4FA6DDDCE9A3E368875BEEFF1804948F"
     }
   ]
 }

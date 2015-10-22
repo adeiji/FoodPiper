@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <FactualSDK/FactualAPI.h>
 #import "Constants.h"
+#import "FourSquareAPIHandler.h"
 
 @interface APIHandler : NSObject <FactualAPIDelegate>
 
 @property (strong, nonatomic) FactualAPI *apiObject;
 @property (strong, nonatomic) NSMutableArray *restaurants;
-@property (strong, nonatomic) NSDictionary *restaurantImages;
+@property (strong, nonatomic) NSMutableArray *restaurantImages;
 
 /* 
  

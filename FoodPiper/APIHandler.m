@@ -52,15 +52,23 @@
                     [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
                                                                   equalTo:[restaurant stringValueForName:@"factual_id"]]];
                     [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
-                                                                  equalTo:@"yelp"]];
+                                                                  equalTo:@"foursquare"]];
                     [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
                 }
             });
         });
     }
     else {
-        NSString *yelpURLString = [queryResult.rows[0] stringValueForName:@"url"];
-        NSURL *yelpURL = [NSURL URLWithString:yelpURLString];
+        NSString *foursquareURLString = [queryResult.rows[0] stringValueForName:@"url"];
+
+        if ([foursquareURLString containsString:@"/v"])
+        {
+            NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
+            [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url) {
+                UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
+            }];
+        }
+        
         
     }
     
