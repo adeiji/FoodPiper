@@ -14,7 +14,7 @@
 @interface APIHandler : NSObject <FactualAPIDelegate>
 
 @property (strong, nonatomic) FactualAPI *apiObject;
-@property (strong, nonatomic) NSMutableArray *restaurants;
+@property (strong, nonatomic) NSMutableDictionary *restaurants;
 @property (strong, nonatomic) NSMutableArray *restaurantImages;
 
 /* 

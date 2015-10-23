@@ -10,7 +10,7 @@
 
 @interface FourSquareAPIHandler : NSObject
 
-typedef void (^completionBlock) (NSString *value);
+typedef void (^completionBlock) (NSString *value, NSString *foursquareId);
 
 + (void) getPhotoFromId:(NSString *) foursquareId CompletionBlock:(completionBlock)callback;
 

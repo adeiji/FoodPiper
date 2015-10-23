@@ -29,5 +29,7 @@ class Restaurant: NSObject {
     var dinner:AnyObject!
     var hours:[String:String]!
     var caters:AnyObject!
+    var factualId:NSString!
+    var image:UIImage!
     
 }

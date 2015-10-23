@@ -19,8 +19,10 @@
  */
 
 - (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation {
-    _restaurants = [NSMutableArray new];
-    _restaurantImages = [NSMutableDictionary new];
+    
+#if RELEASE
+    _restaurants = [NSMutableDictionary new];
+    _restaurantImages = [NSMutableArray new];
     // Create our API object and get all the restaurants in Las Vegas
     _apiObject = [[FactualAPI alloc] initWithAPIKey:@"MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM" secret:@"HKu1BsZY0Xzeo02mPRsywbC7LlzyZVcUrIjkTCt5"];
     FactualQuery *queryObject = [FactualQuery query];
@@ -30,18 +32,32 @@
     [queryObject setGeoFilter:coordinate radiusInMeters:100];
     [queryObject setLimit:50];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
+#endif
+    
+#if DEBUG
+    
+    [self getFoursquareId];
+    
+#endif
+    
+
 }
 
 - (void) requestComplete:(FactualAPIRequest *)request receivedQueryResult:(FactualQueryResult *)queryResult {
     
-    if ([request.requestId isEqualToString:@"1"]) // If this is the first request
+    if ([request.requestId isEqualToString:@"1"]) /* If this is the first request, than we know the request was a 
+                                                   request sent for data in the Factual database.  The second time
+                                                   will be a request sent for the Foursquare Id of the data
+                                                   */
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
             for (id restaurant in queryResult.rows) {
                 if ([restaurant respondsToSelector:@selector(stringValueForName:)]) {
                     Restaurant *myRestaurant = [self createRestaurantObjectFromFactualObject:restaurant];
-                    [_restaurants addObject:myRestaurant];
+                    /* Add this restaurant object to the dictionary with the factual Id as the key so that we can
+                     use the factual id as a reference within the app */
+                    [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
                 }
             }
             
@@ -64,8 +80,12 @@
         if ([foursquareURLString containsString:@"/v"])
         {
             NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
-            [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url) {
+            [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
+                // Get the image from foursquare and store this image for the corresponding restaurant
                 UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
+                NSString *factualId = [queryResult.rows[0] stringValueForName:FACTUAL_ID];
+                Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
+                [restaurant setImage:myImage];
             }];
         }
         
@@ -73,6 +93,19 @@
     }
     
 }
+
+#if DEBUG
+
+- (void) getFoursquareId {
+    [FourSquareAPIHandler getPhotoFromId:@"49f93dadf964a5206f6d1fe3" CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
+        
+        UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
+        
+        
+    }];
+}
+
+#endif
 
 - (Restaurant *) createRestaurantObjectFromFactualObject : (id) restaurant {
     
@@ -90,7 +123,7 @@
     [myRestaurant setAttire:[restaurant stringValueForName:FACTUAL_ATTIRE]];
     [myRestaurant setBreakfast:[restaurant stringValueForName:FACTUAL_BREAKFAST]];
     [myRestaurant setLunch:[restaurant stringValueForName:FACTUAL_LUNCH]];
-    
+    [myRestaurant setFactualId:[restaurant stringValueForName:FACTUAL_ID]];
     NSURL *url = [NSURL URLWithString:[restaurant stringValueForName:FACTUAL_WEBSITE]];
     [myRestaurant setWebsite:url];
     
