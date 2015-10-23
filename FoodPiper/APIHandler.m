@@ -20,7 +20,6 @@
 
 - (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation {
     
-#if DEBUG
     _restaurants = [NSMutableDictionary new];
     _restaurantImages = [NSMutableArray new];
     // Create our API object and get all the restaurants in Las Vegas
@@ -32,14 +31,6 @@
     [queryObject setGeoFilter:coordinate radiusInMeters:100];
     [queryObject setLimit:50];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
-#endif
-    
-#if DEBUG
-    
-//    [self getFoursquareId];
-    
-#endif
-    
 
 }
 
@@ -82,12 +73,14 @@
 
         if ([foursquareURLString containsString:@"/v"])
         {
+            // Get the foursquareId and grab the image from Foursquare with this Id
             NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
             [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
                 // Get the image from foursquare and store this image for the corresponding restaurant
                 NSLog(@"Received image from Foursquare entry with ID %@ and storing image", foursquareId);
                 UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
                 NSString *factualId = [queryResult.rows[0] stringValueForName:FACTUAL_ID];
+                // Get the corresponding restaurant with this Factual Id received from our request and set its image to the image received from Foursquare
                 Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
                 [restaurant setImage:myImage];
             }];
@@ -97,6 +90,12 @@
     }
     
 }
+
+/*
+ 
+ Create a restaurant object getting all the values from the Factual API
+ 
+ */
 
 - (Restaurant *) createRestaurantObjectFromFactualObject : (id) restaurant {
     
