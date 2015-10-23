@@ -24,7 +24,7 @@ static const NSString *GOOGLE_API_RESULTS = @"results";
     queue.maxConcurrentOperationCount = 3;
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
-    [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data != nil)
         {
             NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
@@ -45,5 +45,7 @@ static const NSString *GOOGLE_API_RESULTS = @"results";
             }
         }
     }];
+    
+    [task resume];
 }
 @end

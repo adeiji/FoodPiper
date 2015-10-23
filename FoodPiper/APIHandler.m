@@ -20,7 +20,7 @@
 
 - (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation {
     
-#if RELEASE
+#if DEBUG
     _restaurants = [NSMutableDictionary new];
     _restaurantImages = [NSMutableArray new];
     // Create our API object and get all the restaurants in Las Vegas
@@ -36,7 +36,7 @@
     
 #if DEBUG
     
-    [self getFoursquareId];
+//    [self getFoursquareId];
     
 #endif
     
@@ -63,14 +63,17 @@
             
             dispatch_async(dispatch_get_main_queue(), ^(void){
                 // Get the yelp information from Crosswalk API
-                for (id restaurant in queryResult.rows) {
-                    FactualQuery *queryObject = [FactualQuery query];
-                    [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
-                                                                  equalTo:[restaurant stringValueForName:@"factual_id"]]];
-                    [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
-                                                                  equalTo:@"foursquare"]];
-                    [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
-                }
+                id restaurant = queryResult.rows[0];
+                
+                FactualQuery *queryObject = [FactualQuery query];
+                [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
+                                                              equalTo:[restaurant stringValueForName:@"factual_id"]]];
+                [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
+                                                              equalTo:@"foursquare"]];
+                [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
+//                for (id restaurant in queryResult.rows) {
+//
+//                }
             });
         });
     }
@@ -82,6 +85,7 @@
             NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
             [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
                 // Get the image from foursquare and store this image for the corresponding restaurant
+                NSLog(@"Received image from Foursquare entry with ID %@ and storing image", foursquareId);
                 UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
                 NSString *factualId = [queryResult.rows[0] stringValueForName:FACTUAL_ID];
                 Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
@@ -93,19 +97,6 @@
     }
     
 }
-
-#if DEBUG
-
-- (void) getFoursquareId {
-    [FourSquareAPIHandler getPhotoFromId:@"49f93dadf964a5206f6d1fe3" CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
-        
-        UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
-        
-        
-    }];
-}
-
-#endif
 
 - (Restaurant *) createRestaurantObjectFromFactualObject : (id) restaurant {
     
