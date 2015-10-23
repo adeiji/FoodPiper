@@ -46,8 +46,8 @@
 		F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
-		F4EA28481BDA8F0D00079658 /* DEViewEventsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA28451BDA8F0D00079658 /* DEViewEventsView.m */; settings = {ASSET_TAGS = (); }; };
-		F4EA28491BDA8F0D00079658 /* DEViewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA28471BDA8F0D00079658 /* DEViewEventsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F4EA284E1BDA906700079658 /* DEViewEventsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewEventsView.m */; settings = {ASSET_TAGS = (); }; };
+		F4EA284F1BDA906700079658 /* DEViewEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewEventsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,10 +135,10 @@
 		F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ThinItalic.ttf"; path = "Resources/Fonts/josefin_sans/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperButton.swift; sourceTree = "<group>"; };
 		F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
-		F4EA28441BDA8F0D00079658 /* DEViewEventsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewEventsView.h; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/DEViewEventsView.h"; sourceTree = "<group>"; };
-		F4EA28451BDA8F0D00079658 /* DEViewEventsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewEventsView.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/DEViewEventsView.m"; sourceTree = "<group>"; };
-		F4EA28461BDA8F0D00079658 /* DEViewEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewEventsViewController.h; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/DEViewEventsViewController.h"; sourceTree = "<group>"; };
-		F4EA28471BDA8F0D00079658 /* DEViewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewEventsViewController.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/DEViewEventsViewController.m"; sourceTree = "<group>"; };
+		F4EA284A1BDA906700079658 /* DEViewEventsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewEventsView.h; path = "Restaurant Views and View Controllers/DEViewEventsView.h"; sourceTree = "<group>"; };
+		F4EA284B1BDA906700079658 /* DEViewEventsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewEventsView.m; path = "Restaurant Views and View Controllers/DEViewEventsView.m"; sourceTree = "<group>"; };
+		F4EA284C1BDA906700079658 /* DEViewEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewEventsViewController.h; path = "Restaurant Views and View Controllers/DEViewEventsViewController.h"; sourceTree = "<group>"; };
+		F4EA284D1BDA906700079658 /* DEViewEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewEventsViewController.m; path = "Restaurant Views and View Controllers/DEViewEventsViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,10 +437,10 @@
 		F4EA28411BDA8EE300079658 /* VIew and View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F4EA28441BDA8F0D00079658 /* DEViewEventsView.h */,
-				F4EA28451BDA8F0D00079658 /* DEViewEventsView.m */,
-				F4EA28461BDA8F0D00079658 /* DEViewEventsViewController.h */,
-				F4EA28471BDA8F0D00079658 /* DEViewEventsViewController.m */,
+				F4EA284A1BDA906700079658 /* DEViewEventsView.h */,
+				F4EA284B1BDA906700079658 /* DEViewEventsView.m */,
+				F4EA284C1BDA906700079658 /* DEViewEventsViewController.h */,
+				F4EA284D1BDA906700079658 /* DEViewEventsViewController.m */,
 			);
 			name = "VIew and View Controller";
 			sourceTree = "<group>";
@@ -644,7 +644,7 @@
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
 				F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */,
 				F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */,
-				F4EA28491BDA8F0D00079658 /* DEViewEventsViewController.m in Sources */,
+				F4EA284F1BDA906700079658 /* DEViewEventsViewController.m in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
@@ -656,7 +656,7 @@
 				F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */,
 				F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */,
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
-				F4EA28481BDA8F0D00079658 /* DEViewEventsView.m in Sources */,
+				F4EA284E1BDA906700079658 /* DEViewEventsView.m in Sources */,
 				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
 				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,

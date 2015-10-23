@@ -31,5 +31,6 @@ class Restaurant: NSObject {
     var caters:AnyObject!
     var factualId:NSString!
     var image:UIImage!
+    var distanceFromUser:NSString!
     
 }
