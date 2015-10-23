@@ -13,7 +13,6 @@
 @implementation DEViewRestaurantsView
 
 #define OVERLAY_VIEW 1
-const int POST_WIDTH = 140;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -149,14 +148,15 @@ const int POST_WIDTH = 140;
 
 - (void) loadImage
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
-        _restaurant.image = image;
-        // Load the images on the main thread asynchronously
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.imgMainImageView.image = _restaurant.image;
-        });
-    });
+    self.imgMainImageView.image = _restaurant.image;
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
+//        _restaurant.image = image;
+//        // Load the images on the main thread asynchronously
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.imgMainImageView.image = _restaurant.image;
+//        });
+//    });
 }
 
 

@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblNumGoing;
 @property (weak, nonatomic) IBOutlet UILabel *lblViewCount;
 @property (weak, nonatomic) IBOutlet UILabel *lblCost;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *descriptionHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property BOOL isImageLoaded;

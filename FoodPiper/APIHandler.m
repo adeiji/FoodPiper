@@ -32,7 +32,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
     
     [queryObject setGeoFilter:coordinate radiusInMeters:100];
-    [queryObject setLimit:10];
+    [queryObject setLimit:50];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
 
 }
@@ -65,6 +65,8 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
             [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
             NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
         }
+        
+        [self displayViewRestaurantsScreen];
     }
     else {
         NSString *foursquareURLString = [queryResult.rows[0] stringValueForName:@"url"];
@@ -83,16 +85,13 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
                 [restaurant setImage_url:[NSURL URLWithString:image_url]];
                 NSLog(@"Currently getting the Foursquare entry for object #%i", currentObjectCount);
                 if ([request.requestId doubleValue] == _rowCount + 1) {
-                    [self displayViewRestaurantsScreen];
                 }
                 
                 currentObjectCount ++;
             }];
         }
         
-        
     }
-    
 }
 /*
  

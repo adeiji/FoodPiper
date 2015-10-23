@@ -17,7 +17,7 @@ NSString *const VIEW_RESTAURANTS_VIEW = @"ViewRestaurantsView";
 
 @end
 
-#define POST_HEIGHT 281
+#define POST_HEIGHT 268
 #define POST_WIDTH 140
 #define IPHONE_DEVICE_WIDTH 320
 #define TOP_MARGIN 20
@@ -108,7 +108,8 @@ struct TopMargin {
     [self.navigationController setNavigationBarHidden:YES];
     [self setUpSearchBar];
     [self removeAllPostFromScreen];
-    [self displayRestaurant:nil];
+
+
 }
 
 - (void) removeFirstResponder {
@@ -174,6 +175,7 @@ struct TopMargin {
 {
     [super viewDidAppear:animated];
     [self.scrollView setDelegate:self];
+    [self displayRestaurant:nil];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -305,7 +307,7 @@ struct TopMargin {
                               PostArray : (NSArray *) postArray
 {
     
-    [self addEventsToScreen : topMargin
+    [self addEventsToScreen : 0
                    PostArray:_restaurants
                    ShowBlank:YES];
         
@@ -570,7 +572,7 @@ struct TopMargin {
  */
 - (CGFloat) getLabelHeightDifference : (DEViewRestaurantsView *) view {
     // Set the height of the UITextView for the description to the necessary height to fit all the information
-    CGSize sizeThatFitsTextView = [[view lblSubtitle] sizeThatFits:CGSizeMake([view lblSubtitle].frame.size.width, 1000)];
+    CGSize sizeThatFitsTextView = [[view lblSubtitle] sizeThatFits:CGSizeMake(view.frame.size.width, 1000)];
     // Get the heightDifference from what it's original size is and what it's size will be
     CGFloat heightDifference = ceilf(sizeThatFitsTextView.height) - [view lblSubtitle].frame.size.height;
     
@@ -580,6 +582,7 @@ struct TopMargin {
 - (CGFloat) getEventImageHeightDifferenceOfImage : (Restaurant *) restaurant
                                          AndView : (DEViewRestaurantsView *) view
 {
+    [restaurant setImage:[UIImage imageNamed:@"yoda.png"]];
     if (restaurant.image)
     {
         CGFloat height = restaurant.image.size.height;
@@ -588,6 +591,11 @@ struct TopMargin {
         return [self resizeViewEventsImageView:view ImageWidth:width ImageHeight:height];
 
     }
+    else {
+        CGFloat screenSizeRelativeToiPhone5Width = [[UIScreen mainScreen]  bounds].size.width / 320;
+        return screenSizeRelativeToiPhone5Width * view.imgMainImageView.frame.size.height - view.imgMainImageView.frame.size.height;
+    }
+    
     return 0;
 }
 
