@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DEViewEventsView.h"
+#import "DEViewRestaurantsView.h"
 #import "DEScreenManager.h"
 #import <Masonry/Masonry.h>
 
 @class DEViewMainMenu;
 
-@interface DEViewEventsViewController : UIViewController <UIScrollViewDelegate, MFMailComposeViewControllerDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate>
+@interface DEViewRestaurantsViewController : UIViewController <UIScrollViewDelegate, MFMailComposeViewControllerDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate>
 {
     DEViewMainMenu *viewMainMenu;
     BOOL menuDisplayed;

@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Events View Controller-->
+        <!--View Restaurants View Controller-->
         <scene sceneID="Eyg-i7-8sg">
             <objects>
-                <viewController id="IJq-25-4RC" customClass="DEViewEventsViewController" sceneMemberID="viewController">
+                <viewController id="IJq-25-4RC" customClass="DEViewRestaurantsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H2Q-oU-1yb"/>
                         <viewControllerLayoutGuide type="bottom" id="BOL-og-cs8"/>

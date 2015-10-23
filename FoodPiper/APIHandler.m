@@ -83,11 +83,18 @@
                 // Get the corresponding restaurant with this Factual Id received from our request and set its image to the image received from Foursquare
                 Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
                 [restaurant setImage:myImage];
+                [self displayViewRestaurantsScreen];
             }];
         }
         
         
     }
+    
+}
+
+- (void) displayViewRestaurantsScreen {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
     
 }
 
@@ -132,8 +139,8 @@
     NSString *hours = [restaurant stringValueForName:FACTUAL_HOURS];
     NSDictionary *hoursDictionary = [self convertHoursStringToDictionary:hours];
     [myRestaurant setHours:hoursDictionary];
-    
     [myRestaurant setCaters:[restaurant stringValueForName:FACTUAL_CATERS]];
+    [myRestaurant setDistanceFromUser:[restaurant stringValueForName:FACTUAL_DISTANCE_FROM_USER]];
     
     return myRestaurant;
 }

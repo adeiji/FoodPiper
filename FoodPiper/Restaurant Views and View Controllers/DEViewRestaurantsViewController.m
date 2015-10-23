@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 adeiji. All rights reserved.
 //
 
-#import "DEViewEventsViewController.h"
+#import "DEViewRestaurantsViewController.h"
 #import "Constants.h"
 #import "Reachability.h"
 
-@interface DEViewEventsViewController ()
+@interface DEViewRestaurantsViewController ()
 
 @end
 
@@ -24,7 +24,7 @@
 const int NO_USER_EVENTS = 5;
 NSString *IS_FIRST_TIME_VIEWING_SCREEN = @"com.happsnap.isfirsttimeviewingscreen";
 
-@implementation DEViewEventsViewController
+@implementation DEViewRestaurantsViewController
 
 struct TopMargin {
     int column;
@@ -92,15 +92,6 @@ struct TopMargin {
     
         [self loadFirstTimeView];
     }
-    
-    /*
-     If the welcome screen is displayed then don't allow the orb view to be selected
-     */
-    if (welcomeScreen)
-    {
-        [orbView setEnabled:NO];
-    }
-    
     /* 
      
      Check to see if this is their first time going to this part of the application
@@ -176,7 +167,7 @@ struct TopMargin {
     if (![self.navigationController.viewControllers containsObject:self])
     {
         for (UIView *subview in [_scrollView subviews]) {
-            if ([subview isKindOfClass:[DEViewEventsView class]])
+            if ([subview isKindOfClass:[DEViewRestaurantsView class]])
             {
                 ((DEViewEventsView *) subview).imgMainImageView.image = nil;
                 [subview removeFromSuperview];
@@ -311,7 +302,7 @@ struct TopMargin {
 - (void) removeAllPostFromScreen {
     // Always hide the main menu when we show anything new on the screen
     for (UIView *subview in [_scrollView subviews]) {
-        if ([subview isKindOfClass:[DEViewEventsView class]])
+        if ([subview isKindOfClass:[DEViewRestaurantsView class]])
         {
             ((DEViewEventsView *) subview).imgMainImageView.image = nil;
             [subview removeFromSuperview];
@@ -517,7 +508,7 @@ struct TopMargin {
                        Margin : (CGFloat) columnTwoMargin
                    Restaurant : (Restaurant *) post
                        Column : (int) column
-               ViewEventsView : (DEViewEventsView *) view
+               ViewEventsView : (DEViewRestaurantsView *) view
              HeightDifference : (CGFloat) heightDifference
                     TopMargin : (CGFloat) topMargin
 
@@ -562,7 +553,7 @@ struct TopMargin {
 //    [DEPost getPostFromPFObject:obj];
     obj[@"loaded"] = @YES;
     
-    DEViewEventsView *viewEventsView = [[[NSBundle mainBundle] loadNibNamed:@"ViewEventsView" owner:self options:nil] objectAtIndex:0];
+    DEViewRestaurantsView *viewEventsView = [[[NSBundle mainBundle] loadNibNamed:@"ViewEventsView" owner:self options:nil] objectAtIndex:0];
     [viewEventsView setSearchBar:_searchBar];
     
     [viewEventsView renderViewWithRestaurant:restaurant
@@ -602,7 +593,7 @@ struct TopMargin {
  Get the difference of height between the label with no description, and the label with the size necessary to fit to the description
  
  */
-- (CGFloat) getLabelHeightDifference : (DEViewEventsView *) view {
+- (CGFloat) getLabelHeightDifference : (DEViewRestaurantsView *) view {
     // Set the height of the UITextView for the description to the necessary height to fit all the information
     CGSize sizeThatFitsTextView = [[view lblSubtitle] sizeThatFits:CGSizeMake([view lblSubtitle].frame.size.width, 1000)];
     // Get the heightDifference from what it's original size is and what it's size will be
@@ -612,7 +603,7 @@ struct TopMargin {
 }
 
 - (CGFloat) getEventImageHeightDifference : (PFObject *) postObject
-                                     View : (DEViewEventsView *) view
+                                     View : (DEViewRestaurantsView *) view
 {
     if ([postObject[PARSE_CLASS_EVENT_IMAGES] count] != 0)
     {
@@ -625,7 +616,7 @@ struct TopMargin {
     return 0;
 }
 
-- (CGFloat) resizeViewEventsImageView : (DEViewEventsView *) view
+- (CGFloat) resizeViewEventsImageView : (DEViewRestaurantsView *) view
                         ImageWidth : (double) width
                        ImageHeight : (double) height
 {
@@ -703,15 +694,15 @@ struct TopMargin {
 - (void) loadVisiblePost : (UIScrollView *) scrollView
 {
     for (UIView *view in [scrollView subviews]) {
-        if ([view isKindOfClass:[DEViewEventsView class]])
+        if ([view isKindOfClass:[DEViewRestaurantsView class]])
         {
             if (CGRectIntersectsRect(scrollView.bounds, view.frame))
             {
-                [((DEViewEventsView *) view) showImage];
+                [((DEViewRestaurantsView *) view) showImage];
 
             }
             else {
-                [((DEViewEventsView *) view) hideImage];
+                [((DEViewRestaurantsView *) view) hideImage];
             }
         }
     }

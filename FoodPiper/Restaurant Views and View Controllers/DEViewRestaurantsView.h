@@ -10,7 +10,7 @@
 #import "DEScreenManager.h"
 #import "FoodPiper-Swift.h"
 
-@interface DEViewEventsView : UIView <UIGestureRecognizerDelegate>
+@interface DEViewRestaurantsView : UIView <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgMainImageView;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;

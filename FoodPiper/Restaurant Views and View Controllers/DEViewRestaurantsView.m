@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 adeiji. All rights reserved.
 //
 
-#import "DEViewEventsView.h"
+#import "DEViewRestaurantsView.h"
 #import <Parse/Parse.h>
 
 @implementation DEViewEventsView
