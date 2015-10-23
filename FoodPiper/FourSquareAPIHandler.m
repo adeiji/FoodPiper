@@ -25,24 +25,29 @@ static const NSString *GOOGLE_API_RESULTS = @"results";
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (data != nil)
-        {
-            NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            NSDictionary *photo_details = jsonData[@"response"][@"photos"][@"items"][0];
-            
-            NSString *photo_url_prefix = photo_details[@"prefix"];
-            NSString *photo_url_suffix = photo_details[@"suffix"];
-            NSString *photo_width = photo_details[@"width"];
-            NSString *photo_height = photo_details[@"height"];
-            NSString *photo_url = [NSString stringWithFormat:@"%@%@x%@%@", photo_url_prefix, photo_width, photo_height, photo_url_suffix];
-            
-            if (![jsonData[@"status"] isEqualToString:@"ZERO_RESULTS"])
+        if (!error) {
+            if (data != nil)
             {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    // Make sure that we call this method on the main thread so that it updates properly as supposed to
-                    callback(photo_url, foursquareId);
-                });
+                NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+                NSDictionary *photo_details = jsonData[@"response"][@"photos"][@"items"][0];
+                
+                NSString *photo_url_prefix = photo_details[@"prefix"];
+                NSString *photo_url_suffix = photo_details[@"suffix"];
+                NSString *photo_width = photo_details[@"width"];
+                NSString *photo_height = photo_details[@"height"];
+                NSString *photo_url = [NSString stringWithFormat:@"%@%@x%@%@", photo_url_prefix, photo_width, photo_height, photo_url_suffix];
+                
+                if (![jsonData[@"status"] isEqualToString:@"ZERO_RESULTS"])
+                {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        // Make sure that we call this method on the main thread so that it updates properly as supposed to
+                        callback(photo_url, foursquareId);
+                    });
+                }
             }
+        }
+        else {
+            NSLog(@"Foursquare Photo Error - %@", [error description]);
         }
     }];
     

@@ -17,7 +17,7 @@
 @property (strong, nonatomic) FactualAPI *apiObject;
 @property (strong, nonatomic) NSMutableDictionary *restaurants;
 @property (strong, nonatomic) NSMutableArray *restaurantImages;
-
+@property NSInteger rowCount;
 /* 
  
  Get all the restaurants in a given area

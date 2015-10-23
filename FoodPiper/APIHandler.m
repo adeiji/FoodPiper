@@ -9,6 +9,9 @@
 #import "APIHandler.h"
 #import "FoodPiper-Swift.h"
 
+NSString *const VIEW_RESTAURANTS_VIEW_CONTROLLER = @"ViewRestaurantsViewController";
+NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
+
 @implementation APIHandler
 
 /*
@@ -29,44 +32,39 @@
     CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
     
     [queryObject setGeoFilter:coordinate radiusInMeters:100];
-    [queryObject setLimit:50];
+    [queryObject setLimit:10];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
 
 }
 
 - (void) requestComplete:(FactualAPIRequest *)request receivedQueryResult:(FactualQueryResult *)queryResult {
-    
-    if ([request.requestId isEqualToString:@"1"]) /* If this is the first request, than we know the request was a 
+
+    if ([request.requestId isEqualToString:@"1"]) /* If this is the first request, than we know the request was a
                                                    request sent for data in the Factual database.  The second time
                                                    will be a request sent for the Foursquare Id of the data
                                                    */
     {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-            for (id restaurant in queryResult.rows) {
-                if ([restaurant respondsToSelector:@selector(stringValueForName:)]) {
-                    Restaurant *myRestaurant = [self createRestaurantObjectFromFactualObject:restaurant];
-                    /* Add this restaurant object to the dictionary with the factual Id as the key so that we can
-                     use the factual id as a reference within the app */
-                    [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
-                }
+        _rowCount = queryResult.rowCount;
+        for (id restaurant in queryResult.rows) {
+            if ([restaurant respondsToSelector:@selector(stringValueForName:)]) {
+                Restaurant *myRestaurant = [self createRestaurantObjectFromFactualObject:restaurant];
+                /* Add this restaurant object to the dictionary with the factual Id as the key so that we can
+                 use the factual id as a reference within the app */
+                [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
             }
-            
-            dispatch_async(dispatch_get_main_queue(), ^(void){
-                // Get the yelp information from Crosswalk API
-                id restaurant = queryResult.rows[0];
-                
-                FactualQuery *queryObject = [FactualQuery query];
-                [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
-                                                              equalTo:[restaurant stringValueForName:@"factual_id"]]];
-                [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
-                                                              equalTo:@"foursquare"]];
-                [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
-//                for (id restaurant in queryResult.rows) {
-//
-//                }
-            });
-        });
+        }
+        int count = 0;
+        // Get the yelp information from Crosswalk API
+        for (id restaurant in queryResult.rows) {
+            count ++;
+            FactualQuery *queryObject = [FactualQuery query];
+            [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
+                                                          equalTo:[restaurant stringValueForName:@"factual_id"]]];
+            [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
+                                                          equalTo:@"foursquare"]];
+            [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
+            NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
+        }
     }
     else {
         NSString *foursquareURLString = [queryResult.rows[0] stringValueForName:@"url"];
@@ -76,14 +74,19 @@
             // Get the foursquareId and grab the image from Foursquare with this Id
             NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
             [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
+                static int currentObjectCount = 1;
                 // Get the image from foursquare and store this image for the corresponding restaurant
-                NSLog(@"Received image from Foursquare entry with ID %@ and storing image", foursquareId);
-                UIImage* myImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString: image_url]]];
+                NSLog(@"Received Foursquare entry with ID %@ and storing the foursquare Id", foursquareId);
                 NSString *factualId = [queryResult.rows[0] stringValueForName:FACTUAL_ID];
                 // Get the corresponding restaurant with this Factual Id received from our request and set its image to the image received from Foursquare
                 Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
-                [restaurant setImage:myImage];
-                [self displayViewRestaurantsScreen];
+                [restaurant setImage_url:[NSURL URLWithString:image_url]];
+                NSLog(@"Currently getting the Foursquare entry for object #%i", currentObjectCount);
+                if ([request.requestId doubleValue] == _rowCount + 1) {
+                    [self displayViewRestaurantsScreen];
+                }
+                
+                currentObjectCount ++;
             }];
         }
         
@@ -97,10 +100,31 @@
  
  */
 - (void) displayViewRestaurantsScreen {
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
-    DEViewRestaurantsViewController *viewController = [DEViewRestaurantsViewController new];
-    [navController pushViewController:viewController animated:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
+        DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
+        
+        [viewController setRestaurants:[self convertRestaurantsDictionaryToArray]];
+        [navController pushViewController:viewController animated:YES];
+    });
+}
+
+/*
+ 
+ Get the restaurants dictionary and add each of the restaurants to its own array
+ 
+ */
+
+- (NSArray *) convertRestaurantsDictionaryToArray {
+    
+    NSMutableArray *arrayOfRestaurants = [NSMutableArray new];
+    for (id key in _restaurants) {
+        Restaurant *restaurant = [_restaurants objectForKey:key];
+        [arrayOfRestaurants addObject:restaurant];
+    }
+    
+    return arrayOfRestaurants;
 }
 
 /*

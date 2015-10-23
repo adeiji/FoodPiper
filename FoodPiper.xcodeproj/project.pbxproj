@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -72,6 +73,7 @@
 		5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPiper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A37B571BD8103900DD5DAE /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F4A37B5A1BD8117000DD5DAE /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.h"; sourceTree = "<group>"; };
 		F4A37B5B1BD8117000DD5DAE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.m"; sourceTree = "<group>"; };
@@ -188,6 +190,15 @@
 				5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4A06B171BDAC7C300825D74 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */,
+			);
+			name = Categories;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		F4A37B591BD8114500DD5DAE /* Constants */ = {
@@ -318,6 +329,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4A06B171BDAC7C300825D74 /* Categories */,
 				F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */,
 				F4C85F631BD9BF69009F3B55 /* Networking */,
 				F4C85F4F1BD9BBC4009F3B55 /* Screen Handling */,
@@ -647,6 +659,7 @@
 				F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
+				F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */,
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
 				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,

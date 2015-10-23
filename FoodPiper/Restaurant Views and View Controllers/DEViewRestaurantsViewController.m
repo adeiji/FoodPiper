@@ -11,11 +11,13 @@
 #import "Reachability.h"
 #import "FoodPiper-Swift.h"
 
+NSString *const VIEW_RESTAURANTS_VIEW = @"ViewRestaurantsView";
+
 @interface DEViewRestaurantsViewController ()
 
 @end
 
-#define POST_HEIGHT 305
+#define POST_HEIGHT 281
 #define POST_WIDTH 140
 #define IPHONE_DEVICE_WIDTH 320
 #define TOP_MARGIN 20
@@ -106,6 +108,7 @@ struct TopMargin {
     [self.navigationController setNavigationBarHidden:YES];
     [self setUpSearchBar];
     [self removeAllPostFromScreen];
+    [self displayRestaurant:nil];
 }
 
 - (void) removeFirstResponder {
@@ -291,16 +294,15 @@ struct TopMargin {
 }
 
 
-- (void) displayPost : (NSNotification *) notification {
+- (void) displayRestaurant : (NSNotification *) notification {
     [self stopActivitySpinner];
-    [self displayPost:notification TopMargin:0 PostArray:nil];
+    [self displayRestaurantWithTopMargin:0 PostArray:nil];
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
     [self loadVisiblePost:_scrollView];
 }
 
-- (void) displayPost : (NSNotification *) notification
-           TopMargin : (CGFloat) topMargin
-           PostArray : (NSArray *) postArray
+- (void) displayRestaurantWithTopMargin : (CGFloat) topMargin
+                              PostArray : (NSArray *) postArray
 {
     
     [self addEventsToScreen : topMargin
@@ -388,18 +390,20 @@ struct TopMargin {
                 
                 if (addPost)
                 {
-                    id obj = postArray[count];
-                    validated = [self isValidToShowEvent:obj PostNumber : postCounter];
+                    Restaurant *restaurant = postArray[count];
+//                    validated = [self isValidToShowEvent:obj PostNumber : postCounter];
+                    validated = YES;
                     // Show the event on the screen
-                    if (([obj[@"loaded"] isEqual:@NO] || !obj[@"loaded"])  && validated)
+//                    if (([obj[@"loaded"] isEqual:@NO] || !obj[@"loaded"])  && validated)
+                    if (validated)
                     {
-                        [self loadEvent:obj
-                                Margin1:&columnOneMargin
-                                Margin2:&columnTwoMargin
-                                 Column:&column
-                              TopMargin:topMargin
-                            PostCounter:&postCounter
-                              ShowBlank:showBlank];
+                        [self loadRestaurant:restaurant
+                                     Margin1:&columnOneMargin
+                                     Margin2:&columnTwoMargin
+                                      Column:&column
+                                   TopMargin:topMargin
+                                 PostCounter:&postCounter
+                                   ShowBlank:showBlank];
                     }
                     
                     count ++;
@@ -486,7 +490,7 @@ struct TopMargin {
                        Margin : (CGFloat) columnTwoMargin
                    Restaurant : (Restaurant *) post
                        Column : (int) column
-               ViewEventsView : (DEViewRestaurantsView *) view
+          ViewRestaurantsView : (DEViewRestaurantsView *) view
              HeightDifference : (CGFloat) heightDifference
                     TopMargin : (CGFloat) topMargin
 
@@ -516,53 +520,47 @@ struct TopMargin {
  Load the event
  
  */
-- (void) loadEvent : (PFObject *) obj
-           Margin1 : (CGFloat *) columnOneMargin
-           Margin2 : (CGFloat *) columnTwoMargin
-            Column : (CGFloat *) column
-         TopMargin : (CGFloat) topMargin
-       PostCounter : (int *) postCounter
-         ShowBlank : (BOOL) showBlank
+- (void) loadRestaurant : (Restaurant *) restaurant
+                Margin1 : (CGFloat *) columnOneMargin
+                Margin2 : (CGFloat *) columnTwoMargin
+                 Column : (CGFloat *) column
+              TopMargin : (CGFloat) topMargin
+            PostCounter : (int *) postCounter
+              ShowBlank : (BOOL) showBlank
 {
-    CGFloat viewEventsViewFrameHeight = POST_HEIGHT;
-    Restaurant *restaurant = [Restaurant new];
+    CGFloat viewRestaurantsViewFrameHeight = POST_HEIGHT;
     
 //    [DEPost getPostFromPFObject:obj];
-    obj[@"loaded"] = @YES;
     
-    DEViewRestaurantsView *viewEventsView = [[[NSBundle mainBundle] loadNibNamed:@"ViewEventsView" owner:self options:nil] objectAtIndex:0];
-    [viewEventsView setSearchBar:_searchBar];
-    
-    [viewEventsView renderViewWithRestaurant:restaurant
+    DEViewRestaurantsView *viewRestaurantsView = [[[NSBundle mainBundle] loadNibNamed:VIEW_RESTAURANTS_VIEW owner:self options:nil] objectAtIndex:0];
+    [viewRestaurantsView setSearchBar:_searchBar];
+    [viewRestaurantsView renderViewWithRestaurant:restaurant
                                    ShowBlank:showBlank];
+    [viewRestaurantsView setRestaurant:restaurant];
     
-    [viewEventsView setPostObject:obj];
-    
-    CGFloat heightDifference = [self getLabelHeightDifference:viewEventsView];
-    heightDifference += [self getEventImageHeightDifference:obj View:viewEventsView];
+    CGFloat heightDifference = [self getLabelHeightDifference:viewRestaurantsView];
+    heightDifference += [self getEventImageHeightDifferenceOfImage:restaurant AndView:viewRestaurantsView];
     
     [self setUpViewEventsFrame:*columnOneMargin
                         Margin:*columnTwoMargin
                     Restaurant:restaurant
                         Column:*column
-                ViewEventsView:viewEventsView
+           ViewRestaurantsView:viewRestaurantsView
               HeightDifference:heightDifference
                      TopMargin:topMargin];
     
-    [_scrollView addSubview:viewEventsView];
-    
+    [_scrollView addSubview:viewRestaurantsView];
+    [viewRestaurantsView loadImage];
     if (*column == 0)
     {
         *column = 1;
-        *columnOneMargin += viewEventsViewFrameHeight + heightDifference + TOP_MARGIN;
+        *columnOneMargin += viewRestaurantsViewFrameHeight + heightDifference + TOP_MARGIN;
     }
     else {
         *column = 0;
-        *columnTwoMargin += viewEventsViewFrameHeight + heightDifference + TOP_MARGIN;
+        *columnTwoMargin += viewRestaurantsViewFrameHeight + heightDifference + TOP_MARGIN;
         *postCounter = *postCounter + 1;
     }
-    
-    [self getDistanceFromCurrentLocationOfEvent:obj];
 }
 
 /*
@@ -579,13 +577,13 @@ struct TopMargin {
     return heightDifference;
 }
 
-- (CGFloat) getEventImageHeightDifference : (PFObject *) postObject
-                                     View : (DEViewRestaurantsView *) view
+- (CGFloat) getEventImageHeightDifferenceOfImage : (Restaurant *) restaurant
+                                         AndView : (DEViewRestaurantsView *) view
 {
-    if ([postObject[PARSE_CLASS_EVENT_IMAGES] count] != 0)
+    if (restaurant.image)
     {
-        CGFloat height = [postObject[PARSE_CLASS_EVENT_IMAGE_HEIGHT] doubleValue];
-        CGFloat width = [postObject[PARSE_CLASS_EVENT_IMAGE_WIDTH] doubleValue];
+        CGFloat height = restaurant.image.size.height;
+        CGFloat width = restaurant.image.size.width;
         
         return [self resizeViewEventsImageView:view ImageWidth:width ImageHeight:height];
 

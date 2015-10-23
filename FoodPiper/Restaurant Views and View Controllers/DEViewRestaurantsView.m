@@ -81,12 +81,35 @@ const int POST_WIDTH = 140;
     [self addGestureRecognizer:tapGestureRecognizer];
 }
 
+- (NSString *) convertArrayOfStringsToTextUsingArray : (NSArray *) array {
+    NSMutableString *arrayToString = [NSMutableString new];
+    
+    for (NSString *text in array) {
+        [arrayToString appendString:[NSString stringWithFormat:@"%@,", text]];
+    }
+    
+    return arrayToString;
+}
+
 - (void) renderViewWithRestaurant : (Restaurant *) myRestaurant
                         ShowBlank : (BOOL) showBlank
 {
 
     __block Restaurant *restaurant = myRestaurant;
+    self.lblAddress.text = restaurant.address;
     
+    double price = [restaurant.price doubleValue];
+    NSString *priceString = [NSString new];
+    
+    for (int i = 0; i < price; i ++)
+    {
+        priceString = [NSString stringWithFormat:@"%@%@", priceString, @"$"];
+    }
+    
+    self.lblCost.text = priceString;
+    self.lblDistance.text = restaurant.distanceFromUser;
+    self.lblTitle.text = restaurant.name;
+    self.lblSubtitle.text = [self convertArrayOfStringsToTextUsingArray:restaurant.cuisine];
     [self addGestureRecognizers];
     
     if (showBlank)
@@ -117,13 +140,22 @@ const int POST_WIDTH = 140;
             [self.imgMainImageView setAlpha:1.0f];
         }];
     }
+    else {
+        [UIView animateWithDuration:0.5f animations:^{
+            [self.imgMainImageView setAlpha:1.0f];
+        }];
+    }
 }
 
 - (void) loadImage
 {
-    // Load the images on the main thread asynchronously
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.imgMainImageView.image = _restaurant.image;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
+        _restaurant.image = image;
+        // Load the images on the main thread asynchronously
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imgMainImageView.image = _restaurant.image;
+        });
     });
 }
 
@@ -131,6 +163,7 @@ const int POST_WIDTH = 140;
 // When the user taps this event it will take them to a screen to view all the details of the event.
 - (void) displayEventDetails : (id) sender {
 
+    
 }
 
 - (void) showEventEditing : (BOOL) editing {

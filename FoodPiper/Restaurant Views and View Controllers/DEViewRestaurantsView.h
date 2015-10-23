@@ -25,7 +25,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property BOOL isImageLoaded;
-@property (strong, nonatomic) PFObject *postObject;
 @property BOOL rotateImage;
 @property (strong, nonatomic) Restaurant *restaurant;
 
