@@ -8,7 +8,6 @@
 
 #import "DEUserManager.h"
 #import "Constants.h"
-#import <ParseFacebookUtilsV4/ParseFacebookUtilsV4.h>
 
 @implementation DEUserManager
 
@@ -92,7 +91,6 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
 - (NSError *) createUserWithUserName : (NSString *) userName
                             Password : (NSString *) password
                                Email : (NSString *) email
-                      ViewController : (UIViewController *) viewController
                           ErrorLabel : (UILabel *) label;
 {
     _user = [PFUser new];
@@ -106,7 +104,6 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
     [_user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error)
         {
-            [[DEScreenManager getMainNavigationController] pushViewController:viewController animated:YES];
             _userObject = _user;
             _userObject[PARSE_CLASS_USER_RANK] = USER_RANK_STANDARD;
             _userObject[PARSE_CLASS_USER_CANONICAL_USERNAME] = userName;
@@ -307,11 +304,11 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
 - (NSError *) loginWithFacebook {
     
     NSArray *permissionsArray = @[@"user_location"];
-    
-    if (![PFUser currentUser] && // Check if a user is cached
+
+    if (![PFUser currentUser] || // Check if a user is cached
         ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
     {
-        [PFFacebookUtils logInInBackgroundWithReadPermissions:permissionsArray block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+        [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser * _Nullable user, NSError * _Nullable error) {
             // Display some sort of loading indicator
             
             if (!user) {
@@ -335,7 +332,9 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
                 [DEUserManager logoutUser];
                 [self isLoggedIn];
             }
+            
         }];
+
     }
     
     return nil;

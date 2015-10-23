@@ -9,12 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FBSDKCoreKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKLoginKit.xcscheme</key>
+		<key>Facebook-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ParseFacebookUtilsV4.xcscheme</key>
+		<key>ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,11 +37,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4E286D373D75563CE26E479A68203892</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
@@ -57,22 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81D7FE2A0FD9258247B1232874B837DA</key>
+		<key>59C7B884335BF97F71D38DBB38D1EF2A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A7B3EC56C791BE78C1EFE569A1CEA3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FBAD54F3F20820A1305AB1EB737363A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A48601FEE4437A924848DB48369BA809</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DBDDB4FFB08B9CE13C3842D452303563</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F9E0B4AF2E57CDE3CB2249C8FD91DB8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

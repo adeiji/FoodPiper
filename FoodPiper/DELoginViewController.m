@@ -54,15 +54,6 @@
     else {
         _lblLoginMessage.text = @"HappSnap is more fun and useful with an account.\n\nSign up in seconds for free!";
     }
-    
-    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    if (screenHeight < 500)
-    {
-        if ([self.view isKindOfClass:[DELoginView class]] || [self.view isKindOfClass:[DECreateAccountView class]])
-        {
-            [self.view performSelector:@selector(setUpViewForiPhone4)];
-        }
-    }
 }
 
 - (IBAction)signIn:(id)sender {
@@ -109,9 +100,4 @@
     [[DEScreenManager sharedManager] startActivitySpinner];
     [[DEUserManager sharedManager] loginWithFacebook];
 }
-- (IBAction)loginWithTwitter:(id)sender {
-    [[DEScreenManager sharedManager] startActivitySpinner];
-    [[DEUserManager sharedManager] loginWithTwitter];
-}
-
 @end

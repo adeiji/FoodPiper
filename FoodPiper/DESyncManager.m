@@ -140,7 +140,6 @@ static NSString *const kEventsUserPromptedForComment = @"com.happsnap.eventsUser
 
 + (void) updatePFObject : (PFObject *) postObject
      WithValuesFromPost : (DEPost *) post {
-    postObject = [self getPFObjectWithValuesFromPost:post PFObject:postObject];
     [postObject setObject:@NO forKey:@"loaded"];
     [postObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {

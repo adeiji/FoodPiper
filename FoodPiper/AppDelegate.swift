@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UILabel.appearance().font = UIFont(name: "Gill Sans", size: 13.0);
         UILabel.appearance().textColor = UIColor(red: 115/255, green: 115/255, blue: 155/255, alpha: 1.0);
         
+        Parse.setApplicationId("RACHAIXoHN8KP5hQ2e3gg8MMWZxKTM6NAXkPnEbP",
+            clientKey: "nEnEtiyFBeRXP3sD5XwX62X1Bhr6xsujEEOLV16K")
+        PFFacebookUtils.initializeFacebook();
         return true
     }
 

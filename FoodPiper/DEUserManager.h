@@ -10,14 +10,13 @@
 #import <Parse/Parse.h>
 #import "DELoginViewController.h"
 #import "DESyncManager.h"
-#import <ParseFacebookUtilsV4/ParseFacebookUtilsV4.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface DEUserManager : NSObject
 
 - (NSError *) createUserWithUserName : (NSString *) userName
                             Password : (NSString *) password
                                Email : (NSString *) email
-                      ViewController : (UIViewController *) viewController
                           ErrorLabel : (UILabel *) label;
 
 - (NSError *) loginWithUsername : (NSString *) username
@@ -35,11 +34,8 @@
 - (BOOL) isLoggedIn;
 
 + (id)sharedManager;
-- (NSError *) loginWithTwitter;
-- (NSError *) linkWithTwitter;
 - (NSError *) loginWithFacebook;
 
-- (BOOL) isLinkedWithTwitter;
 - (BOOL) isLinkedWithFacebook;
 - (void) saveItemToArray : (NSString *) item
          ParseColumnName : (NSString *) columnName;

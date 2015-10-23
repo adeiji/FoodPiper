@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C80A32DCD36D570B4885E54 /* libPods-FoodPiper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -24,6 +23,7 @@
 		F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F5D1BD9BEE7009F3B55 /* HPStyleKit.m */; settings = {ASSET_TAGS = (); }; };
 		F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F611BD9BF34009F3B55 /* DESyncManager.m */; settings = {ASSET_TAGS = (); }; };
 		F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F651BD9BF7F009F3B55 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F701BD9EE71009F3B55 /* libPods-FoodPiper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C85F6F1BD9EE71009F3B55 /* libPods-FoodPiper.a */; };
 		F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */; };
 		F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3371BD182BB00FEBE36 /* ViewController.swift */; };
 		F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC3391BD182BB00FEBE36 /* Main.storyboard */; };
@@ -100,6 +100,10 @@
 		F4C85F651BD9BF7F009F3B55 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F4C85F671BD9C6DA009F3B55 /* libParse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParse.a; path = "Pods/../build/Debug-iphoneos/libParse.a"; sourceTree = "<group>"; };
 		F4C85F691BD9C6F1009F3B55 /* libParseFacebookUtilsV4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParseFacebookUtilsV4.a; path = "Pods/../build/Debug-iphoneos/libParseFacebookUtilsV4.a"; sourceTree = "<group>"; };
+		F4C85F6C1BD9D60C009F3B55 /* FoodPiper+Bridging+Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodPiper+Bridging+Header.h"; sourceTree = "<group>"; };
+		F4C85F6D1BD9D6FB009F3B55 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
+		F4C85F6F1BD9EE71009F3B55 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FoodPiper.a"; path = "Pods/../build/Release-iphoneos/libPods-FoodPiper.a"; sourceTree = "<group>"; };
+		F4C85F711BD9EE84009F3B55 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Release-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CBC3371BD182BB00FEBE36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +119,6 @@
 		F4CBC3571BD182BC00FEBE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		F4CBC36F1BD1E85C00FEBE36 /* FactualSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FactualSDK.framework; path = libraries/FactualSDK.framework; sourceTree = "<group>"; };
-		F4CBC3711BD1EAF600FEBE36 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4CBC3721BD1EAF600FEBE36 /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
 		F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHandler.m; sourceTree = "<group>"; };
 		F4CC5ADE1BD58B0F00109C61 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-Bold.ttf"; path = "Resources/Fonts/josefin_sans/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -137,8 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C85F701BD9EE71009F3B55 /* libPods-FoodPiper.a in Frameworks */,
 				F4CBC3701BD1E85C00FEBE36 /* FactualSDK.framework in Frameworks */,
-				2C80A32DCD36D570B4885E54 /* libPods-FoodPiper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,9 @@
 		AF0BDC311F6CB9ABD37C0858 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4C85F711BD9EE84009F3B55 /* libFacebook-iOS-SDK.a */,
+				F4C85F6F1BD9EE71009F3B55 /* libPods-FoodPiper.a */,
+				F4C85F6D1BD9D6FB009F3B55 /* libFacebook-iOS-SDK.a */,
 				F4C85F691BD9C6F1009F3B55 /* libParseFacebookUtilsV4.a */,
 				F4C85F671BD9C6DA009F3B55 /* libParse.a */,
 				5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */,
@@ -367,7 +373,7 @@
 			children = (
 				F4CBC3721BD1EAF600FEBE36 /* APIHandler.h */,
 				F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */,
-				F4CBC3711BD1EAF600FEBE36 /* FoodPiper-Bridging-Header.h */,
+				F4C85F6C1BD9D60C009F3B55 /* FoodPiper+Bridging+Header.h */,
 			);
 			name = "API Handler";
 			sourceTree = "<group>";
@@ -803,6 +809,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -811,9 +818,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper+Bridging+Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -843,6 +850,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -851,8 +859,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper+Bridging+Header.h";
+				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Release;
 		};

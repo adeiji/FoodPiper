@@ -19,14 +19,8 @@
 @property (strong, nonatomic) UIViewController *nextScreen;
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBackButtonToOrLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintOrLabelToLoginLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintLoginButtonToAccountButtons;
-
-- (void) setUpViewForiPhone4;
-
 #pragma mark - Button Methods
 
-- (IBAction)signIn:(id)sender;
+- (IBAction)connectWithFacebook:(id)sender;
 
 @end

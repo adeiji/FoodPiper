@@ -24,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintOrLabelToLoginLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintLoginLabelToAccountButtons;
 
-- (void) setUpViewForiPhone4;
 - (void) setUpView;
 - (IBAction)signUp:(id)sender;
 

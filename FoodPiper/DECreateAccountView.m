@@ -22,13 +22,6 @@
     return self;
 }
 
-- (void) setUpViewForiPhone4 {
-    self.constraintConfirmPasswordToSignUpButton.constant = 5;
-    self.constraintLoginLabelToAccountButtons.constant = 0;
-    self.constraintOrLabelToLoginLabel.constant = 0;
-    self.constraintSignUpButtonToOrLabel.constant = 0;
-}
-
 - (void) setUpView {
     for (UIView *view in self.subviews) {
         if ([view isKindOfClass:[UITextField class]])
@@ -87,12 +80,9 @@
     
     if ([self validateTextFields])
     {
-        DEAddProfileImageViewController *profileImageViewController = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:LOGIN_ADD_PROFILE_IMAGE_VIEW_CONTROLLER];
-        
         [[DEUserManager sharedManager] createUserWithUserName:_txtUsername.text
                                                      Password:_txtPassword.text
                                                         Email:_txtEmail.text
-                                               ViewController:profileImageViewController
                                                    ErrorLabel:_lblUsernameError];
     }
 }
