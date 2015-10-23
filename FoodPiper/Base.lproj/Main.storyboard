@@ -791,23 +791,23 @@
                                 <exclude reference="oO0-qa-lBn"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DEx-Xb-oUm"/>
-                                <exclude reference="K91-dc-6R8"/>
-                                <exclude reference="Qhr-kw-SbK"/>
-                                <exclude reference="wOB-fT-Km3"/>
-                                <exclude reference="4lb-oL-xb7"/>
-                                <exclude reference="bfv-hB-zpk"/>
-                                <exclude reference="QYr-Yf-93d"/>
-                                <exclude reference="Wlb-QT-65s"/>
-                                <exclude reference="YOr-8O-ND5"/>
-                                <exclude reference="1qp-jF-ALL"/>
-                                <exclude reference="ZLF-gj-re0"/>
-                                <exclude reference="lBI-FY-cqY"/>
                                 <exclude reference="Bpp-OH-9j2"/>
                                 <exclude reference="jd6-sZ-chO"/>
                                 <exclude reference="nDh-jd-1rM"/>
+                                <exclude reference="4lb-oL-xb7"/>
+                                <exclude reference="bfv-hB-zpk"/>
+                                <exclude reference="1qp-jF-ALL"/>
+                                <exclude reference="ZLF-gj-re0"/>
+                                <exclude reference="lBI-FY-cqY"/>
+                                <exclude reference="QYr-Yf-93d"/>
+                                <exclude reference="Wlb-QT-65s"/>
+                                <exclude reference="YOr-8O-ND5"/>
                                 <exclude reference="UPv-Hb-jzV"/>
                                 <exclude reference="rxi-JK-KLt"/>
+                                <exclude reference="Qhr-kw-SbK"/>
+                                <exclude reference="wOB-fT-Km3"/>
+                                <exclude reference="DEx-Xb-oUm"/>
+                                <exclude reference="K91-dc-6R8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -821,23 +821,23 @@
                                 <include reference="oO0-qa-lBn"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DEx-Xb-oUm"/>
-                                <include reference="K91-dc-6R8"/>
-                                <include reference="Qhr-kw-SbK"/>
-                                <include reference="wOB-fT-Km3"/>
-                                <include reference="4lb-oL-xb7"/>
-                                <include reference="bfv-hB-zpk"/>
-                                <include reference="QYr-Yf-93d"/>
-                                <include reference="Wlb-QT-65s"/>
-                                <include reference="YOr-8O-ND5"/>
-                                <include reference="1qp-jF-ALL"/>
-                                <include reference="ZLF-gj-re0"/>
-                                <include reference="lBI-FY-cqY"/>
                                 <include reference="Bpp-OH-9j2"/>
                                 <include reference="jd6-sZ-chO"/>
                                 <include reference="nDh-jd-1rM"/>
+                                <include reference="4lb-oL-xb7"/>
+                                <include reference="bfv-hB-zpk"/>
+                                <include reference="1qp-jF-ALL"/>
+                                <include reference="ZLF-gj-re0"/>
+                                <include reference="lBI-FY-cqY"/>
+                                <include reference="QYr-Yf-93d"/>
+                                <include reference="Wlb-QT-65s"/>
+                                <include reference="YOr-8O-ND5"/>
                                 <include reference="UPv-Hb-jzV"/>
                                 <include reference="rxi-JK-KLt"/>
+                                <include reference="Qhr-kw-SbK"/>
+                                <include reference="wOB-fT-Km3"/>
+                                <include reference="DEx-Xb-oUm"/>
+                                <include reference="K91-dc-6R8"/>
                             </mask>
                         </variation>
                         <connections>
