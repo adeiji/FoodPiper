@@ -8,8 +8,9 @@
 
 #import "DEViewRestaurantsView.h"
 #import <Parse/Parse.h>
+#import "FoodPiper-Swift.h"
 
-@implementation DEViewEventsView
+@implementation DEViewRestaurantsView
 
 #define OVERLAY_VIEW 1
 const int POST_WIDTH = 140;

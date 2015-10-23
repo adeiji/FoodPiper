@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DEScreenManager.h"
-#import "FoodPiper-Swift.h"
+
+@class Restaurant;
 
 @interface DEViewRestaurantsView : UIView <UIGestureRecognizerDelegate>
 
@@ -28,10 +29,27 @@
 @property BOOL rotateImage;
 @property (strong, nonatomic) Restaurant *restaurant;
 
+/*
+ 
+ Get the image from the local restaurant object and set the local
+ UIImageView's image to the local restaurant image
+ 
+ */
 - (void) loadImage;
+
+/*
+ 
+ Make the image of the local UIImageView visible.
+ 
+ */
 - (void) showImage;
+
+/*
+ 
+ Make the image of the local UIImageView invisible. 
+ 
+ */
 - (void) hideImage;
-- (void) showOverlayView;
 
 - (void) renderViewWithRestaurant : (Restaurant *) myRestaurant
                         ShowBlank : (BOOL) showBlank;

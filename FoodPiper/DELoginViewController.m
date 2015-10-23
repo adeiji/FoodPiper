@@ -28,7 +28,7 @@
         [[view layer] setCornerRadius:BUTTON_CORNER_RADIUS];
     }
 
-    NSString *restorationId = self.restorationIdentifier;
+//    NSString *restorationId = self.restorationIdentifier;
     
 #warning - Google Analytics - May need to uncomment
 //    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];

@@ -10,6 +10,7 @@
 #import <FactualSDK/FactualAPI.h>
 #import "Constants.h"
 #import "FourSquareAPIHandler.h"
+#import "DEViewRestaurantsViewController.h"
 
 @interface APIHandler : NSObject <FactualAPIDelegate>
 

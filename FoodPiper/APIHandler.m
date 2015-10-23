@@ -91,11 +91,16 @@
     }
     
 }
-
+/*
+ 
+ Display the screen that will display all the restaurants that have been taken from the Factual API
+ 
+ */
 - (void) displayViewRestaurantsScreen {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
-    
+    DEViewRestaurantsViewController *viewController = [DEViewRestaurantsViewController new];
+    [navController pushViewController:viewController animated:YES];
 }
 
 /*

@@ -9,6 +9,7 @@
 #import "DEViewRestaurantsViewController.h"
 #import "Constants.h"
 #import "Reachability.h"
+#import "FoodPiper-Swift.h"
 
 @interface DEViewRestaurantsViewController ()
 
@@ -101,19 +102,10 @@ struct TopMargin {
      
     */
     
-    [self addGestureRecognizers];
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.navigationController setNavigationBarHidden:YES];
     [self setUpSearchBar];
     [self removeAllPostFromScreen];
-    [self addCloseMenuTapGestureRecognizer];
-}
-
-- (void) addCloseMenuTapGestureRecognizer {
-    tapGestureCloseMenuRecognizer = [UITapGestureRecognizer new];
-    [tapGestureCloseMenuRecognizer addTarget:self action:@selector(hideMainMenu)];
-    [tapGestureCloseMenuRecognizer setEnabled:NO];
-    [self.view addGestureRecognizer:tapGestureCloseMenuRecognizer];
 }
 
 - (void) removeFirstResponder {
@@ -133,20 +125,6 @@ struct TopMargin {
             }
         }
     }
-}
-
-- (void) addGestureRecognizers
-{
-    UISwipeGestureRecognizer *swipeRightGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showOrHideMainMenu:)];
-    [swipeRightGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
-    
-    [[self view] addGestureRecognizer:swipeRightGestureRecognizer];
-    
-    UISwipeGestureRecognizer *swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(showOrHideMainMenu:)];
-    [swipeLeftGestureRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
-    
-    [[self view] addGestureRecognizer:swipeLeftGestureRecognizer];
-
 }
 
 - (void) enableClickOnEvents : (BOOL) clickable {
@@ -169,7 +147,7 @@ struct TopMargin {
         for (UIView *subview in [_scrollView subviews]) {
             if ([subview isKindOfClass:[DEViewRestaurantsView class]])
             {
-                ((DEViewEventsView *) subview).imgMainImageView.image = nil;
+                ((DEViewRestaurantsView *) subview).imgMainImageView.image = nil;
                 [subview removeFromSuperview];
             }
             
@@ -304,7 +282,7 @@ struct TopMargin {
     for (UIView *subview in [_scrollView subviews]) {
         if ([subview isKindOfClass:[DEViewRestaurantsView class]])
         {
-            ((DEViewEventsView *) subview).imgMainImageView.image = nil;
+            ((DEViewRestaurantsView *) subview).imgMainImageView.image = nil;
             [subview removeFromSuperview];
         }
         
@@ -531,7 +509,6 @@ struct TopMargin {
     CGRect frame = CGRectMake((column * (POST_WIDTH * screenSizeRelativeToiPhone5Width)) + ((widthMargin * screenSizeRelativeToiPhone5Width) * (column + 1)), topMargin + (margin), (POST_WIDTH * screenSizeRelativeToiPhone5Width), viewEventsViewHeight);
 
     view.frame = frame;
-    [view showOverlayView];
 }
 
 /*

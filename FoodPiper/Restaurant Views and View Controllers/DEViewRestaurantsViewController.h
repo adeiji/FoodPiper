@@ -11,7 +11,6 @@
 #import "DEScreenManager.h"
 #import <Masonry/Masonry.h>
 
-@class DEViewMainMenu;
 
 @interface DEViewRestaurantsViewController : UIViewController <UIScrollViewDelegate, MFMailComposeViewControllerDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate>
 {
@@ -43,7 +42,6 @@
 @property BOOL now;
 @property BOOL isNewProcess;
 
-- (IBAction)showCreatePostScreen:(id)sender;
 - (void) displayPost : (NSNotification *) notification
            TopMargin : (CGFloat) topMargin
            PostArray : (NSArray *) postArray;

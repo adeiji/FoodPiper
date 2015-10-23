@@ -43,7 +43,6 @@
 + (void) addProfileImage : (NSData *) profileImageData;
 + (void) getUserRank : (NSString *) username;
 + (void) getUserFromUsername : (NSString *) username;
-+ (void) logoutUser;
 
 @property (strong, nonatomic) PFUser *user;
 @property (strong, nonatomic) PFObject *userObject;

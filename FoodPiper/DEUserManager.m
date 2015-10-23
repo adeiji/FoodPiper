@@ -236,7 +236,6 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
                 [DEScreenManager popToRootAndShowViewController:viewController];
                 // Clear user image defaults
                 [self clearUserImageDefaults];
-                [DEUserManager logoutUser];
                 [self isLoggedIn];
             }
             else {
@@ -329,7 +328,6 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
                 // Get the Facebook Profile Picture
                 [self clearUserImageDefaults];
                 [self getFacebookProfileInformation];
-                [DEUserManager logoutUser];
                 [self isLoggedIn];
             }
             

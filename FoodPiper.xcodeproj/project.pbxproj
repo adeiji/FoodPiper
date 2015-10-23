@@ -71,6 +71,7 @@
 		080B68DC18D10E47DA2ED8EB /* Pods-FoodPiper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.release.xcconfig"; sourceTree = "<group>"; };
 		5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPiper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
+		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A37B571BD8103900DD5DAE /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F4A37B5A1BD8117000DD5DAE /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.h"; sourceTree = "<group>"; };
 		F4A37B5B1BD8117000DD5DAE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.m"; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		F4C85F651BD9BF7F009F3B55 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F4C85F671BD9C6DA009F3B55 /* libParse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParse.a; path = "Pods/../build/Debug-iphoneos/libParse.a"; sourceTree = "<group>"; };
 		F4C85F691BD9C6F1009F3B55 /* libParseFacebookUtilsV4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParseFacebookUtilsV4.a; path = "Pods/../build/Debug-iphoneos/libParseFacebookUtilsV4.a"; sourceTree = "<group>"; };
-		F4C85F6C1BD9D60C009F3B55 /* FoodPiper+Bridging+Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodPiper+Bridging+Header.h"; sourceTree = "<group>"; };
 		F4C85F6D1BD9D6FB009F3B55 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		F4C85F6F1BD9EE71009F3B55 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FoodPiper.a"; path = "Pods/../build/Release-iphoneos/libPods-FoodPiper.a"; sourceTree = "<group>"; };
 		F4C85F711BD9EE84009F3B55 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Release-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
@@ -318,6 +318,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */,
 				F4C85F631BD9BF69009F3B55 /* Networking */,
 				F4C85F4F1BD9BBC4009F3B55 /* Screen Handling */,
 				F4C85F4B1BD9BB59009F3B55 /* Open Source Classes */,
@@ -380,7 +381,6 @@
 			children = (
 				F4CBC3721BD1EAF600FEBE36 /* APIHandler.h */,
 				F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */,
-				F4C85F6C1BD9D60C009F3B55 /* FoodPiper+Bridging+Header.h */,
 			);
 			name = "API Handler";
 			sourceTree = "<group>";
@@ -756,6 +756,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Briding-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -797,6 +798,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Briding-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -838,7 +840,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper+Bridging+Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "arm64 armv7s";
 			};
@@ -879,7 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper+Bridging+Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Release;
