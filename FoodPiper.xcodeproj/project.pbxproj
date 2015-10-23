@@ -13,6 +13,17 @@
 		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F431BD9B948009F3B55 /* DEUserManager.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F461BD9BAA5009F3B55 /* DECreateAccountView.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F491BD9BB37009F3B55 /* DEAddProfileImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F4D1BD9BB7A009F3B55 /* TextFieldValidator.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F511BD9BBDC009F3B55 /* DEScreenManager.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F561BD9BCAB009F3B55 /* DEAnimationManager.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F5D1BD9BEE7009F3B55 /* HPStyleKit.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F611BD9BF34009F3B55 /* DESyncManager.m */; settings = {ASSET_TAGS = (); }; };
+		F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F651BD9BF7F009F3B55 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */; };
 		F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3371BD182BB00FEBE36 /* ViewController.swift */; };
 		F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC3391BD182BB00FEBE36 /* Main.storyboard */; };
@@ -65,6 +76,30 @@
 		F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantsView.xib; sourceTree = "<group>"; };
 		F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIHandler.h; sourceTree = "<group>"; };
 		F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIHandler.m; sourceTree = "<group>"; };
+		F4C85F3C1BD9B918009F3B55 /* DELoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DELoginView.h; sourceTree = "<group>"; };
+		F4C85F3D1BD9B918009F3B55 /* DELoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DELoginView.m; sourceTree = "<group>"; };
+		F4C85F3E1BD9B918009F3B55 /* DELoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DELoginViewController.h; sourceTree = "<group>"; };
+		F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DELoginViewController.m; sourceTree = "<group>"; };
+		F4C85F421BD9B948009F3B55 /* DEUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEUserManager.h; sourceTree = "<group>"; };
+		F4C85F431BD9B948009F3B55 /* DEUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEUserManager.m; sourceTree = "<group>"; };
+		F4C85F451BD9BAA5009F3B55 /* DECreateAccountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DECreateAccountView.h; sourceTree = "<group>"; };
+		F4C85F461BD9BAA5009F3B55 /* DECreateAccountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DECreateAccountView.m; sourceTree = "<group>"; };
+		F4C85F481BD9BB37009F3B55 /* DEAddProfileImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEAddProfileImageViewController.h; sourceTree = "<group>"; };
+		F4C85F491BD9BB37009F3B55 /* DEAddProfileImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEAddProfileImageViewController.m; sourceTree = "<group>"; };
+		F4C85F4C1BD9BB7A009F3B55 /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
+		F4C85F4D1BD9BB7A009F3B55 /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
+		F4C85F501BD9BBDC009F3B55 /* DEScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEScreenManager.h; sourceTree = "<group>"; };
+		F4C85F511BD9BBDC009F3B55 /* DEScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEScreenManager.m; sourceTree = "<group>"; };
+		F4C85F551BD9BCAB009F3B55 /* DEAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEAnimationManager.h; sourceTree = "<group>"; };
+		F4C85F561BD9BCAB009F3B55 /* DEAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEAnimationManager.m; sourceTree = "<group>"; };
+		F4C85F5C1BD9BEE7009F3B55 /* HPStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPStyleKit.h; sourceTree = "<group>"; };
+		F4C85F5D1BD9BEE7009F3B55 /* HPStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPStyleKit.m; sourceTree = "<group>"; };
+		F4C85F601BD9BF34009F3B55 /* DESyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESyncManager.h; sourceTree = "<group>"; };
+		F4C85F611BD9BF34009F3B55 /* DESyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESyncManager.m; sourceTree = "<group>"; };
+		F4C85F641BD9BF7F009F3B55 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F4C85F651BD9BF7F009F3B55 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F4C85F671BD9C6DA009F3B55 /* libParse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParse.a; path = "Pods/../build/Debug-iphoneos/libParse.a"; sourceTree = "<group>"; };
+		F4C85F691BD9C6F1009F3B55 /* libParseFacebookUtilsV4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParseFacebookUtilsV4.a; path = "Pods/../build/Debug-iphoneos/libParseFacebookUtilsV4.a"; sourceTree = "<group>"; };
 		F4CBC3321BD182BB00FEBE36 /* FoodPiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CBC3371BD182BB00FEBE36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +171,8 @@
 		AF0BDC311F6CB9ABD37C0858 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4C85F691BD9C6F1009F3B55 /* libParseFacebookUtilsV4.a */,
+				F4C85F671BD9C6DA009F3B55 /* libParse.a */,
 				5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */,
 			);
 			name = Frameworks;
@@ -153,6 +190,7 @@
 		F4A37B5D1BD8274000DD5DAE /* Restaurant Workflow */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC5AF71BD7FC9400109C61 /* Restaurant */,
 				F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */,
 				F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */,
 			);
@@ -173,6 +211,72 @@
 				F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */,
 			);
 			name = FourSquare;
+			sourceTree = "<group>";
+		};
+		F4C85F341BD9B8B0009F3B55 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F421BD9B948009F3B55 /* DEUserManager.h */,
+				F4C85F431BD9B948009F3B55 /* DEUserManager.m */,
+				F4C85F3B1BD9B8EF009F3B55 /* Login */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		F4C85F3B1BD9B8EF009F3B55 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F481BD9BB37009F3B55 /* DEAddProfileImageViewController.h */,
+				F4C85F491BD9BB37009F3B55 /* DEAddProfileImageViewController.m */,
+				F4C85F451BD9BAA5009F3B55 /* DECreateAccountView.h */,
+				F4C85F461BD9BAA5009F3B55 /* DECreateAccountView.m */,
+				F4C85F3C1BD9B918009F3B55 /* DELoginView.h */,
+				F4C85F3D1BD9B918009F3B55 /* DELoginView.m */,
+				F4C85F3E1BD9B918009F3B55 /* DELoginViewController.h */,
+				F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */,
+				F4CBC3391BD182BB00FEBE36 /* Main.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		F4C85F4B1BD9BB59009F3B55 /* Open Source Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F4C1BD9BB7A009F3B55 /* TextFieldValidator.h */,
+				F4C85F4D1BD9BB7A009F3B55 /* TextFieldValidator.m */,
+			);
+			name = "Open Source Classes";
+			sourceTree = "<group>";
+		};
+		F4C85F4F1BD9BBC4009F3B55 /* Screen Handling */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F5C1BD9BEE7009F3B55 /* HPStyleKit.h */,
+				F4C85F5D1BD9BEE7009F3B55 /* HPStyleKit.m */,
+				F4C85F551BD9BCAB009F3B55 /* DEAnimationManager.h */,
+				F4C85F561BD9BCAB009F3B55 /* DEAnimationManager.m */,
+				F4C85F501BD9BBDC009F3B55 /* DEScreenManager.h */,
+				F4C85F511BD9BBDC009F3B55 /* DEScreenManager.m */,
+			);
+			name = "Screen Handling";
+			sourceTree = "<group>";
+		};
+		F4C85F5F1BD9BF22009F3B55 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F601BD9BF34009F3B55 /* DESyncManager.h */,
+				F4C85F611BD9BF34009F3B55 /* DESyncManager.m */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		F4C85F631BD9BF69009F3B55 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F4C85F641BD9BF7F009F3B55 /* Reachability.h */,
+				F4C85F651BD9BF7F009F3B55 /* Reachability.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		F4CBC3291BD182BB00FEBE36 = {
@@ -201,15 +305,17 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4C85F631BD9BF69009F3B55 /* Networking */,
+				F4C85F4F1BD9BBC4009F3B55 /* Screen Handling */,
+				F4C85F4B1BD9BB59009F3B55 /* Open Source Classes */,
+				F4C85F341BD9B8B0009F3B55 /* Users */,
 				F4A37B5D1BD8274000DD5DAE /* Restaurant Workflow */,
 				F4A37B591BD8114500DD5DAE /* Constants */,
-				F4CC5AF71BD7FC9400109C61 /* Restaurant */,
 				F4CC5AF21BD5938700109C61 /* Custom View Classes */,
 				F4CC5ADA1BD58AE100109C61 /* Resources */,
 				F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */,
 				F4CBC3631BD182E800FEBE36 /* APIs */,
 				F4CBC3371BD182BB00FEBE36 /* ViewController.swift */,
-				F4CBC3391BD182BB00FEBE36 /* Main.storyboard */,
 				F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */,
 				F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */,
 				F4CBC3411BD182BB00FEBE36 /* Info.plist */,
@@ -238,6 +344,7 @@
 		F4CBC3631BD182E800FEBE36 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				F4C85F5F1BD9BF22009F3B55 /* Parse */,
 				F4C85F301BD87A46009F3B55 /* FourSquare */,
 				F4C85F211BD85092009F3B55 /* Yelp */,
 				F4CBC36C1BD1C00700FEBE36 /* Location Handling */,
@@ -326,6 +433,7 @@
 				F4CBC32F1BD182BB00FEBE36 /* Frameworks */,
 				F4CBC3301BD182BB00FEBE36 /* Resources */,
 				B424F0192B2ED054B6BDF754 /* Copy Pods Resources */,
+				4413C7B82BF2489C94C3BE4B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -455,6 +563,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4413C7B82BF2489C94C3BE4B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A190F7894567D1B3C08DCE16 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,15 +615,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */,
+				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
+				F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */,
+				F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
+				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
+				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,
 				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,
+				F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */,
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
 				F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */,
+				F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */,
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
+				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
+				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
+				F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,8 +800,15 @@
 				);
 				INFOPLIST_FILE = FoodPiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
@@ -699,8 +840,15 @@
 				);
 				INFOPLIST_FILE = FoodPiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
