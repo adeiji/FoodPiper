@@ -17,7 +17,7 @@ NSString *const VIEW_RESTAURANTS_VIEW = @"ViewRestaurantsView";
 
 @end
 
-#define POST_HEIGHT 268
+#define POST_HEIGHT 251
 #define POST_WIDTH 140
 #define IPHONE_DEVICE_WIDTH 320
 #define TOP_MARGIN 20
@@ -582,14 +582,12 @@ struct TopMargin {
 - (CGFloat) getEventImageHeightDifferenceOfImage : (Restaurant *) restaurant
                                          AndView : (DEViewRestaurantsView *) view
 {
-    [restaurant setImage:[UIImage imageNamed:@"yoda.png"]];
     if (restaurant.image)
     {
-        CGFloat height = restaurant.image.size.height;
-        CGFloat width = restaurant.image.size.width;
+        CGFloat height = [restaurant.imageHeight doubleValue];
+        CGFloat width = [restaurant.imageWidth doubleValue];
         
         return [self resizeViewEventsImageView:view ImageWidth:width ImageHeight:height];
-
     }
     else {
         CGFloat screenSizeRelativeToiPhone5Width = [[UIScreen mainScreen]  bounds].size.width / 320;

@@ -13,6 +13,7 @@
 		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */; settings = {ASSET_TAGS = (); }; };
 		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; settings = {ASSET_TAGS = (); }; };
 		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; settings = {ASSET_TAGS = (); }; };
 		F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -81,6 +82,7 @@
 		F4A37B5B1BD8117000DD5DAE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.m"; sourceTree = "<group>"; };
 		F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ViewRestaurants.storyboard; sourceTree = "<group>"; };
 		F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantsView.xib; sourceTree = "<group>"; };
+		F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewIndividualRestaurant.xib; sourceTree = "<group>"; };
 		F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIHandler.h; sourceTree = "<group>"; };
 		F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIHandler.m; sourceTree = "<group>"; };
 		F4C85F3C1BD9B918009F3B55 /* DELoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DELoginView.h; sourceTree = "<group>"; };
@@ -223,12 +225,21 @@
 		F4A37B5D1BD8274000DD5DAE /* Restaurant Workflow */ = {
 			isa = PBXGroup;
 			children = (
+				F4BBFF9E1BDBF88B0056BF40 /* UI Elements */,
 				F4EA28411BDA8EE300079658 /* VIew and View Controller */,
 				F4CC5AF71BD7FC9400109C61 /* Restaurant */,
-				F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */,
-				F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */,
 			);
 			name = "Restaurant Workflow";
+			sourceTree = "<group>";
+		};
+		F4BBFF9E1BDBF88B0056BF40 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */,
+				F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */,
+				F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */,
+			);
+			name = "UI Elements";
 			sourceTree = "<group>";
 		};
 		F4C85F211BD85092009F3B55 /* Yelp */ = {
@@ -580,6 +591,7 @@
 				F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */,
 				F4CC5AEA1BD58B0F00109C61 /* JosefinSans-Italic.ttf in Resources */,
 				F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
+				F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */,
 				F4CC5AEE1BD58B0F00109C61 /* JosefinSans-SemiBold.ttf in Resources */,
 				F4CC5AE91BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf in Resources */,
 				F4CBC33D1BD182BB00FEBE36 /* Assets.xcassets in Resources */,

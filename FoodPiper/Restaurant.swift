@@ -29,8 +29,11 @@ class Restaurant: NSObject {
     var dinner:AnyObject!
     var hours:[String:String]!
     var caters:AnyObject!
-    var factualId:NSString!
+    var factualId:String!
     var image:UIImage!
     var image_url:NSURL!
-    var distanceFromUser:NSString!
+    var imageHeight:String!
+    var imageWidth:String!
+    var distanceFromUser:String!
+    
 }

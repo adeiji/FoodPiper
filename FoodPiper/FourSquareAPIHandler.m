@@ -41,7 +41,7 @@ static const NSString *GOOGLE_API_RESULTS = @"results";
                 {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         // Make sure that we call this method on the main thread so that it updates properly as supposed to
-                        callback(photo_url, foursquareId);
+                        callback(photo_url, foursquareId, photo_width, photo_height);
                     });
                 }
             }

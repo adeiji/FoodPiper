@@ -65,7 +65,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
             [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
             NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
         }
-        
+
         [self displayViewRestaurantsScreen];
     }
     else {
@@ -75,20 +75,30 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
         {
             // Get the foursquareId and grab the image from Foursquare with this Id
             NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
-            [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId) {
-                static int currentObjectCount = 1;
-                // Get the image from foursquare and store this image for the corresponding restaurant
-                NSLog(@"Received Foursquare entry with ID %@ and storing the foursquare Id", foursquareId);
-                NSString *factualId = [queryResult.rows[0] stringValueForName:FACTUAL_ID];
-                // Get the corresponding restaurant with this Factual Id received from our request and set its image to the image received from Foursquare
-                Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
-                [restaurant setImage_url:[NSURL URLWithString:image_url]];
-                NSLog(@"Currently getting the Foursquare entry for object #%i", currentObjectCount);
-                if ([request.requestId doubleValue] == _rowCount + 1) {
-                }
-                
-                currentObjectCount ++;
-            }];
+//            [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId, NSString *photoWidth, NSString *photoHeight) {
+//                static int currentObjectCount = 1;
+//                // Get the image from foursquare and store this image for the corresponding restaurant
+//                NSLog(@"Received Foursquare entry with ID %@ and storing the foursquare Id", foursquareId);
+//                NSString *factualId = [queryResult.rows[0] stringValueForName:FACTUAL_ID];
+//                // Get the corresponding restaurant with this Factual Id received from our request and set its image to the image received from Foursquare
+//                Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
+//                [restaurant setImage_url:[NSURL URLWithString:image_url]];
+//                [restaurant setImageWidth:photoWidth];
+//                [restaurant setImageHeight:photoHeight];
+//                NSLog(@"Currently getting the Foursquare entry for object #%i", currentObjectCount);
+//                if ([request.requestId doubleValue] == _rowCount + 1) {
+//                    
+//                }
+//                
+//                currentObjectCount ++;
+//            }];
+            
+            static int currentObjectCount = 1;
+            
+            if (currentObjectCount == _rowCount)
+            {
+                [self displayViewRestaurantsScreen];
+            }
         }
         
     }

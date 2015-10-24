@@ -42,9 +42,6 @@
 @property BOOL now;
 @property BOOL isNewProcess;
 
-- (void) displayPost : (NSNotification *) notification
-           TopMargin : (CGFloat) topMargin
-           PostArray : (NSArray *) postArray;
 
 - (IBAction)sortTrending:(id)sender;
 - (IBAction)sortNearMe:(id)sender;

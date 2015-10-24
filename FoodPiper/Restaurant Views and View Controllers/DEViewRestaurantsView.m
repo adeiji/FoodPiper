@@ -13,6 +13,7 @@
 @implementation DEViewRestaurantsView
 
 #define OVERLAY_VIEW 1
+NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -163,7 +164,12 @@
 // When the user taps this event it will take them to a screen to view all the details of the event.
 - (void) displayEventDetails : (id) sender {
 
-    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    UINavigationController *navController = (UINavigationController *) [[appDelegate window] rootViewController];
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed:VIEW_INDIVIDUAL_RESTAURANT owner:self options:nil] firstObject];
+    UIViewController *viewController = [UIViewController new];
+    [viewController setView:view];
+    [navController pushViewController:viewController animated:YES];
 }
 
 - (void) showEventEditing : (BOOL) editing {
