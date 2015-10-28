@@ -78,15 +78,7 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
     [self addGestureRecognizer:tapGestureRecognizer];
 }
 
-- (NSString *) convertArrayOfStringsToTextUsingArray : (NSArray *) array {
-    NSMutableString *arrayToString = [NSMutableString new];
-    
-    for (NSString *text in array) {
-        [arrayToString appendString:[NSString stringWithFormat:@"%@,", text]];
-    }
-    
-    return arrayToString;
-}
+
 
 - (void) renderViewWithRestaurant : (Restaurant *) myRestaurant
                         ShowBlank : (BOOL) showBlank
@@ -106,7 +98,7 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
     self.lblCost.text = priceString;
     [self displayDistanceToLocationOfRestaurant:restaurant];
     self.lblTitle.text = restaurant.name;
-    self.lblSubtitle.text = [self convertArrayOfStringsToTextUsingArray:restaurant.cuisine];
+    self.lblSubtitle.text = [restaurant getCuisine];
     [self addGestureRecognizers];
     
     if (showBlank)

@@ -105,10 +105,8 @@ struct TopMargin {
     */
     
     [self.view setBackgroundColor:[UIColor clearColor]];
-    [self.navigationController setNavigationBarHidden:YES];
     [self setUpSearchBar];
     [self removeAllPostFromScreen];
-
 
 }
 

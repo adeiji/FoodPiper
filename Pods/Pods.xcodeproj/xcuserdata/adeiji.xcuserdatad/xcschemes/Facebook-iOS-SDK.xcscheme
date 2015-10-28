@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '42EF4EA4B689DB8155092B0A'
+               BlueprintIdentifier = '2B6490E272DAFF1EE17246AF'
                BlueprintName = 'Facebook-iOS-SDK'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libFacebook-iOS-SDK.a'>

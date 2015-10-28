@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ViewIndividualRestaurantView: UIView {
+class ViewIndividualRestaurantView: UIScrollView {
 
+    @IBOutlet weak var txtCuisine: UILabel!
+    @IBOutlet weak var txtAddress: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
+    @IBOutlet weak var imageView: UIImageView!
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

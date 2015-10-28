@@ -84,6 +84,7 @@
 		F4A37B5B1BD8117000DD5DAE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = "../../../whatsgoingon/mobile-app/whatsgoinon/whatsgoinon/Constants.m"; sourceTree = "<group>"; };
 		F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ViewRestaurants.storyboard; sourceTree = "<group>"; };
 		F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantsView.xib; sourceTree = "<group>"; };
+		F4A7318D1BE15BBC007F4722 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewIndividualRestaurant.xib; sourceTree = "<group>"; };
 		F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantViewController.swift; sourceTree = "<group>"; };
 		F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantView.swift; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 		AF0BDC311F6CB9ABD37C0858 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4A7318D1BE15BBC007F4722 /* libFacebook-iOS-SDK.a */,
 				F4C85F711BD9EE84009F3B55 /* libFacebook-iOS-SDK.a */,
 				F4C85F6F1BD9EE71009F3B55 /* libPods-FoodPiper.a */,
 				F4C85F6D1BD9D6FB009F3B55 /* libFacebook-iOS-SDK.a */,
@@ -873,11 +875,7 @@
 				);
 				INFOPLIST_FILE = FoodPiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
@@ -911,11 +909,7 @@
 				);
 				INFOPLIST_FILE = FoodPiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;

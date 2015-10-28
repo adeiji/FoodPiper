@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Restaurant: NSObject {
+public class Restaurant: NSObject {
 
     var name:String!
     var rating:AnyObject!
@@ -36,4 +36,28 @@ class Restaurant: NSObject {
     var imageWidth:NSNumber!
     var distanceFromUser:String!
     
+    func getCuisine () -> String
+    {
+        var arrayString = String()
+        
+        if cuisine != nil
+        {
+            for text in cuisine {
+                if (text != cuisine.last)
+                {
+                    arrayString = arrayString + text + ", "
+                }
+                else {
+                    arrayString = arrayString + text;
+                }
+            }
+            
+            arrayString = arrayString.stringByReplacingOccurrencesOfString("\"", withString: "")
+            
+            return arrayString
+        }
+        
+        return ""
+    }
 }
+
