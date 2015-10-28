@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewIndividualRestaurantViewController: ViewController, UINavigationControllerDelegate {
+class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnEmail: UIButton!
@@ -74,17 +74,6 @@ class ViewIndividualRestaurantViewController: ViewController, UINavigationContro
         }
         
     }
-    
-    func setupAndAddScrollView() -> UIScrollView {
-        let scrollView = UIScrollView.init();
-        self.view.addSubview(scrollView);
-        
-        scrollView.frame = self.view.bounds;
-        scrollView.backgroundColor = UIColor.greenColor();
-
-        
-        return scrollView;
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -96,7 +85,7 @@ class ViewIndividualRestaurantViewController: ViewController, UINavigationContro
         if (MFMailComposeViewController .canSendMail() == true) {
             if restaurant.email != nil {
                 let composeViewController = MFMailComposeViewController()
-                composeViewController.delegate = self
+                composeViewController.mailComposeDelegate = self
                 composeViewController.setToRecipients([restaurant.email])
                 composeViewController.setSubject("Message from Food Piper User")
                 self.presentViewController(composeViewController, animated: true, completion: nil)
@@ -104,6 +93,28 @@ class ViewIndividualRestaurantViewController: ViewController, UINavigationContro
         }
 
     }
+
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        
+        switch result.rawValue {
+        case MFMailComposeResultCancelled.rawValue:
+            NSLog("Mail Cancelled")
+        case MFMailComposeResultFailed.rawValue:
+            NSLog("Mail Failed to Send")
+        case MFMailComposeResultSaved.rawValue:
+            NSLog("Mail Saved")
+        case MFMailComposeResultSent.rawValue:
+            NSLog("Mail Sent")
+        default:
+            break
+        }
+        
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+
 
     
     /*
