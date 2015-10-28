@@ -5,3 +5,4 @@
 #import "APIHandler.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <GoogleMaps/GoogleMaps.h>

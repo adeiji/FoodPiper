@@ -13,8 +13,8 @@
 @implementation DEViewRestaurantsView
 
 #define OVERLAY_VIEW 1
+NSString *const VIEW_RESTAURANT_STORYBOARD = @"ViewRestaurants";
 NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -149,15 +149,14 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
 
 - (void) loadImage
 {
-    self.imgMainImageView.image = _restaurant.image;
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
-//        _restaurant.image = image;
-//        // Load the images on the main thread asynchronously
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            self.imgMainImageView.image = _restaurant.image;
-//        });
-//    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
+        _restaurant.image = image;
+        // Load the images on the main thread asynchronously
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imgMainImageView.image = _restaurant.image;
+        });
+    });
 }
 
 
@@ -166,9 +165,8 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
 
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     UINavigationController *navController = (UINavigationController *) [[appDelegate window] rootViewController];
-    UIView *view = [[[NSBundle mainBundle] loadNibNamed:VIEW_INDIVIDUAL_RESTAURANT owner:self options:nil] firstObject];
-    UIViewController *viewController = [UIViewController new];
-    [viewController setView:view];
+    ViewIndividualRestaurantViewController *viewController = [[ViewIndividualRestaurantViewController alloc] initWithNibName:VIEW_INDIVIDUAL_RESTAURANT bundle:nil];
+    [viewController setRestaurant:_restaurant];
     [navController pushViewController:viewController animated:YES];
 }
 

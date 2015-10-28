@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("RACHAIXoHN8KP5hQ2e3gg8MMWZxKTM6NAXkPnEbP",
             clientKey: "nEnEtiyFBeRXP3sD5XwX62X1Bhr6xsujEEOLV16K")
         PFFacebookUtils.initializeFacebook();
+        GMSServices.provideAPIKey("AIzaSyCrka4-c9-yUe1AIDmNJit3VLG9KFEQFuA")
+        
         return true
     }
 

@@ -33,8 +33,8 @@ static const NSString *GOOGLE_API_RESULTS = @"results";
                 
                 NSString *photo_url_prefix = photo_details[@"prefix"];
                 NSString *photo_url_suffix = photo_details[@"suffix"];
-                NSString *photo_width = photo_details[@"width"];
-                NSString *photo_height = photo_details[@"height"];
+                NSNumber *photo_width = photo_details[@"width"];
+                NSNumber *photo_height = photo_details[@"height"];
                 NSString *photo_url = [NSString stringWithFormat:@"%@%@x%@%@", photo_url_prefix, photo_width, photo_height, photo_url_suffix];
                 
                 if (![jsonData[@"status"] isEqualToString:@"ZERO_RESULTS"])
