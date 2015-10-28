@@ -535,6 +535,7 @@ struct TopMargin {
 //    [DEPost getPostFromPFObject:obj];
     
     DEViewRestaurantsView *viewRestaurantsView = [[[NSBundle mainBundle] loadNibNamed:VIEW_RESTAURANTS_VIEW owner:self options:nil] objectAtIndex:0];
+    [viewRestaurantsView setCurrentLocation:_currentLocation];
     [viewRestaurantsView setSearchBar:_searchBar];
     [viewRestaurantsView renderViewWithRestaurant:restaurant
                                    ShowBlank:showBlank];

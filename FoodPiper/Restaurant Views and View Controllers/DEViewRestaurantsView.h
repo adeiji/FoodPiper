@@ -18,10 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress;
 @property (weak, nonatomic) IBOutlet UILabel *lblDistance;
 @property (weak, nonatomic) IBOutlet UILabel *lblSubtitle;
-@property (weak, nonatomic) IBOutlet UILabel *lblNumGoing;
-@property (weak, nonatomic) IBOutlet UILabel *lblViewCount;
 @property (weak, nonatomic) IBOutlet UILabel *lblCost;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
+@property (strong, nonatomic) CLLocation *currentLocation;
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property BOOL isImageLoaded;
 @property BOOL rotateImage;

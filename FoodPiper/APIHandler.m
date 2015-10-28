@@ -31,9 +31,10 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     queryObject.includeRowCount = true;
     CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
     
-    [queryObject setGeoFilter:coordinate radiusInMeters:100];
-    [queryObject setLimit:10];
+    [queryObject setGeoFilter:coordinate radiusInMeters:500];
+    [queryObject setLimit:20];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
+    _currentLocation = currentLocation;
 
 }
 
@@ -116,6 +117,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
         DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
         
         [viewController setRestaurants:[self convertRestaurantsDictionaryToArray]];
+        [viewController setCurrentLocation:_currentLocation];
         [navController pushViewController:viewController animated:YES];
     });
 }

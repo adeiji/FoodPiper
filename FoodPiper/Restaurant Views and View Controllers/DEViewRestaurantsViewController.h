@@ -37,6 +37,7 @@
 @property (strong, nonatomic) NSArray *restaurants;
 @property (strong, nonatomic) NSMutableArray *restaurantsCopy;
 @property (strong, nonatomic) NSMutableArray *searchPosts;
+@property (strong, nonatomic) CLLocation *currentLocation;
 @property BOOL shouldNotDisplayPosts;
 @property BOOL overlayDisplayed;
 @property BOOL now;

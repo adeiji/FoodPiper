@@ -46,11 +46,8 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
         // Perform task here
         CLLocationDegrees latitude = restaurant.location.coordinate.latitude;
         CLLocationDegrees longitude = restaurant.location.coordinate.longitude;
-        LocationHandler *locHandler = [LocationHandler new];
-        PFGeoPoint *location =  [PFGeoPoint geoPointWithLocation:locHandler.currentLocation];
-        CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
         CLLocation *eventLocation = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
-        CLLocationDistance distance = [currentLocation distanceFromLocation:eventLocation];
+        CLLocationDistance distance = [_currentLocation distanceFromLocation:eventLocation];
         NSLog(@"Distance to event: %f", distance);
         // Check to see if the event is currently going on, or finished within the hour
         double miles = distance / 1609.34;
@@ -107,7 +104,7 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
     }
     
     self.lblCost.text = priceString;
-    self.lblDistance.text = restaurant.distanceFromUser;
+    [self displayDistanceToLocationOfRestaurant:restaurant];
     self.lblTitle.text = restaurant.name;
     self.lblSubtitle.text = [self convertArrayOfStringsToTextUsingArray:restaurant.cuisine];
     [self addGestureRecognizers];
