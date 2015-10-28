@@ -44,15 +44,17 @@ class ViewIndividualRestaurantViewController: ViewController {
         // Do any additional setup after loading the view.
         let scrollView = setupAndAddScrollView();
         scrollView.addSubview(restaurantView);
+        scrollView.contentSize = CGSizeMake(self.view.frame.width, restaurantView.frame.height);
     }
     
     func setupAndAddScrollView() -> UIScrollView {
         let scrollView = UIScrollView.init();
         self.view.addSubview(scrollView);
-        let margins = self.view.layoutMarginsGuide;
-        scrollView.frame = self.view.frame;
-        scrollView.contentSize = restaurantView.frame.size;
-        scrollView.scrollEnabled = true;
+        
+        scrollView.frame = self.view.bounds;
+        scrollView.backgroundColor = UIColor.greenColor();
+
+        
         return scrollView;
     }
 
