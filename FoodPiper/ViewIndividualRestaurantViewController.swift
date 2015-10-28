@@ -12,6 +12,8 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnEmail: UIButton!
+    @IBOutlet weak var btnPhone: UIButton!
+    
     let VIEW_INDIVIDUAL_RESTAURANT = "ViewIndividualRestaurant";
     var restaurant:Restaurant!
     var restaurantView:ViewIndividualRestaurantView!
@@ -72,6 +74,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         if restaurant.email == nil {
             btnEmail.enabled = false
         }
+        if restaurant.phoneNumber == nil {
+            btnPhone.enabled = false
+        }
         
     }
 
@@ -80,6 +85,11 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+    
+    Check to see if the device can send emails and then display the Email View Controller
+    
+    */
     @IBAction func openEmailViewController(sender: UIButton) {
         
         if (MFMailComposeViewController .canSendMail() == true) {
@@ -94,6 +104,22 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
     }
 
+    /*
+    
+    Check tos ee if the device can make phone calls, and if yes than call the number
+    
+    */
+    @IBAction func openPhoneApp(sender: UIButton) {
+        var phonenumberUrlString = "tel://" + restaurant.phoneNumber;
+        // We can not create a URL with spaces, it will fail and than try to unwrap the nil value and generate an error
+        phonenumberUrlString = phonenumberUrlString.stringByReplacingOccurrencesOfString(" ", withString: "")
+        let phoneNumberUrl = NSURL(string: phonenumberUrlString)!
+        let application = UIApplication.sharedApplication();
+        
+        if application.canOpenURL(phoneNumberUrl) {
+            UIApplication.sharedApplication().openURL(phoneNumberUrl)
+        }
+    }
     
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         

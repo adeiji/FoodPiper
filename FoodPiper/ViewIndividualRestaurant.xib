@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="bottomConstraint" destination="V2h-E7-j8k" id="w2u-iK-C4Y"/>
                 <outlet property="btnEmail" destination="msj-cA-h8F" id="vl8-Kg-T11"/>
+                <outlet property="btnPhone" destination="FEh-Es-v55" id="PC0-7z-dX2"/>
                 <outlet property="view" destination="KO0-BB-kJI" id="diS-Rr-qQo"/>
             </connections>
         </placeholder>
@@ -64,6 +65,9 @@
                                     <include reference="yFk-hf-34c"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="openPhoneApp:" destination="-1" eventType="touchUpInside" id="EQK-Fc-xpi"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-yj-aQE">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
