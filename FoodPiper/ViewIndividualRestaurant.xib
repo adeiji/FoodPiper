@@ -139,6 +139,9 @@
                                     <include reference="rUF-2d-iA5"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="getDirections:" destination="-1" eventType="touchUpInside" id="W46-4V-Mer"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsW-i3-uaW">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>

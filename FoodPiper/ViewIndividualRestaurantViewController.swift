@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate {
+class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate, UIActionSheetDelegate {
 
+    let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
+    let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
+    
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnEmail: UIButton!
     @IBOutlet weak var btnPhone: UIButton!
@@ -17,6 +20,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     let VIEW_INDIVIDUAL_RESTAURANT = "ViewIndividualRestaurant";
     var restaurant:Restaurant!
     var restaurantView:ViewIndividualRestaurantView!
+    var currentLocation:CLLocation!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle:nibBundleOrNil);
@@ -103,6 +107,53 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         }
 
     }
+    
+    @IBAction func getDirections (sender: UIButton) {
+        
+        let latitude:String = "\(restaurant.location.coordinate.latitude)"
+        let longitude:String = "\(restaurant.location.coordinate.longitude)"
+        
+        let alertController = UIAlertController(title: "Directions", message: "Get Directions to Restaurant", preferredStyle: .ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (_) in }
+        
+        let googleMapsAction = UIAlertAction(title: "Google Maps", style: UIAlertActionStyle.Default) { (action) -> Void in
+            // Open Google Maps with the Current Location
+            let urlString = String(format: self.GOOGLE_MAPS_APP_URL, self.restaurant.address.stringByReplacingOccurrencesOfString(" ", withString: "+"), latitude, longitude)
+            let googleMapsUrl = NSURL(string: urlString)!
+            
+            if UIApplication.sharedApplication().canOpenURL(googleMapsUrl) {
+                UIApplication.sharedApplication().openURL(googleMapsUrl)
+            }
+        }
+        
+        alertController.addAction(googleMapsAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
+//    - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+//    {
+//    if (buttonIndex == 0)
+//    {
+//    NSString *urlString = [NSString stringWithFormat:GOOGLE_MAPS_APP_URL, [_post.address stringByReplacingOccurrencesOfString:@" " withString:@"+"], _post.location.longitude, _post.location.latitude ];
+//    if ([[UIApplication sharedApplication] canOpenURL:
+//    [NSURL URLWithString:@"comgooglemaps://"]]) {
+//    [[UIApplication sharedApplication] openURL:
+//    [NSURL URLWithString:urlString]];
+//    } else {
+//    NSLog(@"Can't use comgooglemaps://");
+//    }
+//    }
+//    else if (buttonIndex == 1)
+//    {
+//    PFGeoPoint *currentLocation = [[DELocationManager sharedManager] currentLocation];
+//    NSString *urlString = [NSString stringWithFormat:APPLE_MAPS_APP_URL, [_post.address stringByReplacingOccurrencesOfString:@" " withString:@"+"], currentLocation.latitude, currentLocation.longitude];
+//    
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+//    }
+//    }
+
 
     /*
     

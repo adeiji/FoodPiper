@@ -155,6 +155,7 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     UINavigationController *navController = (UINavigationController *) [[appDelegate window] rootViewController];
     ViewIndividualRestaurantViewController *viewController = [[ViewIndividualRestaurantViewController alloc] initWithNibName:VIEW_INDIVIDUAL_RESTAURANT bundle:nil];
+    viewController.currentLocation = _currentLocation;
     [viewController setRestaurant:_restaurant];
     [navController pushViewController:viewController animated:YES];
 }
