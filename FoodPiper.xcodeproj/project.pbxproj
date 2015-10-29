@@ -13,6 +13,7 @@
 		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
 		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -85,6 +86,7 @@
 		F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ViewRestaurants.storyboard; sourceTree = "<group>"; };
 		F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantsView.xib; sourceTree = "<group>"; };
 		F4A7318D1BE15BBC007F4722 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
+		F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantHours.xib; sourceTree = "<group>"; };
 		F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewIndividualRestaurant.xib; sourceTree = "<group>"; };
 		F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantViewController.swift; sourceTree = "<group>"; };
 		F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantView.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */,
 				F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */,
 				F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */,
+				F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				F4CC5AEC1BD58B0F00109C61 /* JosefinSans-LightItalic.ttf in Resources */,
 				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
 				F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */,
+				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
 				F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */,
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */,

@@ -18,7 +18,6 @@
                   FromView : (UIView *) superview;
 + (void) savedAnimationWithImage : (NSString *) imageName;
 + (void) animateView:(UIView *)view
-          WithInsets:(UIEdgeInsets)insets
         WithSelector:(SEL)selector;
 + (void) animateViewOut:(UIView *)view
              WithInsets:(UIEdgeInsets)insets;

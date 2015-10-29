@@ -12,6 +12,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
     let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
     let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
+    let HOURS_NIB = "ViewRestaurantHours"
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnEmail: UIButton!
@@ -108,13 +109,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
     }
     
-    @IBAction func getDirections (sender: UIButton) {
-        
+    func getGoogleMapsAction () -> UIAlertAction {
         let latitude:String = "\(restaurant.location.coordinate.latitude)"
         let longitude:String = "\(restaurant.location.coordinate.longitude)"
-        
-        let alertController = UIAlertController(title: "Directions", message: "Get Directions to Restaurant", preferredStyle: .ActionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (_) in }
         
         let googleMapsAction = UIAlertAction(title: "Google Maps", style: UIAlertActionStyle.Default) { (action) -> Void in
             // Open Google Maps with the Current Location
@@ -126,34 +123,50 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
             }
         }
         
+        return googleMapsAction
+
+    }
+    
+    @IBAction func viewRestaurantWebsite(sender: UIButton) {
+    
+        if UIApplication.sharedApplication().canOpenURL(restaurant.website)
+        {
+            UIApplication.sharedApplication().openURL(restaurant.website)
+        }
+    }
+    
+    func getAppleMapsAction () -> UIAlertAction {
+        
+        let latitude:String = "\(currentLocation.coordinate.latitude)"
+        let longitude:String = "\(currentLocation.coordinate.longitude)"
+        
+        let appleMapsAction = UIAlertAction(title: "Apple Maps", style: UIAlertActionStyle.Default) { (action) -> Void in
+            // Open Apple Maps with the Current Location
+            let urlString = String(format: self.APPLE_MAPS_APP_URL, self.restaurant.address.stringByReplacingOccurrencesOfString(" ", withString: "+"), latitude, longitude)
+            let appleMapsUrl = NSURL(string: urlString)!
+            
+            if UIApplication.sharedApplication().canOpenURL(appleMapsUrl) {
+                UIApplication.sharedApplication().openURL(appleMapsUrl)
+            }
+        }
+        
+        return appleMapsAction
+    }
+    
+    @IBAction func getDirections (sender: UIButton) {
+        
+        let alertController = UIAlertController(title: "Directions", message: "Get Directions to Restaurant", preferredStyle: .ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (_) in }
+        let googleMapsAction = getGoogleMapsAction()
+        let appleMapsAction = getAppleMapsAction()
+        
         alertController.addAction(googleMapsAction)
         alertController.addAction(cancelAction)
+        alertController.addAction(appleMapsAction)
+        
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    
-//    - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-//    {
-//    if (buttonIndex == 0)
-//    {
-//    NSString *urlString = [NSString stringWithFormat:GOOGLE_MAPS_APP_URL, [_post.address stringByReplacingOccurrencesOfString:@" " withString:@"+"], _post.location.longitude, _post.location.latitude ];
-//    if ([[UIApplication sharedApplication] canOpenURL:
-//    [NSURL URLWithString:@"comgooglemaps://"]]) {
-//    [[UIApplication sharedApplication] openURL:
-//    [NSURL URLWithString:urlString]];
-//    } else {
-//    NSLog(@"Can't use comgooglemaps://");
-//    }
-//    }
-//    else if (buttonIndex == 1)
-//    {
-//    PFGeoPoint *currentLocation = [[DELocationManager sharedManager] currentLocation];
-//    NSString *urlString = [NSString stringWithFormat:APPLE_MAPS_APP_URL, [_post.address stringByReplacingOccurrencesOfString:@" " withString:@"+"], currentLocation.latitude, currentLocation.longitude];
-//    
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-//    }
-//    }
-
 
     /*
     
@@ -191,8 +204,14 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         
     }
     
-
-
+    @IBAction func viewHours(sender: UIButton) {
+        
+        let view = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! UIView
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.addSubview(view);
+        DEAnimationManager.animateView(view, withSelector: nil);
+    }
+    
     
     /*
     // MARK: - Navigation

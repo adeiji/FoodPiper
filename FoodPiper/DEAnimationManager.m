@@ -72,11 +72,10 @@
 
 
 + (void) animateView:(UIView *)view
-          WithInsets:(UIEdgeInsets)insets
         WithSelector:(SEL)selector
 {
     CGRect screenSize = [[UIScreen mainScreen] bounds];
-    insets = UIEdgeInsetsMake(screenSize.size.height / 5, 30, screenSize.size.height / 5, 30);
+    UIEdgeInsets insets = UIEdgeInsetsMake(screenSize.size.height / 5, 30, screenSize.size.height / 5, 30);
     UIEdgeInsets startInsets = [self getCenter:insets WithView:view];
     
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
