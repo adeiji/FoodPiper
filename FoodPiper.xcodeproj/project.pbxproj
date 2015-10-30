@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
+		F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A06B1B1BDAF40A00825D74 /* yoda.png */; settings = {ASSET_TAGS = (); }; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
@@ -79,6 +80,7 @@
 		5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPiper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
 		F410A0521BE2D3AA00BA8FDB /* HoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
+		F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveStarRatingView.xib; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A06B1B1BDAF40A00825D74 /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yoda.png; path = ../../../../../../Desktop/Blog/yoda.png; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 				5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F475C3321BE2F0FE00E159F6 /* Piping */ = {
+			isa = PBXGroup;
+			children = (
+				F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */,
+			);
+			name = Piping;
 			sourceTree = "<group>";
 		};
 		F4A06B171BDAC7C300825D74 /* Categories */ = {
@@ -361,6 +371,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F475C3321BE2F0FE00E159F6 /* Piping */,
 				F4A06B171BDAC7C300825D74 /* Categories */,
 				F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */,
 				F4C85F631BD9BF69009F3B55 /* Networking */,
@@ -603,6 +614,7 @@
 				F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */,
 				F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */,
 				F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */,
+				F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */,
 				F4CC5AEA1BD58B0F00109C61 /* JosefinSans-Italic.ttf in Resources */,
 				F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
 				F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */,
