@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewIndividualRestaurantViewController" customModule="FoodPiper" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PipeMenuView" customModule="FoodPiper" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -97,6 +97,9 @@
                             <include reference="llj-8Q-P4r"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="la0-St-jGr"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-6l-N0e">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -274,12 +277,35 @@
                         </mask>
                     </variation>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pipe Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJA-uX-EHZ">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="116" id="7bZ-zE-mZC"/>
+                        <constraint firstAttribute="height" constant="45" id="bSn-oN-0Wx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7bZ-zE-mZC"/>
+                            <exclude reference="bSn-oN-0Wx"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7bZ-zE-mZC"/>
+                            <include reference="bSn-oN-0Wx"/>
+                        </mask>
+                    </variation>
+                </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fTz-Na-Thw" secondAttribute="trailing" constant="24" id="2dN-ts-wn3"/>
                 <constraint firstItem="qeG-NM-Jce" firstAttribute="leading" secondItem="wKY-Wt-ywh" secondAttribute="trailing" constant="9" id="69u-C1-pw0"/>
                 <constraint firstItem="e7C-9R-hFD" firstAttribute="top" secondItem="8IR-nR-UHh" secondAttribute="bottom" constant="10" identifier="8" id="7JZ-pK-nWr"/>
+                <constraint firstItem="eJA-uX-EHZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Ws-OO-bbo"/>
                 <constraint firstAttribute="trailing" secondItem="XOl-Fy-6Ck" secondAttribute="trailing" constant="84" id="CAU-pn-03W"/>
                 <constraint firstAttribute="bottom" secondItem="XOl-Fy-6Ck" secondAttribute="bottom" constant="22" identifier="1" id="Ied-zS-dG1">
                     <userDefinedRuntimeAttributes>
@@ -293,6 +319,7 @@
                 <constraint firstAttribute="bottom" secondItem="Gms-Qp-aAE" secondAttribute="bottom" constant="82" identifier="4" id="MMF-RM-tBO"/>
                 <constraint firstItem="XOl-Fy-6Ck" firstAttribute="top" secondItem="e7C-9R-hFD" secondAttribute="bottom" constant="10" identifier="5" id="OWH-kR-gb0"/>
                 <constraint firstAttribute="bottom" secondItem="wKY-Wt-ywh" secondAttribute="bottom" constant="22" identifier="3" id="Tm4-mL-vKy"/>
+                <constraint firstItem="eJA-uX-EHZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="46" id="YC9-C9-oWc"/>
                 <constraint firstItem="l5G-cB-6mT" firstAttribute="top" secondItem="fTz-Na-Thw" secondAttribute="bottom" constant="10" identifier="9" id="YeR-wi-5nl"/>
                 <constraint firstItem="Gms-Qp-aAE" firstAttribute="leading" secondItem="e7C-9R-hFD" secondAttribute="trailing" constant="10" id="dD3-bX-CEl"/>
                 <constraint firstAttribute="bottom" secondItem="qeG-NM-Jce" secondAttribute="bottom" constant="22" identifier="2" id="dfF-Yz-PWf"/>
@@ -313,8 +340,11 @@
                     <exclude reference="fTz-Na-Thw"/>
                     <exclude reference="l5G-cB-6mT"/>
                     <exclude reference="Gms-Qp-aAE"/>
+                    <exclude reference="eJA-uX-EHZ"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="7Ws-OO-bbo"/>
+                    <exclude reference="YC9-C9-oWc"/>
                     <exclude reference="2dN-ts-wn3"/>
                     <exclude reference="YeR-wi-5nl"/>
                     <exclude reference="ueE-aS-lH9"/>
@@ -346,8 +376,11 @@
                     <include reference="fTz-Na-Thw"/>
                     <include reference="l5G-cB-6mT"/>
                     <include reference="Gms-Qp-aAE"/>
+                    <include reference="eJA-uX-EHZ"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="7Ws-OO-bbo"/>
+                    <include reference="YC9-C9-oWc"/>
                     <include reference="2dN-ts-wn3"/>
                     <include reference="YeR-wi-5nl"/>
                     <include reference="ueE-aS-lH9"/>

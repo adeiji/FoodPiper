@@ -187,7 +187,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
     /*
     
-    Check tos ee if the device can make phone calls, and if yes than call the number
+    Check to see if the device can make phone calls, and if yes than call the number
     
     */
     @IBAction func openPhoneApp(sender: UIButton) {
@@ -227,16 +227,21 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         DEAnimationManager.animateView(hoursView, withSelector: nil);
     }
     
-    
     @IBAction func showPipeMenu(sender: UIButton) {
-        
         let pipeMenu = NSBundle.mainBundle().loadNibNamed("PipeMenuView", owner: self, options: nil).first as! PipeMenuView
         self.view.superview?.addSubview(pipeMenu)
         pipeMenu.frame = self.view.superview!.bounds
         pipeMenu.animateButtons()
-        
-        
     }
+    
+    @IBAction func showRateScreen(sender: UIButton) {
+        let ratingViewController = RatingViewController()
+        ratingViewController.myNibName = FIVE_STAR_RATING_VIEW
+        self.navigationController!.pushViewController(ratingViewController, animated: true);
+        ratingViewController.setupViewForRating(sender.titleLabel!.text!)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

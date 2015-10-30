@@ -14,6 +14,9 @@
 		F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */; settings = {ASSET_TAGS = (); }; };
 		F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */; settings = {ASSET_TAGS = (); }; };
 		F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33F1BE4023200E159F6 /* PipeButtonView.xib */; settings = {ASSET_TAGS = (); }; };
+		F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */; settings = {ASSET_TAGS = (); }; };
+		F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3431BE4393C00E159F6 /* WaitTimeView.xib */; settings = {ASSET_TAGS = (); }; };
+		F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3451BE43B3800E159F6 /* RateCrowdView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A06B1B1BDAF40A00825D74 /* yoda.png */; settings = {ASSET_TAGS = (); }; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
@@ -91,6 +94,9 @@
 		F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeMenuView.xib; sourceTree = "<group>"; };
 		F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeMenuView.swift; sourceTree = "<group>"; };
 		F475C33F1BE4023200E159F6 /* PipeButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeButtonView.xib; sourceTree = "<group>"; };
+		F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperConstants.swift; sourceTree = "<group>"; };
+		F475C3431BE4393C00E159F6 /* WaitTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitTimeView.xib; sourceTree = "<group>"; };
+		F475C3451BE43B3800E159F6 /* RateCrowdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateCrowdView.xib; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A06B1B1BDAF40A00825D74 /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yoda.png; path = ../../../../../../Desktop/Blog/yoda.png; sourceTree = "<group>"; };
@@ -222,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				F475C33A1BE3FA7B00E159F6 /* UI Elements */,
-				F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */,
 				F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */,
 				F475C3381BE2F6FC00E159F6 /* RatingView.swift */,
 				F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */,
@@ -233,8 +238,11 @@
 		F475C33A1BE3FA7B00E159F6 /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
+				F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */,
 				F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */,
 				F475C33F1BE4023200E159F6 /* PipeButtonView.xib */,
+				F475C3431BE4393C00E159F6 /* WaitTimeView.xib */,
+				F475C3451BE43B3800E159F6 /* RateCrowdView.xib */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			children = (
 				F4A37B5A1BD8117000DD5DAE /* Constants.h */,
 				F4A37B5B1BD8117000DD5DAE /* Constants.m */,
+				F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -650,7 +659,9 @@
 				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
 				F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */,
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
+				F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */,
 				F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */,
+				F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */,
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
@@ -729,6 +740,7 @@
 			files = (
 				F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */,
 				F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */,
+				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
 				F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */,
