@@ -13,12 +13,14 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
     let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
     let HOURS_NIB = "ViewRestaurantHours"
+    let VIEW_INDIVIDUAL_RESTAURANT = "ViewIndividualRestaurant";
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnEmail: UIButton!
     @IBOutlet weak var btnPhone: UIButton!
     
-    let VIEW_INDIVIDUAL_RESTAURANT = "ViewIndividualRestaurant";
+    @IBOutlet weak var btnHours: UIButton!
+    var hoursView:HoursView!
     var restaurant:Restaurant!
     var restaurantView:ViewIndividualRestaurantView!
     var currentLocation:CLLocation!
@@ -65,6 +67,14 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         restaurantView.txtAddress.text = restaurant.address
         restaurantView.txtCuisine.text = restaurant.getCuisine()
         
+        hoursView = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! HoursView
+        if hoursView.displayRestaurantHours(restaurant.hours) {
+            btnHours.userInteractionEnabled = true
+        }
+        else {
+            btnHours.userInteractionEnabled = false
+        }
+    
         checkForInfoAvailability()
     }
     
@@ -205,11 +215,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     @IBAction func viewHours(sender: UIButton) {
-        
-        let view = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! UIView
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.addSubview(view);
-        DEAnimationManager.animateView(view, withSelector: nil);
+        appDelegate.window?.addSubview(hoursView);
+        DEAnimationManager.animateView(hoursView, withSelector: nil);
     }
     
     

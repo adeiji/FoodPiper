@@ -60,28 +60,32 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
         // Get the yelp information from Crosswalk API
         for (id restaurant in queryResult.rows) {
             count ++;
-            FactualQuery *queryObject = [FactualQuery query];
-            [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
-                                                          equalTo:[restaurant stringValueForName:@"factual_id"]]];
-            [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
-                                                          equalTo:@"foursquare"]];
-            [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
-            NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
+            
+#warning Debug purposes only
+            if (count == 1)
+            {
+                FactualQuery *queryObject = [FactualQuery query];
+                [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
+                                                              equalTo:[restaurant stringValueForName:@"factual_id"]]];
+                [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
+                                                              equalTo:@"foursquare"]];
+                [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
+                    
+                NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
+            }
             
             // If this is the last restaurant than notify that this is the last request
             if ([restaurant isEqual:queryResult.rows.lastObject]) {
                 lastRequest = YES;
             }
         }
-        
-        [self displayViewRestaurantsScreen];
     }
     else {
         NSString *foursquareURLString = [queryResult.rows[0] stringValueForName:@"url"];
 
         if ([foursquareURLString containsString:@"/v"])
         {
-//            // Get the foursquareId and grab the image from Foursquare with this Id
+            // Get the foursquareId and grab the image from Foursquare with this Id
             NSString *foursquareId = [foursquareURLString substringFromIndex:([foursquareURLString rangeOfString:@"/v"].location + 3)];
             
             [FourSquareAPIHandler getPhotoFromId:foursquareId CompletionBlock:^(NSString *image_url, NSString *foresquareId, NSNumber *photoWidth, NSNumber *photoHeight) {

@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="bottomConstraint" destination="V2h-E7-j8k" id="w2u-iK-C4Y"/>
                 <outlet property="btnEmail" destination="msj-cA-h8F" id="vl8-Kg-T11"/>
+                <outlet property="btnHours" destination="WR9-fd-u9u" id="Dfp-M1-Y7J"/>
                 <outlet property="btnPhone" destination="FEh-Es-v55" id="PC0-7z-dX2"/>
                 <outlet property="view" destination="KO0-BB-kJI" id="diS-Rr-qQo"/>
             </connections>
@@ -156,7 +157,7 @@
                                 <constraint firstAttribute="height" constant="21" id="MDw-mE-AHQ"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -195,7 +196,7 @@
                                 <constraint firstAttribute="height" constant="21" id="dbg-Jm-fP9"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -249,7 +250,7 @@
                                 <constraint firstAttribute="height" constant="20.5" id="f1X-sU-s5E"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -268,7 +269,7 @@
                                 <constraint firstAttribute="height" constant="20.5" id="VgC-lS-vyk"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -620,7 +621,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="-84" y="1538.5"/>
+            <point key="canvasLocation" x="-4" y="1995.5"/>
         </scrollView>
     </objects>
 </document>
