@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
 		F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */; settings = {ASSET_TAGS = (); }; };
+		F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F475C3391BE2F6FC00E159F6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3381BE2F6FC00E159F6 /* RatingView.swift */; settings = {ASSET_TAGS = (); }; };
+		F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */; settings = {ASSET_TAGS = (); }; };
+		F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */; settings = {ASSET_TAGS = (); }; };
+		F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33F1BE4023200E159F6 /* PipeButtonView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A06B1B1BDAF40A00825D74 /* yoda.png */; settings = {ASSET_TAGS = (); }; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
@@ -81,6 +86,11 @@
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
 		F410A0521BE2D3AA00BA8FDB /* HoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
 		F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveStarRatingView.xib; sourceTree = "<group>"; };
+		F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
+		F475C3381BE2F6FC00E159F6 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeMenuView.xib; sourceTree = "<group>"; };
+		F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipeMenuView.swift; sourceTree = "<group>"; };
+		F475C33F1BE4023200E159F6 /* PipeButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PipeButtonView.xib; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A06B1B1BDAF40A00825D74 /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yoda.png; path = ../../../../../../Desktop/Blog/yoda.png; sourceTree = "<group>"; };
@@ -211,9 +221,22 @@
 		F475C3321BE2F0FE00E159F6 /* Piping */ = {
 			isa = PBXGroup;
 			children = (
+				F475C33A1BE3FA7B00E159F6 /* UI Elements */,
 				F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */,
+				F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */,
+				F475C3381BE2F6FC00E159F6 /* RatingView.swift */,
+				F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */,
 			);
 			name = Piping;
+			sourceTree = "<group>";
+		};
+		F475C33A1BE3FA7B00E159F6 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */,
+				F475C33F1BE4023200E159F6 /* PipeButtonView.xib */,
+			);
+			name = "UI Elements";
 			sourceTree = "<group>";
 		};
 		F4A06B171BDAC7C300825D74 /* Categories */ = {
@@ -614,6 +637,7 @@
 				F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */,
 				F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */,
 				F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */,
+				F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */,
 				F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */,
 				F4CC5AEA1BD58B0F00109C61 /* JosefinSans-Italic.ttf in Resources */,
 				F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
@@ -630,6 +654,7 @@
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
+				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +741,7 @@
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
 				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,
+				F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */,
 				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,
 				F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */,
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
@@ -726,8 +752,10 @@
 				F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */,
 				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
 				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
+				F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
 				F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */,
+				F475C3391BE2F6FC00E159F6 /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

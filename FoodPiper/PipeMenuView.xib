@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PipeMenuView" customModule="FoodPiper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <userGuides>
+                <userLayoutGuide location="694" affinity="minY"/>
+                <userLayoutGuide location="351" affinity="minX"/>
+            </userGuides>
+            <subviews>
+                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-nR-UHh">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="rgM-1D-1JY"/>
+                        <constraint firstAttribute="height" constant="50" id="uLi-AK-9a6"/>
+                    </constraints>
+                    <state key="normal" title="Food">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="rgM-1D-1JY"/>
+                            <exclude reference="uLi-AK-9a6"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="rgM-1D-1JY"/>
+                            <include reference="uLi-AK-9a6"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-9R-hFD">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CHj-pO-be6"/>
+                        <constraint firstAttribute="width" constant="50" id="bcg-dY-qSA"/>
+                    </constraints>
+                    <state key="normal" title="Decor">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="CHj-pO-be6"/>
+                            <exclude reference="bcg-dY-qSA"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="CHj-pO-be6"/>
+                            <include reference="bcg-dY-qSA"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-Fy-6Ck">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="e7M-wo-P4A"/>
+                        <constraint firstAttribute="height" constant="50" id="llj-8Q-P4r"/>
+                    </constraints>
+                    <state key="normal" title="Service">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="e7M-wo-P4A"/>
+                            <exclude reference="llj-8Q-P4r"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="e7M-wo-P4A"/>
+                            <include reference="llj-8Q-P4r"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-6l-N0e">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="c3z-fO-YAq"/>
+                        <constraint firstAttribute="height" constant="50" id="fDE-ku-EZU"/>
+                    </constraints>
+                    <state key="normal" title="Comment">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="c3z-fO-YAq"/>
+                            <exclude reference="fDE-ku-EZU"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="c3z-fO-YAq"/>
+                            <include reference="fDE-ku-EZU"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-NM-Jce">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Ebe-J1-rTM"/>
+                        <constraint firstAttribute="height" constant="50" id="rGn-nn-5M2"/>
+                    </constraints>
+                    <state key="normal" title="Camera">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Ebe-J1-rTM"/>
+                            <exclude reference="rGn-nn-5M2"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Ebe-J1-rTM"/>
+                            <include reference="rGn-nn-5M2"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="PlF-JS-JDz"/>
+                        <constraint firstAttribute="width" constant="50" id="f3U-7g-pnU"/>
+                    </constraints>
+                    <state key="normal" title="Check">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PlF-JS-JDz"/>
+                            <exclude reference="f3U-7g-pnU"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="PlF-JS-JDz"/>
+                            <include reference="f3U-7g-pnU"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTz-Na-Thw">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Le3-6D-VAT"/>
+                        <constraint firstAttribute="width" constant="50" id="fzP-RI-m7Q"/>
+                    </constraints>
+                    <state key="normal" title="Wait Time">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Le3-6D-VAT"/>
+                            <exclude reference="fzP-RI-m7Q"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Le3-6D-VAT"/>
+                            <include reference="fzP-RI-m7Q"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="f66-TV-fJj"/>
+                        <constraint firstAttribute="height" constant="50" id="i4x-5s-8eE"/>
+                    </constraints>
+                    <state key="normal" title="Deals">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="f66-TV-fJj"/>
+                            <exclude reference="i4x-5s-8eE"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="f66-TV-fJj"/>
+                            <include reference="i4x-5s-8eE"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-Qp-aAE">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="51" id="0TI-Yl-WG0">
+                            <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                        </constraint>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="U5R-kg-X3p"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jH8-WF-1DB"/>
+                        <constraint firstAttribute="height" constant="50" id="yef-qN-CGu"/>
+                    </constraints>
+                    <state key="normal" title="Crowd">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0TI-Yl-WG0"/>
+                            <exclude reference="U5R-kg-X3p"/>
+                            <exclude reference="jH8-WF-1DB"/>
+                            <exclude reference="yef-qN-CGu"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0TI-Yl-WG0"/>
+                            <include reference="U5R-kg-X3p"/>
+                            <include reference="jH8-WF-1DB"/>
+                            <include reference="yef-qN-CGu"/>
+                        </mask>
+                    </variation>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fTz-Na-Thw" secondAttribute="trailing" constant="24" id="2dN-ts-wn3"/>
+                <constraint firstItem="qeG-NM-Jce" firstAttribute="leading" secondItem="wKY-Wt-ywh" secondAttribute="trailing" constant="9" id="69u-C1-pw0"/>
+                <constraint firstItem="e7C-9R-hFD" firstAttribute="top" secondItem="8IR-nR-UHh" secondAttribute="bottom" constant="10" identifier="8" id="7JZ-pK-nWr"/>
+                <constraint firstAttribute="trailing" secondItem="XOl-Fy-6Ck" secondAttribute="trailing" constant="84" id="CAU-pn-03W"/>
+                <constraint firstAttribute="bottom" secondItem="XOl-Fy-6Ck" secondAttribute="bottom" constant="22" identifier="1" id="Ied-zS-dG1">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="Gms-Qp-aAE" firstAttribute="top" secondItem="l5G-cB-6mT" secondAttribute="bottom" constant="10" identifier="7" id="KkI-Ul-Dv4"/>
+                <constraint firstAttribute="trailing" secondItem="Gms-Qp-aAE" secondAttribute="trailing" constant="23" id="MAM-0X-mR4">
+                    <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="Gms-Qp-aAE" secondAttribute="bottom" constant="82" identifier="4" id="MMF-RM-tBO"/>
+                <constraint firstItem="XOl-Fy-6Ck" firstAttribute="top" secondItem="e7C-9R-hFD" secondAttribute="bottom" constant="10" identifier="5" id="OWH-kR-gb0"/>
+                <constraint firstAttribute="bottom" secondItem="wKY-Wt-ywh" secondAttribute="bottom" constant="22" identifier="3" id="Tm4-mL-vKy"/>
+                <constraint firstItem="l5G-cB-6mT" firstAttribute="top" secondItem="fTz-Na-Thw" secondAttribute="bottom" constant="10" identifier="9" id="YeR-wi-5nl"/>
+                <constraint firstItem="Gms-Qp-aAE" firstAttribute="leading" secondItem="e7C-9R-hFD" secondAttribute="trailing" constant="10" id="dD3-bX-CEl"/>
+                <constraint firstAttribute="bottom" secondItem="qeG-NM-Jce" secondAttribute="bottom" constant="22" identifier="2" id="dfF-Yz-PWf"/>
+                <constraint firstItem="XOl-Fy-6Ck" firstAttribute="leading" secondItem="qeG-NM-Jce" secondAttribute="trailing" constant="10" id="fT8-fQ-OuI"/>
+                <constraint firstItem="e7C-9R-hFD" firstAttribute="leading" secondItem="D4a-6l-N0e" secondAttribute="trailing" constant="10" id="oeA-xT-anj"/>
+                <constraint firstAttribute="trailing" secondItem="l5G-cB-6mT" secondAttribute="trailing" constant="24" id="ueE-aS-lH9"/>
+                <constraint firstItem="qeG-NM-Jce" firstAttribute="top" secondItem="D4a-6l-N0e" secondAttribute="bottom" constant="10" identifier="6" id="vvo-kX-rVX"/>
+                <constraint firstItem="l5G-cB-6mT" firstAttribute="leading" secondItem="8IR-nR-UHh" secondAttribute="trailing" constant="10" id="yQ7-wp-0p4"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="8IR-nR-UHh"/>
+                    <exclude reference="e7C-9R-hFD"/>
+                    <exclude reference="XOl-Fy-6Ck"/>
+                    <exclude reference="D4a-6l-N0e"/>
+                    <exclude reference="qeG-NM-Jce"/>
+                    <exclude reference="wKY-Wt-ywh"/>
+                    <exclude reference="fTz-Na-Thw"/>
+                    <exclude reference="l5G-cB-6mT"/>
+                    <exclude reference="Gms-Qp-aAE"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="2dN-ts-wn3"/>
+                    <exclude reference="YeR-wi-5nl"/>
+                    <exclude reference="ueE-aS-lH9"/>
+                    <exclude reference="yQ7-wp-0p4"/>
+                    <exclude reference="7JZ-pK-nWr"/>
+                    <exclude reference="oeA-xT-anj"/>
+                    <exclude reference="Tm4-mL-vKy"/>
+                    <exclude reference="KkI-Ul-Dv4"/>
+                    <exclude reference="MAM-0X-mR4"/>
+                    <exclude reference="MMF-RM-tBO"/>
+                    <exclude reference="dD3-bX-CEl"/>
+                    <exclude reference="69u-C1-pw0"/>
+                    <exclude reference="dfF-Yz-PWf"/>
+                    <exclude reference="vvo-kX-rVX"/>
+                    <exclude reference="CAU-pn-03W"/>
+                    <exclude reference="Ied-zS-dG1"/>
+                    <exclude reference="OWH-kR-gb0"/>
+                    <exclude reference="fT8-fQ-OuI"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="8IR-nR-UHh"/>
+                    <include reference="e7C-9R-hFD"/>
+                    <include reference="XOl-Fy-6Ck"/>
+                    <include reference="D4a-6l-N0e"/>
+                    <include reference="qeG-NM-Jce"/>
+                    <include reference="wKY-Wt-ywh"/>
+                    <include reference="fTz-Na-Thw"/>
+                    <include reference="l5G-cB-6mT"/>
+                    <include reference="Gms-Qp-aAE"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="2dN-ts-wn3"/>
+                    <include reference="YeR-wi-5nl"/>
+                    <include reference="ueE-aS-lH9"/>
+                    <include reference="yQ7-wp-0p4"/>
+                    <include reference="7JZ-pK-nWr"/>
+                    <include reference="oeA-xT-anj"/>
+                    <include reference="Tm4-mL-vKy"/>
+                    <include reference="KkI-Ul-Dv4"/>
+                    <include reference="MAM-0X-mR4"/>
+                    <include reference="MMF-RM-tBO"/>
+                    <include reference="dD3-bX-CEl"/>
+                    <include reference="69u-C1-pw0"/>
+                    <include reference="dfF-Yz-PWf"/>
+                    <include reference="vvo-kX-rVX"/>
+                    <include reference="CAU-pn-03W"/>
+                    <include reference="Ied-zS-dG1"/>
+                    <include reference="OWH-kR-gb0"/>
+                    <include reference="fT8-fQ-OuI"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="btnComment" destination="D4a-6l-N0e" id="oHC-DH-Gxm"/>
+                <outlet property="btnCrowd" destination="Gms-Qp-aAE" id="9ek-cF-zJL"/>
+                <outletCollection property="bottomConstraints" destination="Ied-zS-dG1" collectionClass="NSMutableArray" id="2tM-Yc-uTZ"/>
+                <outletCollection property="bottomConstraints" destination="dfF-Yz-PWf" collectionClass="NSMutableArray" id="3bg-ls-5Ga"/>
+                <outletCollection property="bottomConstraints" destination="Tm4-mL-vKy" collectionClass="NSMutableArray" id="hyN-P8-Le7"/>
+                <outletCollection property="bottomConstraints" destination="MMF-RM-tBO" collectionClass="NSMutableArray" id="vuX-3O-fFw"/>
+                <outletCollection property="bottomConstraints" destination="OWH-kR-gb0" collectionClass="NSMutableArray" id="MAV-ii-Qtb"/>
+                <outletCollection property="bottomConstraints" destination="vvo-kX-rVX" collectionClass="NSMutableArray" id="f0G-sl-Z73"/>
+                <outletCollection property="bottomConstraints" destination="KkI-Ul-Dv4" collectionClass="NSMutableArray" id="u8s-sj-56Q"/>
+                <outletCollection property="bottomConstraints" destination="7JZ-pK-nWr" collectionClass="NSMutableArray" id="aqm-ou-1xG"/>
+                <outletCollection property="bottomConstraints" destination="YeR-wi-5nl" collectionClass="NSMutableArray" id="tsl-dZ-7hL"/>
+                <outletCollection property="buttons" destination="XOl-Fy-6Ck" collectionClass="NSMutableArray" id="5EI-Fx-m1j"/>
+                <outletCollection property="buttons" destination="qeG-NM-Jce" collectionClass="NSMutableArray" id="R4E-b5-hBL"/>
+                <outletCollection property="buttons" destination="wKY-Wt-ywh" collectionClass="NSMutableArray" id="YuM-0b-IRg"/>
+                <outletCollection property="buttons" destination="Gms-Qp-aAE" collectionClass="NSMutableArray" id="f4C-yV-h8G"/>
+                <outletCollection property="buttons" destination="e7C-9R-hFD" collectionClass="NSMutableArray" id="0cL-AU-pg3"/>
+                <outletCollection property="buttons" destination="D4a-6l-N0e" collectionClass="NSMutableArray" id="Y2D-96-j7o"/>
+                <outletCollection property="buttons" destination="l5G-cB-6mT" collectionClass="NSMutableArray" id="k7Z-pI-CtE"/>
+                <outletCollection property="buttons" destination="8IR-nR-UHh" collectionClass="NSMutableArray" id="GWo-XR-vCW"/>
+                <outletCollection property="buttons" destination="fTz-Na-Thw" collectionClass="NSMutableArray" id="TOX-We-Xgt"/>
+            </connections>
+        </view>
+    </objects>
+</document>

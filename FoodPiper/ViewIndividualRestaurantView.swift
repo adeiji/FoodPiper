@@ -14,6 +14,12 @@ class ViewIndividualRestaurantView: UIScrollView {
     @IBOutlet weak var txtAddress: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var imageView: UIImageView!
+    var pipeButtonView:UIView!
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

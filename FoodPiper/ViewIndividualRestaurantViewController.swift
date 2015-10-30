@@ -48,6 +48,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         self.view.layoutIfNeeded()
         // Get the restaurant view from the Scroll View and set its width to the width of the scroll view
         restaurantView = self.view as! ViewIndividualRestaurantView;
+        
         let margins = self.view.layoutMarginsGuide
         restaurantView.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
         restaurantView.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
@@ -67,6 +68,11 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         restaurantView.txtAddress.text = restaurant.address
         restaurantView.txtCuisine.text = restaurant.getCuisine()
         
+        let pipeMenuButtonView = NSBundle.mainBundle().loadNibNamed("PipeButtonView", owner: self, options: nil).first as! UIView
+        pipeMenuButtonView.frame = CGRectMake(self.view.superview!.frame.size.width - 103, self.view.superview!.frame.size.height - 103, pipeMenuButtonView.frame.width, pipeMenuButtonView.frame.height)
+        restaurantView.superview!.addSubview(pipeMenuButtonView)
+        restaurantView.pipeButtonView = pipeMenuButtonView
+        
         hoursView = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! HoursView
         if hoursView.displayRestaurantHours(restaurant.hours) {
             btnHours.userInteractionEnabled = true
@@ -74,6 +80,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         else {
             btnHours.userInteractionEnabled = false
         }
+
     
         checkForInfoAvailability()
     }
@@ -221,6 +228,15 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     
+    @IBAction func showPipeMenu(sender: UIButton) {
+        
+        let pipeMenu = NSBundle.mainBundle().loadNibNamed("PipeMenuView", owner: self, options: nil).first as! PipeMenuView
+        self.view.superview?.addSubview(pipeMenu)
+        pipeMenu.frame = self.view.superview!.bounds
+        pipeMenu.animateButtons()
+        
+        
+    }
     /*
     // MARK: - Navigation
 
