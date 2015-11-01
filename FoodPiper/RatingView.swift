@@ -8,11 +8,12 @@
 
 import UIKit
 
-class RatingView: UIView {
+class RatingView: UIScrollView {
 
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var txtComment: UITextView!
     
 }

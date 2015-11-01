@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("RACHAIXoHN8KP5hQ2e3gg8MMWZxKTM6NAXkPnEbP",
             clientKey: "nEnEtiyFBeRXP3sD5XwX62X1Bhr6xsujEEOLV16K")
+        Rating.registerSubclass()
+        Pipe.registerSubclass()
         PFFacebookUtils.initializeFacebook();
         GMSServices.provideAPIKey("AIzaSyCrka4-c9-yUe1AIDmNJit3VLG9KFEQFuA")
         

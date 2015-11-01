@@ -8,25 +8,96 @@
 
 import UIKit
 
+public class Pipe : PFObject, PFSubclassing {
+    
+    @NSManaged var restaurant:Restaurant!
+    @NSManaged var food:Rating!
+    @NSManaged var service:Rating!
+    @NSManaged var decor:Rating!
+    @NSManaged var picture:UIImage!
+    @NSManaged var crowd:Rating!
+    @NSManaged var waitTime:Rating!
+    @NSManaged var user:PFUser!
+    
+    public class func parseClassName() -> String {
+        return "Pipe"
+    }
+    
+    public override class func initialize() {
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+        }
+        dispatch_once(&Static.onceToken) {
+            self.registerSubclass()
+        }
+    }
+}
+
+public class Rating: PFObject, PFSubclassing {
+    
+    // Parse Core Properties
+    @NSManaged var rating:String!
+    @NSManaged var comment:String!
+    @NSManaged var pipe:Pipe!
+    
+    public class func parseClassName() -> String {
+        return "Rating"
+    }
+    
+    public override class func initialize() {
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+        }
+        dispatch_once(&Static.onceToken) {
+            self.registerSubclass()
+        }
+    }
+    
+}
+
 class RatingViewController: UIViewController {
 
     let ratingDetails = [RATING_FOOD :"Quality, taste, presentation, etc", RATING_DECOR : "Design, theme, furnishings, overall ambience, cleanliness, etc", RATING_SERVICE:"Friendliness, expertise, responsiveness, speed, etc",RATING_WAIT_TIME:"", RATING_CROWD:"Size of the crowd, hot or not, etc"]
     var ratingOrder = [RATING_FOOD, RATING_DECOR, RATING_SERVICE, RATING_WAIT_TIME, RATING_CROWD]
     var initialCriteriaIndex:Int!
-    
     var criteria:String!
     var nextCriteriaInOrder:String!
-    var rating:Double!
+    var rating:Rating = Rating()    // Rating subclassed PFOBject that is stored for each and every criteria
     var selectedRating:Int!
     var myNibName:String!
+    var restaurant:Restaurant!
+    var ratingDictionary:[String:String]! // The key is the criteria, and the value is a rating object
+    var pipe:Pipe = Pipe()  // Pipe subclassed PFObject which contains all ratings the user has done
+    let indexOfViewIndividualRestaurant = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NSBundle.mainBundle().loadNibNamed(myNibName, owner: self, options: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action:"doneRatingButtonPressed")
+        self.navigationItem.rightBarButtonItem = doneButton
+        
+        pipe.user = PFUser.currentUser()
+        pipe.restaurant = restaurant
     }
     
-    func setupViewForRating (myCriteria:String) {
+    /*
+    
+    Save the rating of the restaurant to Parse
+    
+    */
+    func doneRatingButtonPressed () {
+        // Check to see if the user has rated anything, and if so than save this pipe to Parse
+        if (pipe.allKeys().count != 0)
+        {
+            SyncManager.saveParseObject(pipe);
+            let viewConrollers:Array<UIViewController> = (self.navigationController?.viewControllers)!
+            self.navigationController?.popToViewController(viewConrollers[indexOfViewIndividualRestaurant], animated: true)
+        }
+    }
+    
+    func setupViewForFiveStarRating (myCriteria:String) {
+        
         let ratingView = self.view as! RatingView;
         
         criteria = myCriteria
@@ -34,7 +105,16 @@ class RatingViewController: UIViewController {
         // Get the description for this specific rating criteria
         let criteriaDescription = ratingDetails[criteria]
         ratingView.lblDescription.text = criteriaDescription
-        
+        setNextCriteria(ratingView)
+    }
+    
+    /*
+    
+    Set the criteria for the next screen and then update the button to display this
+    
+    */
+    
+    func setNextCriteria (ratingView:RatingView) {
         // Get what the next criteria is
         let currentCriteriaIndex = ratingOrder.indexOf(criteria)
         if currentCriteriaIndex != (ratingOrder.count - 1)
@@ -47,6 +127,11 @@ class RatingViewController: UIViewController {
         
         ratingView.btnNext.setTitle("Rate " + nextCriteriaInOrder, forState: UIControlState.Normal)
     }
+    
+    func setupViewForWaitTimeOrCrowd (myCriteria:String) {
+        criteria = myCriteria
+        setNextCriteria(self.view as! RatingView)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,9 +139,9 @@ class RatingViewController: UIViewController {
     }
     
     // Set the rating to the selected star
-    @IBAction func setRating(sender: UIButton) {
-        rating = Double(sender.tag)
-        selectedRating = Int(rating);
+    @IBAction func setCriteriaRating(sender: UIButton) {
+        rating.rating = String(sender.tag)
+        selectedRating = Int(rating.rating);
         
         for index in 1...sender.tag {
             let button = self.view .viewWithTag(index)
@@ -71,35 +156,70 @@ class RatingViewController: UIViewController {
                 button?.backgroundColor = UIColor.blueColor()
             }
         }
+        
+        updatePipe()
+    }
+    
+    /*
+    
+    Set the pipe's ratings for the specified criteria
+    
+    */
+    func updatePipe () {
+
+        let ratingView = self.view as! RatingView
+        rating.comment = ratingView.txtComment!.text
+        
+        switch criteria {
+        case RATING_DECOR:
+            pipe.decor = rating
+        case RATING_SERVICE:
+            pipe.service = rating
+        case RATING_WAIT_TIME:
+            pipe.waitTime = rating
+        case RATING_CROWD:
+            pipe.crowd = rating
+        default:
+            pipe.food = rating
+        }
+        
     }
 
     // Increment the rating down one half
     @IBAction func incrementHalfDown() {
-        rating = Double(selectedRating) - 0.5
+        rating.rating = String(Double(selectedRating) - 0.5)
+        updatePipe()
     }
     
     // Increment the rating up one half
     @IBAction func incrementHalfUp() {
-        rating = Double(selectedRating) + 0.5
+        rating.rating = String(Double(selectedRating) + 0.5)
+        updatePipe()
     }
     
     @IBAction func gotoNextRatingCriteria() {
         
         let ratingViewController = RatingViewController()
+        
+        // Make sure that we load the correct NIB and update the views according to the criteria that is going to be rated next
         if nextCriteriaInOrder == RATING_WAIT_TIME
         {
             ratingViewController.myNibName = WAIT_TIME_VIEW
+            ratingViewController.setupViewForWaitTimeOrCrowd(nextCriteriaInOrder)
         }
-        else if {
-            
+        else if nextCriteriaInOrder == RATING_CROWD {
+            ratingViewController.myNibName = RATE_CROWD_VIEW
+            ratingViewController.setupViewForWaitTimeOrCrowd(nextCriteriaInOrder)
         }
         else {
             ratingViewController.myNibName = FIVE_STAR_RATING_VIEW
+            ratingViewController.setupViewForFiveStarRating(nextCriteriaInOrder)
         }
         
         self.navigationController!.pushViewController(ratingViewController, animated: true)
-        ratingViewController.setupViewForRating(nextCriteriaInOrder)
-        
+        ratingViewController.restaurant = restaurant
+        // Pass the pipe object so that when the user is done we can save all ratings the user has made
+        ratingViewController.pipe = pipe;
     }
     /*
     // MARK: - Navigation

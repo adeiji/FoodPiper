@@ -41,6 +41,9 @@
                             <include reference="uLi-AK-9a6"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="45r-Ea-KKw"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-9R-hFD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -69,6 +72,9 @@
                             <include reference="bcg-dY-qSA"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="SAI-Tx-GLa"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-Fy-6Ck">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -212,6 +218,9 @@
                             <include reference="fzP-RI-m7Q"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="dQL-hK-YiD"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -276,6 +285,9 @@
                             <include reference="yef-qN-CGu"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="ElI-G5-am7"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pipe Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJA-uX-EHZ">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -343,26 +355,26 @@
                     <exclude reference="eJA-uX-EHZ"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="7Ws-OO-bbo"/>
-                    <exclude reference="YC9-C9-oWc"/>
-                    <exclude reference="2dN-ts-wn3"/>
-                    <exclude reference="YeR-wi-5nl"/>
-                    <exclude reference="ueE-aS-lH9"/>
-                    <exclude reference="yQ7-wp-0p4"/>
-                    <exclude reference="7JZ-pK-nWr"/>
-                    <exclude reference="oeA-xT-anj"/>
-                    <exclude reference="Tm4-mL-vKy"/>
                     <exclude reference="KkI-Ul-Dv4"/>
                     <exclude reference="MAM-0X-mR4"/>
                     <exclude reference="MMF-RM-tBO"/>
                     <exclude reference="dD3-bX-CEl"/>
-                    <exclude reference="69u-C1-pw0"/>
-                    <exclude reference="dfF-Yz-PWf"/>
-                    <exclude reference="vvo-kX-rVX"/>
                     <exclude reference="CAU-pn-03W"/>
                     <exclude reference="Ied-zS-dG1"/>
                     <exclude reference="OWH-kR-gb0"/>
                     <exclude reference="fT8-fQ-OuI"/>
+                    <exclude reference="7JZ-pK-nWr"/>
+                    <exclude reference="oeA-xT-anj"/>
+                    <exclude reference="2dN-ts-wn3"/>
+                    <exclude reference="YeR-wi-5nl"/>
+                    <exclude reference="ueE-aS-lH9"/>
+                    <exclude reference="yQ7-wp-0p4"/>
+                    <exclude reference="69u-C1-pw0"/>
+                    <exclude reference="dfF-Yz-PWf"/>
+                    <exclude reference="vvo-kX-rVX"/>
+                    <exclude reference="Tm4-mL-vKy"/>
+                    <exclude reference="7Ws-OO-bbo"/>
+                    <exclude reference="YC9-C9-oWc"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -379,26 +391,26 @@
                     <include reference="eJA-uX-EHZ"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="7Ws-OO-bbo"/>
-                    <include reference="YC9-C9-oWc"/>
-                    <include reference="2dN-ts-wn3"/>
-                    <include reference="YeR-wi-5nl"/>
-                    <include reference="ueE-aS-lH9"/>
-                    <include reference="yQ7-wp-0p4"/>
-                    <include reference="7JZ-pK-nWr"/>
-                    <include reference="oeA-xT-anj"/>
-                    <include reference="Tm4-mL-vKy"/>
                     <include reference="KkI-Ul-Dv4"/>
                     <include reference="MAM-0X-mR4"/>
                     <include reference="MMF-RM-tBO"/>
                     <include reference="dD3-bX-CEl"/>
-                    <include reference="69u-C1-pw0"/>
-                    <include reference="dfF-Yz-PWf"/>
-                    <include reference="vvo-kX-rVX"/>
                     <include reference="CAU-pn-03W"/>
                     <include reference="Ied-zS-dG1"/>
                     <include reference="OWH-kR-gb0"/>
                     <include reference="fT8-fQ-OuI"/>
+                    <include reference="7JZ-pK-nWr"/>
+                    <include reference="oeA-xT-anj"/>
+                    <include reference="2dN-ts-wn3"/>
+                    <include reference="YeR-wi-5nl"/>
+                    <include reference="ueE-aS-lH9"/>
+                    <include reference="yQ7-wp-0p4"/>
+                    <include reference="69u-C1-pw0"/>
+                    <include reference="dfF-Yz-PWf"/>
+                    <include reference="vvo-kX-rVX"/>
+                    <include reference="Tm4-mL-vKy"/>
+                    <include reference="7Ws-OO-bbo"/>
+                    <include reference="YC9-C9-oWc"/>
                 </mask>
             </variation>
             <connections>

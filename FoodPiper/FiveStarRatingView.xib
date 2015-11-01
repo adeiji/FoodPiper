@@ -19,7 +19,7 @@
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="1"/>
                     <connections>
-                        <action selector="setRating:" destination="-1" eventType="touchUpInside" id="A8Y-e4-ZUx"/>
+                        <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="0iR-Bl-woc"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-go-VfM">
@@ -27,7 +27,7 @@
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="2"/>
                     <connections>
-                        <action selector="setRating:" destination="-1" eventType="touchUpInside" id="o9V-4W-xae"/>
+                        <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="R8Z-S6-5yr"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHK-BA-Q3U">
@@ -51,7 +51,7 @@
                         </mask>
                     </variation>
                     <connections>
-                        <action selector="setRating:" destination="-1" eventType="touchUpInside" id="1eX-FL-z8A"/>
+                        <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="DmT-qg-3p9"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oif-Ek-nA3">
@@ -59,7 +59,7 @@
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="4"/>
                     <connections>
-                        <action selector="setRating:" destination="-1" eventType="touchUpInside" id="3Cd-J0-6PK"/>
+                        <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="ww4-Wr-JRt"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Ub-WRY">
@@ -67,7 +67,7 @@
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="5"/>
                     <connections>
-                        <action selector="setRating:" destination="-1" eventType="touchUpInside" id="bFE-b5-0mc"/>
+                        <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="hfG-XH-Ql8"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eee-3Z-1er">
@@ -373,6 +373,7 @@
                 <outlet property="btnNext" destination="DNE-v7-gOW" id="bcS-Xa-GBA"/>
                 <outlet property="lblDescription" destination="wuX-Mg-VZm" id="eTj-ta-fIl"/>
                 <outlet property="lblTitle" destination="hWz-rl-sJu" id="tEn-YX-63K"/>
+                <outlet property="txtComment" destination="zma-IC-hKj" id="Pyd-8o-6Pj"/>
             </connections>
         </view>
     </objects>

@@ -27,8 +27,8 @@ class PipeMenuView: UIView {
             self.layoutIfNeeded()
             
             let delay = Double(Double(multiplier!) * 0.05);
-            
-            UIView.animateWithDuration(0.5, delay: delay, options: .CurveEaseOut, animations: { () -> Void in
+            // Have all the buttons ease down to the bottom screen in a cool little waterfall affect
+            UIView.animateWithDuration(0.3, delay: delay, options: .CurveEaseOut, animations: { () -> Void in
                 constraint.constant = originaConstraintConstant
                 self.layoutIfNeeded()
                 }, completion: nil)

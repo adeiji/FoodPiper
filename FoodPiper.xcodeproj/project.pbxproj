@@ -17,6 +17,7 @@
 		F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */; settings = {ASSET_TAGS = (); }; };
 		F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3431BE4393C00E159F6 /* WaitTimeView.xib */; settings = {ASSET_TAGS = (); }; };
 		F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3451BE43B3800E159F6 /* RateCrowdView.xib */; settings = {ASSET_TAGS = (); }; };
+		F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3471BE59D7400E159F6 /* SyncManager.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B1C1BDAF40A00825D74 /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = F4A06B1B1BDAF40A00825D74 /* yoda.png */; settings = {ASSET_TAGS = (); }; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
@@ -97,6 +98,7 @@
 		F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperConstants.swift; sourceTree = "<group>"; };
 		F475C3431BE4393C00E159F6 /* WaitTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitTimeView.xib; sourceTree = "<group>"; };
 		F475C3451BE43B3800E159F6 /* RateCrowdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateCrowdView.xib; sourceTree = "<group>"; };
+		F475C3471BE59D7400E159F6 /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A06B1B1BDAF40A00825D74 /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yoda.png; path = ../../../../../../Desktop/Blog/yoda.png; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			children = (
 				F4C85F601BD9BF34009F3B55 /* DESyncManager.h */,
 				F4C85F611BD9BF34009F3B55 /* DESyncManager.m */,
+				F475C3471BE59D7400E159F6 /* SyncManager.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 			files = (
 				F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */,
 				F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */,
+				F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */,
 				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate, UIActionSheetDelegate {
+class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate, UIActionSheetDelegate, UIScrollViewDelegate {
 
     let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
     let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
@@ -18,12 +18,13 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var btnEmail: UIButton!
     @IBOutlet weak var btnPhone: UIButton!
-    
     @IBOutlet weak var btnHours: UIButton!
+    
     var hoursView:HoursView!
     var restaurant:Restaurant!
     var restaurantView:ViewIndividualRestaurantView!
     var currentLocation:CLLocation!
+    var viewControllerIsInHierarchy = false
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle:nibBundleOrNil);
@@ -37,23 +38,62 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.view == nil
+        {
+            NSLog("******* Error - view == nil");
+        }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated);
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if viewControllerIsInHierarchy == false
+        {
+            setupRestaurantView()
+            setupMap()
+            setupPipeMenu()
+            checkForInfoAvailability()
+        }
+        
+        viewControllerIsInHierarchy = true
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated);
-        self.view.layoutIfNeeded()
+    func setupHours () {
+        hoursView = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! HoursView
+        if hoursView.displayRestaurantHours(restaurant.hours) {
+            btnHours.userInteractionEnabled = true
+        }
+        else {
+            btnHours.userInteractionEnabled = false
+        }
+    }
+    
+    func setupRestaurantView () {
         // Get the restaurant view from the Scroll View and set its width to the width of the scroll view
         restaurantView = self.view as! ViewIndividualRestaurantView;
+        restaurantView.delegate = self;
         
         let margins = self.view.layoutMarginsGuide
         restaurantView.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
         restaurantView.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
         // Set the bottom constraint to zero to ensure that the scroll views content size is the correct dynamic height
         bottomConstraint.constant = 0;
+        
+        // Display the restaurant information
+        restaurantView.imageView.image = restaurant.image
+        restaurantView.txtAddress.text = restaurant.address
+        restaurantView.txtCuisine.text = restaurant.getCuisine()
+    }
+    
+    func setupPipeMenu () {
+        let pipeMenuButtonView = NSBundle.mainBundle().loadNibNamed("PipeButtonView", owner: self, options: nil).first as! UIView
+        pipeMenuButtonView.frame = CGRectMake(self.view.superview!.frame.size.width - 103, self.view.superview!.frame.size.height - 200, pipeMenuButtonView.frame.width, pipeMenuButtonView.frame.height)
+        restaurantView.addSubview(pipeMenuButtonView)
+        restaurantView.pipeButtonView = pipeMenuButtonView
+    }
+    
+    func setupMap () {
         let restaurantLocation = restaurant.location;
         let camera = GMSCameraPosition.cameraWithLatitude(restaurantLocation.coordinate.latitude, longitude: restaurantLocation.coordinate.longitude, zoom: 15)
         let marker = GMSMarker()
@@ -63,26 +103,6 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         restaurantView.mapView.camera = camera;
         marker.map = restaurantView.mapView;
         restaurantView.mapView.selectedMarker = marker;
-        // Display the restaurant information
-        restaurantView.imageView.image = restaurant.image
-        restaurantView.txtAddress.text = restaurant.address
-        restaurantView.txtCuisine.text = restaurant.getCuisine()
-        
-        let pipeMenuButtonView = NSBundle.mainBundle().loadNibNamed("PipeButtonView", owner: self, options: nil).first as! UIView
-        pipeMenuButtonView.frame = CGRectMake(self.view.superview!.frame.size.width - 103, self.view.superview!.frame.size.height - 103, pipeMenuButtonView.frame.width, pipeMenuButtonView.frame.height)
-        restaurantView.superview!.addSubview(pipeMenuButtonView)
-        restaurantView.pipeButtonView = pipeMenuButtonView
-        
-        hoursView = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! HoursView
-        if hoursView.displayRestaurantHours(restaurant.hours) {
-            btnHours.userInteractionEnabled = true
-        }
-        else {
-            btnHours.userInteractionEnabled = false
-        }
-
-    
-        checkForInfoAvailability()
     }
     
     /*
@@ -228,7 +248,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     @IBAction func showPipeMenu(sender: UIButton) {
-        let pipeMenu = NSBundle.mainBundle().loadNibNamed("PipeMenuView", owner: self, options: nil).first as! PipeMenuView
+        let pipeMenu = NSBundle.mainBundle().loadNibNamed(PIPE_MENU_VIEW, owner: self, options: nil).first as! PipeMenuView
         self.view.superview?.addSubview(pipeMenu)
         pipeMenu.frame = self.view.superview!.bounds
         pipeMenu.animateButtons()
@@ -236,11 +256,34 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     @IBAction func showRateScreen(sender: UIButton) {
         let ratingViewController = RatingViewController()
-        ratingViewController.myNibName = FIVE_STAR_RATING_VIEW
+        if (sender.titleLabel!.text == RATING_CROWD)
+        {
+            ratingViewController.myNibName = RATE_CROWD_VIEW
+            ratingViewController.setupViewForWaitTimeOrCrowd(sender.titleLabel!.text!)
+        }
+        else if (sender.titleLabel!.text == RATING_WAIT_TIME) {
+            ratingViewController.myNibName = WAIT_TIME_VIEW
+            ratingViewController.setupViewForWaitTimeOrCrowd(sender.titleLabel!.text!)
+        }
+        else {
+            ratingViewController.myNibName = FIVE_STAR_RATING_VIEW
+            ratingViewController.setupViewForFiveStarRating(sender.titleLabel!.text!)
+        }
+        
         self.navigationController!.pushViewController(ratingViewController, animated: true);
-        ratingViewController.setupViewForRating(sender.titleLabel!.text!)
+        ratingViewController.restaurant = restaurant
     }
     
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // Make sure that we keep the Pipe Button anchored to the bootom
+        var fixedFrame = restaurantView.pipeButtonView.frame
+        if restaurantView.superview != nil
+        {
+            fixedFrame.origin.y = (restaurantView.superview!.frame.height - 103) + restaurantView.contentOffset.y
+            restaurantView.pipeButtonView.frame = fixedFrame
+        }
+    }
     
     /*
     // MARK: - Navigation
