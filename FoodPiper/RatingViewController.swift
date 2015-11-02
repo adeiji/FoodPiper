@@ -71,6 +71,7 @@ class RatingViewController: UIViewController {
     let indexOfViewIndividualRestaurant = 2
     let WAIT_TIME_RATING_FAST = 1, WAIT_TIME_RATING_SO_SO = 2, WAIT_TIME_RATING_LONG = 3
     let CROWD_RATING_SLOW = 7, CROWD_RATING_GOOD = 8, CROWD_RATING_PACKED = 9, CROWD_RATING_NOT_HOT = 10, CROWD_RATING_SO_SO = 11,CROWD_RATING_HOT = 12
+    var nextRatingViewController:RatingViewController! = nil
     
     struct CrowdRating {
         var crowdSize:String!
@@ -133,7 +134,16 @@ class RatingViewController: UIViewController {
             nextCriteriaInOrder = ratingOrder[0]
         }
         
-        ratingView.btnNext.setTitle("Rate " + nextCriteriaInOrder, forState: UIControlState.Normal)
+        let nextCriteriaIndex = ratingOrder.indexOf(nextCriteriaInOrder)
+        
+        // If the user has reached the last criteria that they can edit than we don't allow them to keep moving forward
+        if nextCriteriaIndex != initialCriteriaIndex
+        {
+            ratingView.btnNext.setTitle("Rate " + nextCriteriaInOrder, forState: UIControlState.Normal)
+        }
+        else {
+            ratingView.btnNext.hidden = true
+        }
     }
     
     func setupViewForWaitTimeOrCrowd (myCriteria:String) {
@@ -176,7 +186,10 @@ class RatingViewController: UIViewController {
     func updatePipe () {
 
         let ratingView = self.view as! RatingView
-        rating.comment = ratingView.txtComment!.text
+        if ratingView.txtComment != nil
+        {
+            rating.comment = ratingView.txtComment!.text
+        }
         
         switch criteria {
         case RATING_DECOR:
@@ -209,6 +222,7 @@ class RatingViewController: UIViewController {
         }
         
         updateSelectionOfButtons(sender, buttons: waitTimebuttons)
+        updatePipe()
     }
     
     func updateSelectionOfButtons (sender: UIButton, buttons:Array<UIButton>){
@@ -251,6 +265,7 @@ class RatingViewController: UIViewController {
         }
         
         updateSelectionOfButtons(sender, buttons: buttons)
+        updatePipe()
     }
 
     // Increment the rating down one half
@@ -267,27 +282,38 @@ class RatingViewController: UIViewController {
     
     @IBAction func gotoNextRatingCriteria() {
         
-        let ratingViewController = RatingViewController()
-        
-        // Make sure that we load the correct NIB and update the views according to the criteria that is going to be rated next
-        if nextCriteriaInOrder == RATING_WAIT_TIME
+        // If we have the next rating view controller set because the user has already rated the next criteria, then reload the exact same view so that it looks the same and has the same criteria already set
+        if self.nextRatingViewController == nil
         {
-            ratingViewController.myNibName = WAIT_TIME_VIEW
-            ratingViewController.setupViewForWaitTimeOrCrowd(nextCriteriaInOrder)
-        }
-        else if nextCriteriaInOrder == RATING_CROWD {
-            ratingViewController.myNibName = RATE_CROWD_VIEW
-            ratingViewController.setupViewForWaitTimeOrCrowd(nextCriteriaInOrder)
+            let ratingViewController = RatingViewController()
+            // Setting the initialCriteriaIndex must be done before any views are setup later
+            ratingViewController.initialCriteriaIndex = initialCriteriaIndex
+            
+            // Make sure that we load the correct NIB and update the views according to the criteria that is going to be rated next
+            if nextCriteriaInOrder == RATING_WAIT_TIME
+            {
+                ratingViewController.myNibName = WAIT_TIME_VIEW
+                ratingViewController.setupViewForWaitTimeOrCrowd(nextCriteriaInOrder)
+            }
+            else if nextCriteriaInOrder == RATING_CROWD {
+                ratingViewController.myNibName = RATE_CROWD_VIEW
+                ratingViewController.setupViewForWaitTimeOrCrowd(nextCriteriaInOrder)
+            }
+            else {
+                ratingViewController.myNibName = FIVE_STAR_RATING_VIEW
+                ratingViewController.setupViewForFiveStarRating(nextCriteriaInOrder)
+            }
+
+            ratingViewController.restaurant = restaurant
+            // Pass the pipe object so that when the user is done we can save all ratings the user has made
+            ratingViewController.pipe = pipe;
+            self.navigationController!.pushViewController(ratingViewController, animated: true)
+            self.nextRatingViewController = ratingViewController;
         }
         else {
-            ratingViewController.myNibName = FIVE_STAR_RATING_VIEW
-            ratingViewController.setupViewForFiveStarRating(nextCriteriaInOrder)
+            self.navigationController!.pushViewController(self.nextRatingViewController, animated: true)
         }
-        
-        self.navigationController!.pushViewController(ratingViewController, animated: true)
-        ratingViewController.restaurant = restaurant
-        // Pass the pipe object so that when the user is done we can save all ratings the user has made
-        ratingViewController.pipe = pipe;
+
     }
     /*
     // MARK: - Navigation

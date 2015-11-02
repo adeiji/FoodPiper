@@ -272,6 +272,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         
         self.navigationController!.pushViewController(ratingViewController, animated: true);
         ratingViewController.restaurant = restaurant
+        ratingViewController.initialCriteriaIndex = ratingViewController.ratingOrder.indexOf(sender.titleLabel!.text!)
     }
     
 
