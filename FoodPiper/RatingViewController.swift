@@ -69,6 +69,17 @@ class RatingViewController: UIViewController {
     var ratingDictionary:[String:String]! // The key is the criteria, and the value is a rating object
     var pipe:Pipe = Pipe()  // Pipe subclassed PFObject which contains all ratings the user has done
     let indexOfViewIndividualRestaurant = 2
+    let WAIT_TIME_RATING_FAST = 1, WAIT_TIME_RATING_SO_SO = 2, WAIT_TIME_RATING_LONG = 3
+    let CROWD_RATING_SLOW = 7, CROWD_RATING_GOOD = 8, CROWD_RATING_PACKED = 9,
+    CROWD_RATING_NOT_HOT = 10,
+    CROWD_RATING_SO_SO = 11,
+    CROWD_RATING_HOT = 12
+    
+    struct CrowdRating {
+        var crowdSize:String!
+        var crowdQuality:String!
+    }
+    var crowdRating = CrowdRating()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,8 +193,43 @@ class RatingViewController: UIViewController {
         default:
             pipe.food = rating
         }
-        
     }
+    
+    
+    @IBAction func waitTimeButtonPressed(sender: UIButton) {
+        
+        switch sender.tag {
+        case WAIT_TIME_RATING_FAST:
+            rating.rating = "fast"
+        case WAIT_TIME_RATING_SO_SO:
+            rating.rating = "so-so"
+        case WAIT_TIME_RATING_LONG:
+            rating.rating = "long"
+        default:break
+        }
+    }
+    
+    @IBAction func crowdButtonPressed(sender: UIButton) {
+        
+        switch sender.tag {
+        case CROWD_RATING_SLOW:
+            crowdRating.crowdSize = "slow"
+        case CROWD_RATING_GOOD:
+            crowdRating.crowdSize = "good"
+        case CROWD_RATING_PACKED:
+            crowdRating.crowdSize = "packed"
+        case CROWD_RATING_NOT_HOT:
+            crowdRating.crowdQuality = "not-hot"
+        case CROWD_RATING_SO_SO:
+            crowdRating.crowdQuality = "so-so"
+        case CROWD_RATING_SLOW:
+            crowdRating.crowdQuality = "hot"
+        default:break
+        }
+        
+        rating.rating = "size:" + crowdRating.crowdSize + "|quality:" + crowdRating.crowdQuality
+    }
+    
 
     // Increment the rating down one half
     @IBAction func incrementHalfDown() {

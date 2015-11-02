@@ -33,8 +33,11 @@
                             <include reference="saL-cn-HFg"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dog-iM-BzH"/>
+                    </connections>
                 </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abF-nz-xGO">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abF-nz-xGO">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -57,8 +60,11 @@
                             <include reference="SFZ-1T-fCA"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dar-WC-uOO"/>
+                    </connections>
                 </button>
-                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-vV-lZ9">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-vV-lZ9">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -77,6 +83,9 @@
                             <include reference="s6l-Id-T81"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="zcG-oe-Fdi"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xck-sr-DB8">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
