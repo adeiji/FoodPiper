@@ -7,6 +7,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingViewController" customModule="FoodPiper" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="z4H-md-tEa"/>
+                <outletCollection property="crowdSizeButtons" destination="4tC-rx-6Uo" collectionClass="NSMutableArray" id="S9v-xu-cLy"/>
+                <outletCollection property="crowdSizeButtons" destination="EdQ-9Y-wew" collectionClass="NSMutableArray" id="fCQ-Ko-yZm"/>
+                <outletCollection property="crowdSizeButtons" destination="IUO-F3-Fpt" collectionClass="NSMutableArray" id="po3-hS-5QF"/>
+                <outletCollection property="crowdQualityButtons" destination="G1V-Wl-mas" collectionClass="NSMutableArray" id="RkZ-xO-0BT"/>
+                <outletCollection property="crowdQualityButtons" destination="CVh-Lm-nCd" collectionClass="NSMutableArray" id="XHz-wO-69L"/>
+                <outletCollection property="crowdQualityButtons" destination="gPH-3Q-tIs" collectionClass="NSMutableArray" id="MyF-SK-71P"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

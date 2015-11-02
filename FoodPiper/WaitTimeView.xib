@@ -7,6 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingViewController" customModule="FoodPiper" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="IKG-Ii-V7a"/>
+                <outletCollection property="waitTimebuttons" destination="QSE-7p-QTf" collectionClass="NSMutableArray" id="pkt-RP-yO4"/>
+                <outletCollection property="waitTimebuttons" destination="abF-nz-xGO" collectionClass="NSMutableArray" id="I1D-n4-Tbf"/>
+                <outletCollection property="waitTimebuttons" destination="83c-vV-lZ9" collectionClass="NSMutableArray" id="ndQ-ng-3Xn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

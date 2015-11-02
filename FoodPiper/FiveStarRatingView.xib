@@ -375,5 +375,10 @@
                 <outlet property="txtComment" destination="zma-IC-hKj" id="Pyd-8o-6Pj"/>
             </connections>
         </view>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TLr-6u-oVV">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="-64" y="186"/>
+        </scrollView>
     </objects>
 </document>

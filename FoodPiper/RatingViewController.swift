@@ -70,10 +70,7 @@ class RatingViewController: UIViewController {
     var pipe:Pipe = Pipe()  // Pipe subclassed PFObject which contains all ratings the user has done
     let indexOfViewIndividualRestaurant = 2
     let WAIT_TIME_RATING_FAST = 1, WAIT_TIME_RATING_SO_SO = 2, WAIT_TIME_RATING_LONG = 3
-    let CROWD_RATING_SLOW = 7, CROWD_RATING_GOOD = 8, CROWD_RATING_PACKED = 9,
-    CROWD_RATING_NOT_HOT = 10,
-    CROWD_RATING_SO_SO = 11,
-    CROWD_RATING_HOT = 12
+    let CROWD_RATING_SLOW = 7, CROWD_RATING_GOOD = 8, CROWD_RATING_PACKED = 9, CROWD_RATING_NOT_HOT = 10, CROWD_RATING_SO_SO = 11,CROWD_RATING_HOT = 12
     
     struct CrowdRating {
         var crowdSize:String!
@@ -195,6 +192,9 @@ class RatingViewController: UIViewController {
         }
     }
     
+    @IBOutlet var waitTimebuttons: [UIButton]!
+    @IBOutlet var crowdSizeButtons: [UIButton]!
+    @IBOutlet var crowdQualityButtons: [UIButton]!
     
     @IBAction func waitTimeButtonPressed(sender: UIButton) {
         
@@ -207,29 +207,51 @@ class RatingViewController: UIViewController {
             rating.rating = "long"
         default:break
         }
+        
+        updateSelectionOfButtons(sender, buttons: waitTimebuttons)
+    }
+    
+    func updateSelectionOfButtons (sender: UIButton, buttons:Array<UIButton>){
+        for button in buttons {
+            button.backgroundColor = UIColor.orangeColor()
+        }
+        
+        sender.backgroundColor = UIColor.blackColor()
     }
     
     @IBAction func crowdButtonPressed(sender: UIButton) {
         
+        var buttons:Array<UIButton>!
+        
         switch sender.tag {
         case CROWD_RATING_SLOW:
             crowdRating.crowdSize = "slow"
+            buttons = crowdSizeButtons
         case CROWD_RATING_GOOD:
             crowdRating.crowdSize = "good"
+            buttons = crowdSizeButtons
         case CROWD_RATING_PACKED:
             crowdRating.crowdSize = "packed"
+            buttons = crowdSizeButtons
         case CROWD_RATING_NOT_HOT:
             crowdRating.crowdQuality = "not-hot"
+            buttons = crowdQualityButtons
         case CROWD_RATING_SO_SO:
             crowdRating.crowdQuality = "so-so"
-        case CROWD_RATING_SLOW:
+            buttons = crowdQualityButtons
+        case CROWD_RATING_HOT:
             crowdRating.crowdQuality = "hot"
+            buttons = crowdQualityButtons
         default:break
         }
         
-        rating.rating = "size:" + crowdRating.crowdSize + "|quality:" + crowdRating.crowdQuality
+        if crowdRating.crowdSize != nil && crowdRating.crowdQuality != nil
+        {
+            rating.rating = "size:" + crowdRating.crowdSize + "|quality:" + crowdRating.crowdQuality
+        }
+        
+        updateSelectionOfButtons(sender, buttons: buttons)
     }
-    
 
     // Increment the rating down one half
     @IBAction func incrementHalfDown() {
