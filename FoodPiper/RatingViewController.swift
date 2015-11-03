@@ -14,7 +14,7 @@ public class Pipe : PFObject, PFSubclassing {
     @NSManaged var food:Rating!
     @NSManaged var service:Rating!
     @NSManaged var decor:Rating!
-    @NSManaged var picture:UIImage!
+    @NSManaged var picture:PFFile!
     @NSManaged var crowd:Rating!
     @NSManaged var waitTime:Rating!
     @NSManaged var user:PFUser!
@@ -67,7 +67,7 @@ class RatingViewController: UIViewController {
     var myNibName:String!
     var restaurant:Restaurant!
     var ratingDictionary:[String:String]! // The key is the criteria, and the value is a rating object
-    var pipe:Pipe = Pipe()  // Pipe subclassed PFObject which contains all ratings the user has done
+    var pipe:Pipe!  // Pipe subclassed PFObject which contains all ratings the user has done
     let indexOfViewIndividualRestaurant = 2
     let WAIT_TIME_RATING_FAST = 1, WAIT_TIME_RATING_SO_SO = 2, WAIT_TIME_RATING_LONG = 3
     let CROWD_RATING_SLOW = 7, CROWD_RATING_GOOD = 8, CROWD_RATING_PACKED = 9, CROWD_RATING_NOT_HOT = 10, CROWD_RATING_SO_SO = 11,CROWD_RATING_HOT = 12
@@ -286,6 +286,8 @@ class RatingViewController: UIViewController {
         if self.nextRatingViewController == nil
         {
             let ratingViewController = RatingViewController()
+            // Pass the pipe object so that when the user is done we can save all ratings the user has made
+            ratingViewController.pipe = pipe;
             // Setting the initialCriteriaIndex must be done before any views are setup later
             ratingViewController.initialCriteriaIndex = initialCriteriaIndex
             
@@ -305,8 +307,7 @@ class RatingViewController: UIViewController {
             }
 
             ratingViewController.restaurant = restaurant
-            // Pass the pipe object so that when the user is done we can save all ratings the user has made
-            ratingViewController.pipe = pipe;
+
             self.navigationController!.pushViewController(ratingViewController, animated: true)
             self.nextRatingViewController = ratingViewController;
         }

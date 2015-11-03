@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate, UIActionSheetDelegate, UIScrollViewDelegate {
+class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate, UIActionSheetDelegate, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
     let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
@@ -25,10 +25,11 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     var restaurantView:ViewIndividualRestaurantView!
     var currentLocation:CLLocation!
     var viewControllerIsInHierarchy = false
+    var pipe:Pipe = Pipe()
+    var imagePicker:UIImagePickerController!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle:nibBundleOrNil);
-        
         self.view.backgroundColor = UIColor.whiteColor()
     }
 
@@ -204,6 +205,56 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func getCameraAction () -> UIAlertAction {
+        let cameraAction = UIAlertAction(title: "Use Camera", style: .Default) { (action) -> Void in
+            self.imagePicker = UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .Camera
+            self.imagePicker.allowsEditing = true
+            
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        return cameraAction
+    }
+    
+    func getPhotoLibraryAction () -> UIAlertAction {
+        let photoLibraryAction = UIAlertAction(title: "Use Photo Library", style: .Default) { (action) -> Void in
+            self.imagePicker = UIImagePickerController()
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = .PhotoLibrary
+            self.imagePicker.allowsEditing = true
+            
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        return photoLibraryAction
+    }
+    /*
+    
+    Prompt the user if he wants to use the photo library use his camera to add the image to the pipe
+    
+    */
+    @IBAction func takePicture(sender: UIButton) {
+        let alertController = UIAlertController(title: "Pipe Image", message: "Add an image to this pipe", preferredStyle: .ActionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (_) in })
+        let useCamera = getCameraAction()
+        let usePhotoLibrary = getPhotoLibraryAction()
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(useCamera)
+        alertController.addAction(usePhotoLibrary)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        let image = info[UIImagePickerControllerEditedImage] as? UIImage
+        pipe.picture = PFFile(data: UIImageJPEGRepresentation(image!, 0.1)!)
+        SyncManager.saveParseObject(pipe);
+    }
 
     /*
     
@@ -256,6 +307,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     @IBAction func showRateScreen(sender: UIButton) {
         let ratingViewController = RatingViewController()
+        ratingViewController.pipe = pipe /* Make sure that the pipe is set before we push the view controller up because the pipe
+                                            will be manipulated in the viewDidLoad method of the ratingViewController */
+        
         if (sender.titleLabel!.text == RATING_CROWD)
         {
             ratingViewController.myNibName = RATE_CROWD_VIEW
@@ -275,7 +329,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         ratingViewController.initialCriteriaIndex = ratingViewController.ratingOrder.indexOf(sender.titleLabel!.text!)
     }
     
-
+    
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // Make sure that we keep the Pipe Button anchored to the bootom
         var fixedFrame = restaurantView.pipeButtonView.frame

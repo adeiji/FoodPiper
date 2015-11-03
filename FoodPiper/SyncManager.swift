@@ -10,7 +10,7 @@ import UIKit
 
 class SyncManager: NSObject {
 
-    class func saveParseObject (object: PFObject) {
+    class func saveParseObject (object: Pipe) {
         object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if (success)
             {

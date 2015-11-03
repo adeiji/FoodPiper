@@ -162,6 +162,9 @@
                             <include reference="rGn-nn-5M2"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="VRU-qZ-N3E"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
