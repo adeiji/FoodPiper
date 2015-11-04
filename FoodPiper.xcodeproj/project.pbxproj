@@ -23,6 +23,8 @@
 		F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3431BE4393C00E159F6 /* WaitTimeView.xib */; settings = {ASSET_TAGS = (); }; };
 		F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3451BE43B3800E159F6 /* RateCrowdView.xib */; settings = {ASSET_TAGS = (); }; };
 		F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3471BE59D7400E159F6 /* SyncManager.swift */; settings = {ASSET_TAGS = (); }; };
+		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; settings = {ASSET_TAGS = (); }; };
+		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
@@ -109,6 +111,8 @@
 		F475C3431BE4393C00E159F6 /* WaitTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitTimeView.xib; sourceTree = "<group>"; };
 		F475C3451BE43B3800E159F6 /* RateCrowdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateCrowdView.xib; sourceTree = "<group>"; };
 		F475C3471BE59D7400E159F6 /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		F49F00A61BEAA63A00EDDF8C /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		F49F00A81BEAA73600EDDF8C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A37B571BD8103900DD5DAE /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 				F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */,
 				F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */,
 				F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */,
+				F49F00A61BEAA63A00EDDF8C /* MapView.xib */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */,
 				F410A0521BE2D3AA00BA8FDB /* HoursView.swift */,
 				F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */,
+				F49F00A81BEAA73600EDDF8C /* MapView.swift */,
 			);
 			name = "VIew and View Controller";
 			sourceTree = "<group>";
@@ -684,6 +690,7 @@
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
+				F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +770,7 @@
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
 				F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
+				F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */,
 				F4624FC61BE83745001F26C4 /* MessageViewController.swift in Sources */,
 				F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */,
 				F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */,

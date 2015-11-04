@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="FoodPiper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="6jZ-dG-qbm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MapView" customModule="FoodPiper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bQ-ubl" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ajZ-bQ-ubl" secondAttribute="height" multiplier="1:1" id="dSD-qr-WmI"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dSD-qr-WmI"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="dSD-qr-WmI"/>
+                        </mask>
+                    </variation>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Aru-Mi-Wfq">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="QcV-Ne-MO8"/>
+                        <outlet property="delegate" destination="-1" id="Q1J-pL-Oi3"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Aru-Mi-Wfq" secondAttribute="bottom" id="0o7-Ag-rFk"/>
+                <constraint firstAttribute="trailing" secondItem="Aru-Mi-Wfq" secondAttribute="trailing" id="GUO-Wb-Cc8"/>
+                <constraint firstAttribute="trailing" secondItem="ajZ-bQ-ubl" secondAttribute="trailing" id="JRq-iw-MqE"/>
+                <constraint firstItem="ajZ-bQ-ubl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SJu-vX-KNt"/>
+                <constraint firstItem="ajZ-bQ-ubl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZCH-Nc-tbu"/>
+                <constraint firstItem="Aru-Mi-Wfq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bPd-3K-fDL"/>
+                <constraint firstItem="Aru-Mi-Wfq" firstAttribute="top" secondItem="ajZ-bQ-ubl" secondAttribute="bottom" constant="-1" id="fkd-Wh-BUO"/>
+                <constraint firstItem="ajZ-bQ-ubl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wwe-gI-O2U"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="ajZ-bQ-ubl"/>
+                    <exclude reference="Aru-Mi-Wfq"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="0o7-Ag-rFk"/>
+                    <exclude reference="GUO-Wb-Cc8"/>
+                    <exclude reference="bPd-3K-fDL"/>
+                    <exclude reference="fkd-Wh-BUO"/>
+                    <exclude reference="JRq-iw-MqE"/>
+                    <exclude reference="SJu-vX-KNt"/>
+                    <exclude reference="ZCH-Nc-tbu"/>
+                    <exclude reference="wwe-gI-O2U"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="ajZ-bQ-ubl"/>
+                    <include reference="Aru-Mi-Wfq"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="0o7-Ag-rFk"/>
+                    <include reference="GUO-Wb-Cc8"/>
+                    <include reference="bPd-3K-fDL"/>
+                    <include reference="fkd-Wh-BUO"/>
+                    <include reference="JRq-iw-MqE"/>
+                    <include reference="SJu-vX-KNt"/>
+                    <include reference="ZCH-Nc-tbu"/>
+                    <include reference="wwe-gI-O2U"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="mapView" destination="ajZ-bQ-ubl" id="wvX-xR-LBN"/>
+                <outlet property="tableView" destination="Aru-Mi-Wfq" id="zgl-VZ-hZX"/>
+            </connections>
+        </view>
+    </objects>
+</document>
