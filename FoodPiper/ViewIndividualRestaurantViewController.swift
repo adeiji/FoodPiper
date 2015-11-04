@@ -99,11 +99,13 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         let camera = GMSCameraPosition.cameraWithLatitude(restaurantLocation.coordinate.latitude, longitude: restaurantLocation.coordinate.longitude, zoom: 15)
         let marker = GMSMarker()
         marker.position = camera.target
-        marker.snippet = restaurant.name;
+        marker.snippet = restaurant.name
         marker.appearAnimation = kGMSMarkerAnimationPop
-        restaurantView.mapView.camera = camera;
-        marker.map = restaurantView.mapView;
-        restaurantView.mapView.selectedMarker = marker;
+        restaurantView.mapView.camera = camera
+        marker.map = restaurantView.mapView
+        restaurantView.mapView.selectedMarker = marker
+
+        restaurantView.mapView.userInteractionEnabled = false
     }
     
     /*
@@ -329,6 +331,16 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         ratingViewController.initialCriteriaIndex = ratingViewController.ratingOrder.indexOf(sender.titleLabel!.text!)
     }
     
+    /*
+    
+    Show the screen that allows the user to comment for this specific pipe/restaurant
+    
+    */
+    @IBAction func commentButtonPressed(sender: UIButton) {
+        
+        let messageViewController = MessageViewController()
+        self.navigationController?.pushViewController(messageViewController, animated: true)
+    }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // Make sure that we keep the Pipe Button anchored to the bootom

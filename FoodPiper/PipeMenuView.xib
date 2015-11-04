@@ -134,6 +134,9 @@
                             <include reference="fDE-ku-EZU"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="commentButtonPressed:" destination="-1" eventType="touchUpInside" id="zQB-ue-Vxt"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-NM-Jce">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>

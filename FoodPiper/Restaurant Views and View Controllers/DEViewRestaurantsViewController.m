@@ -107,7 +107,15 @@ struct TopMargin {
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self setUpSearchBar];
     [self removeAllPostFromScreen];
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Map View" style:UIBarButtonItemStylePlain target:self action:@selector(displayMapView)];
+    [self.navigationItem setRightBarButtonItem:button];
+}
 
+- (void) displayMapView {
+    MapViewController *viewController = [MapViewController new];
+    viewController.currentLocation = _currentLocation;
+    viewController.restaurants = _restaurants;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void) removeFirstResponder {
