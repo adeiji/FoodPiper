@@ -13,6 +13,8 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     var currentLocation:CLLocation!
     var restaurants:Array<Restaurant>!
     var mapView:MapView!
+    let MAP_TABLE_VIEW_CELL_XIB:String = "MapTableViewCell"
+    let tableViewCellHeight = 77
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +54,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         marker.map = mapView.mapView
         marker.title = "Current Location"
         mapView.mapView.selectedMarker = marker
-        setMarkersForRestaurantsWithGoogleMap(mapView.mapView)
+        mapView.mapMarkers = setMarkersForRestaurantsWithGoogleMap(mapView.mapView)
         mapView.mapView = mapView.mapView;
     }
     
@@ -72,6 +74,11 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return markers
     }
     
+    /*
+    
+    Zoom into the Google Map enough to be able to see all the restaurants that are currently on that map
+    
+    */
     func fitBoundsOfMapView (mapView:GMSMapView) {
         let position = CLLocationCoordinate2DMake(currentLocation.coordinate.latitude, currentLocation.coordinate.longitude)
         var bounds = GMSCoordinateBounds.init(coordinate: position, coordinate: position)
@@ -84,12 +91,22 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! MapRestaurantCell
+        // Animate to the marker on the map that corresponds to this restaurant
+        for marker in mapView.mapMarkers {
+            if marker.title == cell.lblRestaurantName.text {
+                mapView.mapView.selectedMarker = marker
+                mapView.mapView.animateToLocation(marker.position)
+                break;
+            }
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init(style: .Default, reuseIdentifier: "Cell")
-        cell.textLabel!.text = restaurants[indexPath.row].name
+        let cell = NSBundle.mainBundle().loadNibNamed(MAP_TABLE_VIEW_CELL_XIB, owner: self, options: nil).first as! MapRestaurantCell
+        
+        cell.lblRestaurantName.text = restaurants[indexPath.row].name
+        cell.lblRestaurantAddress.text = restaurants[indexPath.row].address
         
         return cell;
     }
@@ -97,7 +114,22 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(tableViewCellHeight)
+    }
 
+    @IBAction func viewIndividualRestaurant(sender: UIButton) {
+        
+        let cell = sender.superview!.superview as! MapRestaurantCell
+        let indexPath = mapView.tableView .indexPathForCell(cell)
+        let viewController = ViewIndividualRestaurantViewController.init(nibName: VIEW_INDIVIDUAL_RESTAURANT_XIB, bundle: nil)
+        
+        viewController.currentLocation = currentLocation;
+        viewController.restaurant = restaurants[indexPath!.row];
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
     
     /*
     // MARK: - Navigation
@@ -109,4 +141,9 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     */
 
+}
+
+class MapRestaurantCell : UITableViewCell {
+    @IBOutlet weak var lblRestaurantName: UILabel!
+    @IBOutlet weak var lblRestaurantAddress: UILabel!
 }

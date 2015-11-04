@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="FoodPiper" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapRestaurantCell" rowHeight="77" id="Q3Z-rd-40r" customClass="MapRestaurantCell" customModule="FoodPiper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q3Z-rd-40r" id="yUR-At-qae">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0S-xK-7Mi">
+                        <rect key="frame" x="8" y="11" width="225" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="vQd-iH-77C"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtt-os-t6k">
+                        <rect key="frame" x="8" y="41" width="225" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="KCB-Xq-MKd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx5-Hw-xI4">
+                        <rect key="frame" x="241" y="24" width="71" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="x7a-o9-myV"/>
+                        </constraints>
+                        <state key="normal" title="View"/>
+                        <connections>
+                            <action selector="viewIndividualRestaurant:" destination="-1" eventType="touchUpInside" id="zTj-EQ-iOx"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="o0S-xK-7Mi" firstAttribute="top" secondItem="yUR-At-qae" secondAttribute="topMargin" constant="3" id="15i-SB-Bzr"/>
+                    <constraint firstItem="fx5-Hw-xI4" firstAttribute="leading" secondItem="o0S-xK-7Mi" secondAttribute="trailing" constant="8" id="AQd-jS-GOg"/>
+                    <constraint firstItem="gtt-os-t6k" firstAttribute="trailing" secondItem="o0S-xK-7Mi" secondAttribute="trailing" id="RGD-qM-Thx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="o0S-xK-7Mi" secondAttribute="trailing" constant="79" id="T4u-ru-9ia"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="o0S-xK-7Mi" secondAttribute="leading" id="YXg-ws-6Nd"/>
+                    <constraint firstItem="gtt-os-t6k" firstAttribute="leading" secondItem="o0S-xK-7Mi" secondAttribute="leading" id="ZGm-Dw-gcx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fx5-Hw-xI4" secondAttribute="trailing" id="jJb-Ma-2Ig"/>
+                    <constraint firstItem="fx5-Hw-xI4" firstAttribute="centerY" secondItem="yUR-At-qae" secondAttribute="centerY" id="kaZ-ix-aY0"/>
+                    <constraint firstItem="gtt-os-t6k" firstAttribute="top" secondItem="o0S-xK-7Mi" secondAttribute="bottom" constant="3" id="yGI-jq-dVj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblRestaurantAddress" destination="gtt-os-t6k" id="i55-sv-8oZ"/>
+                <outlet property="lblRestaurantName" destination="o0S-xK-7Mi" id="cLW-dl-gH0"/>
+            </connections>
+            <point key="canvasLocation" x="193" y="107.5"/>
+        </tableViewCell>
+    </objects>
+</document>

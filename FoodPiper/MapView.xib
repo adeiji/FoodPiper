@@ -19,7 +19,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="ajZ-bQ-ubl" secondAttribute="height" multiplier="1:1" id="dSD-qr-WmI"/>
+                        <constraint firstAttribute="width" secondItem="ajZ-bQ-ubl" secondAttribute="height" multiplier="1:1" id="dSD-qr-WmI">
+                            <variation key="heightClass=regular-widthClass=compact" constant="109"/>
+                        </constraint>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
@@ -49,7 +51,9 @@
                 <constraint firstItem="ajZ-bQ-ubl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SJu-vX-KNt"/>
                 <constraint firstItem="ajZ-bQ-ubl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZCH-Nc-tbu"/>
                 <constraint firstItem="Aru-Mi-Wfq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bPd-3K-fDL"/>
-                <constraint firstItem="Aru-Mi-Wfq" firstAttribute="top" secondItem="ajZ-bQ-ubl" secondAttribute="bottom" constant="-1" id="fkd-Wh-BUO"/>
+                <constraint firstItem="Aru-Mi-Wfq" firstAttribute="top" secondItem="ajZ-bQ-ubl" secondAttribute="bottom" constant="-1" id="fkd-Wh-BUO">
+                    <variation key="heightClass=regular-widthClass=compact" constant="-1"/>
+                </constraint>
                 <constraint firstItem="ajZ-bQ-ubl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wwe-gI-O2U"/>
             </constraints>
             <variation key="default">

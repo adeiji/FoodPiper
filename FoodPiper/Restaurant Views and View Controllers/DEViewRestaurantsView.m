@@ -14,7 +14,8 @@
 
 #define OVERLAY_VIEW 1
 NSString *const VIEW_RESTAURANT_STORYBOARD = @"ViewRestaurants";
-NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
+NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -154,10 +155,11 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT = @"ViewIndividualRestaurant";
 
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     UINavigationController *navController = (UINavigationController *) [[appDelegate window] rootViewController];
-    ViewIndividualRestaurantViewController *viewController = [[ViewIndividualRestaurantViewController alloc] initWithNibName:VIEW_INDIVIDUAL_RESTAURANT bundle:nil];
+    ViewIndividualRestaurantViewController *viewController = [[ViewIndividualRestaurantViewController alloc] initWithNibName:VIEW_INDIVIDUAL_RESTAURANT_XIB bundle:nil];
     viewController.currentLocation = _currentLocation;
     [viewController setRestaurant:_restaurant];
     [navController pushViewController:viewController animated:YES];
+
 }
 
 - (void) showEventEditing : (BOOL) editing {
