@@ -55,6 +55,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
             setupMap()
             setupPipeMenu()
             checkForInfoAvailability()
+            pipe.restaurantFactualId = restaurant.factualId
         }
         
         viewControllerIsInHierarchy = true
@@ -309,6 +310,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     @IBAction func showRateScreen(sender: UIButton) {
         let ratingViewController = RatingViewController()
+        
         ratingViewController.pipe = pipe /* Make sure that the pipe is set before we push the view controller up because the pipe
                                             will be manipulated in the viewDidLoad method of the ratingViewController */
         

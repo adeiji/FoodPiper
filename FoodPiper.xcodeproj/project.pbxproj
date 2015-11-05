@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
+		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
+		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
+		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D2A1BEADD57000042FF /* ViewPeep.swift */; settings = {ASSET_TAGS = (); }; };
 		F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F4624FC21BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m */; settings = {ASSET_TAGS = (); }; };
 		F4624FC61BE83745001F26C4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4624FC41BE83745001F26C4 /* MessageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4624FC51BE83745001F26C4 /* MessageViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -32,6 +36,7 @@
 		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */; settings = {ASSET_TAGS = (); }; };
 		F4B18F9E1BEAAE8D00B1765E /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B18F9D1BEAAE8D00B1765E /* MapTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F4B18FA11BEACE7600B1765E /* ViewPeepMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -96,6 +101,10 @@
 		5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPiper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
 		F410A0521BE2D3AA00BA8FDB /* HoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
+		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
+		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
+		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
+		F4447D2A1BEADD57000042FF /* ViewPeep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPeep.swift; sourceTree = "<group>"; };
 		F4624FC11BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DEScrollOnShowKeyboard.h"; sourceTree = "<group>"; };
 		F4624FC21BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DEScrollOnShowKeyboard.m"; sourceTree = "<group>"; };
 		F4624FC41BE83745001F26C4 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +133,7 @@
 		F4A7318D1BE15BBC007F4722 /* libFacebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libFacebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libFacebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewRestaurantHours.xib; sourceTree = "<group>"; };
 		F4B18F9D1BEAAE8D00B1765E /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeepMenu.xib; sourceTree = "<group>"; };
 		F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewIndividualRestaurant.xib; sourceTree = "<group>"; };
 		F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantViewController.swift; sourceTree = "<group>"; };
 		F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantView.swift; sourceTree = "<group>"; };
@@ -305,6 +315,17 @@
 			name = "Restaurant Workflow";
 			sourceTree = "<group>";
 		};
+		F4B18F9F1BEACE6600B1765E /* Peeping */ = {
+			isa = PBXGroup;
+			children = (
+				F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */,
+				F4447D261BEAD646000042FF /* ViewPeep.xib */,
+				F4447D281BEADD47000042FF /* PeepViewController.swift */,
+				F4447D2A1BEADD57000042FF /* ViewPeep.swift */,
+			);
+			name = Peeping;
+			sourceTree = "<group>";
+		};
 		F4BBFF9E1BDBF88B0056BF40 /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +448,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4B18F9F1BEACE6600B1765E /* Peeping */,
 				F475C3321BE2F0FE00E159F6 /* Piping */,
 				F4A06B171BDAC7C300825D74 /* Categories */,
 				F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */,
@@ -549,6 +571,7 @@
 		F4EA28411BDA8EE300079658 /* VIew and View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */,
 				F4EA284A1BDA906700079658 /* DEViewRestaurantsView.h */,
 				F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */,
 				F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */,
@@ -670,6 +693,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */,
+				F4B18FA11BEACE7600B1765E /* ViewPeepMenu.xib in Resources */,
+				F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */,
 				F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */,
 				F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */,
 				F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */,
@@ -783,6 +808,7 @@
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
 				F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */,
+				F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */,
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
 				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,
@@ -794,9 +820,11 @@
 				F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */,
 				F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */,
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
+				F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */,
 				F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */,
 				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
 				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
+				F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */,
 				F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
 				F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */,

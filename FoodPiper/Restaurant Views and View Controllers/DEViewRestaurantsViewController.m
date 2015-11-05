@@ -109,6 +109,25 @@ struct TopMargin {
     [self removeAllPostFromScreen];
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Map View" style:UIBarButtonItemStylePlain target:self action:@selector(displayMapView)];
     [self.navigationItem setRightBarButtonItem:button];
+    [self addPeepMenuButton];
+}
+
+- (void) addPeepMenuButton {
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(25, self.view.frame.size.height - 150, 100, 100)];
+    [button setBackgroundColor:[UIColor orangeColor]];
+    [button setTitle:@"Peep" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(showPeepMenu) forControlEvents:UIControlEventTouchUpInside];
+    [button.layer setZPosition:1.0];
+    [self.view addSubview:button];
+}
+
+- (void) showPeepMenu {
+    
+#warning Using a string that's not a constant for the xib name
+    PipeMenuView *peepMenuView = [[[NSBundle mainBundle] loadNibNamed:@"ViewPeepMenu" owner:self options:nil] firstObject];
+    [self.view addSubview:peepMenuView];
+    [peepMenuView setFrame:self.view.bounds];
+    [peepMenuView animateButtons];
 }
 
 - (void) displayMapView {
