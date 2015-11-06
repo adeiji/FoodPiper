@@ -4,13 +4,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PeepViewController" customModule="FoodPiper" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PeepViewController" customModule="FoodPiper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="D5D-D4-iiI" id="kLm-C8-q8o"/>
+            </connections>
+        </placeholder>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="D5D-D4-iiI">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="-717" y="18"/>
+        </scrollView>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="CMN-JZ-67k" customClass="ViewPeep" customModule="FoodPiper" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-Va-7MK">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-Va-7MK">
                     <rect key="frame" x="0.0" y="0.0" width="110" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="325" id="GUO-Ya-JoP"/>
@@ -22,15 +31,14 @@
                             <exclude reference="X3g-e3-giB"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="0.0"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="GUO-Ya-JoP"/>
                             <exclude reference="X3g-e3-giB"/>
                         </mask>
                     </variation>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxV-dh-cjL">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxV-dh-cjL">
                     <rect key="frame" x="0.0" y="0.0" width="110" height="0.0"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s0-Hf-6Oc">
@@ -151,8 +159,7 @@
                             <exclude reference="tcl-r3-ifs"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="0.0"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
                             <include reference="5s0-Hf-6Oc"/>
                             <include reference="keP-QL-Bxx"/>
@@ -217,8 +224,7 @@
                                     <exclude reference="kIA-fN-GUe"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="111" height="128"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="GMr-nq-DxD"/>
                                 </mask>
@@ -270,8 +276,7 @@
                                     <exclude reference="Ce4-58-bfb"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                <rect key="frame" x="111" y="0.0" width="110" height="128"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="oNv-bH-dIO"/>
                                 </mask>
@@ -323,8 +328,7 @@
                                     <exclude reference="ZgS-02-J2r"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                <rect key="frame" x="221" y="0.0" width="111" height="128"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="DY5-Q5-vlC"/>
                                 </mask>
@@ -354,8 +358,7 @@
                             <exclude reference="gX1-tP-sB3"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="128"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <include reference="Yed-iP-Kzo"/>
                             <exclude reference="eSn-E2-tS3"/>
@@ -411,8 +414,7 @@
                                     <exclude reference="Zap-eG-lbw"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="111" height="72"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="CgT-tq-zrn"/>
                                 </mask>
@@ -463,8 +465,7 @@
                                     <exclude reference="Fdf-Jf-xDI"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                <rect key="frame" x="111" y="0.0" width="110" height="72"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="b6C-Lb-2SC"/>
                                 </mask>
@@ -516,8 +517,7 @@
                                     <exclude reference="BTY-Rc-D1x"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                <rect key="frame" x="221" y="0.0" width="111" height="72"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="SIY-3T-T1P"/>
                                 </mask>
@@ -537,8 +537,7 @@
                             <exclude reference="sUD-ni-KXb"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="0.0" y="128" width="332" height="72"/>
+                    <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
                             <exclude reference="sUD-ni-KXb"/>
                         </mask>
@@ -560,8 +559,14 @@
             </variation>
             <connections>
                 <outlet property="image" destination="2ED-Va-7MK" id="dKG-9f-FCm"/>
+                <outlet property="lblBottomLeft" destination="CgT-tq-zrn" id="Z8a-Qv-ODv"/>
+                <outlet property="lblBottomMiddle" destination="b6C-Lb-2SC" id="Qwl-BH-elb"/>
+                <outlet property="lblBottomRight" destination="SIY-3T-T1P" id="lMk-sQ-hSg"/>
+                <outlet property="lblTopLeft" destination="GMr-nq-DxD" id="Yb3-Q5-6jT"/>
+                <outlet property="lblTopMiddle" destination="oNv-bH-dIO" id="r9U-24-gjq"/>
+                <outlet property="lblTopRight" destination="DY5-Q5-vlC" id="je2-N8-g7n"/>
             </connections>
-            <point key="canvasLocation" x="-412" y="-53.5"/>
+            <point key="canvasLocation" x="-272" y="131.5"/>
         </stackView>
     </objects>
 </document>

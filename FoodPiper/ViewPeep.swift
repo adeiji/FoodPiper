@@ -14,5 +14,11 @@ class ViewPeep: UIStackView {
     
     @IBOutlet weak var image: UIImageView!
     
+    @IBOutlet weak var lblTopLeft: UILabel!
     
+    @IBOutlet weak var lblBottomRight: UILabel!
+    @IBOutlet weak var lblBottomMiddle: UILabel!
+    @IBOutlet weak var lblBottomLeft: UILabel!
+    @IBOutlet weak var lblTopRight: UILabel!
+    @IBOutlet weak var lblTopMiddle: UILabel!
 }

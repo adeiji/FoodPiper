@@ -22,4 +22,22 @@ class SyncManager: NSObject {
         }
     }
     
+    class func getAllParseObjects (parseClass: String) -> [PFObject]? {
+        
+        let query = PFQuery(className: parseClass)
+        let semaphore = dispatch_semaphore_create(0)
+        do {
+            let parseObjects = try query.findObjects()
+            dispatch_semaphore_signal(semaphore)
+            if dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) == 0 {
+                NSLog("Received the parse objects")
+            }
+            return parseObjects
+        }
+        catch {
+            // Error downloading parse data
+            return nil
+        }
+    }
+    
 }

@@ -9,8 +9,6 @@
 import UIKit
 
 extension DEViewRestaurantsViewController  {
-
-    let PEEP_VIEW_CONTROLLER_XIB = "ViewPeep"
     
     @IBAction func viewFriendsPipes () {
         
@@ -21,9 +19,10 @@ extension DEViewRestaurantsViewController  {
     
     */
     @IBAction func viewAllPipes () {
-        var peepViewController = PeepViewController.init(nibName: PEEP_VIEW_CONTROLLER_XIB, bundle: nil)
+        let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
         
-        
+        peepViewController.pipesToRecieve = peepViewController.ALL_PIPES
+        self.navigationController?.pushViewController(peepViewController, animated: true)
     }
     
     @IBAction func viewFavoritePipes () {
