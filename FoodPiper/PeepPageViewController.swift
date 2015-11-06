@@ -40,7 +40,6 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
 
         var index = (viewController as! PeepViewController).pageIndex!
-        
         if index <= 0 {
             return nil
         }
@@ -53,7 +52,6 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
 
         var index = (viewController as! PeepViewController).pageIndex!
-        
         if index >= pipes!.count - 1 {
             return nil
         }

@@ -20,13 +20,8 @@ class PeepViewController: UIViewController {
         super.viewDidLayoutSubviews()
         // Do any additional setup after loading the view.
         if firstTimeOpening == true {
-            //            let peepView = NSBundle.mainBundle().loadNibNamed("ViewPeep", owner: self, options: nil).last as! ViewPeep
-            //
-            let peepView = self.view as! ViewPeep
-            peepView.frame = self.view.bounds
-//            self.view.addSubview(peepView)
+            let peepView = self.view.subviews.first as! ViewPeep
             self.loadandViewPipe(pipe,peepView: peepView)
-            
             firstTimeOpening = false
         }
 
