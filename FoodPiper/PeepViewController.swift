@@ -12,29 +12,29 @@ class PeepViewController: UIViewController {
 
     let ALL_PIPES:String = "all"
     var pipesToRecieve:String!
-    var peepView:ViewPeep!
     var firstTimeOpening = true
-    var pipes:Array<Pipe>!
+    var pipe:Pipe!
+    var pageIndex:Int!
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // Do any additional setup after loading the view.
         if firstTimeOpening == true {
-            if pipesToRecieve == ALL_PIPES
-            {
-
-                self.peepView = NSBundle.mainBundle().loadNibNamed("ViewPeep", owner: self, options: nil).last as! ViewPeep
-                self.peepView.frame = self.view.bounds
-                self.view.addSubview(self.peepView)
-                self.loadandViewPipe(pipes)
-
-                firstTimeOpening = false
-            }
+            //            let peepView = NSBundle.mainBundle().loadNibNamed("ViewPeep", owner: self, options: nil).last as! ViewPeep
+            //
+            let peepView = self.view as! ViewPeep
+            peepView.frame = self.view.bounds
+//            self.view.addSubview(peepView)
+            self.loadandViewPipe(pipe,peepView: peepView)
+            
+            firstTimeOpening = false
         }
+
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
     }
     
     /*
@@ -42,33 +42,32 @@ class PeepViewController: UIViewController {
     Load the pipe details and then display it in the ViewPeep
     
     */
-    func loadandViewPipe (pipes: [PFObject]?) {
-        let pipe = pipes!.first as! Pipe;
-        let pictureFile = pipe.picture
+    func loadandViewPipe (myPipe: Pipe, peepView: ViewPeep) {
+        let pictureFile = myPipe.picture
         var foodRating:String!, decorRating:String!, waitTimeRating:String!, crowdRating:String!, serviceRating:String!
 
         pictureFile.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
             if error == nil {
                 if let imageData = data {
-                    self.peepView.image.image = UIImage(data:imageData)
+                    peepView.image.image = UIImage(data:imageData)
                 }
             }
         }
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             
-            foodRating = self.loadRatingObject(pipe.food)
-            decorRating = self.loadRatingObject(pipe.decor)
-            waitTimeRating = self.loadRatingObject(pipe.waitTime)
-            crowdRating = self.loadRatingObject(pipe.crowd)
-            serviceRating = self.loadRatingObject(pipe.service)
+            foodRating = self.loadRatingObject(myPipe.food)
+            decorRating = self.loadRatingObject(myPipe.decor)
+            waitTimeRating = self.loadRatingObject(myPipe.waitTime)
+            crowdRating = self.loadRatingObject(myPipe.crowd)
+            serviceRating = self.loadRatingObject(myPipe.service)
         
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.peepView.lblTopLeft.text = foodRating
-                self.peepView.lblTopMiddle.text = decorRating
-                self.peepView.lblTopRight.text = waitTimeRating
-                self.peepView.lblBottomLeft.text = crowdRating
-                self.peepView.lblBottomMiddle.text = serviceRating
+                peepView.lblTopLeft.text = foodRating
+                peepView.lblTopMiddle.text = decorRating
+                peepView.lblTopRight.text = waitTimeRating
+                peepView.lblBottomLeft.text = crowdRating
+                peepView.lblBottomMiddle.text = serviceRating
             })
         })
     }

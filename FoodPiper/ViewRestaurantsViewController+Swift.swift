@@ -24,15 +24,17 @@ extension DEViewRestaurantsViewController  {
             let pipes = SyncManager.getAllParseObjects(PIPE_PARSE_CLASS)
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
+                let peepPageViewController = PeepPageViewController()
+                peepPageViewController.pipes = pipes
+                self.navigationController?.pushViewController(peepPageViewController, animated: true)
             })
             
         })
         
-        let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
-        
-        peepViewController.pipesToRecieve = peepViewController.ALL_PIPES
-        self.navigationController?.pushViewController(peepViewController, animated: true)
+//        let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
+//        
+//        peepViewController.pipesToRecieve = peepViewController.ALL_PIPES
+//        self.navigationController?.pushViewController(peepViewController, animated: true)
     }
     
     
