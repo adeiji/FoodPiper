@@ -19,11 +19,22 @@ extension DEViewRestaurantsViewController  {
     
     */
     @IBAction func viewAllPipes () {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            let pipes = SyncManager.getAllParseObjects(PIPE_PARSE_CLASS)
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+            })
+            
+        })
+        
         let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
         
         peepViewController.pipesToRecieve = peepViewController.ALL_PIPES
         self.navigationController?.pushViewController(peepViewController, animated: true)
     }
+    
     
     @IBAction func viewFavoritePipes () {
         
@@ -32,4 +43,5 @@ extension DEViewRestaurantsViewController  {
     @IBAction func viewDeals () {
         
     }
+    
 }

@@ -12,7 +12,7 @@
 #import <Masonry/Masonry.h>
 
 
-@interface DEViewRestaurantsViewController : UIViewController <UIScrollViewDelegate, MFMailComposeViewControllerDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate>
+@interface DEViewRestaurantsViewController : UIViewController <UIScrollViewDelegate, MFMailComposeViewControllerDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate, UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 {
     DEViewMainMenu *viewMainMenu;
     BOOL menuDisplayed;

@@ -14,7 +14,7 @@ class PeepViewController: UIViewController {
     var pipesToRecieve:String!
     var peepView:ViewPeep!
     var firstTimeOpening = true
-    
+    var pipes:Array<Pipe>!
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -22,17 +22,12 @@ class PeepViewController: UIViewController {
         if firstTimeOpening == true {
             if pipesToRecieve == ALL_PIPES
             {
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-                    let pipes = SyncManager.getAllParseObjects(PIPE_PARSE_CLASS)
-                    
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.peepView = NSBundle.mainBundle().loadNibNamed("ViewPeep", owner: self, options: nil).last as! ViewPeep
-                        self.peepView.frame = self.view.bounds
-                        self.view.addSubview(self.peepView)
-                        self.loadandViewPipe(pipes)
-                    })
-                    
-                })
+
+                self.peepView = NSBundle.mainBundle().loadNibNamed("ViewPeep", owner: self, options: nil).last as! ViewPeep
+                self.peepView.frame = self.view.bounds
+                self.view.addSubview(self.peepView)
+                self.loadandViewPipe(pipes)
+
                 firstTimeOpening = false
             }
         }
@@ -40,7 +35,6 @@ class PeepViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-            
     }
     
     /*

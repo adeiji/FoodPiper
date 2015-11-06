@@ -782,6 +782,8 @@ struct TopMargin {
     }
 }
 
+
+
 #pragma mark - Gesture Recognizer Delegate Methods 
 - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
