@@ -89,10 +89,24 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     func setupPipeMenu () {
+        self.navigationItem
+        let navigationBarHeight = self.navigationController?.navigationBar.frame.size.height
         let pipeMenuButtonView = NSBundle.mainBundle().loadNibNamed("PipeButtonView", owner: self, options: nil).first as! UIView
-        pipeMenuButtonView.frame = CGRectMake(self.view.superview!.frame.size.width - 103, self.view.superview!.frame.size.height - 200, pipeMenuButtonView.frame.width, pipeMenuButtonView.frame.height)
+        pipeMenuButtonView.frame = CGRectMake(restaurantView.frame.size.width - 103, (restaurantView.superview!.frame.height - 170) + restaurantView.contentOffset.y + navigationBarHeight! + 20, pipeMenuButtonView.frame.width, pipeMenuButtonView.frame.height)
         restaurantView.addSubview(pipeMenuButtonView)
         restaurantView.pipeButtonView = pipeMenuButtonView
+        
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        // Make sure that we keep the Pipe Button anchored to the bootom
+        var fixedFrame = restaurantView.pipeButtonView.frame
+        if restaurantView.superview != nil
+        {
+            fixedFrame.origin.y = (restaurantView.superview!.frame.height - 170) + restaurantView.contentOffset.y
+            restaurantView.pipeButtonView.frame = fixedFrame
+        }
     }
     
     func setupMap () {
@@ -303,8 +317,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     @IBAction func showPipeMenu(sender: UIButton) {
         let pipeMenu = NSBundle.mainBundle().loadNibNamed(PIPE_MENU_VIEW, owner: self, options: nil).first as! PipeMenuView
-        self.view.superview?.addSubview(pipeMenu)
-        pipeMenu.frame = self.view.superview!.bounds
+        let mainWindow = UIApplication.sharedApplication().keyWindow?.subviews.last
+        mainWindow?.addSubview(pipeMenu)
+        pipeMenu.frame = (mainWindow?.bounds)!
         pipeMenu.animateButtons()
     }
     
@@ -331,6 +346,8 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         self.navigationController!.pushViewController(ratingViewController, animated: true);
         ratingViewController.restaurant = restaurant
         ratingViewController.initialCriteriaIndex = ratingViewController.ratingOrder.indexOf(sender.titleLabel!.text!)
+        
+        sender.superview?.removeFromSuperview()
     }
     
     /*
@@ -344,14 +361,10 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         self.navigationController?.pushViewController(messageViewController, animated: true)
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        // Make sure that we keep the Pipe Button anchored to the bootom
-        var fixedFrame = restaurantView.pipeButtonView.frame
-        if restaurantView.superview != nil
-        {
-            fixedFrame.origin.y = (restaurantView.superview!.frame.height - 103) + restaurantView.contentOffset.y
-            restaurantView.pipeButtonView.frame = fixedFrame
-        }
+    @IBAction func closePipeMenu(sender: UIButton) {
+        
+        sender.superview?.removeFromSuperview()
+        
     }
     
     /*

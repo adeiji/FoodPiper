@@ -18,7 +18,9 @@ extension DEViewRestaurantsViewController  {
     View all the pipes that have been done ordered by time pushed up
     
     */
-    @IBAction func viewAllPipes () {
+    @IBAction func viewAllPipes (sender: UIButton) {
+        
+        sender.superview?.removeFromSuperview()
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let pipes = SyncManager.getAllParseObjects(PIPE_PARSE_CLASS)
@@ -28,7 +30,6 @@ extension DEViewRestaurantsViewController  {
                 peepPageViewController.pipes = pipes
                 self.navigationController?.pushViewController(peepPageViewController, animated: true)
             })
-            
         })
         
 //        let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)

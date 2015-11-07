@@ -551,8 +551,9 @@
                             </variation>
                         </stackView>
                     </subviews>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="402" id="gAh-pw-G0Q"/>
+                        <constraint firstAttribute="width" constant="400" id="gAh-pw-G0Q"/>
                         <constraint firstItem="2ED-Va-7MK" firstAttribute="top" secondItem="CMN-JZ-67k" secondAttribute="top" id="uWh-9B-W2c"/>
                     </constraints>
                     <variation key="default">
@@ -578,7 +579,7 @@
                     </connections>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="CMN-JZ-67k" firstAttribute="leading" secondItem="D5D-D4-iiI" secondAttribute="leading" id="DeJ-cf-4Es"/>
                 <constraint firstItem="CMN-JZ-67k" firstAttribute="top" secondItem="D5D-D4-iiI" secondAttribute="top" id="PFU-CF-AH4"/>

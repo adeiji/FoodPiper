@@ -63,6 +63,7 @@ static NSString *const kEventsUserPromptedForComment = @"com.happsnap.eventsUser
 
 - (void) showGettingEventsIndicatorWitText : (NSString *) text
 {
+    
     gettingEventsView = [self setUpIndicatorViewWithText:@"Getting Events"];
     dispatch_async(dispatch_get_main_queue(), ^{
         gettingEventsTimer = [NSTimer scheduledTimerWithTimeInterval:.35 target:self selector:@selector(incrementGettingEventsProgressView) userInfo:nil repeats:YES];

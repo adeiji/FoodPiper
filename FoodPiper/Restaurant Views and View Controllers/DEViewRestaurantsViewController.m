@@ -89,8 +89,9 @@ struct TopMargin {
 //        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
 //        [tracker set:kGAIScreenName value:@"Trending"];
 //        [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
-//        
-        [[DEScreenManager sharedManager] showGettingEventsIndicatorWitText:@"Getting Events"];
+//
+#warning may want to comment this out at some point
+//        [[DEScreenManager sharedManager] showGettingEventsIndicatorWitText:@"Getting Events"];
         [self startActivitySpinner];
     
         [self loadFirstTimeView];
@@ -125,9 +126,15 @@ struct TopMargin {
     
 #warning Using a string that's not a constant for the xib name
     PipeMenuView *peepMenuView = [[[NSBundle mainBundle] loadNibNamed:@"ViewPeepMenu" owner:self options:nil] firstObject];
-    [self.view addSubview:peepMenuView];
-    [peepMenuView setFrame:self.view.bounds];
+    UIView *mainWindow = [[[[UIApplication sharedApplication] keyWindow] subviews] lastObject];
+    [mainWindow addSubview:peepMenuView];
+    [peepMenuView setFrame:mainWindow.bounds];
     [peepMenuView animateButtons];
+}
+- (IBAction)closePeepMenuView:(UIButton *)sender {
+    
+    [sender.superview removeFromSuperview];
+    
 }
 
 - (void) displayMapView {
