@@ -10,3 +10,4 @@
 #import "FoodPiperIcons.h"
 #import "PaintCodeBackgrounds.h"
 #import "DELoginViewController.h"
+#import "FoodPiperLogo.h"

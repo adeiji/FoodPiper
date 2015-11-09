@@ -12,6 +12,8 @@
 		F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF41BF147DE002286BF /* CircularOrView.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */; settings = {ASSET_TAGS = (); }; };
 		F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1DFD1BF15ED1002286BF /* FoodPiperLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */; settings = {ASSET_TAGS = (); }; };
+		F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFE1BF15EDD002286BF /* Logo.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -133,6 +135,9 @@
 		F42A1DF61BF149A2002286BF /* PaintCodeBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaintCodeBackgrounds.h; path = "style classes/PaintCodeBackgrounds.h"; sourceTree = "<group>"; };
 		F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaintCodeBackgrounds.m; path = "style classes/PaintCodeBackgrounds.m"; sourceTree = "<group>"; };
 		F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodBackgroundView.swift; path = "paintcode-classes/FoodBackgroundView.swift"; sourceTree = "<group>"; };
+		F42A1DFB1BF15ED1002286BF /* FoodPiperLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodPiperLogo.h; path = "style classes/FoodPiperLogo.h"; sourceTree = "<group>"; };
+		F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodPiperLogo.m; path = "style classes/FoodPiperLogo.m"; sourceTree = "<group>"; };
+		F42A1DFE1BF15EDD002286BF /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
 		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +357,8 @@
 		F4A2AF091BF1321F0006CBE8 /* PaintCode Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F42A1DFB1BF15ED1002286BF /* FoodPiperLogo.h */,
+				F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */,
 				F42A1DF61BF149A2002286BF /* PaintCodeBackgrounds.h */,
 				F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */,
 				F42A1DEC1BF145ED002286BF /* FoodPiperIcons.h */,
@@ -379,6 +386,7 @@
 				F4A2AF381BF133D70006CBE8 /* DealsIcon.swift */,
 				F42A1DF41BF147DE002286BF /* CircularOrView.swift */,
 				F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */,
+				F42A1DFE1BF15EDD002286BF /* Logo.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -886,9 +894,11 @@
 				F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */,
 				F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */,
 				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
+				F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */,
 				F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */,
 				F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */,
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
+				F42A1DFD1BF15ED1002286BF /* FoodPiperLogo.m in Sources */,
 				F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */,
 				F4A2AF351BF133C30006CBE8 /* DecorIcon.swift in Sources */,
 				F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */,

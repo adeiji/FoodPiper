@@ -302,9 +302,9 @@
                                             </mask>
                                         </variation>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8A0-xH-f0B">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8A0-xH-f0B" customClass="Logo" customModule="FoodPiper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="8A0-xH-f0B" secondAttribute="height" multiplier="15:8" id="wTW-F7-jqj"/>
                                         </constraints>
