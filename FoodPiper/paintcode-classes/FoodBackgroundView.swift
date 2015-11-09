@@ -21,7 +21,8 @@ class FoodBackgroundView: UIView {
         self.backgroundColor = UIColor.clearColor()
     }
     
-    required override init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.backgroundColor = UIColor.clearColor()
     }
 }

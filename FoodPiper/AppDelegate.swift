@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().translucent = false
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UINavigationBar.appearance().titleTextAttributes = titleDict as? [String : AnyObject]
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         Parse.setApplicationId("RACHAIXoHN8KP5hQ2e3gg8MMWZxKTM6NAXkPnEbP",
             clientKey: "nEnEtiyFBeRXP3sD5XwX62X1Bhr6xsujEEOLV16K")
         Rating.registerSubclass()

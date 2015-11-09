@@ -111,6 +111,7 @@ struct TopMargin {
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Map View" style:UIBarButtonItemStylePlain target:self action:@selector(displayMapView)];
     [self.navigationItem setRightBarButtonItem:button];
     [self addPeepMenuButton];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void) addPeepMenuButton {
