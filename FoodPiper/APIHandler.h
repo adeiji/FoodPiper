@@ -26,6 +26,6 @@
  */
 
 - (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation;
-
+- (NSArray *) convertRestaurantsDictionaryToArray;
 
 @end

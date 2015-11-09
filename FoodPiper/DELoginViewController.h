@@ -34,5 +34,6 @@
 - (IBAction)createAnAccount:(id)sender;
 - (IBAction)goBack:(id)sender;
 - (IBAction)signIn:(id)sender;
+- (IBAction)skipLogin:(id)sender;
 
 @end

@@ -9,9 +9,6 @@
 #import "APIHandler.h"
 #import "FoodPiper-Swift.h"
 
-NSString *const VIEW_RESTAURANTS_VIEW_CONTROLLER = @"ViewRestaurantsViewController";
-NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
-
 @implementation APIHandler
 
 /*

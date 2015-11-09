@@ -14,6 +14,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     var currentLocation:CLLocation!
     var locationManager:CLLocationManager!
     var isFirstRun:Bool!
+    var apiHandler:APIHandler!
     
     func initializeLocationManager () {
         locationManager = CLLocationManager();
@@ -47,7 +48,6 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         // If this is the first time that were getting the current location than get all the restaurants
         if (isFirstRun == true)
         {
-            let apiHandler = APIHandler();
             apiHandler.getAllRestaurantsNearLocation(currentLocation);
             isFirstRun = false;
         }

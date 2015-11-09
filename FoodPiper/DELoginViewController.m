@@ -18,7 +18,8 @@
 @implementation DELoginViewController
 
 #define CREATE_ACCOUNT_VIEW_CONTROLLER @"createAccountViewController"
-
+NSString *const VIEW_RESTAURANTS_VIEW_CONTROLLER = @"ViewRestaurantsViewController";
+NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
 
 - (void)viewDidLoad
 {
@@ -91,6 +92,18 @@
     DEScreenManager *screenManager = [DEScreenManager sharedManager];
     
     [userManager loginWithUsername:_txtUsernameOrEmail.text Password:_txtPassword.text ViewController:[screenManager nextScreen] ErrorLabel:_lblErrorLabel];
+}
+
+- (IBAction)skipLogin:(id)sender {
+    
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    APIHandler *apiHandler = appDelegate.apiHandler;
+    DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
+
+    [viewController setRestaurants:[apiHandler convertRestaurantsDictionaryToArray]];
+    [viewController setCurrentLocation:apiHandler.currentLocation];
+    [self.navigationController pushViewController:viewController animated:YES];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated

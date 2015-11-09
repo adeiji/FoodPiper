@@ -14,12 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var locationHandler:LocationHandler!
+    var apiHandler:APIHandler!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
+        apiHandler = APIHandler()
         // Get all the restaurants in the area from Factual
         locationHandler = LocationHandler();
+        locationHandler.apiHandler = apiHandler
         locationHandler.initializeLocationManager();
         UINavigationBar.appearance().barTintColor = UIColor(red: 186/255, green: 25/255, blue: 96/255, alpha: 1.0)
         UINavigationBar.appearance().translucent = false
