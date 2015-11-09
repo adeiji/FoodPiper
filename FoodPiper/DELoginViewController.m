@@ -9,6 +9,7 @@
 #import "DELoginViewController.h"
 #import "Constants.h"
 #import <GoogleAnalytics/GAITracker.h>
+#import "FoodPiper-Swift.h"
 
 @interface DELoginViewController ()
 
@@ -54,6 +55,35 @@
     else {
         _lblLoginMessage.text = @"HappSnap is more fun and useful with an account.\n\nSign up in seconds for free!";
     }
+    
+    _backgroundView = [[FoodBackgroundView alloc] initWithFrame:CGRectMake(0, 0, 900, 900)];
+    [self.view addSubview:_backgroundView];
+    CGPoint center = CGPointMake(self.view.center.x, self.view.center.y);
+    _backgroundView.center = center;
+    _backgroundView.layer.zPosition = -1;
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self spinView];
+}
+
+#define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI)
+
+- (void) spinView
+{
+    [UIView animateWithDuration: 20.0f
+                          delay: 0.0f
+                        options: UIViewAnimationOptionCurveLinear
+                     animations: ^{
+                         _backgroundView.transform = CGAffineTransformRotate(_backgroundView.transform, M_PI / 2);
+                     }
+                     completion: ^(BOOL finished) {
+                         if (finished) {
+                            // if flag still set, keep spinning with constant speed
+                            [self spinView];
+                         }
+                     }];
 }
 
 - (IBAction)signIn:(id)sender {

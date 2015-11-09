@@ -7,6 +7,7 @@
 //
 
 #import "DELoginView.h"
+#import "PaintCodeBackgrounds.h"
 
 @implementation DELoginView
 
@@ -33,5 +34,6 @@
     DEUserManager *userManager = [DEUserManager sharedManager];
     [userManager loginWithFacebook];
 }
+
 
 @end

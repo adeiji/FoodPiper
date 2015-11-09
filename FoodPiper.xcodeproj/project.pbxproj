@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */; settings = {ASSET_TAGS = (); }; };
+		F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF41BF147DE002286BF /* CircularOrView.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */; settings = {ASSET_TAGS = (); }; };
+		F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -126,6 +129,10 @@
 		F410A0521BE2D3AA00BA8FDB /* HoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
 		F42A1DEC1BF145ED002286BF /* FoodPiperIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodPiperIcons.h; path = "style classes/FoodPiperIcons.h"; sourceTree = "<group>"; };
 		F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodPiperIcons.m; path = "style classes/FoodPiperIcons.m"; sourceTree = "<group>"; };
+		F42A1DF41BF147DE002286BF /* CircularOrView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularOrView.swift; path = "paintcode-classes/CircularOrView.swift"; sourceTree = "<group>"; };
+		F42A1DF61BF149A2002286BF /* PaintCodeBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaintCodeBackgrounds.h; path = "style classes/PaintCodeBackgrounds.h"; sourceTree = "<group>"; };
+		F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaintCodeBackgrounds.m; path = "style classes/PaintCodeBackgrounds.m"; sourceTree = "<group>"; };
+		F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodBackgroundView.swift; path = "paintcode-classes/FoodBackgroundView.swift"; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
 		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +352,8 @@
 		F4A2AF091BF1321F0006CBE8 /* PaintCode Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F42A1DF61BF149A2002286BF /* PaintCodeBackgrounds.h */,
+				F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */,
 				F42A1DEC1BF145ED002286BF /* FoodPiperIcons.h */,
 				F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */,
 				F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */,
@@ -368,6 +377,8 @@
 				F4A2AF341BF133C30006CBE8 /* DecorIcon.swift */,
 				F4A2AF361BF133CD0006CBE8 /* ServiceIcon.swift */,
 				F4A2AF381BF133D70006CBE8 /* DealsIcon.swift */,
+				F42A1DF41BF147DE002286BF /* CircularOrView.swift */,
+				F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -878,6 +889,7 @@
 				F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */,
 				F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */,
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
+				F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */,
 				F4A2AF351BF133C30006CBE8 /* DecorIcon.swift in Sources */,
 				F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */,
 				F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */,
@@ -886,11 +898,13 @@
 				F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */,
 				F4624FC61BE83745001F26C4 /* MessageViewController.swift in Sources */,
 				F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */,
+				F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */,
 				F4A2AF331BF133B90006CBE8 /* CrowdIcon.swift in Sources */,
 				F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */,
 				F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */,
 				F4A2AF1B1BF132CF0006CBE8 /* HoursIcon.swift in Sources */,
 				F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */,
+				F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,

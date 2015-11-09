@@ -25,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtUsernameOrEmail;
 @property (strong, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UILabel *lblErrorLabel;
+@property (strong, nonatomic) UIView *backgroundView;
 @property BOOL account;
 @property BOOL posting;
 

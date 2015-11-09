@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Get all the restaurants in the area from Factual
         locationHandler = LocationHandler();
         locationHandler.initializeLocationManager();
-        UILabel.appearance().textColor = UIColor(red: 115/255, green: 115/255, blue: 155/255, alpha: 1.0);
-        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 186/255, green: 25/255, blue: 96/255, alpha: 1.0)
+        UINavigationBar.appearance().translucent = false
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().titleTextAttributes = titleDict as? [String : AnyObject]
         Parse.setApplicationId("RACHAIXoHN8KP5hQ2e3gg8MMWZxKTM6NAXkPnEbP",
             clientKey: "nEnEtiyFBeRXP3sD5XwX62X1Bhr6xsujEEOLV16K")
         Rating.registerSubclass()
@@ -49,6 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        let navigationController = window?.rootViewController as! UINavigationController;
+        let viewController = navigationController.topViewController
+        if viewController!.isKindOfClass(DELoginViewController) {
+            viewController?.performSelector("spinView")
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {

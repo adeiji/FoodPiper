@@ -117,15 +117,15 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
  
  */
 - (void) displayViewRestaurantsScreen {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
-        DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
-        
-        [viewController setRestaurants:[self convertRestaurantsDictionaryToArray]];
-        [viewController setCurrentLocation:_currentLocation];
-        [navController pushViewController:viewController animated:YES];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//        UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
+//        DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
+//        
+//        [viewController setRestaurants:[self convertRestaurantsDictionaryToArray]];
+//        [viewController setCurrentLocation:_currentLocation];
+//        [navController pushViewController:viewController animated:YES];
+//    });
 }
 
 /*
