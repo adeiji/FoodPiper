@@ -11,6 +11,7 @@
                 <outlet property="btnEmail" destination="msj-cA-h8F" id="vl8-Kg-T11"/>
                 <outlet property="btnHours" destination="WR9-fd-u9u" id="Dfp-M1-Y7J"/>
                 <outlet property="btnPhone" destination="FEh-Es-v55" id="PC0-7z-dX2"/>
+                <outlet property="btnWebsite" destination="b1z-yj-aQE" id="i0S-E2-tnk"/>
                 <outlet property="view" destination="KO0-BB-kJI" id="diS-Rr-qQo"/>
             </connections>
         </placeholder>

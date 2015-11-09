@@ -19,6 +19,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     @IBOutlet weak var btnEmail: UIButton!
     @IBOutlet weak var btnPhone: UIButton!
     @IBOutlet weak var btnHours: UIButton!
+    @IBOutlet weak var btnWebsite: UIButton!
     
     var hoursView:HoursView!
     var restaurant:Restaurant!
@@ -137,6 +138,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         if restaurant.phoneNumber == nil {
             btnPhone.enabled = false
         }
+        if restaurant.website == nil {
+            btnWebsite.enabled = false
+        }
         
     }
 
@@ -184,9 +188,12 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     @IBAction func viewRestaurantWebsite(sender: UIButton) {
     
-        if UIApplication.sharedApplication().canOpenURL(restaurant.website)
+        if restaurant.website != nil
         {
-            UIApplication.sharedApplication().openURL(restaurant.website)
+            if UIApplication.sharedApplication().canOpenURL(restaurant.website)
+            {
+                UIApplication.sharedApplication().openURL(restaurant.website)
+            }
         }
     }
     
@@ -310,6 +317,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     @IBAction func viewHours(sender: UIButton) {
+        setupHours()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.window?.addSubview(hoursView);
         DEAnimationManager.animateView(hoursView, withSelector: nil);

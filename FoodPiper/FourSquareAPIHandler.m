@@ -29,22 +29,26 @@ static const NSString *GOOGLE_API_RESULTS = @"results";
             if (data != nil)
             {
                 NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-                NSDictionary *photo_details = jsonData[@"response"][@"photos"][@"items"][0];
-                
-                NSString *photo_url_prefix = photo_details[@"prefix"];
-                NSString *photo_url_suffix = photo_details[@"suffix"];
-                NSNumber *photo_width = photo_details[@"width"];
-                NSNumber *photo_height = photo_details[@"height"];
-                NSString *photo_url = [NSString stringWithFormat:@"%@%@x%@%@", photo_url_prefix, photo_width, photo_height, photo_url_suffix];
-                
-                if (![jsonData[@"status"] isEqualToString:@"ZERO_RESULTS"])
+                NSArray *photo_items = jsonData[@"response"][@"photos"][@"items"];
+                if ([photo_items count] != 0)
                 {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        // Make sure that we call this method on the main thread so that it updates properly as supposed to
-                        callback(photo_url, foursquareId, photo_width, photo_height);
-                    });
+                    NSDictionary *photo_details = photo_items[0];
+                    NSString *photo_url_prefix = photo_details[@"prefix"];
+                    NSString *photo_url_suffix = photo_details[@"suffix"];
+                    NSNumber *photo_width = photo_details[@"width"];
+                    NSNumber *photo_height = photo_details[@"height"];
+                    NSString *photo_url = [NSString stringWithFormat:@"%@%@x%@%@", photo_url_prefix, photo_width, photo_height, photo_url_suffix];
+                    
+                    if (![jsonData[@"status"] isEqualToString:@"ZERO_RESULTS"])
+                    {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            // Make sure that we call this method on the main thread so that it updates properly as supposed to
+                            callback(photo_url, foursquareId, photo_width, photo_height);
+                        });
+                    }
                 }
             }
+
         }
         else {
             NSLog(@"Foursquare Photo Error - %@", [error description]);

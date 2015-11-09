@@ -753,18 +753,12 @@ struct TopMargin {
     if (![[searchText stringByReplacingOccurrencesOfString:@" " withString:@"" ] isEqualToString:@""])
     {
         [_restaurantsCopy enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//            Restaurant *restaurant = [DEPost getPostFromPFObject:obj];
-//            if ([[post.myDescription lowercaseString] rangeOfString:[searchText lowercaseString] ].location != NSNotFound ||
-//                [[post.title lowercaseString] rangeOfString:[searchText lowercaseString]].location != NSNotFound ||
-//                [[post.address lowercaseString] rangeOfString:[searchText lowercaseString]].location != NSNotFound ||
-//                [[post.categoryStr lowercaseString] rangeOfString:[searchText lowercaseString]].location != NSNotFound ||
-//                [[post.quickDescription lowercaseString] rangeOfString:[searchText lowercaseString]].location != NSNotFound
-//                )
-//            {
-//                PFObject *unloadedObject = obj;
-//                unloadedObject[@"loaded"] = @NO;
-//                [_searchPosts addObject:unloadedObject];
-//            }
+            Restaurant *restaurant = (Restaurant *) obj;
+            if ([[restaurant.name lowercaseString] rangeOfString:[searchText lowercaseString] ].location != NSNotFound
+                )
+            {
+                [_searchPosts addObject:obj];
+            }
         }];
         
         _restaurants = _searchPosts;

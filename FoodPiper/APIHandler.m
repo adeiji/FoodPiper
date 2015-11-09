@@ -32,7 +32,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
     
     [queryObject setGeoFilter:coordinate radiusInMeters:5000];
-    [queryObject setLimit:50];
+    [queryObject setLimit:10];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
     _currentLocation = currentLocation;
 
@@ -61,8 +61,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
         for (id restaurant in queryResult.rows) {
             count ++;
             
-#warning Debug purposes only
-            if (count == 1)
+            if (!lastRequest)
             {
                 FactualQuery *queryObject = [FactualQuery query];
                 [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
@@ -111,6 +110,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
         
     }
 }
+
 /*
  
  Display the screen that will display all the restaurants that have been taken from the Factual API
@@ -133,7 +133,6 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
  Get the restaurants dictionary and add each of the restaurants to its own array
  
  */
-
 - (NSArray *) convertRestaurantsDictionaryToArray {
     
     NSMutableArray *arrayOfRestaurants = [NSMutableArray new];

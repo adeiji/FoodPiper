@@ -14,7 +14,7 @@
                 <userLayoutGuide location="351" affinity="minX"/>
             </userGuides>
             <subviews>
-                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-nR-UHh">
+                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-nR-UHh" customClass="MenuIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -45,7 +45,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="45r-Ea-KKw"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-9R-hFD">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-9R-hFD" customClass="DecorIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -76,7 +76,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="SAI-Tx-GLa"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-Fy-6Ck">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-Fy-6Ck" customClass="ServiceIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -107,7 +107,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="la0-St-jGr"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-6l-N0e">
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-6l-N0e" customClass="CommentIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -138,7 +138,7 @@
                         <action selector="commentButtonPressed:" destination="-1" eventType="touchUpInside" id="zQB-ue-Vxt"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-NM-Jce">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-NM-Jce" customClass="CameraIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -169,7 +169,7 @@
                         <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="VRU-qZ-N3E"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -197,7 +197,7 @@
                         </mask>
                     </variation>
                 </button>
-                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTz-Na-Thw">
+                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTz-Na-Thw" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -228,7 +228,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="dQL-hK-YiD"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT">
+                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT" customClass="DealsIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -256,7 +256,7 @@
                         </mask>
                     </variation>
                 </button>
-                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-Qp-aAE">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-Qp-aAE" customClass="CrowdIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -387,28 +387,28 @@
                     <exclude reference="emy-8M-ygS"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="7Ws-OO-bbo"/>
-                    <exclude reference="YC9-C9-oWc"/>
+                    <exclude reference="KkI-Ul-Dv4"/>
+                    <exclude reference="MAM-0X-mR4"/>
+                    <exclude reference="MMF-RM-tBO"/>
+                    <exclude reference="dD3-bX-CEl"/>
+                    <exclude reference="CAU-pn-03W"/>
+                    <exclude reference="Ied-zS-dG1"/>
+                    <exclude reference="OWH-kR-gb0"/>
+                    <exclude reference="fT8-fQ-OuI"/>
+                    <exclude reference="7JZ-pK-nWr"/>
+                    <exclude reference="oeA-xT-anj"/>
                     <exclude reference="JTh-t1-0HD"/>
                     <exclude reference="wrA-JS-di2"/>
                     <exclude reference="2dN-ts-wn3"/>
                     <exclude reference="YeR-wi-5nl"/>
                     <exclude reference="ueE-aS-lH9"/>
                     <exclude reference="yQ7-wp-0p4"/>
-                    <exclude reference="7JZ-pK-nWr"/>
-                    <exclude reference="oeA-xT-anj"/>
-                    <exclude reference="Tm4-mL-vKy"/>
-                    <exclude reference="KkI-Ul-Dv4"/>
-                    <exclude reference="MAM-0X-mR4"/>
-                    <exclude reference="MMF-RM-tBO"/>
-                    <exclude reference="dD3-bX-CEl"/>
                     <exclude reference="69u-C1-pw0"/>
                     <exclude reference="dfF-Yz-PWf"/>
                     <exclude reference="vvo-kX-rVX"/>
-                    <exclude reference="CAU-pn-03W"/>
-                    <exclude reference="Ied-zS-dG1"/>
-                    <exclude reference="OWH-kR-gb0"/>
-                    <exclude reference="fT8-fQ-OuI"/>
+                    <exclude reference="Tm4-mL-vKy"/>
+                    <exclude reference="7Ws-OO-bbo"/>
+                    <exclude reference="YC9-C9-oWc"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -426,28 +426,28 @@
                     <include reference="emy-8M-ygS"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="7Ws-OO-bbo"/>
-                    <include reference="YC9-C9-oWc"/>
+                    <include reference="KkI-Ul-Dv4"/>
+                    <include reference="MAM-0X-mR4"/>
+                    <include reference="MMF-RM-tBO"/>
+                    <include reference="dD3-bX-CEl"/>
+                    <include reference="CAU-pn-03W"/>
+                    <include reference="Ied-zS-dG1"/>
+                    <include reference="OWH-kR-gb0"/>
+                    <include reference="fT8-fQ-OuI"/>
+                    <include reference="7JZ-pK-nWr"/>
+                    <include reference="oeA-xT-anj"/>
                     <include reference="JTh-t1-0HD"/>
                     <include reference="wrA-JS-di2"/>
                     <include reference="2dN-ts-wn3"/>
                     <include reference="YeR-wi-5nl"/>
                     <include reference="ueE-aS-lH9"/>
                     <include reference="yQ7-wp-0p4"/>
-                    <include reference="7JZ-pK-nWr"/>
-                    <include reference="oeA-xT-anj"/>
-                    <include reference="Tm4-mL-vKy"/>
-                    <include reference="KkI-Ul-Dv4"/>
-                    <include reference="MAM-0X-mR4"/>
-                    <include reference="MMF-RM-tBO"/>
-                    <include reference="dD3-bX-CEl"/>
                     <include reference="69u-C1-pw0"/>
                     <include reference="dfF-Yz-PWf"/>
                     <include reference="vvo-kX-rVX"/>
-                    <include reference="CAU-pn-03W"/>
-                    <include reference="Ied-zS-dG1"/>
-                    <include reference="OWH-kR-gb0"/>
-                    <include reference="fT8-fQ-OuI"/>
+                    <include reference="Tm4-mL-vKy"/>
+                    <include reference="7Ws-OO-bbo"/>
+                    <include reference="YC9-C9-oWc"/>
                 </mask>
             </variation>
             <connections>

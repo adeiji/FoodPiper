@@ -14,7 +14,7 @@
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <state key="normal" title="All"/>
                     <connections>
-                        <action selector="viewAllPipes" destination="-1" eventType="touchUpInside" id="f8x-p6-BOF"/>
+                        <action selector="viewAllPipes:" destination="-1" eventType="touchUpInside" id="77S-je-M6t"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-ah-g2o">
