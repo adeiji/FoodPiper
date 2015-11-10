@@ -28,33 +28,34 @@ class FoodPiperButton: UIButton {
 }
 
 extension UIButton {
-    @IBInspectable var cornerRadius : CGFloat {
-        get {
-            return layer.cornerRadius
-        
-        }
-        set {
-            layer.cornerRadius = newValue
-            layer.masksToBounds = newValue > 0
-        }
-    }
-    
-    @IBInspectable var borderWidth : CGFloat {
-        get {
-            return layer.borderWidth
-        }
-        set {
-            layer.borderWidth = newValue
-            layer.masksToBounds = newValue > 0
-        }
-    }
+//    @IBInspectable var cornerRadius : CGFloat {
+//        get {
+//            return layer.cornerRadius
+//        
+//        }
+//        set {
+//            layer.cornerRadius = newValue
+//            layer.masksToBounds = newValue > 0
+//        }
+//    }
+//    
+//    @IBInspectable var borderWidth : CGFloat {
+//        get {
+//            return layer.borderWidth
+//        }
+//        set {
+//            layer.borderWidth = newValue
+//            layer.masksToBounds = newValue > 0
+//        }
+//    }
+//
+//    @IBInspectable var borderColor : CGColor {
+//        get {
+//            return layer.borderColor!
+//        }
+//        set {
+//            layer.borderColor = newValue
+//        }
+//    }
 
-    @IBInspectable var borderColor : CGColor {
-        get {
-            return layer.borderColor!
-        }
-        set {
-            layer.borderColor = newValue
-        }
-    }
 }
