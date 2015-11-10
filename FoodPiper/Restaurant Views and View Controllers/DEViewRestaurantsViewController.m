@@ -126,6 +126,7 @@ struct TopMargin {
 
 - (void) addPeepMenuButton {
     PeepIcon *button = [[PeepIcon alloc] initWithFrame:CGRectMake(25, self.view.frame.size.height - 140, 70, 70)];
+    [button setShowsTouchWhenHighlighted:YES];
     [button setBackgroundColor:[UIColor clearColor]];
     [button addTarget:self action:@selector(showPeepMenu) forControlEvents:UIControlEventTouchUpInside];
     [button.layer setZPosition:1.0];

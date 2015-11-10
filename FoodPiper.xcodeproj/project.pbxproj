@@ -18,6 +18,10 @@
 		F42A1E041BF190DC002286BF /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E031BF190DC002286BF /* FilterView.xib */; settings = {ASSET_TAGS = (); }; };
 		F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E051BF1913B002286BF /* FilterCategoryView.xib */; settings = {ASSET_TAGS = (); }; };
 		F42A1E081BF24BB8002286BF /* FoodPiperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E071BF24BB8002286BF /* FoodPiperView.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1E0A1BF250AF002286BF /* MakeReservationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E091BF250AF002286BF /* MakeReservationView.xib */; settings = {ASSET_TAGS = (); }; };
+		F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1E0E1BF281B2002286BF /* CheckMarkIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1E101BF28895002286BF /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0F1BF28895002286BF /* Reservation.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -146,6 +150,10 @@
 		F42A1E031BF190DC002286BF /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		F42A1E051BF1913B002286BF /* FilterCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCategoryView.xib; sourceTree = "<group>"; };
 		F42A1E071BF24BB8002286BF /* FoodPiperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperView.swift; sourceTree = "<group>"; };
+		F42A1E091BF250AF002286BF /* MakeReservationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeReservationView.xib; sourceTree = "<group>"; };
+		F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationView.swift; sourceTree = "<group>"; };
+		F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkIcon.swift; sourceTree = "<group>"; };
+		F42A1E0F1BF28895002286BF /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
 		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
@@ -405,6 +413,7 @@
 				F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */,
 				F42A1DFE1BF15EDD002286BF /* Logo.swift */,
 				F42A1E001BF180AF002286BF /* CancelIcon.swift */,
+				F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -451,6 +460,7 @@
 				F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */,
 				F49F00A61BEAA63A00EDDF8C /* MapView.xib */,
 				F4B18F9D1BEAAE8D00B1765E /* MapTableViewCell.xib */,
+				F42A1E091BF250AF002286BF /* MakeReservationView.xib */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -682,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				F4A37B571BD8103900DD5DAE /* Restaurant.swift */,
+				F42A1E0F1BF28895002286BF /* Reservation.swift */,
 			);
 			name = Restaurant;
 			sourceTree = "<group>";
@@ -699,6 +710,7 @@
 				F410A0521BE2D3AA00BA8FDB /* HoursView.swift */,
 				F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */,
 				F49F00A81BEAA73600EDDF8C /* MapView.swift */,
+				F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */,
 			);
 			name = "VIew and View Controller";
 			sourceTree = "<group>";
@@ -822,6 +834,7 @@
 				F4624FCB1BEA7FE8001F26C4 /* walking-26.png in Resources */,
 				F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */,
 				F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
+				F42A1E0A1BF250AF002286BF /* MakeReservationView.xib in Resources */,
 				F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */,
 				F4CC5AEE1BD58B0F00109C61 /* JosefinSans-SemiBold.ttf in Resources */,
 				F4CC5AE91BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf in Resources */,
@@ -925,9 +938,11 @@
 				F4A2AF351BF133C30006CBE8 /* DecorIcon.swift in Sources */,
 				F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */,
 				F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */,
+				F42A1E101BF28895002286BF /* Reservation.swift in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
 				F4A2AF291BF133740006CBE8 /* ViewAllPeepsIcon.swift in Sources */,
 				F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */,
+				F42A1E0E1BF281B2002286BF /* CheckMarkIcon.swift in Sources */,
 				F4624FC61BE83745001F26C4 /* MessageViewController.swift in Sources */,
 				F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */,
 				F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */,
@@ -957,6 +972,7 @@
 				F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */,
 				F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */,
 				F4A2AF191BF132C40006CBE8 /* FavoriteIcon.swift in Sources */,
+				F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */,
 				F4A2AF231BF133440006CBE8 /* DoneIcon.swift in Sources */,
 				F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */,
 				F42A1E011BF180AF002286BF /* CancelIcon.swift in Sources */,

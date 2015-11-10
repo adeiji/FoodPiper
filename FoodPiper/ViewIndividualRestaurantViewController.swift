@@ -22,6 +22,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     @IBOutlet weak var btnWebsite: UIButton!
     
     var hoursView:HoursView!
+    var makeReservationView:MakeReservationView!
     var restaurant:Restaurant!
     var restaurantView:ViewIndividualRestaurantView!
     var currentLocation:CLLocation!
@@ -360,11 +361,66 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         controller.dismissViewControllerAnimated(true, completion: nil)
         
     }
+
+    // Add the view to the main window and animate its appearance
+    func displayViewInWindow (view: UIView) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.addSubview(view);
+        DEAnimationManager.animateView(view, withSelector: nil);
+    }
     
     @IBAction func viewHours(sender: UIButton) {
+        displayViewInWindow(hoursView)
+    }
+    
+    @IBAction func makeReservationButtonPressed(sender: UIButton) {
+        
+        makeReservationView = NSBundle.mainBundle().loadNibNamed(VIEW_MAKE_RESERVATION, owner: self, options: nil).first as! MakeReservationView
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePickerMode.DateAndTime
+        makeReservationView.txtReservationTime.inputView = datePicker
+        datePicker.addTarget(self, action: Selector("datePickerValueChanged:"), forControlEvents: .ValueChanged)
+        displayReservationView()
+        displayDateFromPicker(datePicker)
+        disableScreen()
+
+    }
+    
+    func displayReservationView () {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.addSubview(hoursView);
-        DEAnimationManager.animateView(hoursView, withSelector: nil);
+        appDelegate.window?.addSubview(makeReservationView);
+        let screenSize = UIScreen.mainScreen().bounds
+        let insets = UIEdgeInsetsMake(screenSize.height / 5, 30, screenSize.height / 2.5, 30 )
+        DEAnimationManager.animateView(makeReservationView, withSelector: nil, withEdgeInsets:insets);
+        
+        makeReservationView.txtReservationTime.becomeFirstResponder()
+        
+        disableScreen()
+    }
+
+    func enableScreen () {
+        self.view.userInteractionEnabled = true
+        self.navigationItem.hidesBackButton = false
+    }
+    
+    func disableScreen () {
+        self.view.userInteractionEnabled = false
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    
+    func displayDateFromPicker (datePicker: UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        makeReservationView.txtReservationTime.text = dateFormatter.stringFromDate(datePicker.date)
+    }
+    
+    // Display the selected reservation time
+    func datePickerValueChanged(sender:UIDatePicker) {
+        displayDateFromPicker(sender)
     }
     
     @IBAction func showPipeMenu(sender: UIButton) {
@@ -402,6 +458,13 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         sender.superview?.removeFromSuperview()
     }
     
+    @IBAction func messageButtonPressed(sender: UIButton) {
+        
+        let viewController = MessageViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        
+    }
     /*
     
     Show the screen that allows the user to comment for this specific pipe/restaurant
@@ -413,20 +476,19 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         self.navigationController?.pushViewController(messageViewController, animated: true)
     }
     
+    @IBAction func closeHoursView(sender: UIButton) {
+        DEAnimationManager.animateViewOut(hoursView, withInsets: UIEdgeInsetsZero)
+        
+        enableScreen()
+    }
     @IBAction func closePipeMenu(sender: UIButton) {
         
         sender.superview?.removeFromSuperview()
-        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeReservationView(sender: UIButton) {
+        DEAnimationManager.animateViewOut(makeReservationView, withInsets: UIEdgeInsetsZero)
+        
+        enableScreen()
     }
-    */
-
 }

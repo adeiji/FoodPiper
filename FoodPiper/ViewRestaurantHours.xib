@@ -284,7 +284,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="closeView:" destination="iN0-l3-epB" eventType="touchUpInside" id="6IG-Uq-cwD"/>
+                        <action selector="closeHoursView:" destination="-1" eventType="touchUpInside" id="GxE-c6-gQE"/>
                     </connections>
                 </button>
             </subviews>

@@ -23,7 +23,7 @@
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="FoodBackgroundView" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msj-cA-h8F" customClass="SendMessageIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msj-cA-h8F" customClass="SendMessageIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="Nor-gM-XdC"/>
@@ -46,7 +46,7 @@
                                 <action selector="openEmailViewController:" destination="-1" eventType="touchUpInside" id="BcR-Rz-Ree"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-Es-v55" customClass="PhoneIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-Es-v55" customClass="PhoneIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="yFk-hf-34c"/>
@@ -69,7 +69,7 @@
                                 <action selector="openPhoneApp:" destination="-1" eventType="touchUpInside" id="EQK-Fc-xpi"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-yj-aQE" customClass="MenuIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-yj-aQE" customClass="MenuIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="b1z-yj-aQE" secondAttribute="height" multiplier="1:1" id="0lc-VV-MJf"/>
@@ -103,7 +103,7 @@
                                 <action selector="viewRestaurantWebsite:" destination="-1" eventType="touchUpInside" id="v6B-p3-hAc"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-fd-u9u" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-fd-u9u" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="lAc-Bz-6Hr"/>
@@ -126,7 +126,7 @@
                                 <action selector="viewHours:" destination="-1" eventType="touchUpInside" id="7wu-Aj-K7o"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-P0-vtG" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-P0-vtG" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="rUF-2d-iA5"/>
@@ -306,6 +306,9 @@
                                 <constraint firstAttribute="height" constant="70" id="oR8-zJ-UdG"/>
                                 <constraint firstAttribute="width" constant="70" id="oqb-FI-FUi"/>
                             </constraints>
+                            <state key="normal" title="Friends">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="7EG-29-ZGt"/>
@@ -327,6 +330,9 @@
                                 <constraint firstAttribute="width" constant="70" id="447-ip-eod"/>
                                 <constraint firstAttribute="height" constant="70" id="bhs-es-q1G"/>
                             </constraints>
+                            <state key="normal" title="AllPeeps">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="447-ip-eod"/>
@@ -346,6 +352,9 @@
                                 <constraint firstAttribute="height" constant="70" id="Amo-9a-7ep"/>
                                 <constraint firstAttribute="width" constant="70" id="ho2-Eu-G2q"/>
                             </constraints>
+                            <state key="normal" title="Message">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="Amo-9a-7ep"/>
@@ -358,6 +367,9 @@
                                     <include reference="ho2-Eu-G2q"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="messageButtonPressed:" destination="-1" eventType="touchUpInside" id="41g-KG-lmg"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-t9-Zyq" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -366,6 +378,9 @@
                                 <constraint firstAttribute="height" constant="70" id="WLI-1w-yKv"/>
                                 <constraint firstAttribute="height" constant="70" id="tBe-QM-C23"/>
                             </constraints>
+                            <state key="normal" title="Check In">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="Sij-xc-Tpb"/>
@@ -388,6 +403,9 @@
                                 <constraint firstAttribute="height" constant="70" id="UKF-Tx-eED"/>
                                 <constraint firstAttribute="width" constant="70" id="heZ-2G-pOQ"/>
                             </constraints>
+                            <state key="normal" title="Reservation">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="907-nx-3KL"/>
@@ -402,6 +420,9 @@
                                     <include reference="heZ-2G-pOQ"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="makeReservationButtonPressed:" destination="-1" eventType="touchUpInside" id="xUu-kN-Cm1"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

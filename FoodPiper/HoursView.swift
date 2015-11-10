@@ -59,10 +59,4 @@ class HoursView: UIView {
         
         return true
     }
-
-    @IBAction func closeView(sender: UIButton) {
-        
-        DEAnimationManager.animateViewOut(self, withInsets: UIEdgeInsetsZero);
-        
-    }
 }

@@ -21,4 +21,7 @@
         WithSelector:(SEL)selector;
 + (void) animateViewOut:(UIView *)view
              WithInsets:(UIEdgeInsets)insets;
++ (void) animateView:(UIView *)view
+        WithSelector:(SEL)selector
+      withEdgeInsets:(UIEdgeInsets) insets;
 @end

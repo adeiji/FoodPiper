@@ -13,7 +13,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmU-wo-09B">
                     <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-s1-ntY" customClass="PipeIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-s1-ntY" customClass="PipeIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="16" y="17" width="70" height="70"/>
                             <connections>
                                 <action selector="showPipeMenu:" destination="-1" eventType="touchUpInside" id="TIj-Y3-Ct2"/>

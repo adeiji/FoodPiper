@@ -70,6 +70,43 @@
         }];
 }
 
++ (void) animateView:(UIView *)view
+        WithSelector:(SEL)selector
+      withEdgeInsets:(UIEdgeInsets) insets
+{
+    UIEdgeInsets startInsets = [self getCenter:insets WithView:view];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo([view superview]).with.insets(startInsets);
+    }];
+    
+    [view layoutIfNeeded];
+    UIEdgeInsets midWayInsets = UIEdgeInsetsMake(startInsets.top, insets.left, startInsets.bottom, insets.right);
+    [view mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo([view superview]).with.insets(midWayInsets);
+    }];
+    [UIView animateWithDuration:.1 animations:^{
+        [view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [view mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo([view superview]).with.insets(insets);
+        }];
+        [UIView animateWithDuration:.1 animations:^{
+            [view layoutIfNeeded];
+            [[view layer] setCornerRadius:view.frame.size.width / 15];
+        } completion:^(BOOL finished) {
+            if (selector != nil)
+            {
+                IMP imp = [view methodForSelector:selector];
+                void (*func)(id, SEL) = (void *) imp;
+                
+                func(view, selector);
+            }
+            [self setHiddenOfAllSubviews:view isHidden:NO];
+        }];
+    }];
+}
+
 
 + (void) animateView:(UIView *)view
         WithSelector:(SEL)selector
