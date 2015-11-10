@@ -50,7 +50,48 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        setupHours()
+        checkForEmail()
+        checkForPhone()
+        getRating()
         self.navigationController?.navigationBar.topItem?.title = restaurant.name
+    }
+    
+    func checkForEmail () {
+        if restaurant.phoneNumber == nil {
+            btnPhone.userInteractionEnabled = false
+            btnPhone.alpha = 0.3
+        }
+    }
+    
+    func checkForPhone () {
+        if restaurant.email == nil {
+            btnEmail.userInteractionEnabled = false
+            btnEmail.alpha = 0.3
+        }
+    }
+    
+    func getRating () {
+        let rating = (restaurant.rating as! NSString).integerValue
+        // If this rating is a double and not a whole number than set this to true
+        let hasPoint = (restaurant.rating as! NSString).doubleValue % 1 == 0 ? false : true
+        let height = restaurantView.ratingView.frame.height
+        
+        for var index = 0; index < rating; ++index {
+            let star = StarIcon()
+            star.filled = true
+            star.frame = CGRectMake(CGFloat(index * Int(height + 5)), 0, height, height);
+            restaurantView.ratingView.addSubview(star);
+        }
+        
+        if (hasPoint == true)
+        {
+            let star = StarIcon()
+            star.halfFilled = true
+            star.frame = CGRectMake(CGFloat(rating * Int(height + 5)), 0, height, height);
+            restaurantView.ratingView.addSubview(star);
+        }
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,6 +115,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         }
         else {
             btnHours.userInteractionEnabled = false
+            btnHours.alpha = 0.3
         }
     }
     
@@ -319,7 +361,6 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     @IBAction func viewHours(sender: UIButton) {
-        setupHours()
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.window?.addSubview(hoursView);
         DEAnimationManager.animateView(hoursView, withSelector: nil);

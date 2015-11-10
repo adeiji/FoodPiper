@@ -155,7 +155,7 @@
                                 <constraint firstAttribute="width" constant="49" id="708-DZ-hOa"/>
                                 <constraint firstAttribute="height" constant="21" id="MDw-mE-AHQ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
@@ -261,7 +261,7 @@
                                 <constraint firstAttribute="height" constant="21" id="4RH-eh-K8s"/>
                                 <constraint firstAttribute="height" constant="20.5" id="f1X-sU-s5E"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
@@ -283,7 +283,7 @@
                                 <constraint firstAttribute="height" constant="21" id="I7C-rO-NKn"/>
                                 <constraint firstAttribute="height" constant="20.5" id="VgC-lS-vyk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
@@ -437,6 +437,7 @@
                         <constraint firstAttribute="trailing" secondItem="EL3-MG-ZV0" secondAttribute="trailing" constant="1" id="JRR-3K-9Xi"/>
                         <constraint firstItem="b1z-yj-aQE" firstAttribute="width" secondItem="WR9-fd-u9u" secondAttribute="width" id="Jca-yH-DC5"/>
                         <constraint firstItem="WR9-fd-u9u" firstAttribute="centerY" secondItem="rmK-P0-vtG" secondAttribute="centerY" id="JtW-JZ-LE2"/>
+                        <constraint firstItem="AsW-i3-uaW" firstAttribute="centerY" secondItem="3gD-U6-fbe" secondAttribute="centerY" id="LCT-OO-Nhk"/>
                         <constraint firstItem="OTs-1h-Ffv" firstAttribute="top" secondItem="3gD-U6-fbe" secondAttribute="bottom" constant="4" id="LgR-o7-zr9"/>
                         <constraint firstItem="EL3-MG-ZV0" firstAttribute="top" secondItem="A3s-HN-Yck" secondAttribute="bottom" constant="3" id="LzU-sd-d7c"/>
                         <constraint firstItem="ryd-pY-A6c" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="MWI-Zw-HQb">
@@ -523,6 +524,7 @@
                             <exclude reference="19g-5I-9rf"/>
                             <exclude reference="A4Q-Cj-QHi"/>
                             <exclude reference="XYa-Ms-oxP"/>
+                            <exclude reference="LCT-OO-Nhk"/>
                             <exclude reference="R7J-py-nSm"/>
                             <exclude reference="VsO-98-cgd"/>
                             <exclude reference="sdh-Yg-7tL"/>
@@ -613,9 +615,10 @@
                             <exclude reference="19g-5I-9rf"/>
                             <include reference="A4Q-Cj-QHi"/>
                             <exclude reference="XYa-Ms-oxP"/>
+                            <include reference="LCT-OO-Nhk"/>
                             <exclude reference="R7J-py-nSm"/>
                             <include reference="VsO-98-cgd"/>
-                            <include reference="sdh-Yg-7tL"/>
+                            <exclude reference="sdh-Yg-7tL"/>
                             <include reference="8jZ-XP-DrM"/>
                             <exclude reference="LgR-o7-zr9"/>
                             <include reference="XnB-Xd-xMX"/>
@@ -722,6 +725,7 @@
             <connections>
                 <outlet property="imageView" destination="EL3-MG-ZV0" id="9Dt-HI-kjW"/>
                 <outlet property="mapView" destination="A3s-HN-Yck" id="Gdy-jG-ogK"/>
+                <outlet property="ratingView" destination="3gD-U6-fbe" id="CVE-ud-5kv"/>
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>

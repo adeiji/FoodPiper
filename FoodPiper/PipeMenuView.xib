@@ -378,7 +378,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.25882352939999997" green="0.73725490199999999" blue="0.38431372549999998" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="fTz-Na-Thw" secondAttribute="trailing" constant="24" id="2dN-ts-wn3">
                     <variation key="heightClass=regular-widthClass=compact" constant="14"/>

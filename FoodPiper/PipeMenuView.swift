@@ -33,6 +33,10 @@ class PipeMenuView: UIView {
             
         }
     }
+    
+    override func drawRect(rect: CGRect) {
+        PaintCodeBackgrounds.drawFoodBackgroundViewWithFrame(rect)
+    }
 
 
 }
