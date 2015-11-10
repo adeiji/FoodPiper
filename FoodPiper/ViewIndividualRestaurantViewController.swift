@@ -82,9 +82,6 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         restaurantView = self.view as! ViewIndividualRestaurantView;
         restaurantView.delegate = self;
         
-        let margins = self.view.layoutMarginsGuide
-        restaurantView.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
-        restaurantView.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor).active = true
         // Set the bottom constraint to zero to ensure that the scroll views content size is the correct dynamic height
         bottomConstraint.constant = 0;
         

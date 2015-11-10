@@ -15,4 +15,8 @@ class RatingView: UIScrollView {
     @IBOutlet weak var btnNext: UIButton!
     @IBOutlet weak var txtComment: UITextView!
     
+    override func drawRect(rect: CGRect) {
+        PaintCodeBackgrounds.drawFoodBackgroundViewWithFrame(rect)
+    }
+    
 }

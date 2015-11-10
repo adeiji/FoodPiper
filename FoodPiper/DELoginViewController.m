@@ -73,7 +73,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
 
 - (void) spinView
 {
-    [UIView animateWithDuration: 20.0f
+    [UIView animateWithDuration: 40.0f
                           delay: 0.0f
                         options: UIViewAnimationOptionCurveLinear
                      animations: ^{

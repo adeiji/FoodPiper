@@ -37,5 +37,8 @@
 + (void)drawDecorIconWithFrame: (CGRect)frame;
 + (void)drawServiceIcon;
 + (void)drawDealsIconWithFrame: (CGRect)frame;
++ (void)drawCancelIcon;
++ (void)drawStarHalfFilledIconWithFrame: (CGRect)frame;
++ (void)drawHalfFilledStarWithFrame: (CGRect)frame;
 
 @end

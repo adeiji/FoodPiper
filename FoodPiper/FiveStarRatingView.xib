@@ -11,36 +11,33 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TLr-6u-oVV" customClass="RatingView" customModule="FoodPiper" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view tag="99" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFd-lb-WCo">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFd-lb-WCo" customClass="StarIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="0iR-Bl-woc"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-go-VfM">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHi-go-VfM" customClass="StarIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="2"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="R8Z-S6-5yr"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHK-BA-Q3U">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHK-BA-Q3U" customClass="StarIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="bme-kz-2Q7"/>
                                 <constraint firstAttribute="width" constant="40" id="tPQ-wX-a3H"/>
                             </constraints>
-                            <state key="normal" title="3"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="bme-kz-2Q7"/>
@@ -57,30 +54,37 @@
                                 <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="DmT-qg-3p9"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oif-Ek-nA3">
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oif-Ek-nA3" customClass="StarIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="4"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="ww4-Wr-JRt"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Ub-WRY">
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Ub-WRY" customClass="StarIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="setCriteriaRating:" destination="-1" eventType="touchUpInside" id="hfG-XH-Ql8"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eee-3Z-1er">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.72941176470000002" green="0.098039215690000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="aNc-XL-zyJ"/>
                                 <constraint firstAttribute="width" constant="40" id="geO-ur-AFB"/>
                             </constraints>
-                            <state key="normal" title="-"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            <inset key="contentEdgeInsets" minX="-2" minY="-4" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="-">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="aNc-XL-zyJ"/>
@@ -99,12 +103,21 @@
                         </button>
                         <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td5-M6-EoB">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.25882352939999997" green="0.73725490199999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="QCF-VY-pDe"/>
                                 <constraint firstAttribute="height" constant="40" id="u2X-uj-I1y"/>
                             </constraints>
-                            <state key="normal" title="+"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            <inset key="contentEdgeInsets" minX="-2" minY="-4" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="QCF-VY-pDe"/>
@@ -207,12 +220,19 @@
                         </textView>
                         <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNE-v7-gOW">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.25882352939999997" green="0.73725490199999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="6rm-Gd-WMN"/>
                                 <constraint firstAttribute="width" constant="285" id="tDj-8l-CXm"/>
                             </constraints>
-                            <state key="normal" title="Next"/>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="6rm-Gd-WMN"/>
@@ -230,7 +250,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Krb-Ub-WRY" firstAttribute="width" secondItem="oif-Ek-nA3" secondAttribute="width" id="3v5-PG-ER4"/>
                         <constraint firstAttribute="bottom" secondItem="DNE-v7-gOW" secondAttribute="bottom" constant="18" id="3z6-0J-e6j">
@@ -373,6 +393,7 @@
                     </variation>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="TLr-6u-oVV" secondAttribute="centerY" id="5fz-dI-3gf"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="TLr-6u-oVV" secondAttribute="leading" id="B3l-jg-5W2"/>

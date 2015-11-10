@@ -12997,4 +12997,189 @@
     }
 }
 
++ (void)drawCancelIcon
+{
+    //// General Declarations
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    //// Color Declarations
+    UIColor* fillColor56 = [UIColor colorWithRed: 0.815 green: 0.175 blue: 0.35 alpha: 1];
+    UIColor* color2 = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+    UIColor* color3 = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+
+    //// Group
+    {
+        //// Oval Drawing
+        UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(0, 0, 50, 50)];
+        [fillColor56 setFill];
+        [ovalPath fill];
+
+
+        //// Rectangle 2 Drawing
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, 13.32, 38.35);
+        CGContextRotateCTM(context, -135 * M_PI / 180);
+
+        UIBezierPath* rectangle2Path = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 3.57, 36.01)];
+        [color2 setFill];
+        [rectangle2Path fill];
+
+        CGContextRestoreGState(context);
+
+
+        //// Rectangle Drawing
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, 11.86, 14.26);
+        CGContextRotateCTM(context, -45 * M_PI / 180);
+
+        UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 3.57, 33.33)];
+        [color3 setFill];
+        [rectanglePath fill];
+
+        CGContextRestoreGState(context);
+    }
+}
+
++ (void)drawStarHalfFilledIconWithFrame: (CGRect)frame
+{
+    //// Color Declarations
+    UIColor* fillColor27 = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
+    UIColor* fillColor8 = [UIColor colorWithRed: 0.953 green: 0.578 blue: 0.078 alpha: 1];
+
+
+    //// Subframes
+    CGRect group = CGRectMake(CGRectGetMinX(frame) - 0.39, CGRectGetMinY(frame) + 0.16, CGRectGetWidth(frame) + 0.76, CGRectGetHeight(frame) + 1.78);
+
+
+    //// Group
+    {
+        //// Star 18 Drawing
+        UIBezierPath* star18Path = [UIBezierPath bezierPath];
+        [star18Path moveToPoint: CGPointMake(CGRectGetMinX(group) + 0.50011 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.05519 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.63877 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.33697 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.94991 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.38162 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.72447 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.60041 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.77810 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.90978 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50011 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.76323 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.22211 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.90978 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.27575 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.60041 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.05030 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.38162 * CGRectGetHeight(group))];
+        [star18Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.36145 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.33697 * CGRectGetHeight(group))];
+        [star18Path closePath];
+        [fillColor27 setFill];
+        [star18Path fill];
+
+
+        //// Bezier 1149 Drawing
+        UIBezierPath* bezier1149Path = [UIBezierPath bezierPath];
+        [bezier1149Path moveToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.00000 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.34544 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.31295 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.00000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.36313 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.24997 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.60674 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.19099 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.95071 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.78828 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.80901 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.95071 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.74999 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.60674 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 1.00000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.36313 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.65449 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.31295 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.00000 * CGRectGetHeight(group))];
+        [bezier1149Path closePath];
+        [bezier1149Path moveToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.10322 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.61352 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.33317 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.62415 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.35471 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.64794 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.35815 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.90179 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.39502 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.71809 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.57405 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.70090 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.59079 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.70495 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.61446 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.74832 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.86720 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.52127 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.74785 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.73666 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.47873 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.74785 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.25168 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.86720 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.29500 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.61446 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.29907 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.59079 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.28187 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.57405 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.09821 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.39502 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.35202 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.35815 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.37578 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.35471 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.38643 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.33317 * CGRectGetHeight(group))];
+        [bezier1149Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.10322 * CGRectGetHeight(group))];
+        [bezier1149Path closePath];
+        [fillColor8 setFill];
+        [bezier1149Path fill];
+    }
+}
+
++ (void)drawHalfFilledStarWithFrame: (CGRect)frame
+{
+    //// Color Declarations
+    UIColor* fillColor8 = [UIColor colorWithRed: 0.953 green: 0.578 blue: 0.078 alpha: 1];
+
+
+    //// Subframes
+    CGRect group = CGRectMake(CGRectGetMinX(frame) - 0.14, CGRectGetMinY(frame) - 0.27, CGRectGetWidth(frame) - 0.29, CGRectGetHeight(frame) + 0.75);
+
+
+    //// Group
+    {
+        //// Bezier 535 Drawing
+        UIBezierPath* bezier535Path = [UIBezierPath bezierPath];
+        [bezier535Path moveToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.00000 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.34547 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.32921 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.00000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.38196 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.25000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.63825 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.19100 * CGRectGetWidth(group), CGRectGetMinY(group) + 1.00000 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.82916 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.80900 * CGRectGetWidth(group), CGRectGetMinY(group) + 1.00000 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.75000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.63825 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 1.00000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.38196 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.65453 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.32921 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.00000 * CGRectGetHeight(group))];
+        [bezier535Path closePath];
+        [bezier535Path moveToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.24109 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.56351 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.37641 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.58716 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.42671 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.63991 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.43477 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.78201 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.45648 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.67918 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.56187 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.64098 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.60102 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.65001 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.65628 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.67426 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.80499 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.54723 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.73469 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.70861 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.45277 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.73469 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.32574 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.80499 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.34999 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.65628 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.35902 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.60102 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.32082 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.56187 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.21799 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.45648 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.36003 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.43477 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.41284 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.42671 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.43643 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.37641 * CGRectGetHeight(group))];
+        [bezier535Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.24109 * CGRectGetHeight(group))];
+        [bezier535Path closePath];
+        bezier535Path.lineCapStyle = kCGLineCapSquare;
+
+        [fillColor8 setFill];
+        [bezier535Path fill];
+
+
+        //// Bezier 536 Drawing
+        UIBezierPath* bezier536Path = [UIBezierPath bezierPath];
+        [bezier536Path moveToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.00000 * CGRectGetHeight(group))];
+        [bezier536Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.82916 * CGRectGetHeight(group))];
+        [bezier536Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.19100 * CGRectGetWidth(group), CGRectGetMinY(group) + 1.00000 * CGRectGetHeight(group))];
+        [bezier536Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.25000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.63825 * CGRectGetHeight(group))];
+        [bezier536Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.00000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.38196 * CGRectGetHeight(group))];
+        [bezier536Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.34547 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.32921 * CGRectGetHeight(group))];
+        [bezier536Path addLineToPoint: CGPointMake(CGRectGetMinX(group) + 0.50000 * CGRectGetWidth(group), CGRectGetMinY(group) + 0.00000 * CGRectGetHeight(group))];
+        [bezier536Path closePath];
+        bezier536Path.lineCapStyle = kCGLineCapSquare;
+
+        [fillColor8 setFill];
+        [bezier536Path fill];
+    }
+}
+
 @end

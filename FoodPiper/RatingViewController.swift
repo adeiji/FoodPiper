@@ -73,6 +73,7 @@ class RatingViewController: UIViewController {
     let WAIT_TIME_RATING_FAST = 1, WAIT_TIME_RATING_SO_SO = 2, WAIT_TIME_RATING_LONG = 3
     let CROWD_RATING_SLOW = 7, CROWD_RATING_GOOD = 8, CROWD_RATING_PACKED = 9, CROWD_RATING_NOT_HOT = 10, CROWD_RATING_SO_SO = 11,CROWD_RATING_HOT = 12
     var nextRatingViewController:RatingViewController! = nil
+    var lastTouchedStar:StarIcon!
     
     struct CrowdRating {
         var crowdSize:String!
@@ -158,21 +159,24 @@ class RatingViewController: UIViewController {
     }
     
     // Set the rating to the selected star
-    @IBAction func setCriteriaRating(sender: UIButton) {
+    @IBAction func setCriteriaRating(sender: StarIcon) {
         rating.rating = String(sender.tag)
-        selectedRating = Int(rating.rating);
+        selectedRating = Int(rating.rating)
+        lastTouchedStar = sender
         
         for index in 1...sender.tag {
-            let button = self.view .viewWithTag(index)
-            button?.backgroundColor = UIColor.redColor()
+            let button = self.view .viewWithTag(index) as! StarIcon
+            button.filled = true
+            button.setNeedsDisplay()
         }
 
         // Make sure that this is not the 5 star
         if sender.tag != 5
         {
             for index in (sender.tag + 1)...5 {
-                let button = self.view .viewWithTag(index)
-                button?.backgroundColor = UIColor.blueColor()
+                let button = self.view .viewWithTag(index) as! StarIcon
+                button.filled = false
+                button.setNeedsDisplay()
             }
         }
         
@@ -272,12 +276,34 @@ class RatingViewController: UIViewController {
     // Increment the rating down one half
     @IBAction func incrementHalfDown() {
         rating.rating = String(Double(selectedRating) - 0.5)
+        
+        if (lastTouchedStar.tag != 1)
+        {
+            let currentTag = lastTouchedStar.tag;
+            let starToHalfFill = self.view.viewWithTag(currentTag - 1) as! StarIcon
+            
+            if starToHalfFill.halfFilled == false {
+                starToHalfFill.halfFilled = true
+            }
+            starToHalfFill.setNeedsDisplay()
+        }
         updatePipe()
     }
     
     // Increment the rating up one half
     @IBAction func incrementHalfUp() {
         rating.rating = String(Double(selectedRating) + 0.5)
+        
+        if (lastTouchedStar.tag != 5)
+        {
+            let currentTag = lastTouchedStar.tag;
+            let starToHalfFill = self.view.viewWithTag(currentTag + 1) as! StarIcon
+            
+            if starToHalfFill.halfFilled == false {
+                starToHalfFill.halfFilled = true
+            }
+            starToHalfFill.setNeedsDisplay()
+        }
         updatePipe()
     }
     
