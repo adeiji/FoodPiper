@@ -21,13 +21,13 @@
 + (void)drawPipeIconWithFrame: (CGRect)frame;
 + (void)drawFavoriteIcon;
 + (void)drawHoursIconWithFrame: (CGRect)frame;
-+ (void)drawMenuIconWithFrame: (CGRect)frame;
++ (void)drawMenuIcon;
 + (void)drawPhoneIconWithFrame: (CGRect)frame;
 + (void)drawStarFilledIconWithFrame: (CGRect)frame;
 + (void)drawStarEmptyIconWithFrame: (CGRect)frame;
 + (void)drawDoneIconWithFrame: (CGRect)frame;
 + (void)drawViewFavoritesIconWithFrame: (CGRect)frame;
-+ (void)drawPeepIcon;
++ (void)drawPeepIconWithFrame: (CGRect)frame;
 + (void)drawViewAllPeepsIconWithFrame: (CGRect)frame;
 + (void)drawFriendsIconWithFrame: (CGRect)frame;
 + (void)drawHotDealsIconWithFrame: (CGRect)frame;
@@ -36,6 +36,6 @@
 + (void)drawCrowdIconWithFrame: (CGRect)frame;
 + (void)drawDecorIconWithFrame: (CGRect)frame;
 + (void)drawServiceIcon;
-+ (void)drawDealsIcon;
++ (void)drawDealsIconWithFrame: (CGRect)frame;
 
 @end

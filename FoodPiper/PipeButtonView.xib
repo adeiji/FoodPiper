@@ -10,21 +10,11 @@
             <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuE-nh-MEB">
-                    <rect key="frame" x="26" y="27" width="50" height="50"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Pipe"/>
-                    <connections>
-                        <action selector="showPipeMenu:" destination="-1" eventType="touchUpInside" id="9yQ-s6-7Ll"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmU-wo-09B">
                     <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-s1-ntY">
-                            <rect key="frame" x="26" y="27" width="50" height="50"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="Pipe"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-s1-ntY" customClass="PipeIcon" customModule="FoodPiper" customModuleProvider="target">
+                            <rect key="frame" x="16" y="17" width="70" height="70"/>
                             <connections>
                                 <action selector="showPipeMenu:" destination="-1" eventType="touchUpInside" id="TIj-Y3-Ct2"/>
                             </connections>

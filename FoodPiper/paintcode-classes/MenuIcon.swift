@@ -14,7 +14,7 @@ class MenuIcon: UIButton {
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        FoodPiperIcons.drawMenuIconWithFrame(rect)
+        FoodPiperIcons.drawMenuIcon()
     }
 
 
