@@ -40,16 +40,21 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        self.view.backgroundColor = UIColor.whiteColor()
         if self.view == nil
         {
             NSLog("******* Error - view == nil");
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = restaurant.name
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         if viewControllerIsInHierarchy == false
         {
             setupRestaurantView()
