@@ -39,6 +39,7 @@
 @property (strong, nonatomic) NSMutableArray *searchPosts;
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (strong, nonatomic) UIView *tileView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *categoryHeightConstraint;
 @property BOOL shouldNotDisplayPosts;
 @property BOOL overlayDisplayed;
 @property BOOL now;

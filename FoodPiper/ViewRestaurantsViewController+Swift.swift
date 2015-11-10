@@ -9,6 +9,14 @@
 import UIKit
 
 extension DEViewRestaurantsViewController  {
+        
+    @IBAction func filterCategoryPressed (sender: UIButton) {
+        let categoryView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_CATEGORY, owner: self, options: nil).first as! UIView
+        categoryView.frame.size.width = (sender.superview?.frame.width)!
+        categoryView.frame.origin.y = 70
+        sender.superview?.addSubview(categoryView)
+        categoryHeightConstraint?.constant = categoryView.frame.height
+    }
     
     @IBAction func viewFriendsPipes () {
         

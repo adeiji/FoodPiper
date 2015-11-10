@@ -12,6 +12,8 @@
 #import "FoodPiper-Swift.h"
 
 NSString *const VIEW_RESTAURANTS_VIEW = @"ViewRestaurantsView";
+NSString *const VIEW_FILTER = @"FilterView";
+NSString *const VIEW_FILTER_CATEGORY = @"FilterCategoryView";
 
 @interface DEViewRestaurantsViewController ()
 
@@ -112,6 +114,14 @@ struct TopMargin {
     [self.navigationItem setRightBarButtonItem:button];
     [self addPeepMenuButton];
     self.view.backgroundColor = [UIColor whiteColor];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStylePlain target:self action:@selector(displayFilterView)];
+    [self.navigationItem setLeftBarButtonItem:leftButton];
+}
+
+- (void) displayFilterView {
+    UIScrollView *view = [[[NSBundle mainBundle] loadNibNamed:VIEW_FILTER owner:self options:nil] firstObject];
+    [self.view addSubview:view];
+    [view setFrame:self.view.bounds];
 }
 
 - (void) addPeepMenuButton {

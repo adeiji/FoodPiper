@@ -15,6 +15,8 @@
 		F42A1DFD1BF15ED1002286BF /* FoodPiperLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */; settings = {ASSET_TAGS = (); }; };
 		F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFE1BF15EDD002286BF /* Logo.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1E011BF180AF002286BF /* CancelIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E001BF180AF002286BF /* CancelIcon.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1E041BF190DC002286BF /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E031BF190DC002286BF /* FilterView.xib */; settings = {ASSET_TAGS = (); }; };
+		F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E051BF1913B002286BF /* FilterCategoryView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -140,6 +142,8 @@
 		F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodPiperLogo.m; path = "style classes/FoodPiperLogo.m"; sourceTree = "<group>"; };
 		F42A1DFE1BF15EDD002286BF /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		F42A1E001BF180AF002286BF /* CancelIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelIcon.swift; path = "paintcode-classes/CancelIcon.swift"; sourceTree = "<group>"; };
+		F42A1E031BF190DC002286BF /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		F42A1E051BF1913B002286BF /* FilterCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCategoryView.xib; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
 		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +316,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F42A1E021BF190D1002286BF /* Filtering */ = {
+			isa = PBXGroup;
+			children = (
+				F42A1E031BF190DC002286BF /* FilterView.xib */,
+				F42A1E051BF1913B002286BF /* FilterCategoryView.xib */,
+			);
+			name = Filtering;
+			sourceTree = "<group>";
+		};
 		F475C3321BE2F0FE00E159F6 /* Piping */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +420,7 @@
 		F4A37B5D1BD8274000DD5DAE /* Restaurant Workflow */ = {
 			isa = PBXGroup;
 			children = (
+				F42A1E021BF190D1002286BF /* Filtering */,
 				F4BBFF9E1BDBF88B0056BF40 /* UI Elements */,
 				F4EA28411BDA8EE300079658 /* VIew and View Controller */,
 				F4CC5AF71BD7FC9400109C61 /* Restaurant */,
@@ -803,6 +817,7 @@
 				F4CC5AEA1BD58B0F00109C61 /* JosefinSans-Italic.ttf in Resources */,
 				F4B18F9E1BEAAE8D00B1765E /* MapTableViewCell.xib in Resources */,
 				F4624FCB1BEA7FE8001F26C4 /* walking-26.png in Resources */,
+				F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */,
 				F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
 				F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */,
 				F4CC5AEE1BD58B0F00109C61 /* JosefinSans-SemiBold.ttf in Resources */,
@@ -811,6 +826,7 @@
 				F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */,
 				F4CC5AEC1BD58B0F00109C61 /* JosefinSans-LightItalic.ttf in Resources */,
 				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
+				F42A1E041BF190DC002286BF /* FilterView.xib in Resources */,
 				F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */,
 				F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */,
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
