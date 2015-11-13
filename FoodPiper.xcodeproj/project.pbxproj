@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F40764781BF58163001ED3FD /* ViewWithBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */; settings = {ASSET_TAGS = (); }; };
+		F407647A1BF584CD001ED3FD /* ViewComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40764791BF584CD001ED3FD /* ViewComments.xib */; settings = {ASSET_TAGS = (); }; };
 		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */; settings = {ASSET_TAGS = (); }; };
 		F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF41BF147DE002286BF /* CircularOrView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -139,6 +141,8 @@
 		080B68DC18D10E47DA2ED8EB /* Pods-FoodPiper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.release.xcconfig"; sourceTree = "<group>"; };
 		5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPiper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
+		F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithBorderColor.swift; sourceTree = "<group>"; };
+		F40764791BF584CD001ED3FD /* ViewComments.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewComments.xib; sourceTree = "<group>"; };
 		F410A0521BE2D3AA00BA8FDB /* HoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
 		F42A1DEC1BF145ED002286BF /* FoodPiperIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodPiperIcons.h; path = "style classes/FoodPiperIcons.h"; sourceTree = "<group>"; };
 		F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodPiperIcons.m; path = "style classes/FoodPiperIcons.m"; sourceTree = "<group>"; };
@@ -455,6 +459,7 @@
 				F4447D281BEADD47000042FF /* PeepViewController.swift */,
 				F4447D2A1BEADD57000042FF /* ViewPeep.swift */,
 				F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */,
+				F40764791BF584CD001ED3FD /* ViewComments.xib */,
 			);
 			name = Peeping;
 			sourceTree = "<group>";
@@ -693,6 +698,7 @@
 			children = (
 				F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */,
 				F42A1E071BF24BB8002286BF /* FoodPiperView.swift */,
+				F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */,
 			);
 			name = "Custom View Classes";
 			sourceTree = "<group>";
@@ -859,6 +865,7 @@
 				F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */,
 				F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */,
 				F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */,
+				F407647A1BF584CD001ED3FD /* ViewComments.xib in Resources */,
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
@@ -963,6 +970,7 @@
 				F4A2AF1B1BF132CF0006CBE8 /* HoursIcon.swift in Sources */,
 				F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */,
 				F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */,
+				F40764781BF58163001ED3FD /* ViewWithBorderColor.swift in Sources */,
 				F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */,
 				F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,

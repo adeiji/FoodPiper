@@ -26,5 +26,6 @@
 
 - (void) setUpView;
 - (IBAction)signUp:(id)sender;
-
+- (void) setUpValidators;
+- (BOOL) validateTextFields;
 @end

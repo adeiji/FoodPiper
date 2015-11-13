@@ -20,6 +20,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="X9U-Et-5ja"/>
+                    </connections>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkh-59-kbW">
                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>

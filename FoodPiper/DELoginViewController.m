@@ -63,6 +63,17 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     _backgroundView.center = center;
     _backgroundView.layer.zPosition = -1;
     [self setTextFieldBorders];
+    [self setUpCreateAccountView];
+}
+
+- (void) setUpCreateAccountView {
+    if ([self.view isKindOfClass:[DECreateAccountView class]]) {
+        DECreateAccountView *view = (DECreateAccountView *) self.view;
+        view.txtPassword.layer.borderColor = [UIColor colorWithRed:203.0f/255.0f green:80.0f/255.0f blue:134.0f/255.0f alpha:1.0].CGColor;
+        view.txtConfirmPassword.layer.borderColor = [UIColor colorWithRed:203.0f/255.0f green:80.0f/255.0f blue:134.0f/255.0f alpha:1.0].CGColor;
+        view.txtUsername.layer.borderColor = [UIColor colorWithRed:76.0f/255.0f green:161.0f/255.0f blue:182.0f/255.0f alpha:1.0].CGColor;
+        view.txtEmail.layer.borderColor = [UIColor colorWithRed:76.0f/255.0f green:161.0f/255.0f blue:182.0f/255.0f alpha:1.0].CGColor;
+    }
 }
 
 // Set the border colors of the text boxes
@@ -108,17 +119,22 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     DEScreenManager *screenManager = [DEScreenManager sharedManager];
     
     [userManager loginWithUsername:view.txtUsernameOrEmail.text Password:view.txtPassword.text ViewController:[screenManager nextScreen] ErrorLabel:_lblErrorLabel];
+    [self gotoRestarauntScreen];
+}
+
+- (void) gotoRestarauntScreen {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    APIHandler *apiHandler = appDelegate.apiHandler;
+    DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
+    
+    [viewController setRestaurants:[apiHandler convertRestaurantsDictionaryToArray]];
+    [viewController setCurrentLocation:apiHandler.currentLocation];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (IBAction)skipLogin:(id)sender {
     
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    APIHandler *apiHandler = appDelegate.apiHandler;
-    DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
-
-    [viewController setRestaurants:[apiHandler convertRestaurantsDictionaryToArray]];
-    [viewController setCurrentLocation:apiHandler.currentLocation];
-    [self.navigationController pushViewController:viewController animated:YES];
+    [self gotoRestarauntScreen];
     
 }
 
@@ -143,12 +159,23 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
 
 #pragma mark - Button Press Methods
 
-- (IBAction)createAnAccount:(id)sender {
-    DELoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:CREATE_ACCOUNT_VIEW_CONTROLLER];
+#pragma mark - Button Methods
+
+- (IBAction)signUp:(id)sender {
     
-    [[self navigationController] pushViewController:loginViewController animated:YES];
+    DECreateAccountView *view = (DECreateAccountView *) self.view;
     
-    [(DECreateAccountView *) loginViewController.view setUpView];
+    [view setUpValidators];
+    
+    if ([view validateTextFields])
+    {
+        [[DEUserManager sharedManager] createUserWithUserName:view.txtUsername.text
+                                                     Password:view.txtPassword.text
+                                                        Email:view.txtEmail.text
+                                                   ErrorLabel:view.lblUsernameError];
+    }
+    
+    [self gotoRestarauntScreen];
 }
 
 - (IBAction)goBack:(id)sender {

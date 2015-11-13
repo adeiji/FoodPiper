@@ -189,7 +189,7 @@
                         <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="VRU-qZ-N3E"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" alpha="0.5" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -232,7 +232,7 @@
                             <variation key="heightClass=regular-widthClass=compact" constant="70"/>
                         </constraint>
                     </constraints>
-                    <state key="normal" title="Hours">
+                    <state key="normal" title="Wait Time">
                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -256,7 +256,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="dQL-hK-YiD"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT" customClass="DealsIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" alpha="0.5" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT" customClass="DealsIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>

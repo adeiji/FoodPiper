@@ -232,9 +232,7 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
         
         [PFUser logInWithUsernameInBackground:blockUsername password:password block:^(PFUser *user, NSError *error) {
             if (user)
-            {
-                [DEScreenManager popToRootAndShowViewController:viewController];
-                // Clear user image defaults
+            {                // Clear user image defaults
                 [self clearUserImageDefaults];
                 [self isLoggedIn];
             }

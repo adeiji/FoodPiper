@@ -16,6 +16,14 @@ class PeepViewController: UIViewController {
     var pipe:Pipe!
     var pageIndex:Int!
     
+    @IBOutlet weak var foodRatingView: UIView!
+    @IBOutlet weak var foodRatingViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var serviceRatingView: UIView!
+    @IBOutlet weak var serviceRatingViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var decorRatingView: UIView!
+    @IBOutlet weak var decorRatingViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var commentStackView: UIStackView!
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // Do any additional setup after loading the view.
@@ -30,6 +38,34 @@ class PeepViewController: UIViewController {
         super.viewDidAppear(animated)
         
     }
+    
+    func displayFiveStarRating (myRating: String, view: UIView, constraint: NSLayoutConstraint) {
+        let rating = Int(myRating)
+
+        // If this rating is a double and not a whole number than set this to true
+        let hasPoint = Double(rating!) % 1 == 0 ? false : true
+        let height = view.frame.height
+        var widthOfFrame:CGFloat = 0
+        
+        for var index = 0; index < rating; ++index {
+            let star = StarIcon()
+            star.filled = true
+            star.frame = CGRectMake(CGFloat(index * Int(height + 5)), 0, height, height);
+            view.addSubview(star);
+            widthOfFrame += (height + 5)
+        }
+        
+        if (hasPoint == true)
+        {
+            let star = StarIcon()
+            star.halfFilled = true
+            star.frame = CGRectMake(CGFloat(rating! * Int(height + 5)), 0, height, height);
+            view.addSubview(star);
+        }
+        
+        constraint.constant = widthOfFrame
+    }
+    
     
     /*
     
@@ -60,13 +96,15 @@ class PeepViewController: UIViewController {
             serviceRating = self.loadRatingObject(myPipe.service)
         
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                peepView.lblTopLeft.text = foodRating
-                peepView.lblTopMiddle.text = decorRating
-                peepView.lblTopRight.text = waitTimeRating
-                peepView.lblBottomLeft.text = crowdRating
-                peepView.lblBottomMiddle.text = serviceRating
+                self.displayFiveStarRating(foodRating, view: self.foodRatingView, constraint: self.foodRatingViewWidthConstraint)
+                self.displayFiveStarRating(decorRating, view: self.decorRatingView, constraint: self.decorRatingViewWidthConstraint)
+                self.displayFiveStarRating(serviceRating, view: self.serviceRatingView, constraint: self.serviceRatingViewWidthConstraint)
             })
         })
+    }
+
+    func addCommentToStackView () {
+
     }
     
     func loadRatingObject (myRatingObject: Rating ) -> String {

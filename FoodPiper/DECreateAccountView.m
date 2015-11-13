@@ -17,12 +17,21 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-
     }
     return self;
 }
 
+- (id) initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+
+    }
+    
+    return self;
+}
+
 - (void) setUpView {
+    
     for (UIView *view in self.subviews) {
         if ([view isKindOfClass:[UITextField class]])
         {
@@ -57,6 +66,8 @@
     [_txtPassword setPresentInView:self];
     [_txtUsername setPresentInView:self];
     [_txtConfirmPassword setPresentInView:self];
+    
+    
 }
 
 - (BOOL) validateTextFields
@@ -73,19 +84,6 @@
     return NO;
 }
 
-#pragma mark - Button Methods
-
-- (IBAction)signUp:(id)sender {
-    [self setUpValidators];
-    
-    if ([self validateTextFields])
-    {
-        [[DEUserManager sharedManager] createUserWithUserName:_txtUsername.text
-                                                     Password:_txtPassword.text
-                                                        Email:_txtEmail.text
-                                                   ErrorLabel:_lblUsernameError];
-    }
-}
 
 
 @end
