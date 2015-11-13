@@ -29,6 +29,8 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     for (UIView *view in _buttons) {
         [[view layer] setCornerRadius:BUTTON_CORNER_RADIUS];
     }
+    
+    [PFFacebookUtils unlinkUser:[PFUser currentUser]];
 
 //    NSString *restorationId = self.restorationIdentifier;
     

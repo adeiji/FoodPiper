@@ -38,10 +38,6 @@
     [self removeFirstResponder];
 }
 
-- (IBAction)connectWithFacebook: (id) sender {
-    DEUserManager *userManager = [DEUserManager sharedManager];
-    [userManager loginWithFacebook];
-}
 
 
 @end

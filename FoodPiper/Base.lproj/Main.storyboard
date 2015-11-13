@@ -63,7 +63,6 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="connectWithFacebook:" destination="KzW-mU-Bec" eventType="touchUpInside" id="Nap-kX-WmS"/>
                                             <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpX-Oi-R4e"/>
                                         </connections>
                                     </button>

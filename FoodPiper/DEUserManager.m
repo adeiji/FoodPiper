@@ -298,9 +298,23 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
     }];
 }
 
+- (void) getFriendsListForCurrentUser {
+
+    
+    FBSDKAppInviteContent *content =[[FBSDKAppInviteContent alloc] init];
+    content.appLinkURL = [NSURL URLWithString:@"https://www.mydomain.com/myapplink"];
+    //optionally set previewImageURL
+    content.appInvitePreviewImageURL = [NSURL URLWithString:@"https://www.mydomain.com/my_invite_image.jpg"];
+    
+    // present the dialog. Assumes self implements protocol `FBSDKAppInviteDialogDelegate`
+    [FBSDKAppInviteDialog showWithContent:content
+                                 delegate:self];
+    
+}
+
 - (NSError *) loginWithFacebook {
     
-    NSArray *permissionsArray = @[@"user_location"];
+    NSArray *permissionsArray = @[@"user_friends", @"public_profile", @"email"];
 
     if (![PFUser currentUser] || // Check if a user is cached
         ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
@@ -322,6 +336,7 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
             {
                 NSLog(@"User with facebook signed up and logged in");
                 [[DEScreenManager sharedManager] stopActivitySpinner];
+                [self getFriendsListForCurrentUser];
                 
                 // Get the Facebook Profile Picture
                 [self clearUserImageDefaults];
