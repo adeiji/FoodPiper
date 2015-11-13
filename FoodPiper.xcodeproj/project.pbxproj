@@ -49,6 +49,8 @@
 		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; settings = {ASSET_TAGS = (); }; };
 		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
+		F4A20D1B1BF6A17F00D966D4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF0F1BF1327C0006CBE8 /* CheckInIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */; settings = {ASSET_TAGS = (); }; };
@@ -188,6 +190,8 @@
 		F49F00A81BEAA73600EDDF8C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
+		F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoFriendsView.xib; sourceTree = "<group>"; };
 		F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInIcon.swift; path = "paintcode-classes/CheckInIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendMessageIcon.swift; path = "paintcode-classes/SendMessageIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationIcon.swift; path = "paintcode-classes/ReservationIcon.swift"; sourceTree = "<group>"; };
@@ -390,6 +394,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		F4A20D191BF6A16F00D966D4 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */,
+				F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
 		F4A2AF091BF1321F0006CBE8 /* PaintCode Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +601,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4A20D191BF6A16F00D966D4 /* Friends */,
 				F4B18F9F1BEACE6600B1765E /* Peeping */,
 				F475C3321BE2F0FE00E159F6 /* Piping */,
 				F4A06B171BDAC7C300825D74 /* Categories */,
@@ -870,6 +884,7 @@
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
 				F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */,
+				F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1018,7 @@
 				F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */,
 				F42A1E081BF24BB8002286BF /* FoodPiperView.swift in Sources */,
 				F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */,
+				F4A20D1B1BF6A17F00D966D4 /* FriendsViewController.swift in Sources */,
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
 				F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */,
 				F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */,

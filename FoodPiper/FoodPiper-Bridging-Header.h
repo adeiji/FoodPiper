@@ -4,7 +4,9 @@
 
 #import "APIHandler.h"
 #import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/PFObject+Subclass.h>
 #import "FoodPiperIcons.h"

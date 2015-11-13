@@ -8,6 +8,8 @@
 
 #import "DEUserManager.h"
 #import "Constants.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
 @implementation DEUserManager
 
@@ -17,6 +19,7 @@ const static NSString *FACEBOOK_USER_LOCATION_NAME = @"name";
 const static NSString *TWITTER_USER_LOCATION = @"location";
 
 + (id)sharedManager {
+    
     static DEUserManager *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -298,20 +301,6 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
     }];
 }
 
-- (void) getFriendsListForCurrentUser {
-
-    
-    FBSDKAppInviteContent *content =[[FBSDKAppInviteContent alloc] init];
-    content.appLinkURL = [NSURL URLWithString:@"https://www.mydomain.com/myapplink"];
-    //optionally set previewImageURL
-    content.appInvitePreviewImageURL = [NSURL URLWithString:@"https://www.mydomain.com/my_invite_image.jpg"];
-    
-    // present the dialog. Assumes self implements protocol `FBSDKAppInviteDialogDelegate`
-    [FBSDKAppInviteDialog showWithContent:content
-                                 delegate:self];
-    
-}
-
 - (NSError *) loginWithFacebook {
     
     NSArray *permissionsArray = @[@"user_friends", @"public_profile", @"email"];
@@ -319,7 +308,7 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
     if (![PFUser currentUser] || // Check if a user is cached
         ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) // Check if user is linked to Facebook
     {
-        [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+        [PFFacebookUtils logInInBackgroundWithReadPermissions:permissionsArray block:^(PFUser * _Nullable user, NSError * _Nullable error) {
             // Display some sort of loading indicator
             
             if (!user) {
@@ -336,14 +325,12 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
             {
                 NSLog(@"User with facebook signed up and logged in");
                 [[DEScreenManager sharedManager] stopActivitySpinner];
-                [self getFriendsListForCurrentUser];
                 
                 // Get the Facebook Profile Picture
                 [self clearUserImageDefaults];
                 [self getFacebookProfileInformation];
                 [self isLoggedIn];
             }
-            
         }];
 
     }

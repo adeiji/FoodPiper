@@ -24,5 +24,6 @@ class FoodBackgroundView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clearColor()
+        self.clearsContextBeforeDrawing = false
     }
 }

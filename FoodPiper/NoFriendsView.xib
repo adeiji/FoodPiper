@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController" customModule="FoodPiper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="7Z8-uB-2Nt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44U-gC-yE7" customClass="FoodBackgroundView" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdH-AQ-QC1">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="ICJ-ri-gyv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Invite Friends Using Facebook">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="ICJ-ri-gyv"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="ICJ-ri-gyv"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="inviteFriendsButtonPressed:" destination="-1" eventType="touchUpInside" id="HDZ-6G-Bt3"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Friends?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-Jd-OEN">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="134" id="Bgm-20-gdk"/>
+                                <constraint firstAttribute="height" constant="29" id="ncz-AD-1ft"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Bgm-20-gdk"/>
+                                    <exclude reference="ncz-AD-1ft"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="Bgm-20-gdk"/>
+                                    <include reference="ncz-AD-1ft"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="vdH-AQ-QC1" firstAttribute="centerX" secondItem="44U-gC-yE7" secondAttribute="centerX" id="KUo-2p-vIa"/>
+                        <constraint firstItem="vdH-AQ-QC1" firstAttribute="centerY" secondItem="44U-gC-yE7" secondAttribute="centerY" id="Onk-cn-VU0"/>
+                        <constraint firstItem="fF1-Jd-OEN" firstAttribute="centerX" secondItem="vdH-AQ-QC1" secondAttribute="centerX" id="h5S-vM-fS0"/>
+                        <constraint firstAttribute="trailing" secondItem="vdH-AQ-QC1" secondAttribute="trailing" constant="58" id="mI1-Nr-fFz"/>
+                        <constraint firstItem="vdH-AQ-QC1" firstAttribute="leading" secondItem="44U-gC-yE7" secondAttribute="leading" constant="58" id="uSx-DD-Wsb"/>
+                        <constraint firstItem="vdH-AQ-QC1" firstAttribute="top" secondItem="fF1-Jd-OEN" secondAttribute="bottom" constant="8" id="zMh-86-FM2"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="vdH-AQ-QC1"/>
+                            <exclude reference="fF1-Jd-OEN"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="h5S-vM-fS0"/>
+                            <exclude reference="KUo-2p-vIa"/>
+                            <exclude reference="Onk-cn-VU0"/>
+                            <exclude reference="mI1-Nr-fFz"/>
+                            <exclude reference="uSx-DD-Wsb"/>
+                            <exclude reference="zMh-86-FM2"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="vdH-AQ-QC1"/>
+                            <include reference="fF1-Jd-OEN"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="h5S-vM-fS0"/>
+                            <include reference="KUo-2p-vIa"/>
+                            <include reference="Onk-cn-VU0"/>
+                            <include reference="mI1-Nr-fFz"/>
+                            <include reference="uSx-DD-Wsb"/>
+                            <include reference="zMh-86-FM2"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="44U-gC-yE7" secondAttribute="trailing" id="GDX-lD-vYy"/>
+                <constraint firstAttribute="bottom" secondItem="44U-gC-yE7" secondAttribute="bottom" id="iaM-9W-kuk"/>
+                <constraint firstItem="44U-gC-yE7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mRI-cq-09s"/>
+                <constraint firstItem="44U-gC-yE7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="yEm-Mn-he7"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="44U-gC-yE7"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="GDX-lD-vYy"/>
+                    <exclude reference="iaM-9W-kuk"/>
+                    <exclude reference="mRI-cq-09s"/>
+                    <exclude reference="yEm-Mn-he7"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="44U-gC-yE7"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="GDX-lD-vYy"/>
+                    <include reference="iaM-9W-kuk"/>
+                    <include reference="mRI-cq-09s"/>
+                    <include reference="yEm-Mn-he7"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

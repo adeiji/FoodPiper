@@ -23,7 +23,8 @@ extension DEViewRestaurantsViewController  {
     }
     
     @IBAction func viewFriendsPipes () {
-        
+        let viewController = FriendsViewController.init(nibName: "NoFriendsView", bundle: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     /*
     

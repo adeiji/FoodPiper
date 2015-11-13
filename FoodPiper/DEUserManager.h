@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "DELoginViewController.h"
 #import "DESyncManager.h"
-#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 @interface DEUserManager : NSObject
 

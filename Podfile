@@ -5,9 +5,11 @@ target 'FoodPiper' do
 
 pod 'Parse', '~> 1.9'
 pod 'Masonry', '~> 0.6'
-pod 'ParseFacebookUtils', '~> 1.9'
+pod 'ParseFacebookUtilsV4', '~> 1.9'
 pod 'GoogleAnalytics', '~> 3.13'
 pod 'GoogleMaps'
+pod 'FBSDKShareKit'
+
 
 end
 

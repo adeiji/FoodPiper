@@ -33,10 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientKey: "nEnEtiyFBeRXP3sD5XwX62X1Bhr6xsujEEOLV16K")
         Rating.registerSubclass()
         Pipe.registerSubclass()
-        PFFacebookUtils.initializeFacebook();
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions);
         GMSServices.provideAPIKey("AIzaSyCrka4-c9-yUe1AIDmNJit3VLG9KFEQFuA")
         
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
