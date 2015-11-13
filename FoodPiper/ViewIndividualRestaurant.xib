@@ -306,7 +306,7 @@
                                 <constraint firstAttribute="height" constant="70" id="oR8-zJ-UdG"/>
                                 <constraint firstAttribute="width" constant="70" id="oqb-FI-FUi"/>
                             </constraints>
-                            <state key="normal" title="Friends">
+                            <state key="normal" title="Favorite">
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                             <variation key="default">
@@ -323,6 +323,9 @@
                                     <include reference="oqb-FI-FUi"/>
                                 </mask>
                             </variation>
+                            <connections>
+                                <action selector="addPipeToFavorites:" destination="-1" eventType="touchUpInside" id="5Zn-qu-0XB"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2U-0P-Ydi" customClass="ViewAllPeepsIcon" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>

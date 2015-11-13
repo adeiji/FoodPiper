@@ -51,22 +51,21 @@
  Display in the main window that the user has just saved an event
  
  */
-+ (void) savedAnimationWithImage : (NSString *) imageName {
++ (void) savedAnimationWithView : (UIView *) viewToAdd {
     
     UIView *view = [[[UIApplication sharedApplication] delegate] window];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
     CGRect frame = CGRectMake(0, 0, 200, 200);
-    imageView.frame = frame;
-    [imageView setCenter:[view center]];
-    [view addSubview:imageView];
+    viewToAdd.frame = frame;
+    [viewToAdd setCenter:[view center]];
+    [view addSubview:viewToAdd];
     
     if ([view subviews])
         
         [UIView animateWithDuration:1.8 animations:^{
-            [imageView.layer setOpacity:0.0];
+            [viewToAdd.layer setOpacity:0.0];
         } completion:^(BOOL finished) {
-            [imageView removeFromSuperview];
+            [viewToAdd removeFromSuperview];
         }];
 }
 

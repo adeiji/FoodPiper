@@ -24,7 +24,6 @@ class PeepViewController: UIViewController {
             self.loadandViewPipe(pipe,peepView: peepView)
             firstTimeOpening = false
         }
-
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -38,13 +37,16 @@ class PeepViewController: UIViewController {
     
     */
     func loadandViewPipe (myPipe: Pipe, peepView: ViewPeep) {
-        let pictureFile = myPipe.picture
         var foodRating:String!, decorRating:String!, waitTimeRating:String!, crowdRating:String!, serviceRating:String!
 
-        pictureFile.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
-            if error == nil {
-                if let imageData = data {
-                    peepView.image.image = UIImage(data:imageData)
+        let pictureFile = myPipe.picture
+        
+        if pictureFile != nil {
+            pictureFile.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
+                if error == nil {
+                    if let imageData = data {
+                        peepView.image.image = UIImage(data:imageData)
+                    }
                 }
             }
         }

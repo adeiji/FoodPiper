@@ -61,7 +61,6 @@
                         <constraint firstAttribute="width" constant="152" id="76A-ge-8H0"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
@@ -103,7 +102,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="0.95000000000000007" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Mqx-5D-dsi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="02J-ZL-EC4"/>
                 <constraint firstItem="bds-Q4-cMQ" firstAttribute="width" secondItem="L15-ah-g2o" secondAttribute="width" id="1wq-MP-7zx">

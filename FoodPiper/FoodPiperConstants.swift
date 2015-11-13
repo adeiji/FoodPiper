@@ -29,3 +29,6 @@ let VIEW_RESTAURANTS_STORYBOARD = "ViewRestaurants"
 let VIEW_FILTER = "FilterView"
 let VIEW_FILTER_CATEGORY = "FilterCategoryView"
 let VIEW_MAKE_RESERVATION = "MakeReservationView"
+let VIEW_SUCCESS_INDICATOR_VIEW = "SuccessIndicatorView"
+
+let PARSE_USER_FAVORITE_RESTAURANTS = "favoriteRestaurants"

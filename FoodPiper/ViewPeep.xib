@@ -16,7 +16,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-JZ-67k" customClass="ViewPeep" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-Va-7MK">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-Va-7MK">
                             <rect key="frame" x="0.0" y="0.0" width="110" height="0.0"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="325" id="GUO-Ya-JoP"/>
@@ -35,7 +35,10 @@
                                 </mask>
                             </variation>
                         </imageView>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxV-dh-cjL">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2C3-7O-cUQ">
+                            <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxV-dh-cjL">
                             <rect key="frame" x="0.0" y="0.0" width="110" height="0.0"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s0-Hf-6Oc">
@@ -177,10 +180,10 @@
                                 </mask>
                             </variation>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Wa-2NU">
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-Wa-2NU">
                             <rect key="frame" x="0.0" y="0.0" width="110" height="128"/>
                             <subviews>
-                                <view tag="1" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSp-eE-rOK">
+                                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSp-eE-rOK">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMr-nq-DxD">
@@ -237,7 +240,7 @@
                                         </mask>
                                     </variation>
                                 </view>
-                                <view tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CI-Ax-tiH">
+                                <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CI-Ax-tiH">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNv-bH-dIO">
@@ -290,7 +293,7 @@
                                         </mask>
                                     </variation>
                                 </view>
-                                <view tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-FR-0Cp">
+                                <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-FR-0Cp">
                                     <rect key="frame" x="110" y="0.0" width="0.0" height="128"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY5-Q5-vlC">
@@ -373,10 +376,10 @@
                                 </mask>
                             </variation>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JIQ-H0-Jgs">
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIQ-H0-Jgs">
                             <rect key="frame" x="0.0" y="128" width="110" height="72"/>
                             <subviews>
-                                <view tag="4" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ShQ-qX-LAQ">
+                                <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShQ-qX-LAQ">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="72"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-tq-zrn">
@@ -429,7 +432,7 @@
                                         </mask>
                                     </variation>
                                 </view>
-                                <view tag="5" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-e7-Xcd">
+                                <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-e7-Xcd">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="72"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6C-Lb-2SC">
@@ -482,7 +485,7 @@
                                         </mask>
                                     </variation>
                                 </view>
-                                <view tag="6" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K32-mj-1y9">
+                                <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K32-mj-1y9">
                                     <rect key="frame" x="110" y="0.0" width="0.0" height="72"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIY-3T-T1P">
@@ -553,17 +556,26 @@
                     </subviews>
                     <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="640" id="3wr-bl-EnR"/>
                         <constraint firstAttribute="width" constant="400" id="gAh-pw-G0Q"/>
                         <constraint firstItem="2ED-Va-7MK" firstAttribute="top" secondItem="CMN-JZ-67k" secondAttribute="top" id="uWh-9B-W2c"/>
                     </constraints>
                     <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="2C3-7O-cUQ"/>
+                        </mask>
                         <mask key="constraints">
+                            <exclude reference="3wr-bl-EnR"/>
                             <exclude reference="gAh-pw-G0Q"/>
                             <exclude reference="uWh-9B-W2c"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="2C3-7O-cUQ"/>
+                        </mask>
                         <mask key="constraints">
+                            <include reference="3wr-bl-EnR"/>
                             <include reference="gAh-pw-G0Q"/>
                             <exclude reference="uWh-9B-W2c"/>
                         </mask>

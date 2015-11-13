@@ -29,6 +29,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     var viewControllerIsInHierarchy = false
     var pipe:Pipe = Pipe()
     var imagePicker:UIImagePickerController!
+    var pipeMenu:PipeMenuView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle:nibBundleOrNil);
@@ -424,7 +425,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     @IBAction func showPipeMenu(sender: UIButton) {
-        let pipeMenu = NSBundle.mainBundle().loadNibNamed(PIPE_MENU_VIEW, owner: self, options: nil).first as! PipeMenuView
+        pipeMenu = NSBundle.mainBundle().loadNibNamed(PIPE_MENU_VIEW, owner: self, options: nil).first as! PipeMenuView
         let mainWindow = UIApplication.sharedApplication().keyWindow?.subviews.last
         mainWindow?.addSubview(pipeMenu)
         pipeMenu.frame = (mainWindow?.bounds)!
@@ -461,9 +462,24 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     @IBAction func messageButtonPressed(sender: UIButton) {
         
         let viewController = MessageViewController()
+        viewController.restaurant = restaurant
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @IBAction func addPipeToFavorites(sender: UIButton) {
         
+        let user = PFUser.currentUser()
+        user?.setObject(restaurant.factualId, forKey: PARSE_USER_FAVORITE_RESTAURANTS)
+        user?.saveEventually({ (success: Bool, error: NSError?) -> Void in
+            if success == true {
+                NSLog("The user has been saved successfully with a restaurant added to favorites")
+            }
+        })
         
+        let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
+        let lblTitle = view.subviews.first as! UILabel
+        lblTitle.text = "Added to Favorites"
+        DEAnimationManager.savedAnimationWithView(view)
     }
     /*
     
@@ -473,7 +489,10 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     @IBAction func commentButtonPressed(sender: UIButton) {
         
         let messageViewController = MessageViewController()
+        messageViewController.restaurant = restaurant
+        messageViewController.pipe = pipe
         self.navigationController?.pushViewController(messageViewController, animated: true)
+        pipeMenu.removeFromSuperview()
     }
     
     @IBAction func closeHoursView(sender: UIButton) {

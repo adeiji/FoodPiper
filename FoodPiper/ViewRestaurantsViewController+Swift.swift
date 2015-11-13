@@ -16,6 +16,10 @@ extension DEViewRestaurantsViewController  {
         categoryView.frame.origin.y = 70
         sender.superview?.addSubview(categoryView)
         categoryHeightConstraint?.constant = categoryView.frame.height
+        
+        UIView.animateWithDuration(0.5) { () -> Void in
+            categoryView.layoutIfNeeded()
+        }
     }
     
     @IBAction func viewFriendsPipes () {

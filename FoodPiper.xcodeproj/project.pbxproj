@@ -22,6 +22,9 @@
 		F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1E0E1BF281B2002286BF /* CheckMarkIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1E101BF28895002286BF /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0F1BF28895002286BF /* Reservation.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */; settings = {ASSET_TAGS = (); }; };
+		F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */; settings = {ASSET_TAGS = (); }; };
+		F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -154,6 +157,9 @@
 		F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeReservationView.swift; sourceTree = "<group>"; };
 		F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkIcon.swift; sourceTree = "<group>"; };
 		F42A1E0F1BF28895002286BF /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccessIndicatorView.xib; sourceTree = "<group>"; };
+		F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodPiperPaintCodeButton.swift; path = "paintcode-classes/FoodPiperPaintCodeButton.swift"; sourceTree = "<group>"; };
+		F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageWithTextLimitView.swift; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
 		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +350,7 @@
 				F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */,
 				F4624FC41BE83745001F26C4 /* MessageViewController.swift */,
 				F4624FC51BE83745001F26C4 /* MessageViewController.xib */,
+				F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */,
 			);
 			name = Piping;
 			sourceTree = "<group>";
@@ -414,6 +421,7 @@
 				F42A1DFE1BF15EDD002286BF /* Logo.swift */,
 				F42A1E001BF180AF002286BF /* CancelIcon.swift */,
 				F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */,
+				F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 				F4C85F561BD9BCAB009F3B55 /* DEAnimationManager.m */,
 				F4C85F501BD9BBDC009F3B55 /* DEScreenManager.h */,
 				F4C85F511BD9BBDC009F3B55 /* DEScreenManager.m */,
+				F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */,
 			);
 			name = "Screen Handling";
 			sourceTree = "<group>";
@@ -848,6 +857,7 @@
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
 				F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */,
 				F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */,
+				F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */,
 				F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */,
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
@@ -929,6 +939,7 @@
 				F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */,
 				F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */,
 				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
+				F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */,
 				F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */,
 				F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */,
 				F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */,
@@ -972,6 +983,7 @@
 				F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */,
 				F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */,
 				F4A2AF191BF132C40006CBE8 /* FavoriteIcon.swift in Sources */,
+				F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */,
 				F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */,
 				F4A2AF231BF133440006CBE8 /* DoneIcon.swift in Sources */,
 				F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */,

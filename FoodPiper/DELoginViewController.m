@@ -62,6 +62,21 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     CGPoint center = CGPointMake(self.view.center.x, self.view.center.y);
     _backgroundView.center = center;
     _backgroundView.layer.zPosition = -1;
+    [self setTextFieldBorders];
+}
+
+// Set the border colors of the text boxes
+- (void) setTextFieldBorders {
+    
+    DELoginView *view = (DELoginView *) self.view;
+    
+    if ([view isKindOfClass:[DELoginView class]])
+    {
+        view.txtPassword.layer.borderColor = [UIColor colorWithRed:203.0f/255.0f green:80.0f/255.0f blue:134.0f/255.0f alpha:1.0].CGColor;
+        view.txtUsernameOrEmail.layer.borderColor = [UIColor colorWithRed:76.0f/255.0f green:161.0f/255.0f blue:182.0f/255.0f alpha:1.0].CGColor;
+        view.txtPassword.layer.borderWidth = 1.0f;
+        view.txtUsernameOrEmail.layer.borderWidth = 1.0f;
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -88,10 +103,11 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
 }
 
 - (IBAction)signIn:(id)sender {
+    DELoginView *view = (DELoginView *)self.view;
     DEUserManager *userManager = [DEUserManager sharedManager];
     DEScreenManager *screenManager = [DEScreenManager sharedManager];
     
-    [userManager loginWithUsername:_txtUsernameOrEmail.text Password:_txtPassword.text ViewController:[screenManager nextScreen] ErrorLabel:_lblErrorLabel];
+    [userManager loginWithUsername:view.txtUsernameOrEmail.text Password:view.txtPassword.text ViewController:[screenManager nextScreen] ErrorLabel:_lblErrorLabel];
 }
 
 - (IBAction)skipLogin:(id)sender {

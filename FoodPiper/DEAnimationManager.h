@@ -16,7 +16,12 @@
 
 + (void) fadeOutRemoveView : (UIView *) view
                   FromView : (UIView *) superview;
-+ (void) savedAnimationWithImage : (NSString *) imageName;
+/*
+ 
+ Display the view that was added and then fade it out and remove the view
+ 
+ */
++ (void) savedAnimationWithView : (UIView *) viewToAdd;
 + (void) animateView:(UIView *)view
         WithSelector:(SEL)selector;
 + (void) animateViewOut:(UIView *)view

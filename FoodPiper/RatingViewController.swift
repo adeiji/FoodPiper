@@ -19,6 +19,7 @@ public class Pipe : PFObject, PFSubclassing {
     @NSManaged var waitTime:Rating!
     @NSManaged var user:PFUser!
     @NSManaged var restaurantFactualId:String!
+    @NSManaged var comments:Array<String>!
     
     public class func parseClassName() -> String {
         return "Pipe"
