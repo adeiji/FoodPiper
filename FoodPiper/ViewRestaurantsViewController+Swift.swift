@@ -11,6 +11,7 @@ import UIKit
 extension DEViewRestaurantsViewController  {
         
     @IBAction func filterCategoryPressed (sender: UIButton) {
+        sender.superview?.removeFromSuperview()
         let categoryView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_CATEGORY, owner: self, options: nil).first as! UIView
         categoryView.frame.size.width = (sender.superview?.frame.width)!
         categoryView.frame.origin.y = 70
@@ -21,11 +22,18 @@ extension DEViewRestaurantsViewController  {
             categoryView.layoutIfNeeded()
         }
     }
+    @IBAction func viewProfile (sender: UIButton) {
+        sender.superview?.removeFromSuperview()
+        let viewController = ProfileViewController.init(nibName: "ViewSettingsAccount", bundle: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     
-    @IBAction func viewFriendsPipes () {
+    @IBAction func viewFriendsPipes (sender: UIButton) {
+        sender.superview?.removeFromSuperview()
         let viewController = FriendsViewController.init(nibName: "NoFriendsView", bundle: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
     /*
     
     View all the pipes that have been done ordered by time pushed up

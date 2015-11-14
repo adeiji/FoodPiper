@@ -51,6 +51,9 @@
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A20D1B1BF6A17F00D966D4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D201BF6AE6800D966D4 /* ViewSettingsAccount.xib */; settings = {ASSET_TAGS = (); }; };
+		F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */; settings = {ASSET_TAGS = (); }; };
+		F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF0F1BF1327C0006CBE8 /* CheckInIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */; settings = {ASSET_TAGS = (); }; };
@@ -192,6 +195,10 @@
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoFriendsView.xib; sourceTree = "<group>"; };
+		F4A20D201BF6AE6800D966D4 /* ViewSettingsAccount.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewSettingsAccount.xib; sourceTree = "<group>"; };
+		F4A20D221BF6AE9200D966D4 /* DESettingsAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESettingsAccount.h; sourceTree = "<group>"; };
+		F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESettingsAccount.m; sourceTree = "<group>"; };
+		F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInIcon.swift; path = "paintcode-classes/CheckInIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendMessageIcon.swift; path = "paintcode-classes/SendMessageIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationIcon.swift; path = "paintcode-classes/ReservationIcon.swift"; sourceTree = "<group>"; };
@@ -397,8 +404,12 @@
 		F4A20D191BF6A16F00D966D4 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				F4A20D221BF6AE9200D966D4 /* DESettingsAccount.h */,
+				F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */,
+				F4A20D201BF6AE6800D966D4 /* ViewSettingsAccount.xib */,
 				F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */,
 				F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */,
+				F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -884,6 +895,7 @@
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
 				F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */,
+				F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */,
 				F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -990,11 +1002,13 @@
 				F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */,
 				F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */,
 				F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */,
+				F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */,
 				F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */,
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
 				F4A2AF371BF133CD0006CBE8 /* ServiceIcon.swift in Sources */,
 				F4A2AF2D1BF133970006CBE8 /* HotDealsIcon.swift in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
+				F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */,
 				F4A2AF1D1BF132DA0006CBE8 /* MenuIcon.swift in Sources */,
 				F4A2AF171BF132BA0006CBE8 /* PhoneIcon.swift in Sources */,
 				F4A2AF311BF133AC0006CBE8 /* CommentIcon.swift in Sources */,
