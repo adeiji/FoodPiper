@@ -20,7 +20,13 @@ class MessageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         txtMessage.becomeFirstResponder()
-        lblTo.text = "To: " + restaurant.name
+        
+        if restaurant != nil {
+            lblTo.text = "To: " + restaurant.name
+        }
+        else {
+            lblTo.text = ""
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -67,6 +67,13 @@ class PeepViewController: UIViewController {
     }
     
     
+    @IBAction func commentOnPipeButtonPressed(sender: UIButton) {
+        
+        let viewController = MessageViewController()
+        viewController.pipe = pipe
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
     /*
     
     Load the pipe details and then display it in the ViewPeep
@@ -74,7 +81,7 @@ class PeepViewController: UIViewController {
     */
     func loadandViewPipe (myPipe: Pipe, peepView: ViewPeep) {
         var foodRating:String!, decorRating:String!, waitTimeRating:String!, crowdRating:String!, serviceRating:String!
-
+        var comments = myPipe.comments
         let pictureFile = myPipe.picture
         
         if pictureFile != nil {
@@ -94,11 +101,18 @@ class PeepViewController: UIViewController {
             waitTimeRating = self.loadRatingObject(myPipe.waitTime)
             crowdRating = self.loadRatingObject(myPipe.crowd)
             serviceRating = self.loadRatingObject(myPipe.service)
-        
+            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.displayFiveStarRating(foodRating, view: self.foodRatingView, constraint: self.foodRatingViewWidthConstraint)
                 self.displayFiveStarRating(decorRating, view: self.decorRatingView, constraint: self.decorRatingViewWidthConstraint)
                 self.displayFiveStarRating(serviceRating, view: self.serviceRatingView, constraint: self.serviceRatingViewWidthConstraint)
+                
+                for comment in comments {
+                    let commentLabel = UILabel()
+                    commentLabel.text = comment
+                    self.commentStackView.addArrangedSubview(commentLabel)
+                }
+                
             })
         })
     }

@@ -14,4 +14,8 @@ class ViewPeep: UIStackView {
     
     @IBOutlet weak var image: UIImageView!
 
+    override func drawRect(rect: CGRect) {
+        PaintCodeBackgrounds.drawFoodBackgroundViewWithFrame(rect)
+    }
+    
 }
