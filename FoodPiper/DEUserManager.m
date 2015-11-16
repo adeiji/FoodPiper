@@ -226,7 +226,7 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
     __block NSString *blockUsername = username;
     // Get the user corresponding to an email and then use that username to login
     PFQuery *query = [PFUser query];
-    [query whereKey:PARSE_CLASS_USER_EMAIL equalTo:username];
+    [query whereKey:PARSE_CLASS_USER_USERNAME equalTo:username];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *obj, NSError *error) {
         // If there's no returned objects we know then that this email does not exist, if we get a returned object though, we want to get that username and login now
         if (obj) {
@@ -238,6 +238,7 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
             {                // Clear user image defaults
                 [self clearUserImageDefaults];
                 [self isLoggedIn];
+                NSLog(@"Logged in with username: %@", user.username);
             }
             else {
                 [self usernameExist:[blockUsername lowercaseString] ErrorLabel:label];

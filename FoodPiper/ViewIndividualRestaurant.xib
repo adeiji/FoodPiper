@@ -318,7 +318,7 @@
                                 </mask>
                             </variation>
                             <connections>
-                                <action selector="addPipeToFavorites:" destination="-1" eventType="touchUpInside" id="5Zn-qu-0XB"/>
+                                <action selector="addRestaurantToFavorites:" destination="-1" eventType="touchUpInside" id="pVH-7G-vpN"/>
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2U-0P-Ydi" customClass="ViewAllPeepsIcon" customModule="FoodPiper" customModuleProvider="target">

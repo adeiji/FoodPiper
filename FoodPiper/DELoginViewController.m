@@ -64,6 +64,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     _backgroundView.layer.zPosition = -1;
     [self setTextFieldBorders];
     [self setUpCreateAccountView];
+    [PFUser logOutInBackground];
 }
 
 - (void) setUpCreateAccountView {

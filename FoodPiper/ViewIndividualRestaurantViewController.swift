@@ -470,16 +470,27 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-    @IBAction func addPipeToFavorites(sender: UIButton) {
+    @IBAction func addRestaurantToFavorites(sender: UIButton) {
         
         let user = PFUser.currentUser()
-        user?.setObject(restaurant.factualId, forKey: PARSE_USER_FAVORITE_RESTAURANTS)
+        var favoriteRestaurants:Array<String>!
+        
+        if user?.objectForKey(PARSE_USER_FAVORITE_RESTAURANTS) != nil {
+            favoriteRestaurants = user?.objectForKey(PARSE_USER_FAVORITE_RESTAURANTS) as! Array<String>
+        }
+        else {
+            favoriteRestaurants = Array<String>()
+        }
+        
+        favoriteRestaurants.append(restaurant.factualId)
+        user?.setObject(favoriteRestaurants, forKey: PARSE_USER_FAVORITE_RESTAURANTS)
         user?.saveEventually({ (success: Bool, error: NSError?) -> Void in
             if success == true {
                 NSLog("The user has been saved successfully with a restaurant added to favorites")
             }
         })
         
+
         let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
         let lblTitle = view.subviews.first as! UILabel
         lblTitle.text = "Added to Favorites"
