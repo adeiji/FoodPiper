@@ -362,6 +362,7 @@
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="WLI-1w-yKv"/>
+                                <constraint firstAttribute="width" secondItem="z7h-t9-Zyq" secondAttribute="height" multiplier="1:1" id="xsh-1S-HTd"/>
                             </constraints>
                             <state key="normal" title="Check In">
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -369,11 +370,13 @@
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="WLI-1w-yKv"/>
+                                    <exclude reference="xsh-1S-HTd"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="constraints">
                                     <exclude reference="WLI-1w-yKv"/>
+                                    <include reference="xsh-1S-HTd"/>
                                 </mask>
                             </variation>
                         </button>
@@ -607,7 +610,7 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="19g-5I-9rf"/>
-                            <include reference="A4Q-Cj-QHi"/>
+                            <exclude reference="A4Q-Cj-QHi"/>
                             <exclude reference="XYa-Ms-oxP"/>
                             <include reference="LCT-OO-Nhk"/>
                             <exclude reference="R7J-py-nSm"/>
@@ -692,6 +695,7 @@
                 <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="0Qc-MU-rZy"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="KO0-BB-kJI" secondAttribute="top" id="3gg-mC-J94"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="KO0-BB-kJI" secondAttribute="centerX" id="47E-EJ-luT"/>
+                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Pav-xp-pBu"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="KO0-BB-kJI" secondAttribute="centerY" id="VvG-WF-mxC"/>
                 <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="XFv-JH-ExG">
                     <variation key="heightClass=regular-widthClass=compact" constant="187"/>
@@ -707,6 +711,7 @@
                     <exclude reference="0Qc-MU-rZy"/>
                     <exclude reference="3gg-mC-J94"/>
                     <exclude reference="47E-EJ-luT"/>
+                    <exclude reference="Pav-xp-pBu"/>
                     <exclude reference="VvG-WF-mxC"/>
                     <exclude reference="XFv-JH-ExG"/>
                     <exclude reference="rMN-aP-47y"/>
@@ -720,8 +725,9 @@
                     <include reference="0Qc-MU-rZy"/>
                     <include reference="3gg-mC-J94"/>
                     <include reference="47E-EJ-luT"/>
+                    <include reference="Pav-xp-pBu"/>
                     <exclude reference="VvG-WF-mxC"/>
-                    <include reference="XFv-JH-ExG"/>
+                    <exclude reference="XFv-JH-ExG"/>
                     <include reference="rMN-aP-47y"/>
                 </mask>
             </variation>

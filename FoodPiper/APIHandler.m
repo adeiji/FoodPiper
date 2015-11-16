@@ -55,26 +55,26 @@
         }
         int count = 0;
         // Get the yelp information from Crosswalk API
-        for (id restaurant in queryResult.rows) {
-            count ++;
-            
-            if (!lastRequest)
-            {
-                FactualQuery *queryObject = [FactualQuery query];
-                [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
-                                                              equalTo:[restaurant stringValueForName:@"factual_id"]]];
-                [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
-                                                              equalTo:@"foursquare"]];
-                [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
-                    
-                NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
-            }
-            
-            // If this is the last restaurant than notify that this is the last request
-            if ([restaurant isEqual:queryResult.rows.lastObject]) {
-                lastRequest = YES;
-            }
-        }
+//        for (id restaurant in queryResult.rows) {
+//            count ++;
+//            
+//            if (!lastRequest)
+//            {
+//                FactualQuery *queryObject = [FactualQuery query];
+//                [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id"
+//                                                              equalTo:[restaurant stringValueForName:@"factual_id"]]];
+//                [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace"
+//                                                              equalTo:@"foursquare"]];
+//                [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
+//                    
+//                NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
+//            }
+//            
+//            // If this is the last restaurant than notify that this is the last request
+//            if ([restaurant isEqual:queryResult.rows.lastObject]) {
+//                lastRequest = YES;
+//            }
+//        }
     }
     else {
         NSString *foursquareURLString = [queryResult.rows[0] stringValueForName:@"url"];
