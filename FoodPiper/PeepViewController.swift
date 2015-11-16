@@ -40,14 +40,14 @@ class PeepViewController: UIViewController {
     }
     
     func displayFiveStarRating (myRating: String, view: UIView, constraint: NSLayoutConstraint) {
-        let rating = Int(myRating)
+        let rating = Double(myRating)
 
         // If this rating is a double and not a whole number than set this to true
         let hasPoint = Double(rating!) % 1 == 0 ? false : true
         let height = view.frame.height
         var widthOfFrame:CGFloat = 0
         
-        for var index = 0; index < rating; ++index {
+        for var index = 0; index < Int(ceil(CGFloat(rating!))); ++index {
             let star = StarIcon()
             star.filled = true
             star.frame = CGRectMake(CGFloat(index * Int(height + 5)), 0, height, height);
@@ -59,7 +59,7 @@ class PeepViewController: UIViewController {
         {
             let star = StarIcon()
             star.halfFilled = true
-            star.frame = CGRectMake(CGFloat(rating! * Int(height + 5)), 0, height, height);
+            star.frame = CGRectMake(CGFloat(Double(floor(CGFloat(rating!))) * Double(height + 5)), 0, height, height);
             view.addSubview(star);
         }
         
@@ -81,7 +81,7 @@ class PeepViewController: UIViewController {
     */
     func loadandViewPipe (myPipe: Pipe, peepView: ViewPeep) {
         var foodRating:String!, decorRating:String!, waitTimeRating:String!, crowdRating:String!, serviceRating:String!
-        var comments = myPipe.comments
+        let comments = myPipe.comments
         let pictureFile = myPipe.picture
         
         if pictureFile != nil {
@@ -107,11 +107,13 @@ class PeepViewController: UIViewController {
                 self.displayFiveStarRating(decorRating, view: self.decorRatingView, constraint: self.decorRatingViewWidthConstraint)
                 self.displayFiveStarRating(serviceRating, view: self.serviceRatingView, constraint: self.serviceRatingViewWidthConstraint)
                 
-                for comment in comments {
-                    let commentLabel = UILabel()
-                    commentLabel.text = comment
-                    self.commentStackView.addArrangedSubview(commentLabel)
-                }
+//                for comment in comments {
+//                    let commentLabel = UILabel()
+//                    self.commentStackView.insertArrangedSubview(commentLabel, atIndex: 0)
+//                    commentLabel.text = comment
+//                    commentLabel.numberOfLines = 0
+//                    commentLabel.sizeToFit()
+//                }
                 
             })
         })

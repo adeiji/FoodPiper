@@ -35,6 +35,7 @@ const int PICTURE_ACTION_SHEET = 2;
         [self setUpSocialNetworkingIcons];
 //        [self displayProfilePicture];
         [_btnChangePassword addTarget:self action:@selector(changePasswordPressed:) forControlEvents:UIControlEventTouchUpInside];
+        self.txtUsername.text = [[PFUser currentUser] username];
     }
     return self;    
 }

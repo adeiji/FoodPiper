@@ -29,8 +29,6 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     for (UIView *view in _buttons) {
         [[view layer] setCornerRadius:BUTTON_CORNER_RADIUS];
     }
-    
-    [PFFacebookUtils unlinkUserInBackground:[PFUser currentUser]];
 
 //    NSString *restorationId = self.restorationIdentifier;
     
@@ -185,7 +183,6 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
 }
 
 - (IBAction)loginWithFacebook:(id)sender {
-    [[DEScreenManager sharedManager] startActivitySpinner];
     [[DEUserManager sharedManager] loginWithFacebook];
 }
 @end
