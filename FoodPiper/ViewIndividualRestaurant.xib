@@ -464,7 +464,9 @@
                         <constraint firstItem="A3s-HN-Yck" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hjD-C4-jwW"/>
                         <constraint firstItem="5CU-NH-V2c" firstAttribute="leading" secondItem="jtM-Ih-c3B" secondAttribute="trailing" constant="11" id="iBr-pL-O6V"/>
                         <constraint firstItem="FEh-Es-v55" firstAttribute="centerY" secondItem="b1z-yj-aQE" secondAttribute="centerY" id="ibt-W3-iTm"/>
-                        <constraint firstAttribute="bottom" secondItem="R2U-0P-Ydi" secondAttribute="bottom" constant="13" id="lg9-GL-zWe"/>
+                        <constraint firstAttribute="bottom" secondItem="R2U-0P-Ydi" secondAttribute="bottom" constant="13" id="lg9-GL-zWe">
+                            <variation key="heightClass=regular-widthClass=compact" constant="74"/>
+                        </constraint>
                         <constraint firstItem="b1z-yj-aQE" firstAttribute="height" secondItem="WR9-fd-u9u" secondAttribute="height" id="lh8-MT-awA"/>
                         <constraint firstAttribute="trailing" secondItem="z7h-t9-Zyq" secondAttribute="trailing" id="ll5-pu-n88"/>
                         <constraint firstItem="z7h-t9-Zyq" firstAttribute="top" secondItem="5CU-NH-V2c" secondAttribute="bottom" constant="12" id="mR6-KY-FzL"/>
@@ -738,7 +740,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="236" y="3273"/>
+            <point key="canvasLocation" x="236" y="3303.5"/>
         </scrollView>
     </objects>
 </document>

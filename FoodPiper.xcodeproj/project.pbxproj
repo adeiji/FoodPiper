@@ -54,6 +54,7 @@
 		F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D201BF6AE6800D966D4 /* ViewSettingsAccount.xib */; settings = {ASSET_TAGS = (); }; };
 		F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */; settings = {ASSET_TAGS = (); }; };
 		F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF0F1BF1327C0006CBE8 /* CheckInIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */; settings = {ASSET_TAGS = (); }; };
@@ -199,6 +200,7 @@
 		F4A20D221BF6AE9200D966D4 /* DESettingsAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESettingsAccount.h; sourceTree = "<group>"; };
 		F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESettingsAccount.m; sourceTree = "<group>"; };
 		F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DEUserManager+Swift.swift"; sourceTree = "<group>"; };
 		F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInIcon.swift; path = "paintcode-classes/CheckInIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendMessageIcon.swift; path = "paintcode-classes/SendMessageIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationIcon.swift; path = "paintcode-classes/ReservationIcon.swift"; sourceTree = "<group>"; };
@@ -524,6 +526,7 @@
 				F4C85F421BD9B948009F3B55 /* DEUserManager.h */,
 				F4C85F431BD9B948009F3B55 /* DEUserManager.m */,
 				F4C85F3B1BD9B8EF009F3B55 /* Login */,
+				F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */,
 			);
 			name = Users;
 			sourceTree = "<group>";
@@ -1014,6 +1017,7 @@
 				F4A2AF311BF133AC0006CBE8 /* CommentIcon.swift in Sources */,
 				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,
 				F4A2AF271BF133660006CBE8 /* PeepIcon.swift in Sources */,
+				F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */,
 				F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */,
 				F4A2AF391BF133D70006CBE8 /* DealsIcon.swift in Sources */,
 				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,

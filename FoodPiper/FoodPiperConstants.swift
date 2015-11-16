@@ -32,3 +32,4 @@ let VIEW_MAKE_RESERVATION = "MakeReservationView"
 let VIEW_SUCCESS_INDICATOR_VIEW = "SuccessIndicatorView"
 
 let PARSE_USER_FAVORITE_RESTAURANTS = "favoriteRestaurants"
+let PARSE_USER_POINTS = "points"

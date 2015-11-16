@@ -324,7 +324,11 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         let image = info[UIImagePickerControllerEditedImage] as? UIImage
         pipe.picture = PFFile(data: UIImageJPEGRepresentation(image!, 0.1)!)
+        var points = Int(pipe.points)
+        points += 5
+        pipe.points = points
         SyncManager.saveParseObject(pipe);
+        DEUserManager.incrementUserPoints(pipe)
     }
 
     /*

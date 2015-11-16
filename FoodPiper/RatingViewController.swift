@@ -20,6 +20,7 @@ public class Pipe : PFObject, PFSubclassing {
     @NSManaged var user:PFUser!
     @NSManaged var restaurantFactualId:String!
     @NSManaged var comments:Array<String>!
+    @NSManaged var points:NSNumber!
     
     public class func parseClassName() -> String {
         return "Pipe"
@@ -99,6 +100,9 @@ class RatingViewController: UIViewController {
     
     */
     func doneRatingButtonPressed () {
+        
+        DEUserManager.incrementUserPoints(pipe)
+        
         // Check to see if the user has rated anything, and if so than save this pipe to Parse
         if (pipe.allKeys().count != 0)
         {
@@ -197,18 +201,34 @@ class RatingViewController: UIViewController {
             rating.comment = ratingView.txtComment!.text
         }
         
+        var points:Int
+        
+        if pipe.points != nil {
+            points = Int(pipe.points)
+        }
+        else {
+            points = 0
+        }
+        
         switch criteria {
         case RATING_DECOR:
             pipe.decor = rating
+            points += 1
         case RATING_SERVICE:
             pipe.service = rating
+            points += 1
         case RATING_WAIT_TIME:
             pipe.waitTime = rating
+            points += 1
         case RATING_CROWD:
             pipe.crowd = rating
+            points += 1
         default:
             pipe.food = rating
+            points += 1
         }
+        
+        pipe.points = points
     }
     
     @IBOutlet var waitTimebuttons: [UIButton]!
