@@ -17,6 +17,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44U-gC-yE7" customClass="FoodBackgroundView" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Friends?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-Jd-OEN">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="134" id="Bgm-20-gdk"/>
+                                <constraint firstAttribute="height" constant="29" id="ncz-AD-1ft"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Bgm-20-gdk"/>
+                                    <exclude reference="ncz-AD-1ft"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="Bgm-20-gdk"/>
+                                    <include reference="ncz-AD-1ft"/>
+                                </mask>
+                            </variation>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdH-AQ-QC1">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,64 +68,84 @@
                                 <action selector="inviteFriendsButtonPressed:" destination="-1" eventType="touchUpInside" id="HDZ-6G-Bt3"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Friends?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-Jd-OEN">
-                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhJ-ib-fkD">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="134" id="Bgm-20-gdk"/>
-                                <constraint firstAttribute="height" constant="29" id="ncz-AD-1ft"/>
+                                <constraint firstAttribute="height" constant="35" id="8xp-Pn-XFE"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="Search by Username">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="Bgm-20-gdk"/>
-                                    <exclude reference="ncz-AD-1ft"/>
+                                    <exclude reference="8xp-Pn-XFE"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="constraints">
-                                    <include reference="Bgm-20-gdk"/>
-                                    <include reference="ncz-AD-1ft"/>
+                                    <include reference="8xp-Pn-XFE"/>
                                 </mask>
                             </variation>
-                        </label>
+                            <connections>
+                                <action selector="searchForUsersButtonPressed:" destination="-1" eventType="touchUpInside" id="wYC-QD-vEc"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="IhJ-ib-fkD" firstAttribute="leading" secondItem="vdH-AQ-QC1" secondAttribute="leading" id="Gld-4l-Xpy"/>
                         <constraint firstItem="vdH-AQ-QC1" firstAttribute="centerX" secondItem="44U-gC-yE7" secondAttribute="centerX" id="KUo-2p-vIa"/>
-                        <constraint firstItem="vdH-AQ-QC1" firstAttribute="centerY" secondItem="44U-gC-yE7" secondAttribute="centerY" id="Onk-cn-VU0"/>
+                        <constraint firstItem="IhJ-ib-fkD" firstAttribute="trailing" secondItem="vdH-AQ-QC1" secondAttribute="trailing" id="MaT-qU-AtF"/>
+                        <constraint firstItem="vdH-AQ-QC1" firstAttribute="centerY" secondItem="44U-gC-yE7" secondAttribute="centerY" id="Onk-cn-VU0">
+                            <variation key="heightClass=regular-widthClass=compact" constant="-3.5"/>
+                        </constraint>
                         <constraint firstItem="fF1-Jd-OEN" firstAttribute="centerX" secondItem="vdH-AQ-QC1" secondAttribute="centerX" id="h5S-vM-fS0"/>
                         <constraint firstAttribute="trailing" secondItem="vdH-AQ-QC1" secondAttribute="trailing" constant="58" id="mI1-Nr-fFz"/>
+                        <constraint firstItem="IhJ-ib-fkD" firstAttribute="top" secondItem="vdH-AQ-QC1" secondAttribute="bottom" constant="8" id="qxA-Xx-Vhp"/>
                         <constraint firstItem="vdH-AQ-QC1" firstAttribute="leading" secondItem="44U-gC-yE7" secondAttribute="leading" constant="58" id="uSx-DD-Wsb"/>
                         <constraint firstItem="vdH-AQ-QC1" firstAttribute="top" secondItem="fF1-Jd-OEN" secondAttribute="bottom" constant="8" id="zMh-86-FM2"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="vdH-AQ-QC1"/>
                             <exclude reference="fF1-Jd-OEN"/>
+                            <exclude reference="vdH-AQ-QC1"/>
+                            <exclude reference="IhJ-ib-fkD"/>
                         </mask>
                         <mask key="constraints">
-                            <exclude reference="h5S-vM-fS0"/>
+                            <exclude reference="Gld-4l-Xpy"/>
+                            <exclude reference="MaT-qU-AtF"/>
+                            <exclude reference="qxA-Xx-Vhp"/>
                             <exclude reference="KUo-2p-vIa"/>
                             <exclude reference="Onk-cn-VU0"/>
                             <exclude reference="mI1-Nr-fFz"/>
                             <exclude reference="uSx-DD-Wsb"/>
                             <exclude reference="zMh-86-FM2"/>
+                            <exclude reference="h5S-vM-fS0"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="vdH-AQ-QC1"/>
                             <include reference="fF1-Jd-OEN"/>
+                            <include reference="vdH-AQ-QC1"/>
+                            <include reference="IhJ-ib-fkD"/>
                         </mask>
                         <mask key="constraints">
-                            <include reference="h5S-vM-fS0"/>
+                            <include reference="Gld-4l-Xpy"/>
+                            <include reference="MaT-qU-AtF"/>
+                            <include reference="qxA-Xx-Vhp"/>
                             <include reference="KUo-2p-vIa"/>
                             <include reference="Onk-cn-VU0"/>
                             <include reference="mI1-Nr-fFz"/>
                             <include reference="uSx-DD-Wsb"/>
                             <include reference="zMh-86-FM2"/>
+                            <include reference="h5S-vM-fS0"/>
                         </mask>
                     </variation>
                 </view>

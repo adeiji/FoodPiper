@@ -48,6 +48,12 @@ class FriendsViewController: UIViewController, FBSDKAppInviteDialogDelegate {
         
     }
 
+    @IBAction func searchForUsersButtonPressed(sender: UIButton) {
+        
+        let viewController = SearchFriendsViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

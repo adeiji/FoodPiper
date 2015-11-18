@@ -207,8 +207,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
             if restaurant.email != nil {
                 let composeViewController = MFMailComposeViewController()
                 composeViewController.mailComposeDelegate = self
-                composeViewController.setToRecipients([restaurant.email])
+                composeViewController.setToRecipients(["adebayoiji@gmail.com"])
                 composeViewController.setSubject("Message from Food Piper User")
+                composeViewController.setMessageBody("\n\n\nEmail of " + restaurant.name + "\n\n" + restaurant.email, isHTML: true)
                 self.presentViewController(composeViewController, animated: true, completion: nil)
             }
         }
@@ -495,6 +496,20 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         let lblTitle = view.subviews.first as! UILabel
         lblTitle.text = "Added to Favorites"
         DEAnimationManager.savedAnimationWithView(view)
+    }
+    @IBAction func viewPipesForRestaurant(sender: UIButton) {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            let pipes = SyncManager.getAllPipesForRestaurant(self.restaurant.factualId)
+            
+            if pipes.count != 0 {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    let peepPageViewController = PeepPageViewController()
+                    peepPageViewController.pipes = pipes
+                    self.navigationController?.pushViewController(peepPageViewController, animated: true)
+                })
+            }
+        })
     }
     /*
     

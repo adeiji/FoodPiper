@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController" customModule="FoodPiper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="3Ub-0U-igv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1j-ns-0AO">
+                    <rect key="frame" x="20" y="23" width="94" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="9Uq-ip-CqX"/>
+                        <constraint firstAttribute="height" constant="94" id="Uot-lv-iZN"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="47"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-gj-zlq">
+                    <rect key="frame" x="121" y="23" width="179" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="179" id="Fga-LY-Pmu"/>
+                        <constraint firstAttribute="height" constant="30" id="r0f-wg-wgV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Fga-LY-Pmu"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Fga-LY-Pmu"/>
+                        </mask>
+                    </variation>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Member Since" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69H-qT-QlM">
+                    <rect key="frame" x="121" y="23" width="179" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ali-Nf-4Uf"/>
+                        <constraint firstAttribute="width" constant="179" id="iOa-Wp-3sR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="iOa-Wp-3sR"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="iOa-Wp-3sR"/>
+                        </mask>
+                    </variation>
+                </textField>
+                <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQ1-LC-Wh3">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="1s0-iw-mnu"/>
+                        <constraint firstAttribute="width" constant="285" id="S6N-xh-idd"/>
+                    </constraints>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1s0-iw-mnu"/>
+                            <exclude reference="S6N-xh-idd"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="1s0-iw-mnu"/>
+                            <include reference="S6N-xh-idd"/>
+                        </mask>
+                    </variation>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="69H-qT-QlM" firstAttribute="leading" secondItem="mqd-gj-zlq" secondAttribute="leading" id="5mm-0q-JIx"/>
+                <constraint firstItem="mqd-gj-zlq" firstAttribute="leading" secondItem="q1j-ns-0AO" secondAttribute="trailing" constant="7" id="F3x-kX-bal"/>
+                <constraint firstAttribute="bottom" secondItem="MQ1-LC-Wh3" secondAttribute="bottom" constant="18" id="Jwb-9M-nBt"/>
+                <constraint firstItem="q1j-ns-0AO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Vyx-KD-AHd"/>
+                <constraint firstItem="q1j-ns-0AO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="eeO-Lk-umM"/>
+                <constraint firstItem="q1j-ns-0AO" firstAttribute="top" secondItem="mqd-gj-zlq" secondAttribute="top" id="fh6-KF-ULT"/>
+                <constraint firstItem="MQ1-LC-Wh3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gx8-WH-Iey"/>
+                <constraint firstItem="69H-qT-QlM" firstAttribute="top" secondItem="mqd-gj-zlq" secondAttribute="bottom" constant="8" id="vkw-5o-R40"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="q1j-ns-0AO"/>
+                    <exclude reference="mqd-gj-zlq"/>
+                    <exclude reference="69H-qT-QlM"/>
+                    <exclude reference="MQ1-LC-Wh3"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Vyx-KD-AHd"/>
+                    <exclude reference="eeO-Lk-umM"/>
+                    <exclude reference="fh6-KF-ULT"/>
+                    <exclude reference="F3x-kX-bal"/>
+                    <exclude reference="5mm-0q-JIx"/>
+                    <exclude reference="vkw-5o-R40"/>
+                    <exclude reference="Jwb-9M-nBt"/>
+                    <exclude reference="gx8-WH-Iey"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="q1j-ns-0AO"/>
+                    <include reference="mqd-gj-zlq"/>
+                    <include reference="69H-qT-QlM"/>
+                    <include reference="MQ1-LC-Wh3"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Vyx-KD-AHd"/>
+                    <include reference="eeO-Lk-umM"/>
+                    <include reference="fh6-KF-ULT"/>
+                    <include reference="F3x-kX-bal"/>
+                    <include reference="5mm-0q-JIx"/>
+                    <include reference="vkw-5o-R40"/>
+                    <include reference="Jwb-9M-nBt"/>
+                    <include reference="gx8-WH-Iey"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

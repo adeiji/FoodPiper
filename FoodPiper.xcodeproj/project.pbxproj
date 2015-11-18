@@ -55,6 +55,7 @@
 		F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */; settings = {ASSET_TAGS = (); }; };
 		F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */; settings = {ASSET_TAGS = (); }; };
+		F4A20D2A1BFAA35100D966D4 /* SearchFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D291BFAA35100D966D4 /* SearchFriendsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF0F1BF1327C0006CBE8 /* CheckInIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A2AF131BF1329C0006CBE8 /* ReservationIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */; settings = {ASSET_TAGS = (); }; };
@@ -122,6 +123,7 @@
 		F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B391BFD22C600637FEF /* UserProfileView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; settings = {ASSET_TAGS = (); }; };
 		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -201,6 +203,7 @@
 		F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESettingsAccount.m; sourceTree = "<group>"; };
 		F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DEUserManager+Swift.swift"; sourceTree = "<group>"; };
+		F4A20D291BFAA35100D966D4 /* SearchFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFriendsViewController.swift; sourceTree = "<group>"; };
 		F4A2AF0E1BF1327C0006CBE8 /* CheckInIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInIcon.swift; path = "paintcode-classes/CheckInIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF101BF1328E0006CBE8 /* SendMessageIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendMessageIcon.swift; path = "paintcode-classes/SendMessageIcon.swift"; sourceTree = "<group>"; };
 		F4A2AF121BF1329C0006CBE8 /* ReservationIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationIcon.swift; path = "paintcode-classes/ReservationIcon.swift"; sourceTree = "<group>"; };
@@ -293,6 +296,7 @@
 		F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ThinItalic.ttf"; path = "Resources/Fonts/josefin_sans/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperButton.swift; sourceTree = "<group>"; };
 		F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
+		F4D94B391BFD22C600637FEF /* UserProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileView.xib; sourceTree = "<group>"; };
 		F4EA284A1BDA906700079658 /* DEViewRestaurantsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsView.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.h"; sourceTree = "<group>"; };
 		F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsView.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.m"; sourceTree = "<group>"; };
 		F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsViewController.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.h"; sourceTree = "<group>"; };
@@ -412,6 +416,8 @@
 				F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */,
 				F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */,
 				F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */,
+				F4A20D291BFAA35100D966D4 /* SearchFriendsViewController.swift */,
+				F4D94B391BFD22C600637FEF /* UserProfileView.xib */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -884,6 +890,7 @@
 				F4CBC33D1BD182BB00FEBE36 /* Assets.xcassets in Resources */,
 				F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */,
 				F4CC5AEC1BD58B0F00109C61 /* JosefinSans-LightItalic.ttf in Resources */,
+				F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */,
 				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
 				F42A1E041BF190DC002286BF /* FilterView.xib in Resources */,
 				F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */,
@@ -988,6 +995,7 @@
 				F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */,
 				F42A1E101BF28895002286BF /* Reservation.swift in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
+				F4A20D2A1BFAA35100D966D4 /* SearchFriendsViewController.swift in Sources */,
 				F4A2AF291BF133740006CBE8 /* ViewAllPeepsIcon.swift in Sources */,
 				F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */,
 				F42A1E0E1BF281B2002286BF /* CheckMarkIcon.swift in Sources */,

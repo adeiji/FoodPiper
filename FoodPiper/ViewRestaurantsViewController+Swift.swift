@@ -53,10 +53,6 @@ extension DEViewRestaurantsViewController  {
             })
         })
         
-//        let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
-//        
-//        peepViewController.pipesToRecieve = peepViewController.ALL_PIPES
-//        self.navigationController?.pushViewController(peepViewController, animated: true)
     }
     
     
