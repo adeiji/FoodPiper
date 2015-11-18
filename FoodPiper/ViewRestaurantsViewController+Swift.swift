@@ -24,14 +24,38 @@ extension DEViewRestaurantsViewController  {
     }
     @IBAction func viewProfile (sender: UIButton) {
         sender.superview?.removeFromSuperview()
-        let viewController = ProfileViewController.init(nibName: "ViewSettingsAccount", bundle: nil)
+        
+        let viewController = ProfileViewController.init(nibName: VIEW_SETTINGS_ACCOUNT, bundle: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    /*
     
-    @IBAction func viewFriendsPipes (sender: UIButton) {
+    Get all the friends for the current user and display
+    
+    */
+    @IBAction func viewFriendsPipes (sender: UIButton){
         sender.superview?.removeFromSuperview()
-        let viewController = FriendsViewController.init(nibName: "NoFriendsView", bundle: nil)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        if let friends = PFUser.currentUser()?.objectForKey(PARSE_USER_FRIENDS) as? [PFObject] {
+        
+            if friends.count == 0 {
+                let viewController = FriendsViewController.init(nibName: VIEW_NO_FRIENDS, bundle: nil)
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+            else {
+                let viewController = FriendsViewController.init(nibName:VIEW_FRIENDS_LIST, bundle: nil)
+                viewController.friends = friends
+                self.navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
+        else {
+            // Not Logged in
+        }
+    }
+    
+    enum PFUserError: ErrorType {
+        case Null
+        case LoggedOut
     }
     
     /*

@@ -4,13 +4,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendsViewController" customModule="FoodPiper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="FoodPiper" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="3Ub-0U-igv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserProfileView" customModule="FoodPiper" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -89,7 +89,7 @@
                         <constraint firstAttribute="height" constant="35" id="1s0-iw-mnu"/>
                         <constraint firstAttribute="width" constant="285" id="S6N-xh-idd"/>
                     </constraints>
-                    <state key="normal" title="Next">
+                    <state key="normal" title="Get Connected">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -109,6 +109,9 @@
                             <include reference="S6N-xh-idd"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="getConnectedButtonPressed:" destination="-1" eventType="touchUpInside" id="NlS-Rl-Moy"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -117,7 +120,9 @@
                 <constraint firstItem="mqd-gj-zlq" firstAttribute="leading" secondItem="q1j-ns-0AO" secondAttribute="trailing" constant="7" id="F3x-kX-bal"/>
                 <constraint firstAttribute="bottom" secondItem="MQ1-LC-Wh3" secondAttribute="bottom" constant="18" id="Jwb-9M-nBt"/>
                 <constraint firstItem="q1j-ns-0AO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Vyx-KD-AHd"/>
-                <constraint firstItem="q1j-ns-0AO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="eeO-Lk-umM"/>
+                <constraint firstItem="q1j-ns-0AO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="21" id="eeO-Lk-umM">
+                    <variation key="heightClass=regular-widthClass=compact" constant="26"/>
+                </constraint>
                 <constraint firstItem="q1j-ns-0AO" firstAttribute="top" secondItem="mqd-gj-zlq" secondAttribute="top" id="fh6-KF-ULT"/>
                 <constraint firstItem="MQ1-LC-Wh3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gx8-WH-Iey"/>
                 <constraint firstItem="69H-qT-QlM" firstAttribute="top" secondItem="mqd-gj-zlq" secondAttribute="bottom" constant="8" id="vkw-5o-R40"/>
@@ -158,6 +163,11 @@
                     <include reference="gx8-WH-Iey"/>
                 </mask>
             </variation>
+            <connections>
+                <outlet property="image" destination="q1j-ns-0AO" id="mOG-dU-JSJ"/>
+                <outlet property="txtUserSince" destination="69H-qT-QlM" id="dcd-5P-GVc"/>
+                <outlet property="txtUsername" destination="mqd-gj-zlq" id="EaL-Fx-urx"/>
+            </connections>
         </view>
     </objects>
 </document>

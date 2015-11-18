@@ -124,6 +124,10 @@
 		F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */; settings = {ASSET_TAGS = (); }; };
 		F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
 		F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B391BFD22C600637FEF /* UserProfileView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4D94B3C1BFD248B00637FEF /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B3F1BFD2CDE00637FEF /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B401BFD2E5C00637FEF /* FriendView.xib */; settings = {ASSET_TAGS = (); }; };
+		F4D94B431BFD351B00637FEF /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B421BFD351B00637FEF /* FriendsListView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; settings = {ASSET_TAGS = (); }; };
 		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -297,6 +301,10 @@
 		F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperButton.swift; sourceTree = "<group>"; };
 		F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
 		F4D94B391BFD22C600637FEF /* UserProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileView.xib; sourceTree = "<group>"; };
+		F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
+		F4D94B401BFD2E5C00637FEF /* FriendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendView.xib; sourceTree = "<group>"; };
+		F4D94B421BFD351B00637FEF /* FriendsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListView.xib; sourceTree = "<group>"; };
 		F4EA284A1BDA906700079658 /* DEViewRestaurantsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsView.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.h"; sourceTree = "<group>"; };
 		F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsView.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.m"; sourceTree = "<group>"; };
 		F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsViewController.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.h"; sourceTree = "<group>"; };
@@ -418,6 +426,9 @@
 				F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */,
 				F4A20D291BFAA35100D966D4 /* SearchFriendsViewController.swift */,
 				F4D94B391BFD22C600637FEF /* UserProfileView.xib */,
+				F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */,
+				F4D94B401BFD2E5C00637FEF /* FriendView.xib */,
+				F4D94B421BFD351B00637FEF /* FriendsListView.xib */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -621,7 +632,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
-				F4A20D191BF6A16F00D966D4 /* Friends */,
+				F4D94B3D1BFD2CB700637FEF /* Profile and Friends */,
 				F4B18F9F1BEACE6600B1765E /* Peeping */,
 				F475C3321BE2F0FE00E159F6 /* Piping */,
 				F4A06B171BDAC7C300825D74 /* Categories */,
@@ -744,6 +755,15 @@
 				F42A1E0F1BF28895002286BF /* Reservation.swift */,
 			);
 			name = Restaurant;
+			sourceTree = "<group>";
+		};
+		F4D94B3D1BFD2CB700637FEF /* Profile and Friends */ = {
+			isa = PBXGroup;
+			children = (
+				F4A20D191BF6A16F00D966D4 /* Friends */,
+				F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */,
+			);
+			name = "Profile and Friends";
 			sourceTree = "<group>";
 		};
 		F4EA28411BDA8EE300079658 /* VIew and View Controller */ = {
@@ -891,9 +911,12 @@
 				F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */,
 				F4CC5AEC1BD58B0F00109C61 /* JosefinSans-LightItalic.ttf in Resources */,
 				F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */,
+				F4D94B431BFD351B00637FEF /* FriendsListView.xib in Resources */,
 				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
 				F42A1E041BF190DC002286BF /* FilterView.xib in Resources */,
 				F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */,
+				F4D94B3F1BFD2CDE00637FEF /* ActivityView.xib in Resources */,
+				F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */,
 				F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */,
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
 				F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */,
@@ -1054,6 +1077,7 @@
 				F4A2AF251BF133570006CBE8 /* ViewFavoriteIcon.swift in Sources */,
 				F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */,
 				F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */,
+				F4D94B3C1BFD248B00637FEF /* UserProfileView.swift in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
 				F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */,
 				F475C3391BE2F6FC00E159F6 /* RatingView.swift in Sources */,

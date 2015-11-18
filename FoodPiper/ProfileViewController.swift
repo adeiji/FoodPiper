@@ -9,10 +9,21 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    var user:PFUser!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if user != nil {
+            let view = self.view as! UserProfileView
+            view.txtUsername.text = user.username
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+            let memberSinceDate = dateFormatter.stringFromDate(user.createdAt!)
+            view.txtUserSince.text = "Member Since: " + memberSinceDate
+            
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,13 +46,31 @@ class ProfileViewController: UIViewController {
     
 
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
+    
+    Add the user as a friend to the current user and then display that the friend request was sent
+    
     */
-
+    @IBAction func getConnectedButtonPressed(sender: UIButton) {
+        let currentUser = PFUser.currentUser()
+        var friendsArray = [PFObject]()
+        
+        if currentUser?.objectForKey(PARSE_USER_FRIENDS) != nil {
+            friendsArray = currentUser?.objectForKey(PARSE_USER_FRIENDS) as! [PFObject]
+        }
+        
+        friendsArray.append(user)
+        currentUser?.setObject(friendsArray, forKey: PARSE_USER_FRIENDS)
+        currentUser?.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+            if success == true {
+                NSLog("User - " + self.user.username! + " -  was saved as a friend to the database")
+                let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
+                let lblTitle = view.subviews.first as! UILabel
+                lblTitle.text = "Friend Request Sent"
+                DEAnimationManager.savedAnimationWithView(view)
+                
+            } else {
+                NSLog("Error adding friend: " + error!.description)
+            }
+        })
+    }
 }

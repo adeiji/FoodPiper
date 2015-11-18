@@ -62,7 +62,9 @@ class SearchFriendsViewController: UITableViewController, UISearchBarDelegate, U
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if let user = foundUsers[indexPath.row] as? PFUser {
-            
+            let viewController = ProfileViewController.init(nibName: "UserProfileView", bundle: nil)
+            viewController.user = user
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
         
     }
