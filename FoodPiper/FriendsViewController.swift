@@ -95,8 +95,13 @@ extension FriendsViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell()
         
         if let user = friends[indexPath.row] as? PFUser {
-            cell.textLabel!.text = user.username
+            guard let username = user.username else {
+                return cell
+            }
+            
+            cell.textLabel?.text = username
         }
+        
         return cell
     }
 }

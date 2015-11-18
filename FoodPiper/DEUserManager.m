@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
+#import "FoodPiper-Swift.h"
 
 @implementation DEUserManager
 
@@ -239,6 +240,10 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
                 [self clearUserImageDefaults];
                 [self isLoggedIn];
                 NSLog(@"Logged in with username: %@", user.username);
+                
+                for (PFObject *object in user[@"friends"]) {
+                    [object fetchIfNeededInBackground];
+                }
             }
             else {
                 [self usernameExist:[blockUsername lowercaseString] ErrorLabel:label];

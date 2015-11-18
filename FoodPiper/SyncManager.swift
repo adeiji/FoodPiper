@@ -65,6 +65,7 @@ class SyncManager: NSObject {
             return []
         }
     }
+    
     /*
     Get all Parse Objects for a specified class, wait until done retrieving and then return the data
     */
