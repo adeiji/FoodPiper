@@ -72,6 +72,9 @@
                                             <include reference="iJY-GJ-p9p"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <action selector="savePipeToFavorites:" destination="-1" eventType="touchUpInside" id="n55-Db-L3z"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s0-Hf-6Oc" customClass="CommentIcon" customModule="FoodPiper" customModuleProvider="target">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>

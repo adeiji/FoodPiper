@@ -123,6 +123,21 @@ class PeepViewController: UIViewController {
 
     }
     
+    @IBAction func savePipeToFavorites(sender: UIButton) {
+        
+        let user = PFUser.currentUser()
+        if var favoritePipes = user?.objectForKey(PARSE_USER_FAVORITE_PIPES) as? [Pipe] {
+            favoritePipes.append(pipe)
+            user?.setObject(favoritePipes, forKey: PARSE_USER_FAVORITE_PIPES)
+        }
+        else
+        {
+            user?.setObject([pipe], forKey: PARSE_USER_FAVORITE_PIPES)
+        }
+        
+        SyncManager.saveUserAndDisplayResultsWithMessage("Saved Pipe to Favorites", user: user!, errorDescription: "Error adding pipes to favorites")
+        
+    }
     func loadRatingObject (myRatingObject: Rating ) -> String {
         var rating:String!
         let semaphore = dispatch_semaphore_create(0)
