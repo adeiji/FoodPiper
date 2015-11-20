@@ -87,4 +87,27 @@ class SyncManager: NSObject {
         }
     }
     
+    /*
+    Save the current user and display to the user the results if successful
+    
+    message: Message to display to the user
+    errorDescription: Description to log of the error if one
+    */
+    
+    class func saveUserAndDisplayResultsWithMessage (message: String, user: PFUser, errorDescription: String) {
+        user.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+            if success == true {
+                NSLog("User - " + user.username! + " -  was saved as a friend to the database")
+                let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
+                let lblTitle = view.subviews.first as! UILabel
+                lblTitle.text = message
+                DEAnimationManager.savedAnimationWithView(view)
+                
+            } else {
+                NSLog(errorDescription + ": " + error!.description)
+            }
+        })
+    }
+    
 }
+    

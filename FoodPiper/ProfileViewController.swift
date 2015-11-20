@@ -60,17 +60,6 @@ class ProfileViewController: UIViewController {
         
         friendsArray.append(user)
         currentUser?.setObject(friendsArray, forKey: PARSE_USER_FRIENDS)
-        currentUser?.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-            if success == true {
-                NSLog("User - " + self.user.username! + " -  was saved as a friend to the database")
-                let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
-                let lblTitle = view.subviews.first as! UILabel
-                lblTitle.text = "Friend Request Sent"
-                DEAnimationManager.savedAnimationWithView(view)
-                
-            } else {
-                NSLog("Error adding friend: " + error!.description)
-            }
-        })
+        SyncManager.saveUserAndDisplayResultsWithMessage("Friend Request Sent", user: currentUser!, errorDescription: "Error Sending Friend Request")
     }
 }
