@@ -79,9 +79,17 @@ extension DEViewRestaurantsViewController  {
         
     }
     
+    @IBAction func viewFavoritePipes (sender: UIButton) {
+        sender.superview?.removeFromSuperview()
+        guard let favoritePipes = PFUser.currentUser()?.objectForKey(PARSE_USER_FAVORITE_PIPES) as? [Pipe] else {
+            
+            NSLog("User not logged in")
+            return
+        }
     
-    @IBAction func viewFavoritePipes () {
-        
+        let peepPageViewController = PeepPageViewController()
+        peepPageViewController.pipes = favoritePipes
+        self.navigationController?.pushViewController(peepPageViewController, animated: true)
     }
     
     @IBAction func viewDeals () {

@@ -103,9 +103,9 @@ class PeepViewController: UIViewController {
             serviceRating = self.loadRatingObject(myPipe.service)
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.displayFiveStarRating(foodRating, view: self.foodRatingView, constraint: self.foodRatingViewWidthConstraint)
-                self.displayFiveStarRating(decorRating, view: self.decorRatingView, constraint: self.decorRatingViewWidthConstraint)
-                self.displayFiveStarRating(serviceRating, view: self.serviceRatingView, constraint: self.serviceRatingViewWidthConstraint)
+                if foodRating != nil { self.displayFiveStarRating(foodRating, view: self.foodRatingView, constraint: self.foodRatingViewWidthConstraint) }
+                if decorRating != nil { self.displayFiveStarRating(decorRating, view: self.decorRatingView, constraint: self.decorRatingViewWidthConstraint) }
+                if serviceRating != nil { self.displayFiveStarRating(serviceRating, view: self.serviceRatingView, constraint: self.serviceRatingViewWidthConstraint) }
                 
 //                for comment in comments {
 //                    let commentLabel = UILabel()

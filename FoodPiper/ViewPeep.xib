@@ -319,7 +319,7 @@
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="47" y="8" width="39" height="20.5"/>
+                                                <rect key="frame" x="47" y="8" width="39" height="21"/>
                                                 <mask key="constraints">
                                                     <include reference="Dhe-aF-TG2"/>
                                                 </mask>
@@ -548,7 +548,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="38" y="8" width="57" height="20.5"/>
+                                                <rect key="frame" x="38" y="8" width="57" height="21"/>
                                             </variation>
                                         </label>
                                     </subviews>
@@ -683,7 +683,7 @@
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                                                <rect key="frame" x="28" y="19" width="77" height="20.5"/>
+                                                <rect key="frame" x="28" y="19" width="77" height="21"/>
                                                 <mask key="constraints">
                                                     <include reference="JcR-Cf-GXi"/>
                                                 </mask>

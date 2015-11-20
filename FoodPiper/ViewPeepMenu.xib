@@ -16,10 +16,10 @@
                         <action selector="viewAllPipes:" destination="-1" eventType="touchUpInside" id="77S-je-M6t"/>
                     </connections>
                 </button>
-                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-ah-g2o" customClass="ViewFavoriteIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-ah-g2o" customClass="ViewFavoriteIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <connections>
-                        <action selector="viewFavoritePipes" destination="-1" eventType="touchUpInside" id="JMh-wT-Uqq"/>
+                        <action selector="viewFavoritePipes:" destination="-1" eventType="touchUpInside" id="Kgm-Dj-CnZ"/>
                     </connections>
                 </button>
                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bds-Q4-cMQ" customClass="DealsIcon" customModule="FoodPiper" customModuleProvider="target">

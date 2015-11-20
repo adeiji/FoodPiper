@@ -36,6 +36,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions);
         GMSServices.provideAPIKey("AIzaSyCrka4-c9-yUe1AIDmNJit3VLG9KFEQFuA")
         
+        
+        if PFUser.currentUser() != nil {
+            let storyboard = UIStoryboard(name: VIEW_RESTAURANTS_STORYBOARD, bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier(VIEW_RESTAURANTS_VIEW_CONTROLLER) as! DEViewRestaurantsViewController
+            viewController.restaurants = apiHandler.convertRestaurantsDictionaryToArray()
+            viewController.currentLocation = apiHandler.currentLocation
+            viewController.navigationController?.pushViewController(viewController, animated: true)
+            let userManager = DEUserManager()
+            userManager.fetchObjectsForUser(PFUser.currentUser()!)
+        }
+        else {
+            // Prompt the user to login
+        }
+        
         return true
     }
     
