@@ -35,6 +35,7 @@ let VIEW_FRIENDS_LIST = "FriendsListView"
 let VIEW_NO_FRIENDS = "NoFriendsView"
 let VIEW_SETTINGS_ACCOUNT = "ViewSettingsAccount"
 let VIEW_FRIEND = "FriendView"
+let VIEW_INVITE_EAT_VIEW = "InviteEatView"
 
 let PARSE_USER_FAVORITE_RESTAURANTS = "favoriteRestaurants"
 let PARSE_USER_POINTS = "points"

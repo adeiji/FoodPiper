@@ -41,6 +41,7 @@ extension DEViewRestaurantsViewController  {
             let viewController = FriendsViewController.init(nibName:VIEW_FRIENDS_LIST, bundle: nil)
             viewController.friends = friends
             self.navigationController?.pushViewController(viewController, animated: true)
+            viewController.currentLocation = currentLocation
             
         }
         else if PFUser.currentUser() == nil {
@@ -49,6 +50,7 @@ extension DEViewRestaurantsViewController  {
         else {  // No friends
             let viewController = FriendsViewController.init(nibName: VIEW_NO_FRIENDS, bundle: nil)
             self.navigationController?.pushViewController(viewController, animated: true)
+            viewController.currentLocation = currentLocation
         }
     }
     

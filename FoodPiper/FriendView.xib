@@ -142,6 +142,9 @@
                             <include reference="uRC-JB-9jM"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="inviteToMealButtonPressed:" destination="-1" eventType="touchUpInside" id="xZe-2h-2qE"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYX-Du-6NP">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>

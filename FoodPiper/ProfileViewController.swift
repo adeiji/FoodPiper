@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     var user:PFUser!
+    var currentLocation:CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,16 @@ class ProfileViewController: UIViewController {
             })
         })
     }
+    
+    @IBAction func inviteToMealButtonPressed(sender: UIButton) {
+        
+        let viewController = InviteEatViewController.init(nibName: VIEW_INVITE_EAT_VIEW, bundle: nil)
+        viewController.user = user
+        viewController.currentLocation = currentLocation        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    
     /*
     
     Add the user as a friend to the current user and then display that the friend request was sent

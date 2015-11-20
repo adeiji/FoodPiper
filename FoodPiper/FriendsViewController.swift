@@ -10,7 +10,7 @@ import UIKit
 
 class FriendsViewController: UIViewController, FBSDKAppInviteDialogDelegate, UISearchControllerDelegate {
     var friends:[PFObject]!
-
+    var currentLocation:CLLocation!
     
     @IBOutlet weak var tableView: UITableView!
     var resultsController:UITableViewController!
@@ -87,6 +87,7 @@ extension FriendsViewController : UITableViewDelegate, UITableViewDataSource {
         }
         
         viewController.user = friend
+        viewController.currentLocation = currentLocation
         self.navigationController?.pushViewController(viewController, animated:true)
     }
     

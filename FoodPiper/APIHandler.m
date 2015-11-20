@@ -11,9 +11,23 @@
 
 @implementation APIHandler
 
+- (void) getAllRestaurantsBeginningWith : (NSString *) name
+                                Location: (CLLocation *) currentLocation {
+    _restaurants = [NSMutableDictionary new];
+    FactualQuery *queryObject = [FactualQuery query];
+    [queryObject addRowFilter:[FactualRowFilter fieldName:@"name" beginsWith:name]];
+    queryObject.includeRowCount = true;
+    CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
+    
+    [queryObject setGeoFilter:coordinate radiusInMeters:5000];
+    [queryObject setLimit:10];
+    
+    [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
+}
+
 /*
  
- Get all the restaurants within 20 miles of where the user currently is.  
+ Get all the restaurants within 20 miles of where the user currently is.
  For testing purposes right now we grab all data from Las Vegas.
  
  */
@@ -30,7 +44,9 @@
     
     [queryObject setGeoFilter:coordinate radiusInMeters:5000];
     [queryObject setLimit:10];
+    
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
+    
     _currentLocation = currentLocation;
 
 }
@@ -39,7 +55,7 @@
 
     static BOOL lastRequest = NO;
     
-    if ([request.requestId isEqualToString:@"1"]) /* If this is the first request, than we know the request was a
+    if (request.requestType == FactualRequestType_PlacesQuery) /* If this is the first request, than we know the request was a
                                                    request sent for data in the Factual database.  The second time
                                                    will be a request sent for the Foursquare Id of the data
                                                    */
@@ -51,6 +67,12 @@
                 /* Add this restaurant object to the dictionary with the factual Id as the key so that we can
                  use the factual id as a reference within the app */
                 [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
+            }
+            
+            if (_notifyWhenDone) { // Notify application that the process is done
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_FINISHED_RETRIEVING_RESTAURANTS object:nil];
+                
             }
         }
         int count = 0;
@@ -98,7 +120,6 @@
 
                 // If this is the last request for the foursquare image than display the ViewRestaurants screen
                 if (lastRequest) {
-                    [self displayViewRestaurantsScreen];
                     lastRequest = NO;
                 }
             }];
@@ -106,23 +127,6 @@
         }
         
     }
-}
-
-/*
- 
- Display the screen that will display all the restaurants that have been taken from the Factual API
- 
- */
-- (void) displayViewRestaurantsScreen {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-//        UINavigationController *navController = (UINavigationController *) [appDelegate.window rootViewController];
-//        DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
-//        
-//        [viewController setRestaurants:[self convertRestaurantsDictionaryToArray]];
-//        [viewController setCurrentLocation:_currentLocation];
-//        [navController pushViewController:viewController animated:YES];
-//    });
 }
 
 /*

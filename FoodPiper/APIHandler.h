@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSMutableDictionary *restaurants;
 @property (strong, nonatomic) NSMutableArray *restaurantImages;
 @property (strong, nonatomic) CLLocation *currentLocation;
+@property BOOL notifyWhenDone;
 @property NSInteger rowCount;
 /* 
  
@@ -27,5 +28,6 @@
 
 - (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation;
 - (NSArray *) convertRestaurantsDictionaryToArray;
-
+- (void) getAllRestaurantsBeginningWith : (NSString *) name
+                                Location: (CLLocation *) currentLocation;
 @end
