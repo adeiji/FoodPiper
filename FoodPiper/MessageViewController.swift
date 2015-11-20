@@ -50,14 +50,38 @@ class MessageViewController: UIViewController {
             saveCommentToPipe() // Save the comment created to the current pipe
         }
         else if user != nil {
-            saveAction() // Store the action on the server
+            saveActionMessageToUser() // Store the action on the server
+        }
+        else if restaurant != nil {
+            saveActionMessageToRestaurant()
         }
         
         self.navigationController?.popViewControllerAnimated(true)
 
     }
     
-    func saveAction () {
+    func saveActionMessageToRestaurant () {
+        let action = Action()
+        
+        if PFUser.currentUser() != nil {
+            action.fromUser = PFUser.currentUser()
+        }
+        else {
+            return
+        }
+        
+        action.type = ACTION_TYPE_MESSAGE
+        action.actionDescription = txtMessage.text
+        action.time = NSDate()
+        action.toRestaurant = restaurant.factualId
+        action.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+                NSLog("Action: Send Message to Restaurant with id - " + action.objectId! + " - saved to server")
+            }
+        })
+    }
+    
+    func saveActionMessageToUser () {
         let action = Action()
         
         if PFUser.currentUser() != nil {
@@ -73,7 +97,7 @@ class MessageViewController: UIViewController {
         action.toUser = user;
         action.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
             if error == nil {
-                NSLog("Action with id - " + action.objectId! + " - saved to server")
+                NSLog("Action: Send Message to User with id - " + action.objectId! + " - saved to server")
             }
         })
     }
