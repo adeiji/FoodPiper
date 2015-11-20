@@ -47,12 +47,22 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func sendFriendMessage(sender: UIButton) {
-        
         let viewController = MessageViewController()
         viewController.user = user
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
+    @IBAction func peepPipesButtonPressed(sender: UIButton) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            let dictionary = [PIPE_USER : self.user!]
+            let pipes = SyncManager.getParseObjectsWithClass(PIPE_PARSE_CLASS, objectKeyValues: dictionary, queryType: ParseQueryType.WhereKeyEqualTo)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let viewController = PeepPageViewController()
+                viewController.pipes = pipes
+                self.navigationController?.pushViewController(viewController, animated: true)
+            })
+        })
+    }
     /*
     
     Add the user as a friend to the current user and then display that the friend request was sent

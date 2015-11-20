@@ -37,19 +37,18 @@ extension DEViewRestaurantsViewController  {
         sender.superview?.removeFromSuperview()
         
         if let friends = PFUser.currentUser()?.objectForKey(PARSE_USER_FRIENDS) as? [PFObject] {
-        
-            if friends.count == 0 {
-                let viewController = FriendsViewController.init(nibName: VIEW_NO_FRIENDS, bundle: nil)
-                self.navigationController?.pushViewController(viewController, animated: true)
-            }
-            else {
-                let viewController = FriendsViewController.init(nibName:VIEW_FRIENDS_LIST, bundle: nil)
-                viewController.friends = friends
-                self.navigationController?.pushViewController(viewController, animated: true)
-            }
+            
+            let viewController = FriendsViewController.init(nibName:VIEW_FRIENDS_LIST, bundle: nil)
+            viewController.friends = friends
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
         }
-        else {
+        else if PFUser.currentUser() == nil {
             // Not Logged in
+        }
+        else {  // No friends
+            let viewController = FriendsViewController.init(nibName: VIEW_NO_FRIENDS, bundle: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
     

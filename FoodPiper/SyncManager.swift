@@ -67,6 +67,45 @@ class SyncManager: NSObject {
     }
     
     /*
+    
+    Get the parse objects from the specified class and the the object keys and values
+    
+    parseClass: The class to retrieve the data from
+    objectKeyValues: The database columns from which to check data on and the objects to perform searches for
+    queryType: The type of query that we're doing, for example whereKey(key, equalTo: value)
+    
+    */
+    class func getParseObjectsWithClass (parseClass: String, objectKeyValues: Dictionary<String, AnyObject>, queryType: ParseQueryType) -> [PFObject] {
+        let query = PFQuery(className: parseClass)
+
+        for (key, value) in objectKeyValues {
+            switch queryType {
+            case ParseQueryType.WhereKeyEqualTo:
+                query.whereKey(key, equalTo: value)
+            default:
+                break
+            }
+        }
+        
+        
+        let semaphore = dispatch_semaphore_create(0)
+        do {
+            let parseObjects = try query.findObjects() as! [Pipe]
+            dispatch_semaphore_signal(semaphore)
+            if dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) == 0 {
+                NSLog("Received the parse objects")
+            }
+            
+            return parseObjects
+        }
+        catch {
+            // Error downloading parse data
+            return []
+        }
+
+    }
+    
+    /*
     Get all Parse Objects for a specified class, wait until done retrieving and then return the data
     */
     class func getAllParseObjects (parseClass: String) -> [PFObject]? {

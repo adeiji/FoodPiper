@@ -42,3 +42,18 @@ let PARSE_USER_FRIENDS = "friends"
 let PARSE_USER_FAVORITE_PIPES = "favoritePipes"
 
 let ACTION_TYPE_MESSAGE = "message"
+
+enum ParseQueryType {
+    case WhereKeyExists
+    case WhereKeyDoesNotExists
+    case WhereKeyEqualTo
+    case WhereKeyLessThan
+    case WhereKeyLessThanOrEqual
+    case WhereKeyGreaterThan
+    case WhereKeyGreaterThanOrEqual
+    case WhereKeyNotEqualTo
+    case WhereKeyContainedIn
+    case WhereKeyNotContainedIn
+    case WhereKeyContainsAllObjectsInArray
+    
+}

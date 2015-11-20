@@ -11,15 +11,15 @@ import UIKit
 extension DEUserManager {
 
     func fetchObjectsForUser (user: PFUser) {
-        let friends = user.objectForKey(PARSE_USER_FRIENDS) as! [PFUser]
-        let favoritePipes = user.objectForKey(PARSE_USER_FAVORITE_PIPES) as! [PFObject]
-
-        for object in friends {
-            object.fetchInBackground()
+        if let friends = user.objectForKey(PARSE_USER_FRIENDS) as? [PFUser] {
+            for object in friends {
+                object.fetchInBackground()
+            }
         }
-        
-        for object in favoritePipes {
-            object.fetchInBackground()
+        if let favoritePipes = user.objectForKey(PARSE_USER_FAVORITE_PIPES) as? [PFObject] {
+            for object in favoritePipes {
+                object.fetchInBackground()
+            }
         }
     }
     
