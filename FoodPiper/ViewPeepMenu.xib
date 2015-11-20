@@ -189,26 +189,26 @@
                     <exclude reference="Wko-sp-0F1"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="JVQ-Qx-8ve"/>
-                    <exclude reference="Vz9-u2-OBD"/>
-                    <exclude reference="02J-ZL-EC4"/>
-                    <exclude reference="Mhh-9N-iJE"/>
-                    <exclude reference="L8c-nG-KiK"/>
-                    <exclude reference="RMP-FL-KUM"/>
                     <exclude reference="AAc-gh-HaU"/>
                     <exclude reference="cWN-aE-NIW"/>
                     <exclude reference="fa5-XH-oVx"/>
                     <exclude reference="rf1-w6-8MW"/>
-                    <exclude reference="nR7-dv-jM4"/>
-                    <exclude reference="yOI-xd-YHf"/>
                     <exclude reference="F1d-o5-WEv"/>
                     <exclude reference="KaJ-M5-WC9"/>
                     <exclude reference="hkn-dT-T3S"/>
                     <exclude reference="rMv-cF-dqz"/>
+                    <exclude reference="02J-ZL-EC4"/>
+                    <exclude reference="Mhh-9N-iJE"/>
+                    <exclude reference="nR7-dv-jM4"/>
+                    <exclude reference="yOI-xd-YHf"/>
+                    <exclude reference="L8c-nG-KiK"/>
+                    <exclude reference="RMP-FL-KUM"/>
                     <exclude reference="1wq-MP-7zx"/>
                     <exclude reference="Nao-SG-ERR"/>
                     <exclude reference="Skz-l0-YD6"/>
                     <exclude reference="cNf-GI-d64"/>
+                    <exclude reference="JVQ-Qx-8ve"/>
+                    <exclude reference="Vz9-u2-OBD"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -222,26 +222,26 @@
                     <include reference="Wko-sp-0F1"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="JVQ-Qx-8ve"/>
-                    <include reference="Vz9-u2-OBD"/>
-                    <include reference="02J-ZL-EC4"/>
-                    <include reference="Mhh-9N-iJE"/>
-                    <include reference="L8c-nG-KiK"/>
-                    <include reference="RMP-FL-KUM"/>
                     <include reference="AAc-gh-HaU"/>
                     <include reference="cWN-aE-NIW"/>
                     <include reference="fa5-XH-oVx"/>
                     <include reference="rf1-w6-8MW"/>
-                    <include reference="nR7-dv-jM4"/>
-                    <include reference="yOI-xd-YHf"/>
                     <include reference="F1d-o5-WEv"/>
                     <include reference="KaJ-M5-WC9"/>
                     <include reference="hkn-dT-T3S"/>
                     <include reference="rMv-cF-dqz"/>
+                    <include reference="02J-ZL-EC4"/>
+                    <include reference="Mhh-9N-iJE"/>
+                    <include reference="nR7-dv-jM4"/>
+                    <include reference="yOI-xd-YHf"/>
+                    <include reference="L8c-nG-KiK"/>
+                    <include reference="RMP-FL-KUM"/>
                     <include reference="1wq-MP-7zx"/>
                     <include reference="Nao-SG-ERR"/>
                     <include reference="Skz-l0-YD6"/>
                     <include reference="cNf-GI-d64"/>
+                    <include reference="JVQ-Qx-8ve"/>
+                    <include reference="Vz9-u2-OBD"/>
                 </mask>
             </variation>
             <connections>
