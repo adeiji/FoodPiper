@@ -80,7 +80,14 @@ class FriendsViewController: UIViewController, FBSDKAppInviteDialogDelegate, UIS
 
 extension FriendsViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let viewController = ProfileViewController.init(nibName: VIEW_FRIEND, bundle: nil)
+        guard let friend = friends[indexPath.row] as? PFUser else {
+            NSLog("No friend at index")
+            return
+        }
         
+        viewController.user = friend
+        self.navigationController?.pushViewController(viewController, animated:true)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

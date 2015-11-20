@@ -41,7 +41,9 @@ class ProfileViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.view = NSBundle.mainBundle().loadNibNamed("ViewSettingsAccount", owner: self, options: nil).first as! UIView
+        if nibNameOrNil == VIEW_SETTINGS_ACCOUNT {
+            self.view = NSBundle.mainBundle().loadNibNamed("ViewSettingsAccount", owner: self, options: nil).first as! UIView
+        }
     }
     
 
