@@ -40,3 +40,5 @@ let PARSE_USER_FAVORITE_RESTAURANTS = "favoriteRestaurants"
 let PARSE_USER_POINTS = "points"
 let PARSE_USER_FRIENDS = "friends"
 let PARSE_USER_FAVORITE_PIPES = "favoritePipes"
+
+let ACTION_TYPE_MESSAGE = "message"

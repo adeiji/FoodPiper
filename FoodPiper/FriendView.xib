@@ -119,6 +119,9 @@
                             <include reference="ohc-1K-nnB"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="sendFriendMessage:" destination="-1" eventType="touchUpInside" id="eSR-5l-0jI"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRF-21-BF9">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>

@@ -129,6 +129,7 @@
 		F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B401BFD2E5C00637FEF /* FriendView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4D94B431BFD351B00637FEF /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B421BFD351B00637FEF /* FriendsListView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4D94B451BFEBA3800637FEF /* UserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B441BFEBA3800637FEF /* UserManager+Swift.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B481BFEC20500637FEF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B471BFEC20500637FEF /* Action.swift */; settings = {ASSET_TAGS = (); }; };
 		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; settings = {ASSET_TAGS = (); }; };
 		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -307,6 +308,7 @@
 		F4D94B401BFD2E5C00637FEF /* FriendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendView.xib; sourceTree = "<group>"; };
 		F4D94B421BFD351B00637FEF /* FriendsListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListView.xib; sourceTree = "<group>"; };
 		F4D94B441BFEBA3800637FEF /* UserManager+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserManager+Swift.swift"; sourceTree = "<group>"; };
+		F4D94B471BFEC20500637FEF /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		F4EA284A1BDA906700079658 /* DEViewRestaurantsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsView.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.h"; sourceTree = "<group>"; };
 		F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsView.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.m"; sourceTree = "<group>"; };
 		F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsViewController.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.h"; sourceTree = "<group>"; };
@@ -635,6 +637,7 @@
 		F4CBC3341BD182BB00FEBE36 /* FoodPiper */ = {
 			isa = PBXGroup;
 			children = (
+				F4D94B461BFEC1EC00637FEF /* Actions */,
 				F4D94B3D1BFD2CB700637FEF /* Profile and Friends */,
 				F4B18F9F1BEACE6600B1765E /* Peeping */,
 				F475C3321BE2F0FE00E159F6 /* Piping */,
@@ -767,6 +770,14 @@
 				F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */,
 			);
 			name = "Profile and Friends";
+			sourceTree = "<group>";
+		};
+		F4D94B461BFEC1EC00637FEF /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F4D94B471BFEC20500637FEF /* Action.swift */,
+			);
+			name = Actions;
 			sourceTree = "<group>";
 		};
 		F4EA28411BDA8EE300079658 /* VIew and View Controller */ = {
@@ -1078,6 +1089,7 @@
 				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
 				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
 				F4A2AF2B1BF133850006CBE8 /* FriendsIcon.swift in Sources */,
+				F4D94B481BFEC20500637FEF /* Action.swift in Sources */,
 				F4A2AF251BF133570006CBE8 /* ViewFavoriteIcon.swift in Sources */,
 				F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */,
 				F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */,

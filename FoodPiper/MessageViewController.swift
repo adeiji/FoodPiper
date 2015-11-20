@@ -14,6 +14,7 @@ class MessageViewController: UIViewController {
     @IBOutlet weak var lblTo: UILabel!
     var restaurant:Restaurant!
     var pipe:Pipe!
+    var user:PFUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,9 @@ class MessageViewController: UIViewController {
         
         if restaurant != nil {
             lblTo.text = "To: " + restaurant.name
+        }
+        else if user != nil {
+            lblTo.text = "To: " + user.username!
         }
         else {
             lblTo.text = ""
@@ -42,28 +46,57 @@ class MessageViewController: UIViewController {
     */
     @IBAction func saveMessage(sender: UIButton) {
         
-        // If this is a pipe comment, than save this to the pipe
         if pipe != nil {
-            if pipe.comments == nil {
-                pipe.comments = Array<String>()
-            }
-            
-            pipe.comments.append(txtMessage!.text)
-            
-            pipe.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-                if error == nil {
-                    NSLog("Saved comment to pipe")
-                }
-            })
+            saveCommentToPipe() // Save the comment created to the current pipe
         }
+        else if user != nil {
+            saveAction() // Store the action on the server
+        }
+        
+        self.navigationController?.popViewControllerAnimated(true)
+
+    }
+    
+    func saveAction () {
+        let action = Action()
+        
+        if PFUser.currentUser() != nil {
+            action.fromUser = PFUser.currentUser()
+        }
+        else {
+            return
+        }
+        
+        action.type = ACTION_TYPE_MESSAGE
+        action.actionDescription = txtMessage.text
+        action.time = NSDate()
+        action.toUser = user;
+        action.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+                NSLog("Action with id - " + action.objectId! + " - saved to server")
+            }
+        })
+    }
+    
+    func saveCommentToPipe () {
+        // If this is a pipe comment, than save this to the pipe
+        if pipe.comments == nil {
+            pipe.comments = Array<String>()
+        }
+        
+        pipe.comments.append(txtMessage!.text)
+        
+        pipe.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+            if error == nil {
+                NSLog("Saved comment to pipe")
+            }
+        })
+        
         
         let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
         let lblTitle = view.subviews.first as! UILabel
         lblTitle.text = "Saved Comment"
         DEAnimationManager.savedAnimationWithView(view)
-        
-        self.navigationController?.popViewControllerAnimated(true)
-
     }
 
     @IBAction func cancelButtonPressed(sender: UIButton) {

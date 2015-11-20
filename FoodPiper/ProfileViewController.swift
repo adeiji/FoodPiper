@@ -46,6 +46,12 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func sendFriendMessage(sender: UIButton) {
+        
+        let viewController = MessageViewController()
+        viewController.user = user
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 
     /*
     
