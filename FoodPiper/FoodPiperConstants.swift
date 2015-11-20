@@ -42,7 +42,11 @@ let PARSE_USER_POINTS = "points"
 let PARSE_USER_FRIENDS = "friends"
 let PARSE_USER_FAVORITE_PIPES = "favoritePipes"
 
-let ACTION_TYPE_MESSAGE = "message"
+enum UserAction : String {
+    case Message = "message"
+    case Invite = "invite"
+}
+
 
 enum ParseQueryType {
     case WhereKeyExists

@@ -32,11 +32,23 @@ class SyncManager: NSObject {
     /*
     Save the parse object to the server and log the results
     */
-    class func saveParseObject (object: Pipe) {
+    class func saveParseObject (object: PFObject, message: String) {
+        
+        // If this is an action class than we need to make sure that we set the action to false if it has not default value already set
+        if object.isKindOfClass(Action) {
+            if (object as! Action).viewed == nil {
+                (object as! Action).viewed = NSNumber(bool: false)
+            }
+        }
+        
         object.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if (success)
             {
                 NSLog("***** Parse Object With ID " + object.objectId! + " and class " + object.parseClassName + " Saved Successfully *****")
+                
+                if message.isEmpty {
+                    showSuccessIndicator(message)
+                }
             }
             else {
                 NSLog("Error saving Parse Object: " + error!.description)
@@ -137,15 +149,19 @@ class SyncManager: NSObject {
         user.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
             if success == true {
                 NSLog("User - " + user.username! + " -  was saved as a friend to the database")
-                let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
-                let lblTitle = view.subviews.first as! UILabel
-                lblTitle.text = message
-                DEAnimationManager.savedAnimationWithView(view)
+                showSuccessIndicator(message)
                 
             } else {
                 NSLog(errorDescription + ": " + error!.description)
             }
         })
+    }
+    
+    class func showSuccessIndicator (message: String) {
+        let view = NSBundle.mainBundle().loadNibNamed(VIEW_SUCCESS_INDICATOR_VIEW, owner: self, options: nil).first as! UIView
+        let lblTitle = view.subviews.first as! UILabel
+        lblTitle.text = message
+        DEAnimationManager.savedAnimationWithView(view)
     }
     
 }

@@ -70,10 +70,11 @@ class MessageViewController: UIViewController {
             return
         }
         
-        action.type = ACTION_TYPE_MESSAGE
+        action.type = UserAction.Message.rawValue
         action.actionDescription = txtMessage.text
         action.time = NSDate()
         action.toRestaurant = restaurant.factualId
+        action.viewed = NSNumber(bool: false)
         action.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
             if error == nil {
                 NSLog("Action: Send Message to Restaurant with id - " + action.objectId! + " - saved to server")
@@ -91,15 +92,12 @@ class MessageViewController: UIViewController {
             return
         }
         
-        action.type = ACTION_TYPE_MESSAGE
+        action.type = UserAction.Message.rawValue
         action.actionDescription = txtMessage.text
         action.time = NSDate()
         action.toUser = user;
-        action.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                NSLog("Action: Send Message to User with id - " + action.objectId! + " - saved to server")
-            }
-        })
+        action.viewed = NSNumber(bool: false)
+        SyncManager.saveParseObject(action, message: "Message Sent to " + user.username!)
     }
     
     func saveCommentToPipe () {

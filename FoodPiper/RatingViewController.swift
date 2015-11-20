@@ -106,7 +106,7 @@ class RatingViewController: UIViewController {
         // Check to see if the user has rated anything, and if so than save this pipe to Parse
         if (pipe.allKeys().count != 0)
         {
-            SyncManager.saveParseObject(pipe);
+            SyncManager.saveParseObject(pipe, message: String());
             let viewConrollers:Array<UIViewController> = (self.navigationController?.viewControllers)!
             self.navigationController?.popToViewController(viewConrollers[indexOfViewIndividualRestaurant], animated: true)
         }

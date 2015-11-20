@@ -76,15 +76,25 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         self.tableView.hidden = true
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func sendInvite(sender: UIButton) {
+        
+        if PFUser.currentUser() != nil {
+            let action = Action()
+            action.fromUser = PFUser.currentUser()
+            action.toUser = user
+            action.type = UserAction.Invite.rawValue
+            action.time = NSDate()
+            action.toRestaurant = selectedRestaurant.factualId
+            action.actionDescription = self.inviteView.txtDateTime!.text
+            action.viewed = NSNumber(bool: false)
+            SyncManager.saveParseObject(action, message: "Invite Sent to " + user.username!)
+        }
+        
+        
+        
     }
-    */
 
 }
 
@@ -92,6 +102,7 @@ extension InviteEatViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.inviteView.txtRestaurant.text = self.restaurants[indexPath.row].name
+        selectedRestaurant = self.restaurants[indexPath.row]
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -328,7 +328,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         var points = Int(pipe.points)
         points += 5
         pipe.points = points
-        SyncManager.saveParseObject(pipe);
+        SyncManager.saveParseObject(pipe, message: String());
         DEUserManager.incrementUserPoints(pipe)
     }
 
