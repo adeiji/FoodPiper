@@ -102,15 +102,18 @@ class FilterViewController: UIViewController {
     
     func collapseExpansionView (expansionView: ExpansionView) {
         expansionView.heightConstraint.constant = CGFloat(expansionViewHeight)
-        UIView.animateWithDuration(0.7, animations: { () -> Void in
-            expansionView.layoutIfNeeded()
+        
+        for view in expansionView.subviews {
+            if view.isKindOfClass(FilteringView) {
+                view.removeFromSuperview()
+            }
+        }
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.view.layoutIfNeeded()
             })
             { (complete: Bool) -> Void in
-                for view in expansionView.subviews {
-                    if view.isKindOfClass(FilteringView) {
-                        view.removeFromSuperview()
-                    }
-                }
+                // Do something
         }
     }
 
@@ -119,8 +122,8 @@ class FilterViewController: UIViewController {
         filterView.frame.origin.y = 70
         let collapsedView = expansionView
         collapsedView.heightConstraint.constant = filterView.frame.height + 70
-        UIView.animateWithDuration(0.7, animations: { () -> Void in
-            collapsedView.layoutIfNeeded()
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.view.layoutIfNeeded()
             })
             { (complete: Bool) -> Void in
                 
