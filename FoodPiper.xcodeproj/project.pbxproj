@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4056AFA1C06516F004916FC /* ExpansionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4056AF91C06516F004916FC /* ExpansionView.swift */; settings = {ASSET_TAGS = (); }; };
 		F40764781BF58163001ED3FD /* ViewWithBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */; settings = {ASSET_TAGS = (); }; };
 		F407647A1BF584CD001ED3FD /* ViewComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40764791BF584CD001ED3FD /* ViewComments.xib */; settings = {ASSET_TAGS = (); }; };
 		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -141,6 +142,8 @@
 		F4D94B5C1C03E1E300637FEF /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5B1C03E1E300637FEF /* Categories.plist */; settings = {ASSET_TAGS = (); }; };
 		F4D94B5E1C03E58D00637FEF /* FactualCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5D1C03E58D00637FEF /* FactualCategories.json */; settings = {ASSET_TAGS = (); }; };
 		F4D94B601C03F11400637FEF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B5F1C03F11400637FEF /* FilterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B621C063B0E00637FEF /* FilteringAvailability.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B611C063B0D00637FEF /* FilteringAvailability.plist */; settings = {ASSET_TAGS = (); }; };
+		F4D94B641C063CAA00637FEF /* FilterAvailabilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B631C063CAA00637FEF /* FilterAvailabilityView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; settings = {ASSET_TAGS = (); }; };
 		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -166,6 +169,7 @@
 		080B68DC18D10E47DA2ED8EB /* Pods-FoodPiper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.release.xcconfig"; sourceTree = "<group>"; };
 		5A23CBF988F4F5CA405B2454 /* libPods-FoodPiper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPiper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62905AA2BEAE68984EDA343 /* Pods-FoodPiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPiper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPiper/Pods-FoodPiper.debug.xcconfig"; sourceTree = "<group>"; };
+		F4056AF91C06516F004916FC /* ExpansionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionView.swift; sourceTree = "<group>"; };
 		F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWithBorderColor.swift; sourceTree = "<group>"; };
 		F40764791BF584CD001ED3FD /* ViewComments.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewComments.xib; sourceTree = "<group>"; };
 		F410A0521BE2D3AA00BA8FDB /* HoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursView.swift; sourceTree = "<group>"; };
@@ -331,6 +335,8 @@
 		F4D94B5B1C03E1E300637FEF /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
 		F4D94B5D1C03E58D00637FEF /* FactualCategories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FactualCategories.json; path = Resources/FactualCategories.json; sourceTree = "<group>"; };
 		F4D94B5F1C03F11400637FEF /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		F4D94B611C063B0D00637FEF /* FilteringAvailability.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FilteringAvailability.plist; sourceTree = "<group>"; };
+		F4D94B631C063CAA00637FEF /* FilterAvailabilityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterAvailabilityView.xib; sourceTree = "<group>"; };
 		F4EA284A1BDA906700079658 /* DEViewRestaurantsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsView.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.h"; sourceTree = "<group>"; };
 		F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsView.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.m"; sourceTree = "<group>"; };
 		F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsViewController.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.h"; sourceTree = "<group>"; };
@@ -393,6 +399,8 @@
 				F42A1E031BF190DC002286BF /* FilterView.xib */,
 				F42A1E051BF1913B002286BF /* FilterCategoryView.xib */,
 				F4D94B5F1C03F11400637FEF /* FilterViewController.swift */,
+				F4D94B631C063CAA00637FEF /* FilterAvailabilityView.xib */,
+				F4056AF91C06516F004916FC /* ExpansionView.swift */,
 			);
 			name = Filtering;
 			sourceTree = "<group>";
@@ -749,6 +757,7 @@
 				F4A06B1A1BDAF3C200825D74 /* Images */,
 				F4CC5ADB1BD58AE800109C61 /* Font */,
 				F4D94B5B1C03E1E300637FEF /* Categories.plist */,
+				F4D94B611C063B0D00637FEF /* FilteringAvailability.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -983,6 +992,7 @@
 				F4D94B5C1C03E1E300637FEF /* Categories.plist in Resources */,
 				F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */,
 				F4D94B3F1BFD2CDE00637FEF /* ActivityView.xib in Resources */,
+				F4D94B641C063CAA00637FEF /* FilterAvailabilityView.xib in Resources */,
 				F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */,
 				F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */,
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
@@ -994,6 +1004,7 @@
 				F407647A1BF584CD001ED3FD /* ViewComments.xib in Resources */,
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
+				F4D94B621C063B0E00637FEF /* FilteringAvailability.plist in Resources */,
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
 				F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */,
 				F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */,
@@ -1113,6 +1124,7 @@
 				F4A2AF371BF133CD0006CBE8 /* ServiceIcon.swift in Sources */,
 				F4A2AF2D1BF133970006CBE8 /* HotDealsIcon.swift in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
+				F4056AFA1C06516F004916FC /* ExpansionView.swift in Sources */,
 				F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */,
 				F4A2AF1D1BF132DA0006CBE8 /* MenuIcon.swift in Sources */,
 				F4A2AF171BF132BA0006CBE8 /* PhoneIcon.swift in Sources */,

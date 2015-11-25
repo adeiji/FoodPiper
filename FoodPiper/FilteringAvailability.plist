@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>meal_breakfast</string>
+	<string>meal_lunch</string>
+	<string>meal_dinner</string>
+	<string>meal_deliver</string>
+	<string>meal_cater</string>
+	<string>alcohol</string>
+	<string>alcohol_bar</string>
+	<string>kids_goodfor</string>
+	<string>seating_outdoor</string>
+	<string>wifi</string>
+	<string>room_private</string>
+	<string>options_vegetarian</string>
+	<string>options_vegan</string>
+	<string>options_glutenfree</string>
+	<string>options_lowfat</string>
+	<string>options_organic</string>
+	<string>options_healthy</string>
+</array>
+</plist>

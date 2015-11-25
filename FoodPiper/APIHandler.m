@@ -13,6 +13,7 @@
 
 NSString *const FILTER_CATEGORY_KEY = @"category";
 NSString *const FILTER_PRICE_KEY = @"price";
+NSString *const FILTER_AVAILABILITY_KEY = @"availability";
 
 - (void) getAllRestaurantsWithFilterData : (NSDictionary *) filterData
                                  Location: (CLLocation *) currentLocation {
@@ -28,9 +29,18 @@ NSString *const FILTER_PRICE_KEY = @"price";
 
     if (filterData[FILTER_PRICE_KEY]) {
         NSString *price = ((NSNumber *) filterData[FILTER_PRICE_KEY]).stringValue;
-        FactualRowFilter *categoryFilter = [FactualRowFilter fieldName:@"price"
+        FactualRowFilter *priceFilter = [FactualRowFilter fieldName:@"price"
                                                       includes:price];
-        [queryObject addRowFilter:categoryFilter];
+        [queryObject addRowFilter:priceFilter];
+    }
+    
+    if (filterData[FILTER_AVAILABILITY_KEY]) {
+        NSArray *availabilityList = (NSArray *) filterData[FILTER_AVAILABILITY_KEY];
+        for (NSString *fieldName in availabilityList) {
+            FactualRowFilter *availabilityFilter = [FactualRowFilter fieldName:fieldName equalTo:[NSNumber numberWithBool:YES]];
+            [queryObject addRowFilter:availabilityFilter];
+        }
+
     }
     
     if (currentLocation) {

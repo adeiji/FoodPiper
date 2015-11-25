@@ -9,9 +9,11 @@
 import UIKit
 
 class FilterViewController: UIViewController {
-
-    @IBOutlet weak var categoryHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var categoryCollapsedView: UIView!
+    
+    @IBOutlet weak var categoryExpansionView: ExpansionView!
+    @IBOutlet weak var availabilityExpansionView: ExpansionView!
+    let expansionViewHeight = 51
+    
     var filterCriteria:[String:AnyObject]!
     var currentLocation:CLLocation!
     var viewRestaurantsViewController:DEViewRestaurantsViewController!
@@ -67,24 +69,64 @@ class FilterViewController: UIViewController {
         self.navigationController?.popToViewController(viewRestaurantsViewController, animated: true)
     }
     
+    
     /*
     
-    Display the filter view
+    Expand the filter view that was selected or collapse it and show the buttons that correspond with it
     
     */
-    @IBAction func filterCategoryPressed (sender: UIButton) {
-        let categoryView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_CATEGORY, owner: self, options: nil).first as! UIView
-        categoryView.frame.size.width = (sender.superview?.frame.width)!
-        categoryView.frame.origin.y = 70
-        categoryHeightConstraint?.constant = categoryView.frame.height + 70
+    @IBAction func expandCollapseExpansionViewButtonPressed (sender: UIButton) {
+        var filterView:UIView!
+        let expansionView:ExpansionView! = sender.superview as! ExpansionView
+    
+        if expansionView == availabilityExpansionView {
+            filterView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_AVAILABILITY, owner: self, options: nil).first as! UIView
+            if expansionView.collapsed == true {
+                self.setAvailabilityButtonTargets(filterView)
+            }
+        }
+        else if expansionView == categoryExpansionView {
+            filterView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_CATEGORY, owner: self, options: nil).first as! UIView
+            if expansionView.collapsed == true {
+                self.setCategoryButtonTargets(filterView)
+            }
+        }
         
+        if expansionView.collapsed == true {
+            expansionView.collapsed = false
+            expandExpansionView(expansionView, filterView: filterView)
+        }
+        else {
+            expansionView.collapsed = false
+            collapseExpansionView(expansionView)
+        }
+    }
+    
+    func collapseExpansionView (expansionView: ExpansionView) {
+        expansionView.heightConstraint.constant = CGFloat(expansionViewHeight)
         UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.categoryCollapsedView.layoutIfNeeded()
+            expansionView.layoutIfNeeded()
+            })
+            { (complete: Bool) -> Void in
+                for view in expansionView.subviews {
+                    if view.isKindOfClass(UIView) {
+                        view.removeFromSuperview()   
+                    }
+                }
+        }
+    }
+
+    func expandExpansionView (expansionView: ExpansionView, filterView: UIView) {
+        filterView.frame.size.width = expansionView.frame.width
+        filterView.frame.origin.y = 70
+        let collapsedView = expansionView
+        collapsedView.heightConstraint.constant = filterView.frame.height + 70
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            collapsedView.layoutIfNeeded()
             })
             { (complete: Bool) -> Void in
                 
-                self.categoryCollapsedView?.addSubview(categoryView)
-                self.setCategoryButtonTargets(categoryView)
+                collapsedView.addSubview(filterView)
         }
     }
     
@@ -109,12 +151,46 @@ class FilterViewController: UIViewController {
             }
         }
     }
+    
+    /*
+    Using the tag as the index we grab the correct Factual Database column name from the array stored in the corresponding Plist
+    */
+    func availabilityPressed (sender: UIButton) {
+        var availabilities = [String]()
+        if filterCriteria[FILTER_AVAILABILITY_KEY] != nil {
+            availabilities = filterCriteria[FILTER_AVAILABILITY_KEY] as! [String]
+        }
+        let availability = sender.titleLabel?.text!
+        if availabilities.contains(availability!) == false {
+            let path = NSBundle.mainBundle().pathForResource("FilteringAvailability", ofType: "plist")
+            let availabilityList = NSArray(contentsOfFile: path!)
+            availabilities.append(availabilityList![sender.tag] as! String)
+            filterCriteria[FILTER_AVAILABILITY_KEY] = availabilities
+        }
+        
+        sender.layer.backgroundColor = UIColor.greenColor().CGColor
+    }
+    
+    /*
+    Get the data from the FilteringAvailability plist and then set the target of every button for filtering availabilitie's target
+    */
+    func setAvailabilityButtonTargets (categoryView: UIView) {
+        for view in categoryView.subviews
+        {
+            if view.isKindOfClass(UIButton)
+            {
+                let button = view as! UIButton
+                button.addTarget(self, action: "availabilityPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            }
+        }
+    }
+    
     /*
     
     Add the category of the button pressed to the filter criteria
     
     */
-    @IBAction func categoryPressed (sender: UIButton) {
+    func categoryPressed (sender: UIButton) {
         
         var categories = [String]()
         if filterCriteria[FILTER_CATEGORY_KEY] != nil {
@@ -133,13 +209,6 @@ class FilterViewController: UIViewController {
     }
     
     func filterRestaurantsByCriteria () {
-        
-    }
-
-    
-    @IBAction func moneyFitlerButtonPressed(sender: UIButton) {
-        
-        
         
     }
 

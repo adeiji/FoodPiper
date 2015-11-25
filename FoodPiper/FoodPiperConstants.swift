@@ -29,6 +29,7 @@ let VIEW_RESTAURANTS_VIEW_CONTROLLER = "ViewRestaurantsViewController"
 let VIEW_RESTAURANTS_STORYBOARD = "ViewRestaurants"
 let VIEW_FILTER = "FilterView"
 let VIEW_FILTER_CATEGORY = "FilterCategoryView"
+let VIEW_FILTER_AVAILABILITY = "FilterAvailabilityView"
 let VIEW_MAKE_RESERVATION = "MakeReservationView"
 let VIEW_SUCCESS_INDICATOR_VIEW = "SuccessIndicatorView"
 let VIEW_FRIENDS_LIST = "FriendsListView"
@@ -48,6 +49,7 @@ let ACTION_VIEWED = "viewed"
 
 let FILTER_CATEGORY_KEY = "category"
 let FILTER_PRICE_KEY = "price"
+let FILTER_AVAILABILITY_KEY = "availability"
 
 let STORYBOARD_ID_PROMPT_LOGIN = "promptLoginViewController"
 
