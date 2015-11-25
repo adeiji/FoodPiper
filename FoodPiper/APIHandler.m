@@ -14,6 +14,7 @@
 NSString *const FILTER_CATEGORY_KEY = @"category";
 NSString *const FILTER_PRICE_KEY = @"price";
 NSString *const FILTER_AVAILABILITY_KEY = @"availability";
+NSString *const FILTER_DISTANCE_KEY = @"distance";
 
 - (void) getAllRestaurantsWithFilterData : (NSDictionary *) filterData
                                  Location: (CLLocation *) currentLocation {
@@ -40,10 +41,14 @@ NSString *const FILTER_AVAILABILITY_KEY = @"availability";
             FactualRowFilter *availabilityFilter = [FactualRowFilter fieldName:fieldName equalTo:[NSNumber numberWithBool:YES]];
             [queryObject addRowFilter:availabilityFilter];
         }
-
     }
     
-    if (currentLocation) {
+    if (filterData[FILTER_DISTANCE_KEY]) {
+        CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
+        NSNumber *distance = (NSNumber *) filterData[FILTER_DISTANCE_KEY];
+        [queryObject setGeoFilter:coordinate radiusInMeters:distance.doubleValue];
+    }
+    else if (currentLocation) {
         CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
         [queryObject setGeoFilter:coordinate radiusInMeters:5000];
     }

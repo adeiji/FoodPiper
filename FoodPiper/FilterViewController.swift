@@ -33,9 +33,7 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var pricingSegmentControl: UISegmentedControl!
     
     @IBAction func pricingSelected(sender: UISegmentedControl) {
-        
         filterCriteria[FILTER_PRICE_KEY] = NSNumber(integer: sender.selectedSegmentIndex + 1)
-        
     }
     /*
     
@@ -97,20 +95,20 @@ class FilterViewController: UIViewController {
             expandExpansionView(expansionView, filterView: filterView)
         }
         else {
-            expansionView.collapsed = false
+            expansionView.collapsed = true
             collapseExpansionView(expansionView)
         }
     }
     
     func collapseExpansionView (expansionView: ExpansionView) {
         expansionView.heightConstraint.constant = CGFloat(expansionViewHeight)
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
             expansionView.layoutIfNeeded()
             })
             { (complete: Bool) -> Void in
                 for view in expansionView.subviews {
-                    if view.isKindOfClass(UIView) {
-                        view.removeFromSuperview()   
+                    if view.isKindOfClass(FilteringView) {
+                        view.removeFromSuperview()
                     }
                 }
         }
@@ -121,7 +119,7 @@ class FilterViewController: UIViewController {
         filterView.frame.origin.y = 70
         let collapsedView = expansionView
         collapsedView.heightConstraint.constant = filterView.frame.height + 70
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
+        UIView.animateWithDuration(0.7, animations: { () -> Void in
             collapsedView.layoutIfNeeded()
             })
             { (complete: Bool) -> Void in
@@ -211,5 +209,17 @@ class FilterViewController: UIViewController {
     func filterRestaurantsByCriteria () {
         
     }
+    @IBAction func distanceFilterPressed(sender: UIButton) {
+        
+        var distance = NSNumber(double:Double(sender.tag) * 1609.34)
+        if distance == 0 {
+            distance = 1000
+        }
 
+        filterCriteria[FILTER_DISTANCE_KEY] = distance
+    }
+}
+
+class FilteringView: UIView {
+    
 }
