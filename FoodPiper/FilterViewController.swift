@@ -66,10 +66,10 @@ class FilterViewController: UIViewController {
         let categoryView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_CATEGORY, owner: self, options: nil).first as! UIView
         categoryView.frame.size.width = (sender.superview?.frame.width)!
         categoryView.frame.origin.y = 70
-        categoryHeightConstraint?.constant = categoryView.frame.height
+        categoryHeightConstraint?.constant = categoryView.frame.height + 70
         
         UIView.animateWithDuration(0.5, animations: { () -> Void in
-            categoryView.layoutIfNeeded()
+            self.categoryCollapsedView.layoutIfNeeded()
             })
             { (complete: Bool) -> Void in
                 
@@ -77,10 +77,8 @@ class FilterViewController: UIViewController {
                 self.categoryCollapsedView?.addSubview(categoryView)
                 self.setCategoryButtonTargets(categoryView)
         }
-        
-        
     }
-
+    
     func setCategoryButtonTargets (categoryView: UIView) {
         for view in categoryView.subviews
         {

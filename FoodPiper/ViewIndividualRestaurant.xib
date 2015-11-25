@@ -743,7 +743,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="236" y="3303.5"/>
+            <point key="canvasLocation" x="316" y="3697.5"/>
         </scrollView>
     </objects>
 </document>
