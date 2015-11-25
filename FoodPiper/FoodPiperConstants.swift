@@ -47,6 +47,7 @@ let ACTION_TO_USER = "toUser"
 let ACTION_VIEWED = "viewed"
 
 let FILTER_CATEGORY_KEY = "category"
+let FILTER_PRICE_KEY = "price"
 
 let STORYBOARD_ID_PROMPT_LOGIN = "promptLoginViewController"
 

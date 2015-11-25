@@ -16,6 +16,7 @@ class FilterViewController: UIViewController {
     var currentLocation:CLLocation!
     var viewRestaurantsViewController:DEViewRestaurantsViewController!
     var apiHandler:APIHandler!
+    let ONE_DOLLAR = 0, TWO_DOLLAR = 1, THREE_DOLLAR = 2, FOUR_DOLLAR = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,17 @@ class FilterViewController: UIViewController {
         // Do any additional setup after loading the view.
         let button = UIBarButtonItem(title: "Done", style: .Done, target: self, action: "doneSettingFiltersButtonPressed:")
         self.navigationItem.rightBarButtonItem = button
+        self.pricingSegmentControl.frame.size.height = 30
+        self.filterCriteria = [String : AnyObject]()
     }
 
+    @IBOutlet weak var pricingSegmentControl: UISegmentedControl!
+    
+    @IBAction func pricingSelected(sender: UISegmentedControl) {
+        
+        filterCriteria[FILTER_PRICE_KEY] = NSNumber(integer: sender.selectedSegmentIndex + 1)
+        
+    }
     /*
     
     Run another search using Factual and get the restaurants that match the criteria set
@@ -33,7 +43,7 @@ class FilterViewController: UIViewController {
     func doneSettingFiltersButtonPressed (sender: UIButton) {
         apiHandler = (UIApplication.sharedApplication().delegate as! AppDelegate).apiHandler
         apiHandler.notifyWhenDone = true
-        apiHandler.getAllRestaurantsOfCategory(filterCriteria[FILTER_CATEGORY_KEY] as! [String], location: currentLocation)
+        apiHandler.getAllRestaurantsWithFilterData(filterCriteria, location: currentLocation)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -73,7 +83,6 @@ class FilterViewController: UIViewController {
             })
             { (complete: Bool) -> Void in
                 
-                self.filterCriteria = [String : AnyObject]()
                 self.categoryCollapsedView?.addSubview(categoryView)
                 self.setCategoryButtonTargets(categoryView)
         }
@@ -128,14 +137,10 @@ class FilterViewController: UIViewController {
     }
 
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func moneyFitlerButtonPressed(sender: UIButton) {
+        
+        
+        
     }
-    */
 
 }

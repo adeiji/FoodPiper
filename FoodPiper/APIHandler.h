@@ -30,6 +30,6 @@
 - (NSArray *) convertRestaurantsDictionaryToArray;
 - (void) getAllRestaurantsBeginningWith : (NSString *) name
                                 Location: (CLLocation *) currentLocation;
-- (void) getAllRestaurantsOfCategory : (NSArray *) categories
-                             Location: (CLLocation *) currentLocation;
+- (void) getAllRestaurantsWithFilterData : (NSDictionary *) filterData
+                                 Location: (CLLocation *) currentLocation;
 @end

@@ -11,14 +11,28 @@
 
 @implementation APIHandler
 
-- (void) getAllRestaurantsOfCategory:(NSArray *)categories
-                            Location:(CLLocation *)currentLocation {
+NSString *const FILTER_CATEGORY_KEY = @"category";
+NSString *const FILTER_PRICE_KEY = @"price";
+
+- (void) getAllRestaurantsWithFilterData : (NSDictionary *) filterData
+                                 Location: (CLLocation *) currentLocation {
     _restaurants = [NSMutableDictionary new];
     FactualQuery *queryObject = [FactualQuery query];
     queryObject.includeRowCount = true;
-    FactualRowFilter *categoryFilter = [FactualRowFilter fieldName:@"category_ids"
-                                             includesAnyArray:categories];
-    [queryObject addRowFilter:categoryFilter];
+    
+    if (filterData[FILTER_CATEGORY_KEY]) {
+        FactualRowFilter *categoryFilter = [FactualRowFilter fieldName:@"category_ids"
+                                             includesAnyArray:filterData[FILTER_CATEGORY_KEY]];
+        [queryObject addRowFilter:categoryFilter];
+    }
+
+    if (filterData[FILTER_PRICE_KEY]) {
+        NSString *price = ((NSNumber *) filterData[FILTER_PRICE_KEY]).stringValue;
+        FactualRowFilter *categoryFilter = [FactualRowFilter fieldName:@"price"
+                                                      includes:price];
+        [queryObject addRowFilter:categoryFilter];
+    }
+    
     if (currentLocation) {
         CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
         [queryObject setGeoFilter:coordinate radiusInMeters:5000];
