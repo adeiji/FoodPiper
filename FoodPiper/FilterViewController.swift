@@ -63,7 +63,6 @@ class FilterViewController: UIViewController {
     
     func displayFilteredRestaurants () {
         viewRestaurantsViewController.restaurants = apiHandler.convertRestaurantsDictionaryToArray()
-        viewRestaurantsViewController.displayRestaurant(nil)
         self.navigationController?.popToViewController(viewRestaurantsViewController, animated: true)
     }
     
@@ -90,6 +89,7 @@ class FilterViewController: UIViewController {
             }
         }
         
+        // Check to see if the view is expanded or collapsed and then expand or collapse as necessary
         if expansionView.collapsed == true {
             expansionView.collapsed = false
             expandExpansionView(expansionView, filterView: filterView)
@@ -209,6 +209,8 @@ class FilterViewController: UIViewController {
     func filterRestaurantsByCriteria () {
         
     }
+    
+    // Add a filter for distance in miles or one block
     @IBAction func distanceFilterPressed(sender: UIButton) {
         
         var distance = NSNumber(double:Double(sender.tag) * 1609.34)

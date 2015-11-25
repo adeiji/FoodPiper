@@ -220,6 +220,7 @@ struct TopMargin {
 {
     [super viewDidAppear:animated];
     [self.scrollView setDelegate:self];
+    _isNewProcess = YES;
     [self displayRestaurant:nil];
 }
 
@@ -343,11 +344,18 @@ struct TopMargin {
 
 - (void) displayRestaurant : (NSNotification *) notification {
     _isNewProcess = YES;
-    [self removeAllPostFromScreen];
-    [self stopActivitySpinner];
-    [self displayRestaurantWithTopMargin:0 PostArray:nil];
-    [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
-    [self loadVisiblePost:_scrollView];
+    
+    if (_restaurants.count != 0)
+    {
+        [self removeAllPostFromScreen];
+        [self stopActivitySpinner];
+        [self displayRestaurantWithTopMargin:0 PostArray:nil];
+        [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
+        [self loadVisiblePost:_scrollView];
+    }
+    else {
+        [SyncManager showSuccessIndicator:@"No Restaurants Found"];
+    }
 }
 
 - (void) displayRestaurantWithTopMargin : (CGFloat) topMargin
@@ -425,6 +433,7 @@ struct TopMargin {
         numberOfPostOnScreen = 0;
         postCounter = 0;
         _isNewProcess = NO;
+        count = 0;
     }
     
     if (count < [postArray count])
