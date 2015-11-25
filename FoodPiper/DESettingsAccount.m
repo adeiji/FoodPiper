@@ -9,6 +9,7 @@
 #import "DESettingsAccount.h"
 #import "Constants.h"
 #import "PaintCodeBackgrounds.h"
+#import "FoodPiper-Swift.h"
 
 @implementation DESettingsAccount
 
@@ -326,30 +327,7 @@ const int PICTURE_ACTION_SHEET = 2;
 //    [picker dismissViewControllerAnimated:YES completion:NULL];
 //}
 
-/*
 
- Display a prompt asking if the user wants to quit for sure
-
- */
-- (IBAction)signOut:(id)sender {
-    
-    if ([[DEUserManager sharedManager] isLoggedIn])
-    {
-        promptView = [[[NSBundle mainBundle] loadNibNamed:@"ViewSettingsAccount" owner:self options:nil] lastObject];
-        [DEAnimationManager fadeOutWithView:self ViewToAdd:promptView];
-        [promptView setFrame:self.frame];
-        
-        // Set up the view of the prompt screen
-        [self setUpPromptViewButtons];
-    }
-    else
-    {
-        DELoginViewController *loginViewController = [[UIStoryboard storyboardWithName:@"Login" bundle:nil] instantiateViewControllerWithIdentifier:PROMPT_LOGIN_VIEW_CONTROLLER];
-        
-        loginViewController.btnSkip.hidden = YES;
-        [[DEScreenManager getMainNavigationController] pushViewController:loginViewController animated:YES];
-    }
-}
 
 - (void) setUpPromptViewButtons {
     

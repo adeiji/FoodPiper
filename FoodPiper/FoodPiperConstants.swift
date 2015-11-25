@@ -36,17 +36,25 @@ let VIEW_NO_FRIENDS = "NoFriendsView"
 let VIEW_SETTINGS_ACCOUNT = "ViewSettingsAccount"
 let VIEW_FRIEND = "FriendView"
 let VIEW_INVITE_EAT_VIEW = "InviteEatView"
+let VIEW_ACTIVITY = "ActivityView"
 
 let PARSE_USER_FAVORITE_RESTAURANTS = "favoriteRestaurants"
 let PARSE_USER_POINTS = "points"
 let PARSE_USER_FRIENDS = "friends"
 let PARSE_USER_FAVORITE_PIPES = "favoritePipes"
+let PARSE_CLASS_ACTION = "Action"
+let ACTION_TO_USER = "toUser"
+let ACTION_VIEWED = "viewed"
+
+let FILTER_CATEGORY_KEY = "category"
+
+let STORYBOARD_ID_PROMPT_LOGIN = "promptLoginViewController"
 
 enum UserAction : String {
     case Message = "message"
     case Invite = "invite"
+    case InviteAccept = "acceptInvite"
 }
-
 
 enum ParseQueryType {
     case WhereKeyExists

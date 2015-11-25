@@ -133,6 +133,14 @@
 		F4D94B4B1BFFB03500637FEF /* InviteEatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B4A1BFFB03500637FEF /* InviteEatView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4D94B4D1BFFB04200637FEF /* InviteEatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B4C1BFFB04200637FEF /* InviteEatView.xib */; settings = {ASSET_TAGS = (); }; };
 		F4D94B4F1BFFB15C00637FEF /* InviteEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B4E1BFFB15C00637FEF /* InviteEatViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B521BFFD28700637FEF /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B511BFFD28700637FEF /* ActivityViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B541BFFD2DD00637FEF /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B531BFFD2DD00637FEF /* MessageTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F4D94B561BFFDE2F00637FEF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B551BFFDE2F00637FEF /* AccountViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B581BFFDF8000637FEF /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B571BFFDF8000637FEF /* MessageTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D94B5A1BFFFC4B00637FEF /* InviteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B591BFFFC4B00637FEF /* InviteTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		F4D94B5C1C03E1E300637FEF /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5B1C03E1E300637FEF /* Categories.plist */; settings = {ASSET_TAGS = (); }; };
+		F4D94B5E1C03E58D00637FEF /* FactualCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5D1C03E58D00637FEF /* FactualCategories.json */; settings = {ASSET_TAGS = (); }; };
+		F4D94B601C03F11400637FEF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B5F1C03F11400637FEF /* FilterViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; settings = {ASSET_TAGS = (); }; };
 		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -315,6 +323,14 @@
 		F4D94B4A1BFFB03500637FEF /* InviteEatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteEatView.swift; sourceTree = "<group>"; };
 		F4D94B4C1BFFB04200637FEF /* InviteEatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteEatView.xib; sourceTree = "<group>"; };
 		F4D94B4E1BFFB15C00637FEF /* InviteEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteEatViewController.swift; sourceTree = "<group>"; };
+		F4D94B511BFFD28700637FEF /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		F4D94B531BFFD2DD00637FEF /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		F4D94B551BFFDE2F00637FEF /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		F4D94B571BFFDF8000637FEF /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		F4D94B591BFFFC4B00637FEF /* InviteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteTableViewCell.xib; sourceTree = "<group>"; };
+		F4D94B5B1C03E1E300637FEF /* Categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Categories.plist; sourceTree = "<group>"; };
+		F4D94B5D1C03E58D00637FEF /* FactualCategories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = FactualCategories.json; path = Resources/FactualCategories.json; sourceTree = "<group>"; };
+		F4D94B5F1C03F11400637FEF /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F4EA284A1BDA906700079658 /* DEViewRestaurantsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsView.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.h"; sourceTree = "<group>"; };
 		F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsView.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.m"; sourceTree = "<group>"; };
 		F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsViewController.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.h"; sourceTree = "<group>"; };
@@ -376,6 +392,7 @@
 			children = (
 				F42A1E031BF190DC002286BF /* FilterView.xib */,
 				F42A1E051BF1913B002286BF /* FilterCategoryView.xib */,
+				F4D94B5F1C03F11400637FEF /* FilterViewController.swift */,
 			);
 			name = Filtering;
 			sourceTree = "<group>";
@@ -439,6 +456,7 @@
 				F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */,
 				F4D94B401BFD2E5C00637FEF /* FriendView.xib */,
 				F4D94B421BFD351B00637FEF /* FriendsListView.xib */,
+				F4D94B551BFFDE2F00637FEF /* AccountViewController.swift */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -726,9 +744,11 @@
 		F4CC5ADA1BD58AE100109C61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F4D94B5D1C03E58D00637FEF /* FactualCategories.json */,
 				F4A2AF091BF1321F0006CBE8 /* PaintCode Classes */,
 				F4A06B1A1BDAF3C200825D74 /* Images */,
 				F4CC5ADB1BD58AE800109C61 /* Font */,
+				F4D94B5B1C03E1E300637FEF /* Categories.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -772,9 +792,9 @@
 		F4D94B3D1BFD2CB700637FEF /* Profile and Friends */ = {
 			isa = PBXGroup;
 			children = (
+				F4D94B501BFFD27C00637FEF /* Activity */,
 				F4D94B491BFFB01100637FEF /* Invite Let's Eat */,
 				F4A20D191BF6A16F00D966D4 /* Friends */,
-				F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */,
 			);
 			name = "Profile and Friends";
 			sourceTree = "<group>";
@@ -795,6 +815,18 @@
 				F4D94B4E1BFFB15C00637FEF /* InviteEatViewController.swift */,
 			);
 			name = "Invite Let's Eat";
+			sourceTree = "<group>";
+		};
+		F4D94B501BFFD27C00637FEF /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				F4D94B511BFFD28700637FEF /* ActivityViewController.swift */,
+				F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */,
+				F4D94B531BFFD2DD00637FEF /* MessageTableViewCell.xib */,
+				F4D94B571BFFDF8000637FEF /* MessageTableViewCell.swift */,
+				F4D94B591BFFFC4B00637FEF /* InviteTableViewCell.xib */,
+			);
+			name = Activity;
 			sourceTree = "<group>";
 		};
 		F4EA28411BDA8EE300079658 /* VIew and View Controller */ = {
@@ -936,6 +968,7 @@
 				F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */,
 				F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
 				F42A1E0A1BF250AF002286BF /* MakeReservationView.xib in Resources */,
+				F4D94B541BFFD2DD00637FEF /* MessageTableViewCell.xib in Resources */,
 				F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */,
 				F4CC5AEE1BD58B0F00109C61 /* JosefinSans-SemiBold.ttf in Resources */,
 				F4CC5AE91BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf in Resources */,
@@ -945,12 +978,15 @@
 				F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */,
 				F4D94B431BFD351B00637FEF /* FriendsListView.xib in Resources */,
 				F4CBC33B1BD182BB00FEBE36 /* Main.storyboard in Resources */,
+				F4D94B5E1C03E58D00637FEF /* FactualCategories.json in Resources */,
 				F42A1E041BF190DC002286BF /* FilterView.xib in Resources */,
+				F4D94B5C1C03E1E300637FEF /* Categories.plist in Resources */,
 				F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */,
 				F4D94B3F1BFD2CDE00637FEF /* ActivityView.xib in Resources */,
 				F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */,
 				F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */,
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
+				F4D94B5A1BFFFC4B00637FEF /* InviteTableViewCell.xib in Resources */,
 				F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */,
 				F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */,
 				F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */,
@@ -1040,6 +1076,7 @@
 				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
 				F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */,
 				F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */,
+				F4D94B561BFFDE2F00637FEF /* AccountViewController.swift in Sources */,
 				F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */,
 				F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */,
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
@@ -1072,6 +1109,7 @@
 				F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */,
 				F4D94B4F1BFFB15C00637FEF /* InviteEatViewController.swift in Sources */,
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
+				F4D94B521BFFD28700637FEF /* ActivityViewController.swift in Sources */,
 				F4A2AF371BF133CD0006CBE8 /* ServiceIcon.swift in Sources */,
 				F4A2AF2D1BF133970006CBE8 /* HotDealsIcon.swift in Sources */,
 				F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */,
@@ -1094,6 +1132,7 @@
 				F4D94B4B1BFFB03500637FEF /* InviteEatView.swift in Sources */,
 				F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */,
 				F42A1E011BF180AF002286BF /* CancelIcon.swift in Sources */,
+				F4D94B581BFFDF8000637FEF /* MessageTableViewCell.swift in Sources */,
 				F4A2AF2F1BF133A10006CBE8 /* CameraIcon.swift in Sources */,
 				F4A2AF0F1BF1327C0006CBE8 /* CheckInIcon.swift in Sources */,
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
@@ -1113,6 +1152,7 @@
 				F4A2AF251BF133570006CBE8 /* ViewFavoriteIcon.swift in Sources */,
 				F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */,
 				F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */,
+				F4D94B601C03F11400637FEF /* FilterViewController.swift in Sources */,
 				F4D94B3C1BFD248B00637FEF /* UserProfileView.swift in Sources */,
 				F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */,
 				F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */,

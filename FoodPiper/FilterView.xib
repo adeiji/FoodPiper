@@ -4,9 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DEViewRestaurantsViewController" customModule="FoodPiper" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController" customModule="FoodPiper" customModuleProvider="target">
             <connections>
-                <outlet property="categoryHeightConstraint" destination="UEK-qh-o8h" id="Ufs-cn-ekh"/>
+                <outlet property="categoryCollapsedView" destination="dPZ-7i-Cup" id="1QN-g4-cRr"/>
+                <outlet property="categoryHeightConstraint" destination="UEK-qh-o8h" id="LZe-1A-u34"/>
+                <outlet property="view" destination="iN0-l3-epB" id="sjT-PT-BId"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -57,6 +59,7 @@
                             <constraints>
                                 <constraint firstItem="Kwm-by-sVI" firstAttribute="centerY" secondItem="7fA-wL-XwQ" secondAttribute="centerY" id="1ff-Mc-Aey"/>
                                 <constraint firstItem="7fA-wL-XwQ" firstAttribute="top" secondItem="dPZ-7i-Cup" secondAttribute="top" constant="15" id="FsF-4O-rG8"/>
+                                <constraint firstAttribute="width" constant="400" id="No0-G0-u0C"/>
                                 <constraint firstItem="7fA-wL-XwQ" firstAttribute="centerY" secondItem="dPZ-7i-Cup" secondAttribute="centerY" id="OiG-Xa-2KK"/>
                                 <constraint firstAttribute="trailing" secondItem="Kwm-by-sVI" secondAttribute="trailing" constant="16" id="Rja-ff-jRi"/>
                                 <constraint firstAttribute="height" constant="51" id="UEK-qh-o8h"/>
@@ -69,6 +72,7 @@
                                     <exclude reference="Kwm-by-sVI"/>
                                 </mask>
                                 <mask key="constraints">
+                                    <exclude reference="No0-G0-u0C"/>
                                     <exclude reference="UEK-qh-o8h"/>
                                     <exclude reference="FsF-4O-rG8"/>
                                     <exclude reference="OiG-Xa-2KK"/>
@@ -84,6 +88,7 @@
                                     <include reference="Kwm-by-sVI"/>
                                 </mask>
                                 <mask key="constraints">
+                                    <include reference="No0-G0-u0C"/>
                                     <include reference="UEK-qh-o8h"/>
                                     <include reference="FsF-4O-rG8"/>
                                     <exclude reference="OiG-Xa-2KK"/>

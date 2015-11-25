@@ -21,15 +21,26 @@ class AccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func viewActivityButtonPressed(sender: UIButton) {
+        let viewController = ActivityViewController(nibName: VIEW_ACTIVITY, bundle: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    /*
+    
+    Display a prompt asking if the user wants to quit for sure
+    
     */
+    @IBAction func signOut(sender: UIButton) {
+        if DEUserManager.sharedManager().isLoggedIn() {
+            PFUser.logOutInBackground()
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        else {
+            let loginViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(STORYBOARD_ID_PROMPT_LOGIN)
+            self.navigationController?.popToRootViewControllerAnimated(false)
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+        }
+    }
 
 }

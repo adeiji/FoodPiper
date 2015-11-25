@@ -109,7 +109,6 @@ struct TopMargin {
     
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self setUpSearchBar];
-    [self removeAllPostFromScreen];
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"Map View" style:UIBarButtonItemStylePlain target:self action:@selector(displayMapView)];
     [self.navigationItem setRightBarButtonItem:button];
     [self addPeepMenuButton];
@@ -119,9 +118,12 @@ struct TopMargin {
 }
 
 - (void) displayFilterView {
-    UIScrollView *view = [[[NSBundle mainBundle] loadNibNamed:VIEW_FILTER owner:self options:nil] firstObject];
-    [self.view addSubview:view];
-    [view setFrame:self.view.bounds];
+
+    FilterViewController *viewController = [[FilterViewController alloc] initWithNibName:@"FilterView" bundle:nil];
+    viewController.currentLocation = _currentLocation;
+    viewController.viewRestaurantsViewController = self;
+    [self.navigationController pushViewController:viewController animated:YES];
+    
 }
 
 - (void) addPeepMenuButton {
@@ -340,6 +342,8 @@ struct TopMargin {
 
 
 - (void) displayRestaurant : (NSNotification *) notification {
+    _isNewProcess = YES;
+    [self removeAllPostFromScreen];
     [self stopActivitySpinner];
     [self displayRestaurantWithTopMargin:0 PostArray:nil];
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];

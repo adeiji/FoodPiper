@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             // Prompt the user to login
         }
+
         
         return true
     }

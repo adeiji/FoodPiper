@@ -11,6 +11,24 @@
 
 @implementation APIHandler
 
+- (void) getAllRestaurantsOfCategory:(NSArray *)categories
+                            Location:(CLLocation *)currentLocation {
+    _restaurants = [NSMutableDictionary new];
+    FactualQuery *queryObject = [FactualQuery query];
+    queryObject.includeRowCount = true;
+    FactualRowFilter *categoryFilter = [FactualRowFilter fieldName:@"category_ids"
+                                             includesAnyArray:categories];
+    [queryObject addRowFilter:categoryFilter];
+    if (currentLocation) {
+        CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
+        [queryObject setGeoFilter:coordinate radiusInMeters:5000];
+    }
+    
+    [queryObject setLimit:50];
+    [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
+    
+}
+
 - (void) getAllRestaurantsBeginningWith : (NSString *) name
                                 Location: (CLLocation *) currentLocation {
     _restaurants = [NSMutableDictionary new];
@@ -20,7 +38,7 @@
     CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
     
     [queryObject setGeoFilter:coordinate radiusInMeters:5000];
-    [queryObject setLimit:10];
+    [queryObject setLimit:50];
     
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
 }
@@ -68,12 +86,12 @@
                  use the factual id as a reference within the app */
                 [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
             }
+        }
+        
+        if (_notifyWhenDone) { // Notify application that the process is done
             
-            if (_notifyWhenDone) { // Notify application that the process is done
-                
-                [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_FINISHED_RETRIEVING_RESTAURANTS object:nil];
-                
-            }
+            [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_FINISHED_RETRIEVING_RESTAURANTS object:nil];
+            
         }
         int count = 0;
         // Get the yelp information from Crosswalk API
@@ -168,6 +186,7 @@
     [myRestaurant setBreakfast:[restaurant stringValueForName:FACTUAL_BREAKFAST]];
     [myRestaurant setLunch:[restaurant stringValueForName:FACTUAL_LUNCH]];
     [myRestaurant setFactualId:[restaurant stringValueForName:FACTUAL_ID]];
+
     NSURL *url = [NSURL URLWithString:[restaurant stringValueForName:FACTUAL_WEBSITE]];
     [myRestaurant setWebsite:url];
     
@@ -176,6 +195,12 @@
     cuisines = [cuisines stringByTrimmingCharactersInSet:trim];
     NSArray *objectArray = [cuisines componentsSeparatedByString:@","];
     [myRestaurant setCuisine:objectArray];
+    
+    NSString *categories = [restaurant stringValueForName:FACTUAL_CATEGORIES];
+    categories = [categories stringByTrimmingCharactersInSet:trim];
+    objectArray = [cuisines componentsSeparatedByString:@","];
+    [myRestaurant setCategories:objectArray];
+    
     [myRestaurant setPrice:[restaurant stringValueForName:FACTUAL_PRICE]];
     [myRestaurant setAlcohol_bar:[restaurant stringValueForName:FACTUAL_ALCOHOL_BAR]];
     [myRestaurant setWifi:[restaurant stringValueForName:FACTUAL_WIFI]];

@@ -46,7 +46,7 @@ class SyncManager: NSObject {
             {
                 NSLog("***** Parse Object With ID " + object.objectId! + " and class " + object.parseClassName + " Saved Successfully *****")
                 
-                if message.isEmpty {
+                if !message.isEmpty {
                     showSuccessIndicator(message)
                 }
             }

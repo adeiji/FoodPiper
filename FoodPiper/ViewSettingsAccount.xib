@@ -4,7 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DESettingsAccount"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountViewController" customModule="FoodPiper" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="qkQ-JK-zgC"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DESettingsAccount">
             <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
@@ -124,7 +128,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="signOut:" destination="iN0-l3-epB" eventType="touchUpInside" id="C8y-u7-bSl"/>
+                                <action selector="signOut:" destination="-1" eventType="touchUpInside" id="6vy-ne-CeR"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECL-f1-3Mb">
@@ -206,12 +210,21 @@
                         <action selector="becomeAmbassadorPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="HZv-Yr-tWn"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-Gl-GUP">
+                    <rect key="frame" x="121" y="67" width="179" height="30"/>
+                    <state key="normal" title="View Activity"/>
+                    <connections>
+                        <action selector="viewActivityButtonPressed:" destination="-1" eventType="touchUpInside" id="l0c-iW-1CI"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="6tH-JM-PZg" firstAttribute="trailing" secondItem="FcG-da-MAS" secondAttribute="trailing" id="2c3-JE-lld"/>
+                <constraint firstItem="QWq-Gl-GUP" firstAttribute="trailing" secondItem="wu7-mS-D2d" secondAttribute="trailing" id="7FU-tq-kx0"/>
                 <constraint firstItem="6tH-JM-PZg" firstAttribute="top" secondItem="GYx-Re-4r6" secondAttribute="bottom" constant="15" id="Egc-LO-okd"/>
                 <constraint firstItem="hGM-sH-5Bv" firstAttribute="trailing" secondItem="GYx-Re-4r6" secondAttribute="trailing" id="Gao-28-c6y"/>
+                <constraint firstItem="QWq-Gl-GUP" firstAttribute="top" secondItem="wu7-mS-D2d" secondAttribute="bottom" constant="14" id="Gf8-lV-1NJ"/>
                 <constraint firstItem="6tH-JM-PZg" firstAttribute="centerX" secondItem="FcG-da-MAS" secondAttribute="centerX" id="J34-LH-0JJ"/>
                 <constraint firstItem="hGM-sH-5Bv" firstAttribute="top" secondItem="z6h-3d-K53" secondAttribute="bottom" constant="40" id="JJU-7F-gMc"/>
                 <constraint firstItem="hGM-sH-5Bv" firstAttribute="leading" secondItem="GYx-Re-4r6" secondAttribute="leading" id="L4S-T4-c0y"/>
@@ -238,6 +251,7 @@
                 <constraint firstItem="wu7-mS-D2d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="23" id="hUj-m1-xuB"/>
                 <constraint firstItem="6tH-JM-PZg" firstAttribute="trailing" secondItem="mdt-HD-GKB" secondAttribute="trailing" id="iwr-TK-2bX"/>
                 <constraint firstItem="6tH-JM-PZg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jkD-Br-SkW"/>
+                <constraint firstItem="QWq-Gl-GUP" firstAttribute="leading" secondItem="wu7-mS-D2d" secondAttribute="leading" id="m0h-5P-fj0"/>
                 <constraint firstItem="z6h-3d-K53" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="mAx-a5-Jdk"/>
                 <constraint firstItem="FcG-da-MAS" firstAttribute="trailing" secondItem="eOs-av-RBc" secondAttribute="trailing" id="pQz-bC-OSD"/>
                 <constraint firstItem="gv4-Bc-lr6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="rXu-tE-XtL"/>

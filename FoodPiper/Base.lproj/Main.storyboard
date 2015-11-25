@@ -27,7 +27,7 @@
         <!--LoginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginViewController" id="BYZ-38-t0r" customClass="DELoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="promptLoginViewController" title="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DELoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Iay-U0-slp"/>
                         <viewControllerLayoutGuide type="bottom" id="5Rt-yQ-Iup"/>

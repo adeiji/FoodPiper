@@ -29,6 +29,7 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
         
         // Do any additional setup after loading the view.
     }
+
     
     func displayDateAndTime (sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()

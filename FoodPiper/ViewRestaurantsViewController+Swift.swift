@@ -9,23 +9,10 @@
 import UIKit
 
 extension DEViewRestaurantsViewController  {
-        
-    @IBAction func filterCategoryPressed (sender: UIButton) {
-        sender.superview?.removeFromSuperview()
-        let categoryView = NSBundle.mainBundle().loadNibNamed(VIEW_FILTER_CATEGORY, owner: self, options: nil).first as! UIView
-        categoryView.frame.size.width = (sender.superview?.frame.width)!
-        categoryView.frame.origin.y = 70
-        sender.superview?.addSubview(categoryView)
-        categoryHeightConstraint?.constant = categoryView.frame.height
-        
-        UIView.animateWithDuration(0.5) { () -> Void in
-            categoryView.layoutIfNeeded()
-        }
-    }
-    @IBAction func viewProfile (sender: UIButton) {
+       @IBAction func viewProfile (sender: UIButton) {
         sender.superview?.removeFromSuperview()
         
-        let viewController = ProfileViewController.init(nibName: VIEW_SETTINGS_ACCOUNT, bundle: nil)
+        let viewController = AccountViewController.init(nibName: VIEW_SETTINGS_ACCOUNT, bundle: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     /*

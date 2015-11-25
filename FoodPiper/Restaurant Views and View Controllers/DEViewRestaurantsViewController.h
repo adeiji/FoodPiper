@@ -49,6 +49,6 @@
 - (IBAction)sortTrending:(id)sender;
 - (IBAction)sortNearMe:(id)sender;
 - (IBAction)sortStartTime:(id)sender;
-
+- (void) displayRestaurant : (NSNotification *) notification;
 
 @end

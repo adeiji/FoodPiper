@@ -21,6 +21,7 @@ public class Restaurant: NSObject {
     var lunch:AnyObject!
     var website:NSURL!
     var cuisine:Array<String>!
+    var categories:Array<String>!
     var price:AnyObject!
     var alcohol_bar:AnyObject!
     var wifi:AnyObject!

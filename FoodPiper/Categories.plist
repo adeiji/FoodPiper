@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Categories.plist
-   FoodPiper
-
-   Created by adeiji on 11/23/15.
-   Copyright (c) 2015 Dephyned. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>Breweries</key>
+	<integer>341</integer>
+	<key>Bakeries</key>
+	<integer>340</integer>
+	<key>Bagels and Doughnuts</key>
+	<integer>338</integer>
+	<key>Cafe</key>
+	<integer>342</integer>
+	<key>Tea House</key>
+	<integer>342</integer>
+	<key>Dessert</key>
+	<integer>343</integer>
+	<key>Ice Cream Parlors</key>
+	<integer>344</integer>
+	<key>Internet Cafes</key>
+	<integer>345</integer>
+	<key>Juice Bars and Smoothies</key>
+	<integer>346</integer>
+	<key>American</key>
+	<integer>348</integer>
+	<key>Barbecue</key>
+	<integer>349</integer>
+	<key>Buffets</key>
+	<integer>350</integer>
+	<key>Burgers</key>
+	<integer>351</integer>
+	<key>Chinese</key>
+	<integer>352</integer>
+	<key>Delis</key>
+	<integer>353</integer>
+	<key>Diners</key>
+	<integer>354</integer>
+	<key>Fast Food</key>
+	<integer>355</integer>
+	<key>French</key>
+	<integer>356</integer>
+	<key>Indian</key>
+	<integer>357</integer>
+	<key>Italian</key>
+	<integer>358</integer>
+	<key>Japanese</key>
+	<integer>359</integer>
+	<key>Korean</key>
+	<integer>360</integer>
+	<key>Mexican</key>
+	<integer>361</integer>
+	<key>Middle Eastern</key>
+	<integer>362</integer>
+	<key>Pizza</key>
+	<integer>363</integer>
+	<key>Seafood</key>
+	<integer>364</integer>
+	<key>Steakhouses</key>
+	<integer>365</integer>
+	<key>Sushi</key>
+	<integer>366</integer>
+	<key>Thai</key>
+	<integer>367</integer>
+	<key>Vegan and Vegetarian</key>
+	<integer>368</integer>
+	<key>Asian</key>
+	<integer>457</integer>
+	<key>Food Trucks</key>
+	<integer>458</integer>
+	<key>International</key>
+	<integer>464</integer>
+	<key>Wineries and Vineyards</key>
+	<integer>370</integer>
+</dict>
 </plist>
