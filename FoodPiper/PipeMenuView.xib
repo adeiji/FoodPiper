@@ -287,6 +287,9 @@
                             <include reference="i4x-5s-8eE"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="showCreateDealsScreen:" destination="-1" eventType="touchUpInside" id="P4A-TV-5kb"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-Qp-aAE" customClass="CrowdIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>

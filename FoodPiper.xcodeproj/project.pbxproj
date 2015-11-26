@@ -47,6 +47,8 @@
 		F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3431BE4393C00E159F6 /* WaitTimeView.xib */; settings = {ASSET_TAGS = (); }; };
 		F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3451BE43B3800E159F6 /* RateCrowdView.xib */; settings = {ASSET_TAGS = (); }; };
 		F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3471BE59D7400E159F6 /* SyncManager.swift */; settings = {ASSET_TAGS = (); }; };
+		F48A3F921C067EA100F048DD /* CreateDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F48A3F951C067EBD00F048DD /* CreateDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; settings = {ASSET_TAGS = (); }; };
 		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
@@ -213,6 +215,8 @@
 		F475C3431BE4393C00E159F6 /* WaitTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaitTimeView.xib; sourceTree = "<group>"; };
 		F475C3451BE43B3800E159F6 /* RateCrowdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateCrowdView.xib; sourceTree = "<group>"; };
 		F475C3471BE59D7400E159F6 /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
+		F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDealsViewController.swift; sourceTree = "<group>"; };
+		F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateDeals.storyboard; sourceTree = "<group>"; };
 		F49F00A61BEAA63A00EDDF8C /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		F49F00A81BEAA73600EDDF8C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -526,6 +530,7 @@
 				F4BBFF9E1BDBF88B0056BF40 /* UI Elements */,
 				F4EA28411BDA8EE300079658 /* VIew and View Controller */,
 				F4CC5AF71BD7FC9400109C61 /* Restaurant */,
+				F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */,
 			);
 			name = "Restaurant Workflow";
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 			children = (
 				F4A37B571BD8103900DD5DAE /* Restaurant.swift */,
 				F42A1E0F1BF28895002286BF /* Reservation.swift */,
+				F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */,
 			);
 			name = Restaurant;
 			sourceTree = "<group>";
@@ -1005,6 +1011,7 @@
 				F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */,
 				F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */,
 				F4D94B621C063B0E00637FEF /* FilteringAvailability.plist in Resources */,
+				F48A3F951C067EBD00F048DD /* CreateDeals.storyboard in Resources */,
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
 				F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */,
 				F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */,
@@ -1083,6 +1090,7 @@
 			files = (
 				F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */,
 				F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */,
+				F48A3F921C067EA100F048DD /* CreateDealsViewController.swift in Sources */,
 				F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */,
 				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
 				F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */,
