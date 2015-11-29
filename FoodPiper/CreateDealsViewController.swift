@@ -75,12 +75,28 @@ class CreateDealsViewController: UIViewController {
         default:break
         }
         
-        deal.restaurant = restaurant.factualId
-        SyncManager.saveParseObject(deal, message: "Deal Saved")
-        self.navigationController?.popViewControllerAnimated(true)
+        saveDeal(deal)
         
     }
     
+    @IBOutlet weak var txtFreeItem: UITextField!
+    
+    @IBAction func freeItemDoneButtonPressed(sender: UIButton) {
+        
+        let deal = Deal()
+        deal.dealType = dealType.rawValue
+        deal.deal = "Get Free " + txtFreeItem.text!
+        saveDeal(deal)
+        
+    }
+    
+    func saveDeal (deal: Deal) {
+        deal.restaurant = restaurant.factualId
+        SyncManager.saveParseObject(deal, message: "Deal Saved")
+        let viewControllers = self.navigationController!.viewControllers
+        let restaurantViewController = viewControllers[viewControllers.count - 3]
+        self.navigationController?.popToViewController(restaurantViewController, animated: true)
+    }
     
     @IBAction func entireBillPressed(sender: UIButton) {
         txtItem.text = "Entire Bill"

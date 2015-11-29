@@ -27,22 +27,22 @@
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-Wd-94C" customClass="CancelIcon" customModule="FoodPiper" customModuleProvider="target">
-                    <rect key="frame" x="135" y="16" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="osR-9t-M05"/>
-                        <constraint firstAttribute="height" constant="50" id="z8L-xf-MwR"/>
-                    </constraints>
-                    <connections>
-                        <action selector="closeReservationView:" destination="-1" eventType="touchUpInside" id="hCW-Q8-lWn"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9V4-QW-s3E" customClass="CheckMarkIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="126" y="150" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="ckg-Fm-Ed2"/>
                         <constraint firstAttribute="width" constant="60" id="kWB-OY-Bu7"/>
                     </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-Wd-94C" customClass="CancelIcon" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="140" y="18" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="osR-9t-M05"/>
+                        <constraint firstAttribute="height" constant="40" id="z8L-xf-MwR"/>
+                    </constraints>
+                    <connections>
+                        <action selector="closeReservationView:" destination="-1" eventType="touchUpInside" id="hCW-Q8-lWn"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,10 +53,10 @@
                 <constraint firstItem="9V4-QW-s3E" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-4" id="Xsx-rf-rmS"/>
                 <constraint firstAttribute="trailing" secondItem="Miv-sa-gBe" secondAttribute="trailing" constant="47" id="Yy4-La-Pel"/>
                 <constraint firstItem="Cby-Wd-94C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dYH-ll-Kr0"/>
-                <constraint firstItem="Cby-Wd-94C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="mOW-TD-94X"/>
+                <constraint firstItem="Cby-Wd-94C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="mOW-TD-94X"/>
                 <constraint firstItem="fCY-8K-y7J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="n6f-CP-Kuy"/>
                 <constraint firstAttribute="bottom" secondItem="9V4-QW-s3E" secondAttribute="bottom" constant="12" id="vfk-xk-acB"/>
-                <constraint firstItem="Miv-sa-gBe" firstAttribute="top" secondItem="Cby-Wd-94C" secondAttribute="bottom" constant="14" id="yBT-rh-rPG"/>
+                <constraint firstItem="Miv-sa-gBe" firstAttribute="top" secondItem="Cby-Wd-94C" secondAttribute="bottom" constant="22" id="yBT-rh-rPG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <userDefinedRuntimeAttributes>

@@ -49,6 +49,7 @@
 		F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3471BE59D7400E159F6 /* SyncManager.swift */; settings = {ASSET_TAGS = (); }; };
 		F48A3F921C067EA100F048DD /* CreateDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F48A3F951C067EBD00F048DD /* CreateDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */; settings = {ASSET_TAGS = (); }; };
+		F48A3F971C07E5B700F048DD /* APIHandler+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; settings = {ASSET_TAGS = (); }; };
 		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
@@ -217,6 +218,7 @@
 		F475C3471BE59D7400E159F6 /* SyncManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDealsViewController.swift; sourceTree = "<group>"; };
 		F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateDeals.storyboard; sourceTree = "<group>"; };
+		F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIHandler+Swift.swift"; sourceTree = "<group>"; };
 		F49F00A61BEAA63A00EDDF8C /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		F49F00A81BEAA73600EDDF8C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -725,6 +727,7 @@
 				F4CBC36C1BD1C00700FEBE36 /* Location Handling */,
 				F4CBC3671BD1B09F00FEBE36 /* API Handler */,
 				F4CBC3641BD1830500FEBE36 /* Google Places */,
+				F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */,
 			);
 			name = APIs;
 			sourceTree = "<group>";
@@ -1158,6 +1161,7 @@
 				F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */,
 				F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */,
 				F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */,
+				F48A3F971C07E5B700F048DD /* APIHandler+Swift.swift in Sources */,
 				F42A1E081BF24BB8002286BF /* FoodPiperView.swift in Sources */,
 				F4D94B451BFEBA3800637FEF /* UserManager+Swift.swift in Sources */,
 				F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */,

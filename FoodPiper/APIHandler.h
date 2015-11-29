@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSMutableDictionary *restaurants;
 @property (strong, nonatomic) NSMutableArray *restaurantImages;
 @property (strong, nonatomic) CLLocation *currentLocation;
+@property (strong, nonatomic) NSArray *storedRestaurantImages;
 @property BOOL notifyWhenDone;
 @property NSInteger rowCount;
 /* 

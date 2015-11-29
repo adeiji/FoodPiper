@@ -28,7 +28,8 @@ public class Restaurant: NSObject {
     var reservations_allowed:AnyObject!
     var outdoor_seating:AnyObject!
     var dinner:AnyObject!
-    var hours:[String:String]!
+    var hours:[String: String]!
+    var hoursDisplay:String!
     var caters:AnyObject!
     var factualId:String!
     var image:UIImage!

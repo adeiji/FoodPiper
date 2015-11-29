@@ -61,7 +61,7 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
     }
     
     func viewControllerAtIndex(index: Int) -> UIViewController? {
-        if pipes == nil {
+        if pipes?.count == 0 {
             return nil
         }
         let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
@@ -77,15 +77,5 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

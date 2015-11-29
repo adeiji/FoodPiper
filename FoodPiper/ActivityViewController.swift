@@ -22,7 +22,7 @@ class ActivityViewController: UIViewController {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let user = PFUser.currentUser()
             let objectKeyValues: [String : AnyObject!] = [ACTION_TO_USER:user, ACTION_VIEWED: NSNumber(bool: false)]
-            self.actions = SyncManager.getParseObjectsWithClass(PARSE_CLASS_ACTION, objectKeyValues: objectKeyValues, queryType: ParseQueryType.WhereKeyEqualTo) as! [Action]
+            self.actions = SyncManager.getParseObjectsWithClass(PARSE_CLASS_ACTION, objectKeyValues: objectKeyValues, queryType: ParseQueryType.WhereKeyEqualTo, containedInNot: [AnyObject]()) as! [Action]
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.tableView!.reloadData()
             })

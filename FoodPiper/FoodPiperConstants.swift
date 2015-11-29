@@ -44,6 +44,9 @@ let PARSE_USER_POINTS = "points"
 let PARSE_USER_FRIENDS = "friends"
 let PARSE_USER_FAVORITE_PIPES = "favoritePipes"
 let PARSE_CLASS_ACTION = "Action"
+let PARSE_RESTAURANT_IMAGE_URL = "image_url"
+let PARSE_RESTAURANT_IMAGE_WIDTH = "image_width"
+let PARSE_RESTAURANT_IMAGE_HEIGHT = "image_height"
 let ACTION_TO_USER = "toUser"
 let ACTION_VIEWED = "viewed"
 
@@ -72,5 +75,4 @@ enum ParseQueryType {
     case WhereKeyContainedIn
     case WhereKeyNotContainedIn
     case WhereKeyContainsAllObjectsInArray
-    
 }

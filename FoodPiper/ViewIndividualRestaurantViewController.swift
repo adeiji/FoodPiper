@@ -113,7 +113,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     func setupHours () {
         hoursView = NSBundle.mainBundle().loadNibNamed(HOURS_NIB, owner: self, options: nil).first as! HoursView
 
-        if hoursView.displayRestaurantHours(restaurant.hours) {
+        if hoursView.displayRestaurantHours(restaurant.hoursDisplay) {
             btnHours.userInteractionEnabled = true
         }
         else {
