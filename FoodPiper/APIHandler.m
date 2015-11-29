@@ -91,7 +91,7 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
     CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
     
     [queryObject setGeoFilter:coordinate radiusInMeters:5000];
-    [queryObject setLimit:5];
+    [queryObject setLimit:50];
     
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
     
@@ -102,16 +102,24 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
 - (void) requestComplete:(FactualAPIRequest *)request receivedQueryResult:(FactualQueryResult *)queryResult {
 
     static BOOL lastRequest = NO;
-    
+    static BOOL restaurantsSaved = NO;
     if (request.requestType == FactualRequestType_PlacesQuery) /* If the type of request is for the places*/
     {
         _rowCount = queryResult.rowCount;
-        for (id restaurant in queryResult.rows) {
-            if ([restaurant respondsToSelector:@selector(stringValueForName:)]) {
-                Restaurant *myRestaurant = [self createRestaurantObjectFromFactualObject:restaurant];
-                /* Add this restaurant object to the dictionary with the factual Id as the key so that we can
-                 use the factual id as a reference within the app */
-                [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
+        
+        id restaurantObject = queryResult.rows[0];
+        if ([restaurantObject stringValueForName:FACTUAL_NAME] != nil)
+        {
+            for (id restaurant in queryResult.rows) {
+                
+                if ([restaurant respondsToSelector:@selector(stringValueForName:)]) {
+                    Restaurant *myRestaurant = [self createRestaurantObjectFromFactualObject:restaurant];
+                    /* Add this restaurant object to the dictionary with the factual Id as the key so that we can
+                     use the factual id as a reference within the app */
+                    if (myRestaurant != nil) {
+                        [_restaurants setValue:myRestaurant forKey:myRestaurant.factualId];
+                    }
+                }
             }
         }
         
@@ -125,8 +133,9 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
             lastRequest = [self callCrossWalkForImagesWithQueryResult:queryResult];
         }
         else {
-            
             [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO ];
+            
+            restaurantsSaved = NO;
         }
     }
 }
