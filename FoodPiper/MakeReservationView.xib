@@ -34,7 +34,7 @@
                         <constraint firstAttribute="width" constant="60" id="kWB-OY-Bu7"/>
                     </constraints>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-Wd-94C" customClass="CancelIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Small" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cby-Wd-94C" customClass="CancelIcon" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="140" y="18" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="osR-9t-M05"/>

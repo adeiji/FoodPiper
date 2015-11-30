@@ -95,12 +95,22 @@ class PeepViewController: UIViewController {
         }
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            
-            foodRating = self.loadRatingObject(myPipe.food)
-            decorRating = self.loadRatingObject(myPipe.decor)
-            waitTimeRating = self.loadRatingObject(myPipe.waitTime)
-            crowdRating = self.loadRatingObject(myPipe.crowd)
-            serviceRating = self.loadRatingObject(myPipe.service)
+            // Get all the ratings from the PFObject if there is a rating for that specific detail
+            if myPipe.food != nil {
+                foodRating = self.loadRatingObject(myPipe.food)
+            }
+            if myPipe.decor != nil {
+                decorRating = self.loadRatingObject(myPipe.decor)
+            }
+            if myPipe.waitTime != nil {
+                waitTimeRating = self.loadRatingObject(myPipe.waitTime)
+            }
+            if myPipe.crowd != nil {
+                crowdRating = self.loadRatingObject(myPipe.crowd)                
+            }
+            if myPipe.service != nil {
+                serviceRating = self.loadRatingObject(myPipe.service)
+            }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if foodRating != nil { self.displayFiveStarRating(foodRating, view: self.foodRatingView, constraint: self.foodRatingViewWidthConstraint) }

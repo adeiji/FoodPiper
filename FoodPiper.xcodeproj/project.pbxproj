@@ -50,6 +50,8 @@
 		F48A3F921C067EA100F048DD /* CreateDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F48A3F951C067EBD00F048DD /* CreateDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F48A3F971C07E5B700F048DD /* APIHandler+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */; settings = {ASSET_TAGS = (); }; };
+		F48A3F991C0BFE7100F048DD /* CrowdIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F981C0BFE7100F048DD /* CrowdIcons.swift */; settings = {ASSET_TAGS = (); }; };
+		F48A3F9B1C0C02D800F048DD /* WaitTimeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F9A1C0C02D800F048DD /* WaitTimeIcons.swift */; settings = {ASSET_TAGS = (); }; };
 		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; settings = {ASSET_TAGS = (); }; };
 		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
@@ -219,6 +221,8 @@
 		F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateDealsViewController.swift; sourceTree = "<group>"; };
 		F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateDeals.storyboard; sourceTree = "<group>"; };
 		F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIHandler+Swift.swift"; sourceTree = "<group>"; };
+		F48A3F981C0BFE7100F048DD /* CrowdIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrowdIcons.swift; sourceTree = "<group>"; };
+		F48A3F9A1C0C02D800F048DD /* WaitTimeIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitTimeIcons.swift; sourceTree = "<group>"; };
 		F49F00A61BEAA63A00EDDF8C /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		F49F00A81BEAA73600EDDF8C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 				F42A1E001BF180AF002286BF /* CancelIcon.swift */,
 				F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */,
 				F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */,
+				F48A3F981C0BFE7100F048DD /* CrowdIcons.swift */,
+				F48A3F9A1C0C02D800F048DD /* WaitTimeIcons.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -1098,6 +1104,7 @@
 				F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */,
 				F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */,
 				F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */,
+				F48A3F9B1C0C02D800F048DD /* WaitTimeIcons.swift in Sources */,
 				F4D94B561BFFDE2F00637FEF /* AccountViewController.swift in Sources */,
 				F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */,
 				F4A2AF111BF1328E0006CBE8 /* SendMessageIcon.swift in Sources */,
@@ -1149,6 +1156,7 @@
 				F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */,
 				F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */,
 				F4A2AF191BF132C40006CBE8 /* FavoriteIcon.swift in Sources */,
+				F48A3F991C0BFE7100F048DD /* CrowdIcons.swift in Sources */,
 				F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */,
 				F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */,
 				F4A2AF231BF133440006CBE8 /* DoneIcon.swift in Sources */,

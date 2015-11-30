@@ -14,7 +14,12 @@ class CancelIcon: UIButton {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
-        FoodPiperIcons.drawCancelIcon()
+        if self.restorationIdentifier == "Small" {
+            FoodPiperIcons.drawCancelSmallIcon()
+        }
+        else {
+            FoodPiperIcons.drawCancelIcon()
+        }
     }
 
 

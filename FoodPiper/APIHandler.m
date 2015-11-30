@@ -108,6 +108,7 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
         _rowCount = queryResult.rowCount;
         
         id restaurantObject = queryResult.rows[0];
+        // Check to see if this is actually a restaurant object, if it has a restaurant name than it's a restaurant object
         if ([restaurantObject stringValueForName:FACTUAL_NAME] != nil)
         {
             for (id restaurant in queryResult.rows) {

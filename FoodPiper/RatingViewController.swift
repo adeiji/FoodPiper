@@ -253,10 +253,11 @@ class RatingViewController: UIViewController {
     
     func updateSelectionOfButtons (sender: UIButton, buttons:Array<UIButton>){
         for button in buttons {
-            button.backgroundColor = UIColor.orangeColor()
+            button.borderWidth = 0
         }
         
-        sender.backgroundColor = UIColor.blackColor()
+        sender.borderWidth = 3.0;
+        sender.layer.borderColor = UIColor.blueColor().CGColor
     }
     
     @IBAction func crowdButtonPressed(sender: UIButton) {

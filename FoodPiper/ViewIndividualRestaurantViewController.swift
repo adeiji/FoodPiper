@@ -74,24 +74,26 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     func getRating () {
-        let rating = (restaurant.rating as! NSString).integerValue
-        // If this rating is a double and not a whole number than set this to true
-        let hasPoint = (restaurant.rating as! NSString).doubleValue % 1 == 0 ? false : true
-        let height = restaurantView.ratingView.frame.height
-        
-        for var index = 0; index < rating; ++index {
-            let star = StarIcon()
-            star.filled = true
-            star.frame = CGRectMake(CGFloat(index * Int(height + 5)), 0, height, height);
-            restaurantView.ratingView.addSubview(star);
-        }
-        
-        if (hasPoint == true)
-        {
-            let star = StarIcon()
-            star.halfFilled = true
-            star.frame = CGRectMake(CGFloat(rating * Int(height + 5)), 0, height, height);
-            restaurantView.ratingView.addSubview(star);
+        if restaurant.rating != nil {  // Make sure that this restaurant has a rating
+            let rating = (restaurant.rating as! NSString).integerValue
+            // If this rating is a double and not a whole number than set this to true
+            let hasPoint = (restaurant.rating as! NSString).doubleValue % 1 == 0 ? false : true
+            let height = restaurantView.ratingView.frame.height
+            
+            for var index = 0; index < rating; ++index {
+                let star = StarIcon()
+                star.filled = true
+                star.frame = CGRectMake(CGFloat(index * Int(height + 5)), 0, height, height);
+                restaurantView.ratingView.addSubview(star);
+            }
+            
+            if (hasPoint == true)
+            {
+                let star = StarIcon()
+                star.halfFilled = true
+                star.frame = CGRectMake(CGFloat(rating * Int(height + 5)), 0, height, height);
+                restaurantView.ratingView.addSubview(star);
+            }
         }
 
     }

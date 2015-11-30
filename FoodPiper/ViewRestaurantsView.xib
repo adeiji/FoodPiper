@@ -64,7 +64,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Movie at the park" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="129" translatesAutoresizingMaskIntoConstraints="NO" id="kW7-t4-DET">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Movie at the park" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="129" translatesAutoresizingMaskIntoConstraints="NO" id="kW7-t4-DET">
                     <rect key="frame" x="6" y="193" width="129" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="500" constant="18" id="30D-4E-gNA"/>
@@ -111,6 +111,7 @@
                 <constraint firstItem="MJ0-LB-RQz" firstAttribute="top" secondItem="Rdq-Pp-4T2" secondAttribute="bottom" constant="-1" id="LaM-g6-Aah"/>
                 <constraint firstItem="OAY-py-BDZ" firstAttribute="top" secondItem="MJ0-LB-RQz" secondAttribute="bottom" constant="5" id="Mk8-6U-GCT"/>
                 <constraint firstItem="dfb-u1-i4Q" firstAttribute="top" secondItem="kW7-t4-DET" secondAttribute="bottom" constant="3" id="Nao-Bq-HTA"/>
+                <constraint firstAttribute="bottom" secondItem="Ali-rf-U8v" secondAttribute="bottom" constant="6" id="OfW-bP-iQO"/>
                 <constraint firstItem="dfb-u1-i4Q" firstAttribute="centerY" secondItem="L5I-6n-mVu" secondAttribute="centerY" id="PcX-5S-THw"/>
                 <constraint firstItem="L5I-6n-mVu" firstAttribute="leading" secondItem="kW7-t4-DET" secondAttribute="leading" id="Suo-uX-dkK"/>
                 <constraint firstItem="Ali-rf-U8v" firstAttribute="leading" secondItem="dfb-u1-i4Q" secondAttribute="leading" id="ctj-nj-nXq"/>

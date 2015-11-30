@@ -14,93 +14,27 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TuF-Ih-zcx" customClass="RatingView" customModule="FoodPiper" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-7p-QTf">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="55" id="aLc-l9-fdb"/>
-                                <constraint firstAttribute="width" constant="55" id="saL-cn-HFg"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="aLc-l9-fdb"/>
-                                    <exclude reference="saL-cn-HFg"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="aLc-l9-fdb"/>
-                                    <include reference="saL-cn-HFg"/>
-                                </mask>
-                            </variation>
-                            <connections>
-                                <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dog-iM-BzH"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abF-nz-xGO">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="32p-KD-KKT">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="55"/>
-                                </constraint>
-                                <constraint firstAttribute="width" constant="40" id="SFZ-1T-fCA">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="55"/>
-                                </constraint>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="32p-KD-KKT"/>
-                                    <exclude reference="SFZ-1T-fCA"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="32p-KD-KKT"/>
-                                    <include reference="SFZ-1T-fCA"/>
-                                </mask>
-                            </variation>
-                            <connections>
-                                <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dar-WC-uOO"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-vV-lZ9">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="55" id="J73-XY-oZ0"/>
-                                <constraint firstAttribute="height" constant="55" id="s6l-Id-T81"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="J73-XY-oZ0"/>
-                                    <exclude reference="s6l-Id-T81"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="J73-XY-oZ0"/>
-                                    <include reference="s6l-Id-T81"/>
-                                </mask>
-                            </variation>
-                            <connections>
-                                <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="zcG-oe-Fdi"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xck-sr-DB8">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <color key="backgroundColor" red="0.25882352939999997" green="0.73725490199999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="285" id="Dx8-eK-UVV"/>
                                 <constraint firstAttribute="height" constant="35" id="W8V-ea-tFg"/>
                             </constraints>
-                            <state key="normal" title="Next"/>
+                            <state key="normal" title="Next">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="Dx8-eK-UVV"/>
@@ -129,7 +63,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0H-Ru-TaP">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0H-Ru-TaP">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,28 +93,134 @@
                                 </mask>
                             </variation>
                         </label>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="Fast" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-7p-QTf" customClass="WaitTimeIcons" customModule="FoodPiper" customModuleProvider="target">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="aLc-l9-fdb">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="55" id="saL-cn-HFg">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                </constraint>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="35"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="aLc-l9-fdb"/>
+                                    <exclude reference="saL-cn-HFg"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="aLc-l9-fdb"/>
+                                    <include reference="saL-cn-HFg"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dog-iM-BzH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="Soso" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abF-nz-xGO" customClass="WaitTimeIcons" customModule="FoodPiper" customModuleProvider="target">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="32p-KD-KKT">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                </constraint>
+                                <constraint firstAttribute="width" constant="40" id="SFZ-1T-fCA">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                </constraint>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="35"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="32p-KD-KKT"/>
+                                    <exclude reference="SFZ-1T-fCA"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="32p-KD-KKT"/>
+                                    <include reference="SFZ-1T-fCA"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dar-WC-uOO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="Slow" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-vV-lZ9" customClass="WaitTimeIcons" customModule="FoodPiper" customModuleProvider="target">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="J73-XY-oZ0">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="55" id="s6l-Id-T81">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                </constraint>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="35"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="J73-XY-oZ0"/>
+                                    <exclude reference="s6l-Id-T81"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="J73-XY-oZ0"/>
+                                    <include reference="s6l-Id-T81"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="zcG-oe-Fdi"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="abF-nz-xGO" firstAttribute="leading" secondItem="QSE-7p-QTf" secondAttribute="trailing" constant="30" id="0fp-V5-UFM"/>
+                        <constraint firstItem="abF-nz-xGO" firstAttribute="leading" secondItem="QSE-7p-QTf" secondAttribute="trailing" constant="30" id="0fp-V5-UFM">
+                            <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                        </constraint>
                         <constraint firstItem="c0y-TH-Fs1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0zp-86-sxo"/>
-                        <constraint firstItem="pNf-Ua-gMk" firstAttribute="width" secondItem="QSE-7p-QTf" secondAttribute="width" id="1br-AV-YE2"/>
-                        <constraint firstItem="83c-vV-lZ9" firstAttribute="leading" secondItem="abF-nz-xGO" secondAttribute="trailing" constant="30" id="1hK-2T-LH9"/>
-                        <constraint firstItem="u0H-Ru-TaP" firstAttribute="width" secondItem="83c-vV-lZ9" secondAttribute="width" id="GEE-Uf-ezj"/>
+                        <constraint firstItem="pNf-Ua-gMk" firstAttribute="width" secondItem="QSE-7p-QTf" secondAttribute="width" id="1br-AV-YE2">
+                            <variation key="heightClass=regular-widthClass=compact" constant="-15"/>
+                        </constraint>
+                        <constraint firstItem="83c-vV-lZ9" firstAttribute="leading" secondItem="abF-nz-xGO" secondAttribute="trailing" constant="30" id="1hK-2T-LH9">
+                            <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                        </constraint>
+                        <constraint firstItem="u0H-Ru-TaP" firstAttribute="width" secondItem="83c-vV-lZ9" secondAttribute="width" id="GEE-Uf-ezj">
+                            <variation key="heightClass=regular-widthClass=compact" constant="-15"/>
+                        </constraint>
                         <constraint firstItem="QSE-7p-QTf" firstAttribute="centerY" secondItem="abF-nz-xGO" secondAttribute="centerY" id="Gmx-tD-813"/>
                         <constraint firstItem="abF-nz-xGO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JCJ-no-xIQ"/>
                         <constraint firstItem="83c-vV-lZ9" firstAttribute="centerY" secondItem="abF-nz-xGO" secondAttribute="centerY" id="KCx-Ye-TVT"/>
                         <constraint firstItem="7yL-Fh-RYx" firstAttribute="centerX" secondItem="abF-nz-xGO" secondAttribute="centerX" id="LSW-5P-6GG"/>
                         <constraint firstItem="7yL-Fh-RYx" firstAttribute="top" secondItem="abF-nz-xGO" secondAttribute="bottom" constant="8" id="RMt-zn-X5r"/>
                         <constraint firstItem="abF-nz-xGO" firstAttribute="top" secondItem="c0y-TH-Fs1" secondAttribute="bottom" constant="66" id="VL1-X6-9pi">
-                            <variation key="heightClass=regular-widthClass=compact" constant="68"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="53"/>
                         </constraint>
                         <constraint firstItem="pNf-Ua-gMk" firstAttribute="centerX" secondItem="QSE-7p-QTf" secondAttribute="centerX" id="VRX-E8-dPZ"/>
                         <constraint firstItem="u0H-Ru-TaP" firstAttribute="centerX" secondItem="83c-vV-lZ9" secondAttribute="centerX" id="YdV-dB-Z8E"/>
                         <constraint firstItem="pNf-Ua-gMk" firstAttribute="top" secondItem="QSE-7p-QTf" secondAttribute="bottom" constant="8" id="Yk8-Nn-zyw"/>
                         <constraint firstItem="u0H-Ru-TaP" firstAttribute="top" secondItem="83c-vV-lZ9" secondAttribute="bottom" constant="8" id="na5-AD-1Cn"/>
                         <constraint firstItem="Xck-sr-DB8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qUB-uz-g1I"/>
-                        <constraint firstItem="7yL-Fh-RYx" firstAttribute="width" secondItem="abF-nz-xGO" secondAttribute="width" id="rhM-Q3-LVp"/>
+                        <constraint firstItem="7yL-Fh-RYx" firstAttribute="width" secondItem="abF-nz-xGO" secondAttribute="width" id="rhM-Q3-LVp">
+                            <variation key="heightClass=regular-widthClass=compact" constant="-15"/>
+                        </constraint>
                         <constraint firstItem="c0y-TH-Fs1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="82" id="wGR-Pp-vrg">
                             <variation key="heightClass=regular-widthClass=compact" constant="20"/>
                         </constraint>
@@ -188,14 +228,14 @@
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="QSE-7p-QTf"/>
-                            <exclude reference="abF-nz-xGO"/>
-                            <exclude reference="83c-vV-lZ9"/>
                             <exclude reference="Xck-sr-DB8"/>
                             <exclude reference="pNf-Ua-gMk"/>
                             <exclude reference="7yL-Fh-RYx"/>
                             <exclude reference="u0H-Ru-TaP"/>
                             <exclude reference="c0y-TH-Fs1"/>
+                            <exclude reference="QSE-7p-QTf"/>
+                            <exclude reference="abF-nz-xGO"/>
+                            <exclude reference="83c-vV-lZ9"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="1hK-2T-LH9"/>
@@ -221,14 +261,14 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="QSE-7p-QTf"/>
-                            <include reference="abF-nz-xGO"/>
-                            <include reference="83c-vV-lZ9"/>
                             <include reference="Xck-sr-DB8"/>
                             <include reference="pNf-Ua-gMk"/>
                             <include reference="7yL-Fh-RYx"/>
                             <include reference="u0H-Ru-TaP"/>
                             <include reference="c0y-TH-Fs1"/>
+                            <include reference="QSE-7p-QTf"/>
+                            <include reference="abF-nz-xGO"/>
+                            <include reference="83c-vV-lZ9"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="1hK-2T-LH9"/>
@@ -254,6 +294,7 @@
                     </variation>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="J8O-sL-03n"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="TuF-Ih-zcx" secondAttribute="centerX" id="LBr-FI-eOW"/>
