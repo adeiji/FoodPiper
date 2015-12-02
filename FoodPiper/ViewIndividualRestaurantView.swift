@@ -20,5 +20,9 @@ class ViewIndividualRestaurantView: UIScrollView {
     override func layoutSubviews() {
         super.layoutSubviews()
     }
+    
+    override func drawRect(rect: CGRect) {
+        PaintCodeBackgrounds.drawFoodBackgroundViewWithFrame(rect)
+    }
 
 }

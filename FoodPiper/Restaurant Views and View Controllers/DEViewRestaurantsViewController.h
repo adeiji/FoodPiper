@@ -44,7 +44,7 @@
 @property BOOL overlayDisplayed;
 @property BOOL now;
 @property BOOL isNewProcess;
-
+@property BOOL isFirstTime;
 
 - (IBAction)sortTrending:(id)sender;
 - (IBAction)sortNearMe:(id)sender;

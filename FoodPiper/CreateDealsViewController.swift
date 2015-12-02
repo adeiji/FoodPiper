@@ -13,6 +13,7 @@ class CreateDealsViewController: UIViewController {
     @IBOutlet weak var txtItem: UITextField!
     @IBOutlet weak var txtDeal: UITextField!
     
+    @IBOutlet weak var btnPercentOff: UIButton!
     @IBOutlet weak var secondItem: UITextField!
     
     var txtDealPlaceholder:String!
@@ -37,13 +38,23 @@ class CreateDealsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if btnPercentOff != nil {
+            btnPercentOff.layer.borderColor = UIColor(red: 32/255, green: 137/255, blue: 163/255, alpha: 1).CGColor
+        }
+        
+        if txtItem != nil {
+            txtItem.layer.borderColor = UIColor(red: 186/255, green: 25/255, blue: 96/255, alpha: 1).CGColor
+        }
+        if txtDeal != nil {
+            txtDeal.layer.borderColor = UIColor(red: 32/255, green: 137/255, blue: 163/255, alpha: 1).CGColor
+        }
+        
         if txtItemPlaceholder != nil {
             txtItem.placeholder = txtItemPlaceholder
         }
         if txtDealPlaceholder != nil {
             txtDeal.placeholder = txtDealPlaceholder
         }
-
     }
 
     override func didReceiveMemoryWarning() {

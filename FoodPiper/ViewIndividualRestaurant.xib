@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" customClass="FoodBackgroundView" customModule="FoodPiper" customModuleProvider="target">
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msj-cA-h8F" customClass="SendMessageIcon" customModule="FoodPiper" customModuleProvider="target">
@@ -230,7 +230,7 @@
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="constraints">
-                                    <include reference="iqe-kX-Oa2"/>
+                                    <exclude reference="iqe-kX-Oa2"/>
                                     <include reference="peu-27-pe8"/>
                                     <exclude reference="xdt-9k-0hl"/>
                                 </mask>
@@ -743,7 +743,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="396" y="4091.5"/>
+            <point key="canvasLocation" x="476" y="4485.5"/>
         </scrollView>
     </objects>
 </document>

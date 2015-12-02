@@ -474,10 +474,10 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     }
     
     @IBAction func showCreateDealsScreen(sender: UIButton) {
+        sender.superview?.removeFromSuperview()
         let viewController = UIStoryboard(name: "CreateDeals", bundle: nil).instantiateInitialViewController() as! CreateDealsViewController
         viewController.restaurant = restaurant
         self.navigationController?.pushViewController(viewController, animated: true)
-        sender.superview?.removeFromSuperview()
     }
     @IBAction func addRestaurantToFavorites(sender: UIButton) {
         

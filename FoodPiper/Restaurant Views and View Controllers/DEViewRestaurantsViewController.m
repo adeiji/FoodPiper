@@ -87,25 +87,10 @@ struct TopMargin {
     [self addObservers];
     if (!_shouldNotDisplayPosts)
     {
-#warning Google Analytics
-//        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-//        [tracker set:kGAIScreenName value:@"Trending"];
-//        [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
-//
-#warning may want to comment this out at some point
-//        [[DEScreenManager sharedManager] showGettingEventsIndicatorWitText:@"Getting Events"];
         [self startActivitySpinner];
     
         [self loadFirstTimeView];
     }
-    /* 
-     
-     Check to see if this is their first time going to this part of the application
-     If it is their first time then show the welcome screen.
-     Otherwise go straight to the viewing of the post
-     Add the gesture recognizer which will be used to show and hide the main menu view
-     
-    */
     
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self setUpSearchBar];
@@ -115,6 +100,9 @@ struct TopMargin {
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Filter" style:UIBarButtonItemStylePlain target:self action:@selector(displayFilterView)];
     [self.navigationItem setLeftBarButtonItem:leftButton];
+    _isFirstTime = YES;
+    _isNewProcess = YES;
+
 }
 
 - (void) displayFilterView {
@@ -220,8 +208,11 @@ struct TopMargin {
 {
     [super viewDidAppear:animated];
     [self.scrollView setDelegate:self];
-    _isNewProcess = YES;
-    [self displayRestaurant:nil];
+
+    if (_isFirstTime) {
+        [self displayRestaurant:nil];
+        _isFirstTime = NO;
+    }
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -343,7 +334,6 @@ struct TopMargin {
 
 
 - (void) displayRestaurant : (NSNotification *) notification {
-    _isNewProcess = YES;
     
     if (_restaurants.count != 0)
     {

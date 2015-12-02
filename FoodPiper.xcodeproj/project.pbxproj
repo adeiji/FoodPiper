@@ -28,6 +28,8 @@
 		F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */; settings = {ASSET_TAGS = (); }; };
 		F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */; settings = {ASSET_TAGS = (); }; };
 		F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */; settings = {ASSET_TAGS = (); }; };
+		F43BE2861C0C0EC900966D1F /* PeepMenuIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BE2851C0C0EC900966D1F /* PeepMenuIcons.swift */; settings = {ASSET_TAGS = (); }; };
+		F43BE2881C0C1A1C00966D1F /* DealIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BE2871C0C1A1C00966D1F /* DealIcons.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
 		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
 		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -198,6 +200,8 @@
 		F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuccessIndicatorView.xib; sourceTree = "<group>"; };
 		F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodPiperPaintCodeButton.swift; path = "paintcode-classes/FoodPiperPaintCodeButton.swift"; sourceTree = "<group>"; };
 		F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageWithTextLimitView.swift; sourceTree = "<group>"; };
+		F43BE2851C0C0EC900966D1F /* PeepMenuIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepMenuIcons.swift; sourceTree = "<group>"; };
+		F43BE2871C0C1A1C00966D1F /* DealIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealIcons.swift; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
 		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 				F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */,
 				F48A3F981C0BFE7100F048DD /* CrowdIcons.swift */,
 				F48A3F9A1C0C02D800F048DD /* WaitTimeIcons.swift */,
+				F43BE2851C0C0EC900966D1F /* PeepMenuIcons.swift */,
+				F43BE2871C0C1A1C00966D1F /* DealIcons.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -1151,6 +1157,7 @@
 				F4A2AF271BF133660006CBE8 /* PeepIcon.swift in Sources */,
 				F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */,
 				F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */,
+				F43BE2881C0C1A1C00966D1F /* DealIcons.swift in Sources */,
 				F4A2AF391BF133D70006CBE8 /* DealsIcon.swift in Sources */,
 				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,
 				F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */,
@@ -1178,6 +1185,7 @@
 				F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */,
 				F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */,
 				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
+				F43BE2861C0C0EC900966D1F /* PeepMenuIcons.swift in Sources */,
 				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
 				F4A2AF2B1BF133850006CBE8 /* FriendsIcon.swift in Sources */,
 				F4D94B481BFEC20500637FEF /* Action.swift in Sources */,
