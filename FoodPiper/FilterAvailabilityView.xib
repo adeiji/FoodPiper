@@ -12,12 +12,11 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVJ-cn-dzm">
                     <rect key="frame" x="8" y="8" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="KNM-r6-8EL"/>
                     </constraints>
                     <state key="normal" title="Breakfast">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -27,12 +26,11 @@
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-AV-yEr">
                     <rect key="frame" x="304" y="8" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="kVD-jz-RIx"/>
                     </constraints>
                     <state key="normal" title="Vegetarian Options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -42,12 +40,11 @@
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYq-0X-FSd">
                     <rect key="frame" x="304" y="56" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="frm-FI-gHp"/>
                     </constraints>
                     <state key="normal" title="Vegan Options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -57,12 +54,11 @@
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDb-qa-YI6">
                     <rect key="frame" x="8" y="104" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="nev-fo-Ah4"/>
                     </constraints>
                     <state key="normal" title="Dinner">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -72,12 +68,11 @@
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D9-Lu-KZW">
                     <rect key="frame" x="304" y="104" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="9Ob-qU-W4G"/>
                     </constraints>
                     <state key="normal" title="Gluten Free Options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -87,12 +82,11 @@
                 </button>
                 <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-xa-wp9">
                     <rect key="frame" x="8" y="152" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="pZL-PY-CAH"/>
                     </constraints>
                     <state key="normal" title="Deliver">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -102,12 +96,11 @@
                 </button>
                 <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki7-Iw-Ice">
                     <rect key="frame" x="304" y="152" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="LUv-3r-Sjk"/>
                     </constraints>
                     <state key="normal" title="Low Fat Options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -117,12 +110,11 @@
                 </button>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSP-tr-NjN">
                     <rect key="frame" x="8" y="200" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="kdd-3n-wlL"/>
                     </constraints>
                     <state key="normal" title="Alcohol">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -132,12 +124,11 @@
                 </button>
                 <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLr-ja-Wxj">
                     <rect key="frame" x="304" y="200" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="TOK-bz-sDj"/>
                     </constraints>
                     <state key="normal" title="Organic Options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -147,12 +138,11 @@
                 </button>
                 <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5g-08-UY9">
                     <rect key="frame" x="8" y="248" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="bgQ-Qh-hQo"/>
                     </constraints>
                     <state key="normal" title="Good For Kids">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -162,12 +152,11 @@
                 </button>
                 <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vju-8K-6ka">
                     <rect key="frame" x="304" y="248" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="aPW-Lk-Zc1"/>
                     </constraints>
                     <state key="normal" title="Healthy Options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -177,12 +166,11 @@
                 </button>
                 <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVu-5W-zmQ">
                     <rect key="frame" x="8" y="296" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="uat-Px-vGp"/>
                     </constraints>
                     <state key="normal" title="Outdoor Seating">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -192,12 +180,11 @@
                 </button>
                 <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6A-eT-Mcs">
                     <rect key="frame" x="304" y="296" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Yuj-t5-ZmD"/>
                     </constraints>
                     <state key="normal" title="Alcohol Bar">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -207,12 +194,11 @@
                 </button>
                 <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPJ-Iv-phm">
                     <rect key="frame" x="8" y="344" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ixV-Nb-Ngf"/>
                     </constraints>
                     <state key="normal" title="Wifi">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -222,12 +208,11 @@
                 </button>
                 <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8h-1x-ajn">
                     <rect key="frame" x="304" y="344" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="h8m-gV-E9g"/>
                     </constraints>
                     <state key="normal" title="Caters">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -237,12 +222,11 @@
                 </button>
                 <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMu-yw-Kh8">
                     <rect key="frame" x="8" y="392" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GGo-wo-Us9"/>
                     </constraints>
                     <state key="normal" title="Private Room">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -252,12 +236,11 @@
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sj-TR-V9t">
                     <rect key="frame" x="8" y="56" width="288" height="40"/>
-                    <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="oBc-7q-IK8"/>
                     </constraints>
                     <state key="normal" title="Lunch">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

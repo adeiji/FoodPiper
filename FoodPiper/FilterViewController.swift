@@ -144,6 +144,8 @@ class FilterViewController: UIViewController {
             {
                 let button = view as! UIButton
                 button.addTarget(self, action: "categoryPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+                button.layer.borderWidth = 1
+                button.layer.borderColor = UIColor(red: 245/255, green: 163/255, blue: 47/255, alpha: 1).CGColor
             }
         }
         
@@ -173,9 +175,13 @@ class FilterViewController: UIViewController {
             let availabilityList = NSArray(contentsOfFile: path!)
             availabilities.append(availabilityList![sender.tag] as! String)
             filterCriteria[FILTER_AVAILABILITY_KEY] = availabilities
+            sender.layer.backgroundColor = UIColor(red: 32/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
+            sender.layer.borderWidth = 0
         }
-        
-        sender.layer.backgroundColor = UIColor.greenColor().CGColor
+        else {
+            sender.layer.borderWidth = 1
+            sender.layer.borderColor = UIColor(red: 245/255, green: 163/255, blue: 47/255, alpha: 1).CGColor
+        }
     }
     
     /*
@@ -188,6 +194,8 @@ class FilterViewController: UIViewController {
             {
                 let button = view as! UIButton
                 button.addTarget(self, action: "availabilityPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+                button.layer.borderWidth = 1
+                button.layer.borderColor = UIColor(red: 245/255, green: 163/255, blue: 47/255, alpha: 1).CGColor
             }
         }
     }
@@ -210,9 +218,14 @@ class FilterViewController: UIViewController {
             let categoryId = myDict?.objectForKey(category!) as! NSNumber
             categories.append(categoryId.stringValue)
             filterCriteria[FILTER_CATEGORY_KEY] = categories
+            
+            sender.layer.backgroundColor = UIColor(red: 32/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
+            sender.layer.borderWidth = 0
         }
-        
-        sender.layer.backgroundColor = UIColor.greenColor().CGColor
+        else {
+            sender.layer.borderWidth = 1
+            sender.layer.borderColor = UIColor(red: 245/255, green: 163/255, blue: 47/255, alpha: 1).CGColor
+        }
     }
     
     func filterRestaurantsByCriteria () {

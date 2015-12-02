@@ -126,9 +126,6 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
     if (self.imgMainImageView.image == nil)
     {
         [self loadImage];
-        [UIView animateWithDuration:0.5f animations:^{
-            [self.imgMainImageView setAlpha:1.0f];
-        }];
     }
     else {
         [UIView animateWithDuration:0.5f animations:^{
@@ -145,6 +142,9 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
         // Load the images on the main thread asynchronously
         dispatch_async(dispatch_get_main_queue(), ^{
             self.imgMainImageView.image = _restaurant.image;
+            [UIView animateWithDuration:0.5f animations:^{
+                [self.imgMainImageView setAlpha:1.0f];
+            }];
         });
     });
 }

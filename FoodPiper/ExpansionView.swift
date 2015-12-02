@@ -13,4 +13,10 @@ class ExpansionView: UIView {
     var collapsed:Bool! = true
     @IBOutlet var heightConstraint:NSLayoutConstraint!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        self.layer.borderColor = UIColor(red: 186/255, green: 25/255, blue: 96/255, alpha: 1).CGColor
+    }
+    
 }
