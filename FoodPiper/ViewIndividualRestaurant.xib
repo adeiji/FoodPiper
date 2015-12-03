@@ -23,7 +23,7 @@
                 <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msj-cA-h8F" customClass="SendMessageIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="email" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msj-cA-h8F" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="Nor-gM-XdC"/>
@@ -46,7 +46,7 @@
                                 <action selector="openEmailViewController:" destination="-1" eventType="touchUpInside" id="BcR-Rz-Ree"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-Es-v55" customClass="PhoneIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="call" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-Es-v55" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="yFk-hf-34c"/>
@@ -69,7 +69,7 @@
                                 <action selector="openPhoneApp:" destination="-1" eventType="touchUpInside" id="EQK-Fc-xpi"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-yj-aQE" customClass="MenuIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="website" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-yj-aQE" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="b1z-yj-aQE" secondAttribute="height" multiplier="1:1" id="0lc-VV-MJf"/>
@@ -103,7 +103,7 @@
                                 <action selector="viewRestaurantWebsite:" destination="-1" eventType="touchUpInside" id="v6B-p3-hAc"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-fd-u9u" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="hours" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR9-fd-u9u" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="lAc-Bz-6Hr"/>
@@ -126,7 +126,7 @@
                                 <action selector="viewHours:" destination="-1" eventType="touchUpInside" id="7wu-Aj-K7o"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-P0-vtG" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="directions" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-P0-vtG" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="87" y="77" width="46" height="46"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="rUF-2d-iA5"/>
@@ -299,7 +299,7 @@
                                 </mask>
                             </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtM-Ih-c3B" customClass="FavoriteIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="favorites" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtM-Ih-c3B" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="7EG-29-ZGt"/>
@@ -321,7 +321,7 @@
                                 <action selector="addRestaurantToFavorites:" destination="-1" eventType="touchUpInside" id="pVH-7G-vpN"/>
                             </connections>
                         </button>
-                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2U-0P-Ydi" customClass="ViewAllPeepsIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" restorationIdentifier="peep" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2U-0P-Ydi" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <state key="normal" title="AllPeeps">
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -330,7 +330,7 @@
                                 <action selector="viewPipesForRestaurant:" destination="-1" eventType="touchUpInside" id="pUi-nI-Iuk"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-fg-qe7" customClass="SendMessageIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="message" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-fg-qe7" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <state key="normal" title="Message">
                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -339,7 +339,7 @@
                                 <action selector="messageButtonPressed:" destination="-1" eventType="touchUpInside" id="41g-KG-lmg"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CU-NH-V2c" customClass="ReservationIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="reservation" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CU-NH-V2c" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="UKF-Tx-eED"/>
@@ -361,7 +361,7 @@
                                 <action selector="makeReservationButtonPressed:" destination="-1" eventType="touchUpInside" id="xUu-kN-Cm1"/>
                             </connections>
                         </button>
-                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-t9-Zyq" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" restorationIdentifier="checkin" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-t9-Zyq" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="WLI-1w-yKv"/>
@@ -903,7 +903,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="476" y="4485.5"/>
+            <point key="canvasLocation" x="455" y="4482.5"/>
         </scrollView>
     </objects>
 </document>

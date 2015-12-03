@@ -102,7 +102,6 @@ struct TopMargin {
     [self.navigationItem setLeftBarButtonItem:leftButton];
     _isFirstTime = YES;
     _isNewProcess = YES;
-
 }
 
 - (void) displayFilterView {
@@ -599,7 +598,7 @@ struct TopMargin {
                      TopMargin:topMargin];
     
     [_scrollView addSubview:viewRestaurantsView];
-    [viewRestaurantsView loadImage];
+    [viewRestaurantsView loadImageWithNotification:nil];
     if (*column == 0)
     {
         *column = 1;

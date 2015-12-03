@@ -21,10 +21,12 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+
     }
     
     return self;
 }
+
 - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
     return YES;
@@ -125,7 +127,7 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
 - (void) showImage {
     if (self.imgMainImageView.image == nil)
     {
-        [self loadImage];
+        [self loadImageWithNotification:nil];
     }
     else {
         [UIView animateWithDuration:0.5f animations:^{
@@ -134,10 +136,17 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
     }
 }
 
-- (void) loadImage
+- (void) loadImageWithNotification : (NSNotification *) notification
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
+        UIImage *image;
+        if (!notification) {
+            image = [UIImage imageWithData:[NSData dataWithContentsOfURL:_restaurant.image_url]];
+        }
+        else {
+            Restaurant *myRestaurant = [notification.userInfo objectForKey:NOTIFICATION_KEY_RESTAURANT];
+            image = [UIImage imageWithData:[NSData dataWithContentsOfURL:myRestaurant.image_url]];
+        }
         _restaurant.image = image;
         // Load the images on the main thread asynchronously
         dispatch_async(dispatch_get_main_queue(), ^{

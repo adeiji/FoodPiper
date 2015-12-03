@@ -92,9 +92,6 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
             action.viewed = NSNumber(bool: false)
             SyncManager.saveParseObject(action, message: "Invite Sent to " + user.username!)
         }
-        
-        
-        
     }
 
 }

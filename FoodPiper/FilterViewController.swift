@@ -169,18 +169,17 @@ class FilterViewController: UIViewController {
         if filterCriteria[FILTER_AVAILABILITY_KEY] != nil {
             availabilities = filterCriteria[FILTER_AVAILABILITY_KEY] as! [String]
         }
-        let availability = sender.titleLabel?.text!
-        if availabilities.contains(availability!) == false {
-            let path = NSBundle.mainBundle().pathForResource("FilteringAvailability", ofType: "plist")
-            let availabilityList = NSArray(contentsOfFile: path!)
-            availabilities.append(availabilityList![sender.tag] as! String)
+        
+        let path = NSBundle.mainBundle().pathForResource("FilteringAvailability", ofType: "plist")
+        let availabilityList = NSArray(contentsOfFile: path!)
+        let availability = availabilityList![sender.tag] as! String
+        if availabilities.contains(availability) == false {
+            availabilities.append(availability)
             filterCriteria[FILTER_AVAILABILITY_KEY] = availabilities
-            sender.layer.backgroundColor = UIColor(red: 32/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
-            sender.layer.borderWidth = 0
+            updateButtonHighlightedView(sender, highlighted: false)
         }
         else {
-            sender.layer.borderWidth = 1
-            sender.layer.borderColor = UIColor(red: 245/255, green: 163/255, blue: 47/255, alpha: 1).CGColor
+            updateButtonHighlightedView(sender, highlighted: true)
         }
     }
     
@@ -212,18 +211,33 @@ class FilterViewController: UIViewController {
             categories = filterCriteria[FILTER_CATEGORY_KEY] as! [String]
         }
         let category = sender.titleLabel?.text!
-        if categories.contains(category!) == false {
-            let path = NSBundle.mainBundle().pathForResource("Categories", ofType: "plist")
-            let myDict = NSDictionary(contentsOfFile: path!)
-            let categoryId = myDict?.objectForKey(category!) as! NSNumber
+        
+        let path = NSBundle.mainBundle().pathForResource("Categories", ofType: "plist")
+        let myDict = NSDictionary(contentsOfFile: path!)
+        let categoryId = myDict?.objectForKey(category!) as! NSNumber
+        
+        if categories.contains(categoryId.stringValue) == false {
+
             categories.append(categoryId.stringValue)
             filterCriteria[FILTER_CATEGORY_KEY] = categories
             
-            sender.layer.backgroundColor = UIColor(red: 32/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
+            updateButtonHighlightedView(sender, highlighted: false)
+        }
+        else {
+            updateButtonHighlightedView(sender, highlighted: true)
+        }
+    }
+    
+    func updateButtonHighlightedView (sender: UIButton, highlighted: Bool) {
+        if highlighted == false {
             sender.layer.borderWidth = 0
+            sender.layer.backgroundColor = UIColor(red: 32/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
+            sender.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         }
         else {
             sender.layer.borderWidth = 1
+            sender.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+            sender.layer.backgroundColor = UIColor.whiteColor().CGColor
             sender.layer.borderColor = UIColor(red: 245/255, green: 163/255, blue: 47/255, alpha: 1).CGColor
         }
     }

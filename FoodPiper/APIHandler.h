@@ -20,6 +20,7 @@
 @property (strong, nonatomic) CLLocation *currentLocation;
 @property (strong, nonatomic) NSArray *storedRestaurantImages;
 @property BOOL notifyWhenDone;
+@property BOOL singleRequest;
 @property NSInteger rowCount;
 /* 
  
@@ -33,4 +34,5 @@
                                 Location: (CLLocation *) currentLocation;
 - (void) getAllRestaurantsWithFilterData : (NSDictionary *) filterData
                                  Location: (CLLocation *) currentLocation;
+- (void) callCrossWalkForSingleImageWithFactualId : (NSString *) factualId;
 @end

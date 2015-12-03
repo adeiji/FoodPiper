@@ -10,19 +10,19 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2P-RE-wo9" customClass="ViewAllPeepsIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="peep" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2P-RE-wo9" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <connections>
                         <action selector="viewAllPipes:" destination="-1" eventType="touchUpInside" id="77S-je-M6t"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-ah-g2o" customClass="ViewFavoriteIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="favorites" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L15-ah-g2o" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <connections>
                         <action selector="viewFavoritePipes:" destination="-1" eventType="touchUpInside" id="Kgm-Dj-CnZ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-3N-px9" customClass="FriendsIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="friends" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR1-3N-px9" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="51" id="8Nc-0e-Ff9">
@@ -95,7 +95,7 @@
                         <action selector="closePeepMenuView:" destination="-1" eventType="touchUpInside" id="WTK-gp-wK5"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Profile" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wko-sp-0F1" customClass="PeepMenuIcons" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="profile" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wko-sp-0F1" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="a1j-VZ-nT6"/>
@@ -214,7 +214,7 @@
                         </mask>
                     </variation>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bds-Q4-cMQ" customClass="DealsIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="deals" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bds-Q4-cMQ" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <connections>
                         <action selector="viewDeals" destination="-1" eventType="touchUpInside" id="U1E-4s-Ogy"/>

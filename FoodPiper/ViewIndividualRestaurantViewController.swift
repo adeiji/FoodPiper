@@ -48,6 +48,27 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         {
             NSLog("******* Error - view == nil");
         }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadImageWithNotification:", name: NOTIFICATION_IMAGE_LOADED, object: nil)
+    }
+    
+    func loadImageWithNotification (notification: NSNotification) {
+        let userInfo:[NSObject : AnyObject ] = notification.userInfo!
+        let myRestaurant = userInfo[NOTIFICATION_KEY_RESTAURANT] as! Restaurant
+        
+
+        // Load the images on the main thread asynchronously
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            let image = UIImage(data: NSData(contentsOfURL: myRestaurant.image_url)!)
+            self.restaurant.image = image;
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.restaurantView.imageView.alpha = 0
+                self.restaurantView.imageView.image = image
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.restaurantView.imageView.alpha = 1
+                })
+            })
+        })
     }
     
     override func viewDidAppear(animated: Bool) {

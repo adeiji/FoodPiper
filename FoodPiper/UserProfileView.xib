@@ -135,14 +135,14 @@
                     <exclude reference="MQ1-LC-Wh3"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="Jwb-9M-nBt"/>
+                    <exclude reference="gx8-WH-Iey"/>
                     <exclude reference="Vyx-KD-AHd"/>
                     <exclude reference="eeO-Lk-umM"/>
                     <exclude reference="fh6-KF-ULT"/>
-                    <exclude reference="F3x-kX-bal"/>
                     <exclude reference="5mm-0q-JIx"/>
                     <exclude reference="vkw-5o-R40"/>
-                    <exclude reference="Jwb-9M-nBt"/>
-                    <exclude reference="gx8-WH-Iey"/>
+                    <exclude reference="F3x-kX-bal"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -153,14 +153,14 @@
                     <include reference="MQ1-LC-Wh3"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="Jwb-9M-nBt"/>
+                    <include reference="gx8-WH-Iey"/>
                     <include reference="Vyx-KD-AHd"/>
                     <include reference="eeO-Lk-umM"/>
                     <include reference="fh6-KF-ULT"/>
-                    <include reference="F3x-kX-bal"/>
                     <include reference="5mm-0q-JIx"/>
                     <include reference="vkw-5o-R40"/>
-                    <include reference="Jwb-9M-nBt"/>
-                    <include reference="gx8-WH-Iey"/>
+                    <include reference="F3x-kX-bal"/>
                 </mask>
             </variation>
             <connections>

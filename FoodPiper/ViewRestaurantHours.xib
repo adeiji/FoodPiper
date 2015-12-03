@@ -39,8 +39,9 @@
                     <rect key="frame" x="46" y="122" width="215" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="lNH-rm-m5h"/>
+                        <constraint firstAttribute="width" constant="215" id="osX-kH-irJ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -49,10 +50,9 @@
             <constraints>
                 <constraint firstItem="PRm-2x-0PU" firstAttribute="top" secondItem="sg8-Dq-Gxl" secondAttribute="bottom" constant="16" id="6ol-zv-DaZ"/>
                 <constraint firstItem="Ldg-2z-KRd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-0.5" id="I5h-UK-7Yl"/>
-                <constraint firstAttribute="trailing" secondItem="PRm-2x-0PU" secondAttribute="trailing" constant="46" id="Z9w-6g-aR5"/>
                 <constraint firstItem="Ldg-2z-KRd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="cjb-G5-A4p"/>
                 <constraint firstItem="sg8-Dq-Gxl" firstAttribute="top" secondItem="Ldg-2z-KRd" secondAttribute="bottom" constant="8" id="dDl-hj-kzU"/>
-                <constraint firstItem="PRm-2x-0PU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="46" id="gdi-cE-rMK"/>
+                <constraint firstItem="PRm-2x-0PU" firstAttribute="centerX" secondItem="sg8-Dq-Gxl" secondAttribute="centerX" id="s0m-iz-vJn"/>
                 <constraint firstItem="sg8-Dq-Gxl" firstAttribute="centerX" secondItem="Ldg-2z-KRd" secondAttribute="centerX" id="sX4-sF-VRZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

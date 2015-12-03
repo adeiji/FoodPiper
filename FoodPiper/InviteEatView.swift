@@ -13,4 +13,8 @@ class InviteEatView: UIView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtDateTime: UITextField!
     @IBOutlet weak var txtRestaurant: UITextField!
+    
+    override func drawRect(rect: CGRect) {
+        PaintCodeBackgrounds.drawFoodBackgroundViewWithFrame(rect)
+    }
 }

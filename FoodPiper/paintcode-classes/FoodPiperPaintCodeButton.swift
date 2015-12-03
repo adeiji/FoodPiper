@@ -24,6 +24,4 @@ class FoodPiperPaintCodeButton: UIButton {
             FoodPiperIcons.drawUsernameIconWithFrame(rect)
         }
     }
-
-
 }

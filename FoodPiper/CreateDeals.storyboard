@@ -93,7 +93,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="Percent" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7on-tL-U5g" customClass="DealIcons" customModule="FoodPiper" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="percent" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7on-tL-U5g" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HQa-yf-q8o">
@@ -122,7 +122,7 @@
                                             <segue destination="AJf-JC-Zbi" kind="show" id="0QQ-CK-C6u"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="Free" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vk-Gh-mp4" customClass="DealIcons" customModule="FoodPiper" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="free" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vk-Gh-mp4" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MKp-Vj-lfM">
@@ -151,7 +151,7 @@
                                             <segue destination="AJf-JC-Zbi" kind="show" id="oOs-CE-WRc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="Dollar" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-mb-co9" customClass="DealIcons" customModule="FoodPiper" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="dollar" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceK-mb-co9" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="KZJ-ul-kvg">

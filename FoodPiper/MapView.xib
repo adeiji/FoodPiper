@@ -17,20 +17,40 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajZ-bQ-ubl" customClass="GMSMapView">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap another location to view the restaurants near there" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zM-mo-elj">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="7zM-mo-elj" firstAttribute="centerX" secondItem="ajZ-bQ-ubl" secondAttribute="centerX" id="KQB-Gh-Vi2"/>
+                        <constraint firstItem="7zM-mo-elj" firstAttribute="top" secondItem="ajZ-bQ-ubl" secondAttribute="top" constant="8" id="apA-gb-h7t"/>
                         <constraint firstAttribute="width" secondItem="ajZ-bQ-ubl" secondAttribute="height" multiplier="1:1" id="dSD-qr-WmI">
                             <variation key="heightClass=regular-widthClass=compact" constant="109"/>
                         </constraint>
                     </constraints>
                     <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="7zM-mo-elj"/>
+                        </mask>
                         <mask key="constraints">
                             <exclude reference="dSD-qr-WmI"/>
+                            <exclude reference="KQB-Gh-Vi2"/>
+                            <exclude reference="apA-gb-h7t"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="7zM-mo-elj"/>
+                        </mask>
                         <mask key="constraints">
                             <include reference="dSD-qr-WmI"/>
+                            <include reference="KQB-Gh-Vi2"/>
+                            <include reference="apA-gb-h7t"/>
                         </mask>
                     </variation>
                 </view>

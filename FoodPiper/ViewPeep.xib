@@ -263,7 +263,7 @@
                                 <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSp-eE-rOK" customClass="ViewWithBorderColor" customModule="FoodPiper" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="128"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-nN-fy6" customClass="MenuIcon" customModule="FoodPiper" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" restorationIdentifier="food" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-nN-fy6">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -386,7 +386,7 @@
                                 <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CI-Ax-tiH" customClass="ViewWithBorderColor" customModule="FoodPiper" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="128"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVt-zA-dCY" customClass="DecorIcon" customModule="FoodPiper" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" restorationIdentifier="decor" translatesAutoresizingMaskIntoConstraints="NO" id="BVt-zA-dCY" customClass="DecorIcon" customModule="FoodPiper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -503,7 +503,7 @@
                                 <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5N-FR-0Cp" customClass="ViewWithBorderColor" customModule="FoodPiper" customModuleProvider="target">
                                     <rect key="frame" x="110" y="0.0" width="0.0" height="128"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkd-pI-gdH" customClass="ServiceIcon" customModule="FoodPiper" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" restorationIdentifier="service" translatesAutoresizingMaskIntoConstraints="NO" id="qkd-pI-gdH" customClass="ServiceIcon" customModule="FoodPiper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -646,7 +646,7 @@
                                 <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShQ-qX-LAQ" customClass="ViewWithBorderColor" customModule="FoodPiper" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="72"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ta-Cq-10Y" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" restorationIdentifier="waittime" translatesAutoresizingMaskIntoConstraints="NO" id="8Ta-Cq-10Y" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -761,7 +761,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNB-gy-GRF" customClass="CrowdIcon" customModule="FoodPiper" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" restorationIdentifier="crowd" translatesAutoresizingMaskIntoConstraints="NO" id="UNB-gy-GRF" customClass="CrowdIcon" customModule="FoodPiper" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -923,7 +923,7 @@
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                 <mask key="subviews">
                     <include reference="CMN-JZ-67k"/>
                 </mask>
@@ -937,7 +937,7 @@
                     <include reference="pMK-sQ-Cff"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="-717" y="18"/>
+            <point key="canvasLocation" x="-717" y="118"/>
         </scrollView>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>

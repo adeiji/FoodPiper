@@ -14,42 +14,7 @@
                 <userLayoutGuide location="351" affinity="minX"/>
             </userGuides>
             <subviews>
-                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-nR-UHh" customClass="MenuIcon" customModule="FoodPiper" customModuleProvider="target">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="rgM-1D-1JY">
-                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
-                        </constraint>
-                        <constraint firstAttribute="height" constant="50" id="uLi-AK-9a6">
-                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
-                        </constraint>
-                    </constraints>
-                    <state key="normal" title="Food">
-                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="35"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="rgM-1D-1JY"/>
-                            <exclude reference="uLi-AK-9a6"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="rgM-1D-1JY"/>
-                            <include reference="uLi-AK-9a6"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="45r-Ea-KKw"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-9R-hFD" customClass="DecorIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="decor" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-9R-hFD" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -84,7 +49,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="SAI-Tx-GLa"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-Fy-6Ck" customClass="ServiceIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="service" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOl-Fy-6Ck" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -119,7 +84,7 @@
                         <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="la0-St-jGr"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-6l-N0e" customClass="CommentIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" tag="6" contentMode="scaleToFill" restorationIdentifier="message" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-6l-N0e" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -154,7 +119,7 @@
                         <action selector="commentButtonPressed:" destination="-1" eventType="touchUpInside" id="zQB-ue-Vxt"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-NM-Jce" customClass="CameraIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="picture" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeG-NM-Jce" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -189,7 +154,7 @@
                         <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="VRU-qZ-N3E"/>
                     </connections>
                 </button>
-                <button opaque="NO" alpha="0.5" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh" customClass="CheckInIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" alpha="0.5" tag="3" contentMode="scaleToFill" restorationIdentifier="checkin" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-Wt-ywh" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -221,42 +186,7 @@
                         </mask>
                     </variation>
                 </button>
-                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTz-Na-Thw" customClass="HoursIcon" customModule="FoodPiper" customModuleProvider="target">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Le3-6D-VAT">
-                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
-                        </constraint>
-                        <constraint firstAttribute="width" constant="50" id="fzP-RI-m7Q">
-                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
-                        </constraint>
-                    </constraints>
-                    <state key="normal" title="Wait Time">
-                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="35"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="Le3-6D-VAT"/>
-                            <exclude reference="fzP-RI-m7Q"/>
-                        </mask>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <mask key="constraints">
-                            <include reference="Le3-6D-VAT"/>
-                            <include reference="fzP-RI-m7Q"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="dQL-hK-YiD"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT" customClass="DealsIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" tag="7" contentMode="scaleToFill" restorationIdentifier="deals" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5G-cB-6mT" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -291,7 +221,7 @@
                         <action selector="showCreateDealsScreen:" destination="-1" eventType="touchUpInside" id="P4A-TV-5kb"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-Qp-aAE" customClass="CrowdIcon" customModule="FoodPiper" customModuleProvider="target">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="crowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gms-Qp-aAE" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -599,6 +529,76 @@
                         </mask>
                     </variation>
                 </label>
+                <button opaque="NO" tag="8" contentMode="scaleToFill" restorationIdentifier="food" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8IR-nR-UHh" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="rgM-1D-1JY">
+                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="50" id="uLi-AK-9a6">
+                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Food">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="rgM-1D-1JY"/>
+                            <exclude reference="uLi-AK-9a6"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="rgM-1D-1JY"/>
+                            <include reference="uLi-AK-9a6"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="45r-Ea-KKw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="9" contentMode="scaleToFill" restorationIdentifier="waittime" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTz-Na-Thw" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Le3-6D-VAT">
+                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="50" id="fzP-RI-m7Q">
+                            <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Wait Time">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="35"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Le3-6D-VAT"/>
+                            <exclude reference="fzP-RI-m7Q"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Le3-6D-VAT"/>
+                            <include reference="fzP-RI-m7Q"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="showRateScreen:" destination="-1" eventType="touchUpInside" id="dQL-hK-YiD"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -688,13 +688,11 @@
             </constraints>
             <variation key="default">
                 <mask key="subviews">
-                    <exclude reference="8IR-nR-UHh"/>
                     <exclude reference="e7C-9R-hFD"/>
                     <exclude reference="XOl-Fy-6Ck"/>
                     <exclude reference="D4a-6l-N0e"/>
                     <exclude reference="qeG-NM-Jce"/>
                     <exclude reference="wKY-Wt-ywh"/>
-                    <exclude reference="fTz-Na-Thw"/>
                     <exclude reference="l5G-cB-6mT"/>
                     <exclude reference="Gms-Qp-aAE"/>
                     <exclude reference="eJA-uX-EHZ"/>
@@ -709,6 +707,8 @@
                     <exclude reference="wAK-zN-hcQ"/>
                     <exclude reference="rc1-9N-wy0"/>
                     <exclude reference="1CX-aN-3VT"/>
+                    <exclude reference="8IR-nR-UHh"/>
+                    <exclude reference="fTz-Na-Thw"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="6tw-uY-qPJ"/>
@@ -757,13 +757,11 @@
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
-                    <include reference="8IR-nR-UHh"/>
                     <include reference="e7C-9R-hFD"/>
                     <include reference="XOl-Fy-6Ck"/>
                     <include reference="D4a-6l-N0e"/>
                     <include reference="qeG-NM-Jce"/>
                     <include reference="wKY-Wt-ywh"/>
-                    <include reference="fTz-Na-Thw"/>
                     <include reference="l5G-cB-6mT"/>
                     <include reference="Gms-Qp-aAE"/>
                     <include reference="eJA-uX-EHZ"/>
@@ -778,6 +776,8 @@
                     <include reference="wAK-zN-hcQ"/>
                     <include reference="rc1-9N-wy0"/>
                     <include reference="1CX-aN-3VT"/>
+                    <include reference="8IR-nR-UHh"/>
+                    <include reference="fTz-Na-Thw"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="6tw-uY-qPJ"/>

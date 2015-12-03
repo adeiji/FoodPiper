@@ -61,14 +61,14 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="1YE-fU-BGi"/>
                             <exclude reference="0WS-HY-zb3"/>
+                            <exclude reference="1YE-fU-BGi"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="1YE-fU-BGi"/>
                             <include reference="0WS-HY-zb3"/>
+                            <include reference="1YE-fU-BGi"/>
                         </mask>
                     </variation>
                 </view>
@@ -81,14 +81,14 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="OA6-Ce-Lk9"/>
                             <exclude reference="6wO-4P-KDn"/>
+                            <exclude reference="OA6-Ce-Lk9"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="OA6-Ce-Lk9"/>
                             <include reference="6wO-4P-KDn"/>
+                            <include reference="OA6-Ce-Lk9"/>
                         </mask>
                     </variation>
                 </view>
@@ -102,11 +102,14 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nso-qd-qp9">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="186" id="NeM-LP-mu8"/>
                         <constraint firstAttribute="height" constant="30" id="QW0-ve-zAf"/>
                     </constraints>
-                    <state key="normal" title="Send Invite"/>
+                    <state key="normal" title="Send Invite">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="NeM-LP-mu8"/>
@@ -154,8 +157,6 @@
                     <exclude reference="Nso-qd-qp9"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="kih-9D-oK0"/>
-                    <exclude reference="Vfx-pB-KcR"/>
                     <exclude reference="K4k-ul-OC2"/>
                     <exclude reference="QwQ-If-MTn"/>
                     <exclude reference="hh2-vb-H24"/>
@@ -165,6 +166,8 @@
                     <exclude reference="xAX-Gf-FY3"/>
                     <exclude reference="4AU-MA-L2C"/>
                     <exclude reference="J5d-IX-23E"/>
+                    <exclude reference="Vfx-pB-KcR"/>
+                    <exclude reference="kih-9D-oK0"/>
                     <exclude reference="910-pk-xZF"/>
                     <exclude reference="FbE-kU-aDp"/>
                     <exclude reference="fFr-AI-4ml"/>
@@ -181,8 +184,6 @@
                     <include reference="Nso-qd-qp9"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="kih-9D-oK0"/>
-                    <include reference="Vfx-pB-KcR"/>
                     <include reference="K4k-ul-OC2"/>
                     <include reference="QwQ-If-MTn"/>
                     <include reference="hh2-vb-H24"/>
@@ -192,6 +193,8 @@
                     <include reference="xAX-Gf-FY3"/>
                     <include reference="4AU-MA-L2C"/>
                     <include reference="J5d-IX-23E"/>
+                    <include reference="Vfx-pB-KcR"/>
+                    <include reference="kih-9D-oK0"/>
                     <include reference="910-pk-xZF"/>
                     <include reference="FbE-kU-aDp"/>
                     <include reference="fFr-AI-4ml"/>

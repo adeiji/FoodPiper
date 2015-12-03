@@ -133,7 +133,6 @@
                     <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                 </constraint>
                 <constraint firstItem="wkh-59-kbW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="Kcm-QP-DY6"/>
-                <constraint firstItem="k7C-Mx-DEz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LQh-tN-MWQ"/>
                 <constraint firstAttribute="bottom" secondItem="k7C-Mx-DEz" secondAttribute="bottom" constant="347" id="N8t-1V-AyO"/>
                 <constraint firstAttribute="trailing" secondItem="BL4-al-UP9" secondAttribute="trailing" constant="24" id="POA-w8-Tms"/>
                 <constraint firstItem="wkh-59-kbW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gP6-vP-0r1"/>
@@ -165,7 +164,6 @@
                     <exclude reference="wCV-pl-HnG"/>
                     <exclude reference="89f-l6-iZc"/>
                     <exclude reference="E1S-Gz-ZsW"/>
-                    <exclude reference="LQh-tN-MWQ"/>
                     <exclude reference="N8t-1V-AyO"/>
                     <exclude reference="o0Q-Tf-wAV"/>
                 </mask>
@@ -190,7 +188,6 @@
                     <include reference="wCV-pl-HnG"/>
                     <include reference="89f-l6-iZc"/>
                     <include reference="E1S-Gz-ZsW"/>
-                    <include reference="LQh-tN-MWQ"/>
                     <include reference="N8t-1V-AyO"/>
                     <include reference="o0Q-Tf-wAV"/>
                 </mask>

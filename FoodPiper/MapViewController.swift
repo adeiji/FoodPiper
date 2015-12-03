@@ -8,23 +8,33 @@
 
 import UIKit
 
-class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, GMSMapViewDelegate {
 
     var currentLocation:CLLocation!
     var restaurants:Array<Restaurant>!
     var mapView:MapView!
     let MAP_TABLE_VIEW_CELL_XIB:String = "MapTableViewCell"
     let tableViewCellHeight = 77
+    var tappedLocation:CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableView", name: NOTIFICATION_FINISHED_RETRIEVING_RESTAURANTS, object: nil)
+    }
+    
+    func updateTableView () {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let apiHandler = appDelegate.apiHandler
+        restaurants = apiHandler.convertRestaurantsDictionaryToArray() as! [Restaurant]
+        self.mapView.tableView.reloadData()
+        displayMapView(tappedLocation)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // Do any additional setup after loading the view.
-        displayMapView()
+        displayMapView(currentLocation)
+        self.mapView.mapView.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -45,9 +55,20 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return color
     }
     
-    func displayMapView () {
+    func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let apiHandler = appDelegate.apiHandler
+        apiHandler.notifyWhenDone = true
+        tappedLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        apiHandler.getAllRestaurantsNearLocation(tappedLocation)
+    }
+    
+    func displayMapView (location: CLLocation) {
         mapView = self.view as! MapView
-        let camera = GMSCameraPosition.cameraWithLatitude(currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude, zoom: 5)
+        mapView.mapView.clear()
+        var camera:GMSCameraPosition!
+        
+        camera = GMSCameraPosition.cameraWithLatitude(location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 5)
         let marker = GMSMarker.init()
         marker.position = camera.target
         marker.appearAnimation = kGMSMarkerAnimationPop
@@ -127,6 +148,8 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         viewController.currentLocation = currentLocation;
         viewController.restaurant = restaurants[indexPath!.row];
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.apiHandler.callCrossWalkForSingleImageWithFactualId(restaurants[indexPath!.row].factualId)
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }

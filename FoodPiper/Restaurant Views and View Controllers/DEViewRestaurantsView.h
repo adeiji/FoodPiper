@@ -32,7 +32,7 @@
  UIImageView's image to the local restaurant image
  
  */
-- (void) loadImage;
+- (void) loadImageWithNotification:(NSNotification *) notification;
 
 /*
  

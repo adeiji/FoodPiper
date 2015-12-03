@@ -58,6 +58,11 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
     
 }
 
+- (void) getAllRestaurantsNearLocation:(CLLocation *)currentLocation {
+    FactualQuery *queryObject = [FactualQuery query];
+    [self getAllRestaurantsNearLocation:currentLocation queryObject:queryObject];
+}
+
 - (void) getAllRestaurantsBeginningWith : (NSString *) name
                                 Location: (CLLocation *) currentLocation {
     _restaurants = [NSMutableDictionary new];
@@ -72,37 +77,18 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
 }
 
-/*
- 
- Get all the restaurants within 20 miles of where the user currently is.
- For testing purposes right now we grab all data from Las Vegas.
- 
- */
 
-- (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation {
-    
-    _restaurants = [NSMutableDictionary new];
-    _restaurantImages = [NSMutableArray new];
-    // Create our API object and get all the restaurants in Las Vegas
-    _apiObject = [[FactualAPI alloc] initWithAPIKey:@"MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM" secret:@"HKu1BsZY0Xzeo02mPRsywbC7LlzyZVcUrIjkTCt5"];
-    _storedRestaurantImages = [SyncManager getAllParseObjects:PARSE_CLASS_NAME_RESTAURANT_IMAGE];
-    FactualQuery *queryObject = [FactualQuery query];
-    queryObject.includeRowCount = true;
-    CLLocationCoordinate2D coordinate = { currentLocation.coordinate.latitude, currentLocation.coordinate.longitude };
-    
-    [queryObject setGeoFilter:coordinate radiusInMeters:5000];
-    [queryObject setLimit:50];
-    
-    [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
-    
-    _currentLocation = currentLocation;
-
-}
 
 - (void) requestComplete:(FactualAPIRequest *)request receivedQueryResult:(FactualQueryResult *)queryResult {
 
     static BOOL lastRequest = NO;
     static BOOL restaurantsSaved = NO;
+    
+    // If we're just getting one single image
+    if (_singleRequest) {
+        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
+    }
+    
     if (request.requestType == FactualRequestType_PlacesQuery) /* If the type of request is for the places*/
     {
         _rowCount = queryResult.rowCount;
@@ -125,27 +111,24 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
         }
         
         if (_notifyWhenDone) { // Notify application that the process is done
-            
             [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_FINISHED_RETRIEVING_RESTAURANTS object:nil];
-            
         }
         // Get the yelp information from Foursquare API
         if (!lastRequest) {
             lastRequest = [self callCrossWalkForImagesWithQueryResult:queryResult];
         }
         else {
-            [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO ];
-            
+            [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
             restaurantsSaved = NO;
         }
     }
 }
 
-- (BOOL) getRestaurantImageFromFoursquareWithQueryResult : (FactualQueryResult *) queryResult
-                                               SaveImage : (BOOL) saveImage {
+- (void) getRestaurantImageFromFoursquareWithQueryResult : (FactualQueryResult *) queryResult
+                                               SaveImage : (BOOL) saveImage
+                                           SingleRequest : (BOOL) singleRequest {
     NSString *foursquareURLString = [queryResult.rows[0] stringValueForName:@"url"];
 
-    __block BOOL lastRequest = NO;
     if ([foursquareURLString containsString:@"/v"])
     {
         // Get the foursquareId and grab the image from Foursquare with this Id
@@ -168,15 +151,19 @@ NSString *const FILTER_DISTANCE_KEY = @"distance";
             NSLog(@"Currently getting the Foursquare entry for object #%i", currentObjectCount);
             
             // If this is the last request for the foursquare image than display the ViewRestaurants screen
-            if (lastRequest) {
-                lastRequest = NO;
+            if (singleRequest) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_IMAGE_LOADED object:nil userInfo:@{ NOTIFICATION_KEY_RESTAURANT : restaurant }];
             }
         }];
-        
     }
+}
 
-    return lastRequest;
-    
+- (void) callCrossWalkForSingleImageWithFactualId : (NSString *) factualId {
+    _singleRequest = YES;
+    FactualQuery *queryObject = [FactualQuery query];
+    [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id" equalTo:factualId]];
+    [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace" equalTo:@"foursquare"]];
+    [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
 }
 
 - (BOOL) callCrossWalkForImagesWithQueryResult : (FactualQueryResult*) queryResult {
