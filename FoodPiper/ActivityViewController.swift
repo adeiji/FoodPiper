@@ -65,8 +65,15 @@ extension ActivityViewController : UITableViewDataSource, UITableViewDelegate {
         let action = actions[indexPath.row]
         let cell = configureBasicCell(action, indexPath: indexPath)
         
-        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let action = actions[indexPath.row]
+        let cell = configureBasicCell(action, indexPath: indexPath)
+        cell.layoutIfNeeded()
+        let size = cell.contentView .systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+        return size.height
     }
     
     func configureBasicCell (action: Action, indexPath: NSIndexPath) -> UITableViewCell {

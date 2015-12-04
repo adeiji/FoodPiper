@@ -93,7 +93,7 @@
                                 </mask>
                             </variation>
                         </label>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="Fast" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-7p-QTf" customClass="WaitTimeIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="fast" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSE-7p-QTf" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -125,7 +125,7 @@
                                 <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dog-iM-BzH"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="Soso" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abF-nz-xGO" customClass="WaitTimeIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="soso" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abF-nz-xGO" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -157,7 +157,7 @@
                                 <action selector="waitTimeButtonPressed:" destination="-1" eventType="touchUpInside" id="dar-WC-uOO"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="Slow" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-vV-lZ9" customClass="WaitTimeIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="slow" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83c-vV-lZ9" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>

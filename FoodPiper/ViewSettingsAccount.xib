@@ -212,7 +212,15 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-Gl-GUP">
                     <rect key="frame" x="121" y="67" width="179" height="30"/>
-                    <state key="normal" title="View Activity"/>
+                    <color key="backgroundColor" red="0.12549019610000001" green="0.53725490200000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="View Activity">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="viewActivityButtonPressed:" destination="-1" eventType="touchUpInside" id="l0c-iW-1CI"/>
                     </connections>
@@ -268,6 +276,7 @@
                 <outlet property="btnChangePassword" destination="ECL-f1-3Mb" id="agn-vY-UFV"/>
                 <outlet property="btnSendFeedback" destination="XBN-Q4-bFe" id="OQq-pD-jsQ"/>
                 <outlet property="btnSignOut" destination="Ony-rI-kOe" id="CXS-Ns-iyB"/>
+                <outlet property="btnTakePicture" destination="z6h-3d-K53" id="7cB-Ik-9xU"/>
                 <outlet property="lblMemberSince" destination="duH-8J-71V" id="E7y-ap-zXO"/>
                 <outlet property="lblNumberOfPosts" destination="mdt-HD-GKB" id="w8O-VU-EWI"/>
                 <outlet property="lblPasswordError" destination="6tH-JM-PZg" id="LO9-Cb-NKI"/>

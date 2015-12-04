@@ -62,34 +62,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     CGPoint center = CGPointMake(self.view.center.x, self.view.center.y);
     _backgroundView.center = center;
     _backgroundView.layer.zPosition = -1;
-    [self setTextFieldBorders];
-    [self setUpCreateAccountView];
 }
-
-- (void) setUpCreateAccountView {
-    if ([self.view isKindOfClass:[DECreateAccountView class]]) {
-        DECreateAccountView *view = (DECreateAccountView *) self.view;
-        view.txtPassword.layer.borderColor = [UIColor colorWithRed:203.0f/255.0f green:80.0f/255.0f blue:134.0f/255.0f alpha:1.0].CGColor;
-        view.txtConfirmPassword.layer.borderColor = [UIColor colorWithRed:203.0f/255.0f green:80.0f/255.0f blue:134.0f/255.0f alpha:1.0].CGColor;
-        view.txtUsername.layer.borderColor = [UIColor colorWithRed:76.0f/255.0f green:161.0f/255.0f blue:182.0f/255.0f alpha:1.0].CGColor;
-        view.txtEmail.layer.borderColor = [UIColor colorWithRed:76.0f/255.0f green:161.0f/255.0f blue:182.0f/255.0f alpha:1.0].CGColor;
-    }
-}
-
-// Set the border colors of the text boxes
-- (void) setTextFieldBorders {
-    
-    DELoginView *view = (DELoginView *) self.view;
-    
-    if ([view isKindOfClass:[DELoginView class]])
-    {
-        view.txtPassword.layer.borderColor = [UIColor colorWithRed:203.0f/255.0f green:80.0f/255.0f blue:134.0f/255.0f alpha:1.0].CGColor;
-        view.txtUsernameOrEmail.layer.borderColor = [UIColor colorWithRed:76.0f/255.0f green:161.0f/255.0f blue:182.0f/255.0f alpha:1.0].CGColor;
-        view.txtPassword.layer.borderWidth = 1.0f;
-        view.txtUsernameOrEmail.layer.borderWidth = 1.0f;
-    }
-}
-
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self spinView];

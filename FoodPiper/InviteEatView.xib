@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-hr-Qu0">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="green" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jph-hr-Qu0" customClass="FoodPiperTextField" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="oCZ-SY-N9q"/>
@@ -42,7 +42,7 @@
                         <outlet property="delegate" destination="-1" id="CEO-uT-zbu"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date and Time" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-Zt-avS">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="red" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date and Time" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-Zt-avS" customClass="FoodPiperTextField" customModule="FoodPiper" customModuleProvider="target">
                     <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
                     <textInputTraits key="textInputTraits"/>
@@ -110,6 +110,11 @@
                     <state key="normal" title="Send Invite">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="NeM-LP-mu8"/>

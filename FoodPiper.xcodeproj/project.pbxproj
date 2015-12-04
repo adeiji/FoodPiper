@@ -81,6 +81,7 @@
 		F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */; settings = {ASSET_TAGS = (); }; };
+		F4BD6ABE1C1207C100321BE5 /* FoodPiperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; settings = {ASSET_TAGS = (); }; };
 		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; settings = {ASSET_TAGS = (); }; };
@@ -244,6 +245,7 @@
 		F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewIndividualRestaurant.xib; sourceTree = "<group>"; };
 		F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantViewController.swift; sourceTree = "<group>"; };
 		F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantView.swift; sourceTree = "<group>"; };
+		F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperTextField.swift; sourceTree = "<group>"; };
 		F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepPageViewController.swift; sourceTree = "<group>"; };
 		F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIHandler.h; sourceTree = "<group>"; };
 		F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIHandler.m; sourceTree = "<group>"; };
@@ -481,6 +483,7 @@
 				F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */,
 				F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */,
 				F43BE28D1C0F924900966D1F /* FoodPiperButtons.swift */,
+				F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -1135,6 +1138,7 @@
 				F4A2AF2B1BF133850006CBE8 /* FriendsIcon.swift in Sources */,
 				F4D94B481BFEC20500637FEF /* Action.swift in Sources */,
 				F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */,
+				F4BD6ABE1C1207C100321BE5 /* FoodPiperTextField.swift in Sources */,
 				F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */,
 				F4D94B601C03F11400637FEF /* FilterViewController.swift in Sources */,
 				F4D94B3C1BFD248B00637FEF /* UserProfileView.swift in Sources */,

@@ -33,7 +33,7 @@ public class Restaurant: NSObject {
     var caters:AnyObject!
     var factualId:String!
     var image:UIImage!
-    var image_url:NSURL!
+    var image_url:NSURL?
     var imageHeight:NSNumber!
     var imageWidth:NSNumber!
     var distanceFromUser:String!

@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions);
         GMSServices.provideAPIKey("AIzaSyCrka4-c9-yUe1AIDmNJit3VLG9KFEQFuA")
         
-        
         if PFUser.currentUser() != nil {
             let storyboard = UIStoryboard(name: VIEW_RESTAURANTS_STORYBOARD, bundle: nil)
             let viewController = storyboard.instantiateViewControllerWithIdentifier(VIEW_RESTAURANTS_VIEW_CONTROLLER) as! DEViewRestaurantsViewController

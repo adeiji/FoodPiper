@@ -42,5 +42,14 @@ class AccountViewController: UIViewController {
             self.navigationController?.pushViewController(loginViewController, animated: true)
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        let view = self.view as! DESettingsAccount
+        
+        view.txtUsername?.text = PFUser.currentUser()?.objectForKey(PARSE_CLASS_USER_CANONICAL_USERNAME) as! String
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .ShortStyle
+        view.lblMemberSince?.text = dateFormatter.stringFromDate((PFUser.currentUser()?.createdAt)!)
+    }
 
 }

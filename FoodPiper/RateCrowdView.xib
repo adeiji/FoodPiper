@@ -23,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <button opaque="NO" tag="7" contentMode="scaleToFill" restorationIdentifier="Slow" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tC-rx-6Uo" customClass="CrowdIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" restorationIdentifier="slowcrowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tC-rx-6Uo" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -58,7 +58,7 @@
                                 <action selector="crowdButtonPressed:" destination="-1" eventType="touchUpInside" id="39j-nE-84r"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="8" contentMode="scaleToFill" restorationIdentifier="Good" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-9Y-wew" customClass="CrowdIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" restorationIdentifier="goodcrowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-9Y-wew" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -93,7 +93,7 @@
                                 <action selector="crowdButtonPressed:" destination="-1" eventType="touchUpInside" id="yY7-fg-1AF"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="9" contentMode="scaleToFill" restorationIdentifier="Packed" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUO-F3-Fpt" customClass="CrowdIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" restorationIdentifier="packedcrowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUO-F3-Fpt" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>
@@ -216,7 +216,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" restorationIdentifier="NotHot" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1V-Wl-mas" customClass="CrowdIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" restorationIdentifier="nothotcrowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1V-Wl-mas" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -248,7 +248,7 @@
                                 <action selector="crowdButtonPressed:" destination="-1" eventType="touchUpInside" id="s0U-HM-0u1"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="11" contentMode="scaleToFill" restorationIdentifier="Soso" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVh-Lm-nCd" customClass="CrowdIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" restorationIdentifier="sosocrowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVh-Lm-nCd" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -280,7 +280,7 @@
                                 <action selector="crowdButtonPressed:" destination="-1" eventType="touchUpInside" id="fuk-gv-pXQ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="12" contentMode="scaleToFill" restorationIdentifier="Hot" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPH-3Q-tIs" customClass="CrowdIcons" customModule="FoodPiper" customModuleProvider="target">
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" restorationIdentifier="hotcrowd" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPH-3Q-tIs" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <userDefinedRuntimeAttributes>

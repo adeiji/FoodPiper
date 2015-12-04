@@ -299,16 +299,29 @@ class RatingViewController: UIViewController {
     @IBAction func incrementHalfDown() {
         rating.rating = String(Double(selectedRating) - 0.5)
         
-        if (lastTouchedStar.tag != 1)
-        {
-            let currentTag = lastTouchedStar.tag;
-            let starToHalfFill = self.view.viewWithTag(currentTag - 1) as! StarIcon
-            
-            if starToHalfFill.halfFilled == false {
+        let currentTag = lastTouchedStar.tag;
+        let starToHalfFill = self.view.viewWithTag(currentTag) as! StarIcon
+        
+        if starToHalfFill.halfFilled == false {
+            if starToHalfFill.filled == true {
+                starToHalfFill.filled = false
                 starToHalfFill.halfFilled = true
             }
-            starToHalfFill.setNeedsDisplay()
+            else if starToHalfFill.filled == false {
+                if starToHalfFill.halfFilled == true {
+                    starToHalfFill.halfFilled = false
+                }
+                lastTouchedStar = self.view.viewWithTag(currentTag - 1) as! StarIcon
+            }
         }
+        else if starToHalfFill.halfFilled == true {  // If this is already incremented then we unfill the star completely and then make it so next time the user clicks the increment down it will start on the next star
+            starToHalfFill.filled = false
+            starToHalfFill.halfFilled = false
+            lastTouchedStar = self.view.viewWithTag(currentTag - 1) as! StarIcon
+        }
+        
+        starToHalfFill.setNeedsDisplay()
+        
         updatePipe()
     }
     
@@ -316,16 +329,30 @@ class RatingViewController: UIViewController {
     @IBAction func incrementHalfUp() {
         rating.rating = String(Double(selectedRating) + 0.5)
         
-        if (lastTouchedStar.tag != 5)
-        {
-            let currentTag = lastTouchedStar.tag;
-            let starToHalfFill = self.view.viewWithTag(currentTag + 1) as! StarIcon
-            
-            if starToHalfFill.halfFilled == false {
-                starToHalfFill.halfFilled = true
+        let currentTag = lastTouchedStar.tag;
+        var starToHalfFill = self.view.viewWithTag(currentTag) as! StarIcon
+        
+        if starToHalfFill.halfFilled == false { // Star is not shown as half filled
+            if starToHalfFill.filled == true    // Star is filled
+            {
+                if currentTag != 5 {
+                    starToHalfFill = self.view.viewWithTag(currentTag + 1) as! StarIcon // Get the next star
+                    starToHalfFill.halfFilled = true                                    // Half fill the next star
+                    lastTouchedStar = starToHalfFill                                    // Make sure that the next star is now the one to update on the next increment
+                }
+            } else {                                // Star is not filled
+                 starToHalfFill.halfFilled = true   // Half fill the star
             }
-            starToHalfFill.setNeedsDisplay()
         }
+        else if (starToHalfFill.halfFilled == true) {
+            starToHalfFill.halfFilled = false
+            starToHalfFill.filled = true
+            if currentTag != 5 {
+                lastTouchedStar = self.view.viewWithTag(currentTag + 1) as! StarIcon
+            }
+        }
+        starToHalfFill.setNeedsDisplay()
+        
         updatePipe()
     }
     

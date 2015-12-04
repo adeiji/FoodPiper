@@ -41,6 +41,16 @@ const int PICTURE_ACTION_SHEET = 2;
     return self;    
 }
 
+- (id) initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        self.txtUsername.text = [PFUser currentUser][PARSE_CLASS_USER_CANONICAL_USERNAME];
+    }
+    
+    return self;
+}
+
 - (void) setIsPublic:(BOOL)myIsPublic
 {
     if (myIsPublic)
@@ -147,90 +157,6 @@ const int PICTURE_ACTION_SHEET = 2;
 }
 
 
-//- (void) displayMemberSince {
-//    NSDate *date = [user createdAt];
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"MM/dd/yyyy"];
-//    self.lblMemberSince.text = [formatter stringFromDate:date];
-//}
-//
-//- (void) displayNumberOfPostForUser:(NSNotification *) notification
-//{
-//    NSNumber *numberOfPost = [notification.userInfo objectForKey:kNOTIFICATION_CENTER_USER_INFO_USER_EVENTS_COUNT];
-//    self.lblNumberOfPosts.text = [numberOfPost stringValue];
-//    
-//    DELevelHandler *levelHandler = [[DELevelHandler alloc] init];
-//    
-//    __block NSInteger level = 0;
-//
-//    __block NSNumber *postSinceLastLevel = [NSNumber new];
-//    // This post variable is called postNecessaryToReachAde, because this is the amount of post it will take to reach the next level, where Ade resides
-//    __block NSNumber *postNecessaryToReachAde = [NSNumber new];
-//    // This is the necessary post required to reach the previous level
-//    __block NSNumber *postNecessaryForAyosLevel = [NSNumber new];
-//    
-//    [[levelHandler levels] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        if (numberOfPost > (NSNumber *) obj)
-//        {
-//            level ++;
-//            postSinceLastLevel = [NSNumber numberWithLong:(numberOfPost.integerValue - ((NSNumber *) obj).integerValue)];
-//            postNecessaryForAyosLevel = obj;
-//        }
-//        else {
-//            *stop = YES;
-//            postNecessaryToReachAde = [NSNumber numberWithLong: ((NSNumber *) obj).integerValue - postNecessaryForAyosLevel.integerValue];
-//        }
-//    }];
-//    
-//    _lblLevel.text = [NSString stringWithFormat:@"%li", (long)level];
-//    [_progressBarForLevel setProgress:(postSinceLastLevel.doubleValue / postNecessaryToReachAde.doubleValue) animated:YES];
-//    _progressBarForLevel.transform = CGAffineTransformMakeScale(1.0f, 2.0f);
-//}
-//
-//- (void) displayProfilePicture
-//{
-//    if (!isPublic)
-//    {
-//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//        NSData *imageData = [userDefaults objectForKey:@"profile-picture"];
-//        UIImage *image = [UIImage imageWithData:imageData];
-//        
-//        if (!image)
-//        {
-//            [_btnTakePicture setNoProfileImage:YES];
-//        }
-//        else
-//        {
-//            [[_btnTakePicture imageView] setContentMode:UIViewContentModeScaleAspectFill];
-//            [_btnTakePicture setImage:image forState:UIControlStateNormal];
-//        }
-//        
-//    }
-//    else {
-//        // Load the profile image from the server
-//        PFFile *imageFile = user[PARSE_CLASS_USER_PROFILE_PICTURE];
-//        
-//        [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-//            
-//            @autoreleasepool {
-//                NSData *imageData = data;
-//                UIImage *image = [UIImage imageWithData:imageData];
-//                
-//                if (image)
-//                {
-//                    [_btnTakePicture setNoProfileImage:NO];
-//                    [[_btnTakePicture imageView] setContentMode:UIViewContentModeScaleAspectFill];
-//                    [_btnTakePicture setImage:image forState:UIControlStateNormal];
-//                }
-//                else {
-//                    [_btnTakePicture setNoProfileImage:YES];
-//                }
-//                image = nil;
-//            }
-//        }];
-//    }
-//}
-
 - (void) setUpTextFields
 {
     NSArray *array = [NSArray arrayWithObjects:_txtPassword, _txtUsername, _txtConfirmPassword, nil];
@@ -306,26 +232,26 @@ const int PICTURE_ACTION_SHEET = 2;
 
 }
 
-//- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-//{
-//    //Get the original image
-//    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-//    // Set the image at the correct location so that it can be restored later to this same exact location
-//    [[_btnTakePicture imageView] setContentMode:UIViewContentModeScaleAspectFill];
-//    [_btnTakePicture setImage:image forState:UIControlStateNormal];
-//    //Shrink the size of the image.
-//    UIGraphicsBeginImageContext( CGSizeMake(70, 56) );
-//    [image drawInRect:CGRectMake(0,0,70,56)];
-//    UIGraphicsEndImageContext();
-//    NSData *imageData = UIImageJPEGRepresentation (
-//                                        image,
-//                                        .01
-//                                        );
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    [userDefaults setObject:imageData forKey:@"profile-picture"];
-//    [DEUserManager addProfileImage:imageData];
-//    [picker dismissViewControllerAnimated:YES completion:NULL];
-//}
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    //Get the original image
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    // Set the image at the correct location so that it can be restored later to this same exact location
+    [[_btnTakePicture imageView] setContentMode:UIViewContentModeScaleAspectFill];
+    [_btnTakePicture setImage:image forState:UIControlStateNormal];
+    //Shrink the size of the image.
+    UIGraphicsBeginImageContext( CGSizeMake(70, 56) );
+    [image drawInRect:CGRectMake(0,0,70,56)];
+    UIGraphicsEndImageContext();
+    NSData *imageData = UIImageJPEGRepresentation (
+                                        image,
+                                        .01
+                                        );
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:imageData forKey:@"profile-picture"];
+    [DEUserManager addProfileImage:imageData];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 

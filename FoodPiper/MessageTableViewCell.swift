@@ -23,5 +23,11 @@ class MessageTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.contentView.layoutIfNeeded()
+        self.lblMessage.preferredMaxLayoutWidth = self.lblMessage.frame.size.width
+    }
 
 }

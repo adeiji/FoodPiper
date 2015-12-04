@@ -53,6 +53,7 @@
  */
 @property (weak, nonatomic) IBOutlet UIButton *btnSendFeedback;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignOut;
+@property (weak, nonatomic) IBOutlet UIButton *btnTakePicture;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewTopConstraint;
 @property (weak, nonatomic) IBOutlet UIButton *btnChangePassword;
 /*

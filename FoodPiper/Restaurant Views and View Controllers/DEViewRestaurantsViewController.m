@@ -209,6 +209,7 @@ struct TopMargin {
     [self.scrollView setDelegate:self];
 
     if (_isFirstTime) {
+        [self removeRestaurantsWithNoImage];
         [self displayRestaurant:nil];
         _isFirstTime = NO;
     }

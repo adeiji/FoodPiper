@@ -142,6 +142,9 @@ class FoodPiperButtons: UIButton {
         case RestorationIdentifiers.NotHotCrowd.rawValue?:
             FoodPiperIcons.drawNotHotIconWithFrame(rect)
             break
+        case RestorationIdentifiers.HotCrowd.rawValue?:
+            FoodPiperIcons.drawHotIconWithFrame(rect)
+            break
         case RestorationIdentifiers.SoSoCrowd.rawValue?:
             FoodPiperIcons.drawSoSoIcon()
             break

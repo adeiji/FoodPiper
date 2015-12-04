@@ -84,4 +84,17 @@ extension DEViewRestaurantsViewController  {
         
     }
     
+    func removeRestaurantsWithNoImage () {
+        var count = 0
+        for restaurant in self.restaurants {
+            let image_url = (restaurant as! Restaurant).image_url as NSURL?
+            if image_url == nil {
+                self.restaurants.removeAtIndex(count)
+                count--
+            }
+            
+            count++
+        }
+    }
+    
 }

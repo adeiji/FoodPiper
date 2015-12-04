@@ -58,7 +58,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
         // Load the images on the main thread asynchronously
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            let image = UIImage(data: NSData(contentsOfURL: myRestaurant.image_url)!)
+            let image = UIImage(data: NSData(contentsOfURL: myRestaurant.image_url!)!)
             self.restaurant.image = image;
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in

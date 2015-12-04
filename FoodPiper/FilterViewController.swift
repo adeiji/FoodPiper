@@ -107,13 +107,14 @@ class FilterViewController: UIViewController {
     }
     
     func collapseExpansionView (expansionView: ExpansionView) {
-        expansionView.heightConstraint.constant = CGFloat(expansionViewHeight)
         
         for view in expansionView.subviews {
             if view.isKindOfClass(FilteringView) {
                 view.removeFromSuperview()
             }
         }
+        
+        expansionView.heightConstraint.constant = CGFloat(expansionViewHeight)
         
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.view.layoutIfNeeded()
