@@ -52,8 +52,10 @@ class SearchFriendsViewController: UITableViewController, UISearchBarDelegate, U
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        if let user = foundUsers[indexPath.row] as? PFUser {
-            cell.textLabel!.text = user.username
+        if indexPath.row < foundUsers.count {
+            if let user = foundUsers[indexPath.row] as? PFUser {
+                cell.textLabel!.text = user.username
+            }
         }
         
         return cell

@@ -21,7 +21,6 @@ extension DEViewRestaurantsViewController  {
     
     */
     @IBAction func viewFriendsPipes (sender: UIButton){
-        sender.superview?.removeFromSuperview()
         
         if let friends = PFUser.currentUser()?.objectForKey(PARSE_USER_FRIENDS) as? [PFObject] {
             
@@ -39,6 +38,8 @@ extension DEViewRestaurantsViewController  {
             self.navigationController?.pushViewController(viewController, animated: true)
             viewController.currentLocation = currentLocation
         }
+
+        sender.superview?.removeFromSuperview()
     }
     
     enum PFUserError: ErrorType {

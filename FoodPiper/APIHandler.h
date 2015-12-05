@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSArray *storedRestaurantImages;
 @property BOOL notifyWhenDone;
 @property BOOL singleRequest;
+@property BOOL initialRequest;
 @property NSInteger rowCount;
 /* 
  

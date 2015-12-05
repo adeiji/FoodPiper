@@ -36,7 +36,9 @@ class CreateDealsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if txtItem != nil {
+            txtItem.becomeFirstResponder()
+        }
         // Do any additional setup after loading the view.
         if btnPercentOff != nil {
             btnPercentOff.layer.borderColor = UIColor(red: 32/255, green: 137/255, blue: 163/255, alpha: 1).CGColor

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodPiperTextField: UITextField {
+class FoodPiperTextField: TextFieldValidator {
 
     enum BorderColor : String {
         case Green = "green"

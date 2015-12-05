@@ -61,6 +61,7 @@ enum UserAction : String {
     case Message = "message"
     case Invite = "invite"
     case InviteAccept = "acceptInvite"
+    case Response = "response"
 }
 
 enum ParseQueryType {
@@ -76,3 +77,6 @@ enum ParseQueryType {
     case WhereKeyNotContainedIn
     case WhereKeyContainsAllObjectsInArray
 }
+
+let FACTUAL_API_KEY = "MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM"
+let FACTUAL_SECRET_KEY = "HKu1BsZY0Xzeo02mPRsywbC7LlzyZVcUrIjkTCt5"

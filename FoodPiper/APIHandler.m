@@ -89,7 +89,7 @@ NSString *const INITIAL_REQUEST = @"1";
 //        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
     }
     
-    if ([request.requestId isEqualToString:INITIAL_REQUEST]) /* If the type of request is for the places*/
+    if (_initialRequest) /* If the type of request is for the places*/
     {
         _rowCount = queryResult.rowCount;
         
@@ -115,6 +115,8 @@ NSString *const INITIAL_REQUEST = @"1";
         if (_notifyWhenDone) { // Notify application that the process is done
             [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_FINISHED_RETRIEVING_RESTAURANTS object:nil];
         }
+        
+        _initialRequest = NO;
     }
     else {     // Get the yelp information from Foursquare API
 //        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];

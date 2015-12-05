@@ -87,12 +87,23 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
 }
 
 - (IBAction)signIn:(id)sender {
-    DELoginView *view = (DELoginView *)self.view;
-    DEUserManager *userManager = [DEUserManager sharedManager];
-    DEScreenManager *screenManager = [DEScreenManager sharedManager];
-    
-    [userManager loginWithUsername:view.txtUsernameOrEmail.text Password:view.txtPassword.text ViewController:[screenManager nextScreen] ErrorLabel:_lblErrorLabel];
-    [self gotoRestarauntScreen];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        DELoginView *view = (DELoginView *)self.view;
+        DEUserManager *userManager = [DEUserManager sharedManager];
+        DEScreenManager *screenManager = [DEScreenManager sharedManager];
+        
+        NSString* results = [userManager loginWithUsername:view.txtUsernameOrEmail.text Password:view.txtPassword.text ViewController:[screenManager nextScreen] ErrorLabel:view.errorLabel];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!results) {
+                [self gotoRestarauntScreen];
+            }
+            else {
+                view.errorLabel.text = results;
+            }
+        });
+        
+    });
 }
 
 - (void) gotoRestarauntScreen {

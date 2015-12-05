@@ -132,9 +132,7 @@ struct TopMargin {
     [peepMenuView animateButtons];
 }
 - (IBAction)closePeepMenuView:(UIButton *)sender {
-    
     [sender.superview removeFromSuperview];
-    
 }
 
 - (void) displayMapView {

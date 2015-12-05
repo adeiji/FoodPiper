@@ -67,6 +67,7 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let apiHandler = appDelegate.apiHandler
         apiHandler.notifyWhenDone = true
+        apiHandler.initialRequest = true
         apiHandler.getAllRestaurantsBeginningWith(updatedText, location: currentLocation)
 
         return true
@@ -88,6 +89,7 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
             action.type = UserAction.Invite.rawValue
             action.time = NSDate()
             action.toRestaurant = selectedRestaurant.factualId
+            action.restaurantName = selectedRestaurant.name
             action.actionDescription = self.inviteView.txtDateTime!.text
             action.viewed = NSNumber(bool: false)
             SyncManager.saveParseObject(action, message: "Invite Sent to " + user.username!)

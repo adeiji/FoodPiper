@@ -12,6 +12,10 @@ class MessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblMessage: UILabel!
     var action:Action!
+    var fetched:Bool! = false
+    
+    @IBOutlet weak var btnPositive: UIButton!
+    @IBOutlet weak var btnNegative: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

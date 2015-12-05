@@ -16,44 +16,70 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-ng-Bkk">
-                        <rect key="frame" x="64" y="42" width="60" height="30"/>
+                        <rect key="frame" x="64" y="42" width="70" height="30"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="4Uw-8g-2vT"/>
-                            <constraint firstAttribute="width" constant="60" id="6Kg-dH-aVR"/>
+                            <constraint firstAttribute="width" constant="70" id="6Kg-dH-aVR"/>
                         </constraints>
-                        <state key="normal" title="Reply"/>
-                        <connections>
-                            <action selector="replyToMessageButtonPressed:" destination="-1" eventType="touchUpInside" id="6Bd-V3-ObT"/>
-                        </connections>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="Reply">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3M-4c-lz4">
-                        <rect key="frame" x="197" y="42" width="60" height="30"/>
+                        <rect key="frame" x="197" y="42" width="70" height="30"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.64313725489999995" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="0RS-Ck-UjH"/>
+                            <constraint firstAttribute="width" constant="70" id="0RS-Ck-UjH"/>
                             <constraint firstAttribute="height" constant="30" id="bQN-Fn-EyN"/>
                         </constraints>
-                        <state key="normal" title="Delete"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-Qt-8yD">
-                        <rect key="frame" x="35" y="12" width="250" height="23"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="PMI-Qt-8yD">
+                        <rect key="frame" x="56" y="12" width="229" height="23"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJJ-n5-PqQ">
+                        <rect key="frame" x="8" y="22" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="F7J-BF-xKO"/>
+                            <constraint firstAttribute="height" constant="40" id="d2h-wF-fQx"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="PMI-Qt-8yD" firstAttribute="top" secondItem="udW-2s-vIX" secondAttribute="topMargin" constant="4" id="0pg-BG-PTY"/>
                     <constraint firstAttribute="bottomMargin" secondItem="j0E-ng-Bkk" secondAttribute="bottom" constant="3.5" id="94u-ui-xo5"/>
-                    <constraint firstItem="PMI-Qt-8yD" firstAttribute="leading" secondItem="udW-2s-vIX" secondAttribute="leadingMargin" constant="27" id="AdG-EO-sn3"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="SJJ-n5-PqQ" secondAttribute="leading" id="EAs-fM-tTv"/>
                     <constraint firstAttribute="bottomMargin" secondItem="I3M-4c-lz4" secondAttribute="bottom" constant="3.5" id="QC3-J8-pah"/>
-                    <constraint firstItem="j0E-ng-Bkk" firstAttribute="centerX" secondItem="udW-2s-vIX" secondAttribute="centerX" constant="-66" id="T4P-VA-7dq"/>
-                    <constraint firstItem="I3M-4c-lz4" firstAttribute="centerX" secondItem="udW-2s-vIX" secondAttribute="centerX" constant="67" id="dFC-2x-Mic"/>
+                    <constraint firstItem="j0E-ng-Bkk" firstAttribute="centerX" secondItem="udW-2s-vIX" secondAttribute="centerX" constant="-61" id="T4P-VA-7dq"/>
+                    <constraint firstItem="PMI-Qt-8yD" firstAttribute="leading" secondItem="SJJ-n5-PqQ" secondAttribute="trailing" constant="8" id="Zy3-qB-9SH"/>
+                    <constraint firstItem="I3M-4c-lz4" firstAttribute="centerX" secondItem="udW-2s-vIX" secondAttribute="centerX" constant="72" id="dFC-2x-Mic"/>
                     <constraint firstItem="j0E-ng-Bkk" firstAttribute="top" secondItem="PMI-Qt-8yD" secondAttribute="bottom" constant="7" id="gv5-dJ-zTU"/>
+                    <constraint firstItem="SJJ-n5-PqQ" firstAttribute="centerY" secondItem="udW-2s-vIX" secondAttribute="centerY" id="hk9-jH-eO1"/>
                     <constraint firstItem="I3M-4c-lz4" firstAttribute="top" secondItem="PMI-Qt-8yD" secondAttribute="bottom" constant="7" id="nQs-UO-5o3"/>
                     <constraint firstAttribute="trailingMargin" secondItem="PMI-Qt-8yD" secondAttribute="trailing" constant="27" id="wwh-PM-uBd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnNegative" destination="I3M-4c-lz4" id="gwq-Ze-WSz"/>
+                <outlet property="btnPositive" destination="j0E-ng-Bkk" id="Xrd-nn-iVk"/>
                 <outlet property="lblMessage" destination="PMI-Qt-8yD" id="8Tk-Mu-WtS"/>
             </connections>
             <point key="canvasLocation" x="625" y="-350"/>

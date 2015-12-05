@@ -218,37 +218,35 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
     }];
 }
 
-- (NSError *) loginWithUsername : (NSString *) username
+- (NSString *) loginWithUsername : (NSString *) username
                        Password : (NSString *) password
                  ViewController : (UIViewController *)viewController
                      ErrorLabel : (UILabel *)label
 {
     username = [username lowercaseString];
-    __block NSString *blockUsername = username;
-    // Get the user corresponding to an email and then use that username to login
     PFQuery *query = [PFUser query];
-    [query whereKey:PARSE_CLASS_USER_USERNAME equalTo:username];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *obj, NSError *error) {
-        // If there's no returned objects we know then that this email does not exist, if we get a returned object though, we want to get that username and login now
+    NSError *error;
+    [query whereKey:PARSE_CLASS_USER_USERNAME equalTo:username];     // Get the user corresponding to an email and then use that username to login
+    PFObject *user = [query getFirstObject:&error];
+    
+    if (!error && user) {
+        NSString *usernameFromEmail = user[PARSE_CLASS_USER_USERNAME];
+        id obj = [PFUser logInWithUsername:usernameFromEmail password:password];
         if (obj) {
-            blockUsername = obj[PARSE_CLASS_USER_USERNAME];
+            [self fetchObjectsForUser:obj];
+            [self clearUserImageDefaults];
+            [self isLoggedIn];
+            NSLog(@"Logged in user with info %@", usernameFromEmail);
+            return nil;
+        }
+        else {
+            return [self usernameExist:[usernameFromEmail lowercaseString] ErrorLabel:label];
         }
         
-        [PFUser logInWithUsernameInBackground:blockUsername password:password block:^(PFUser *user, NSError *error) {
-            if (user)
-            {                // Clear user image defaults
-                [self clearUserImageDefaults];
-                [self isLoggedIn];
-                NSLog(@"Logged in with username: %@", user.username);
-                [self fetchObjectsForUser:user];
-            }
-            else {
-                [self usernameExist:[blockUsername lowercaseString] ErrorLabel:label];
-            }
-        }];
-    }];
-    
-    return nil;
+    }
+    else {
+        return [self usernameExist:username ErrorLabel:label];
+    }
 }
 
 - (void) clearUserImageDefaults {
@@ -259,25 +257,26 @@ const static NSString *TWITTER_USER_LOCATION = @"location";
 
 
 
-- (BOOL) usernameExist : (NSString *) username
+- (NSString *) usernameExist : (NSString *) username
             ErrorLabel : (UILabel *) label
 {
     PFQuery *query = [PFUser query];
 
     [query whereKey:PARSE_CLASS_USER_USERNAME equalTo:[username lowercaseString]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    NSError *error;
+    NSArray* objects = [query findObjects:&error];
+    
+    if (!error) {
         if ([objects count] > 0)
         {
-            [label setText:@"Incorrect password"];
+            return @"Incorrect password";
         }
         else {
-            [label setText:@"Username does not exist"];
+            return @"Username does not exist";
         }
-        
-        [label setHidden:NO];
-    }];
+    }
     
-    return NO;
+    return nil;
 }
 
 

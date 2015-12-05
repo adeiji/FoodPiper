@@ -16,6 +16,7 @@ public class Action : PFObject, PFSubclassing {
     @NSManaged var fromUser:PFUser!
     @NSManaged var toUser:PFUser!
     @NSManaged var toRestaurant:String!
+    @NSManaged var restaurantName:String?
     @NSManaged var viewed:NSNumber!
     
     public class func parseClassName() -> String {

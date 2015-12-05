@@ -46,10 +46,12 @@ class AccountViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         let view = self.view as! DESettingsAccount
         
-        view.txtUsername?.text = PFUser.currentUser()?.objectForKey(PARSE_CLASS_USER_CANONICAL_USERNAME) as! String
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateStyle = .ShortStyle
-        view.lblMemberSince?.text = dateFormatter.stringFromDate((PFUser.currentUser()?.createdAt)!)
+        if PFUser.currentUser() != nil {
+            view.txtUsername?.text = PFUser.currentUser()?.objectForKey(PARSE_CLASS_USER_CANONICAL_USERNAME) as! String
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .ShortStyle
+            view.lblMemberSince?.text = dateFormatter.stringFromDate((PFUser.currentUser()?.createdAt)!)
+        }
     }
 
 }

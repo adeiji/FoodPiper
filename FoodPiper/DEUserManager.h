@@ -19,7 +19,7 @@
                                Email : (NSString *) email
                           ErrorLabel : (UILabel *) label;
 
-- (NSError *) loginWithUsername : (NSString *) username
+- (NSString *) loginWithUsername : (NSString *) username
                        Password : (NSString *) password
                  ViewController : (UIViewController *) viewController
                      ErrorLabel : (UILabel *) label;
