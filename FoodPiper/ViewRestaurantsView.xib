@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DEViewRestaurantsViewController"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="1" customClass="DEViewRestaurantsView">
-            <rect key="frame" x="0.0" y="0.0" width="140" height="276"/>
+            <rect key="frame" x="0.0" y="0.0" width="140" height="256"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie at the park" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdq-Pp-4T2">
@@ -20,9 +20,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.2 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="45" translatesAutoresizingMaskIntoConstraints="NO" id="Ali-rf-U8v">
-                    <rect key="frame" x="31" y="246" width="45" height="24"/>
+                    <rect key="frame" x="31" y="231" width="45" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="24" id="e2N-76-rGr"/>
+                        <constraint firstAttribute="height" constant="19" id="e2N-76-rGr"/>
                         <constraint firstAttribute="width" constant="45" id="kFD-ar-0Ch"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
@@ -36,22 +36,22 @@
                         <constraint firstAttribute="height" constant="140" id="SPl-mj-GoB"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1c-VQ-fcl">
-                    <rect key="frame" x="7" y="250" width="23" height="15"/>
+                <view contentMode="scaleToFill" restorationIdentifier="distance" translatesAutoresizingMaskIntoConstraints="NO" id="B1c-VQ-fcl" customClass="FoodPiperFlatIcons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="8" y="233" width="17" height="15"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="AHB-0g-unU"/>
-                        <constraint firstAttribute="width" constant="23" id="At6-x4-0bh"/>
+                        <constraint firstAttribute="width" constant="17" id="At6-x4-0bh"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5I-6n-mVu">
-                    <rect key="frame" x="6" y="215" width="25" height="25"/>
+                <view contentMode="scaleToFill" restorationIdentifier="address" translatesAutoresizingMaskIntoConstraints="NO" id="L5I-6n-mVu" customClass="FoodPiperFlatIcons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="8" y="213" width="17" height="15"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="ehe-iE-eBu"/>
-                        <constraint firstAttribute="height" constant="25" id="wzX-gW-6Nq"/>
+                        <constraint firstAttribute="width" constant="17" id="ehe-iE-eBu"/>
+                        <constraint firstAttribute="height" constant="15" id="wzX-gW-6Nq"/>
                     </constraints>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccH-so-CjV">
@@ -74,8 +74,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="104" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-u1-i4Q">
-                    <rect key="frame" x="31" y="214" width="104" height="27"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="31" y="213" width="104" height="16"/>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -102,21 +101,21 @@
             </subviews>
             <color key="backgroundColor" red="0.12941176470588234" green="0.54117647058823526" blue="0.64313725490196072" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="B1c-VQ-fcl" firstAttribute="top" secondItem="dfb-u1-i4Q" secondAttribute="bottom" constant="9" id="98F-dg-hYR"/>
+                <constraint firstItem="B1c-VQ-fcl" firstAttribute="centerX" secondItem="L5I-6n-mVu" secondAttribute="centerX" id="0SO-4H-XBa"/>
+                <constraint firstItem="B1c-VQ-fcl" firstAttribute="top" secondItem="dfb-u1-i4Q" secondAttribute="bottom" constant="4" id="98F-dg-hYR"/>
                 <constraint firstAttribute="trailing" secondItem="MJ0-LB-RQz" secondAttribute="trailing" id="9xA-Je-nJW"/>
-                <constraint firstItem="dfb-u1-i4Q" firstAttribute="leading" secondItem="L5I-6n-mVu" secondAttribute="trailing" id="EDr-7c-L9s"/>
+                <constraint firstItem="dfb-u1-i4Q" firstAttribute="leading" secondItem="L5I-6n-mVu" secondAttribute="trailing" constant="6" id="EDr-7c-L9s"/>
                 <constraint firstItem="MJ0-LB-RQz" firstAttribute="top" secondItem="Rdq-Pp-4T2" secondAttribute="bottom" constant="-1" id="LaM-g6-Aah"/>
                 <constraint firstItem="OAY-py-BDZ" firstAttribute="top" secondItem="MJ0-LB-RQz" secondAttribute="bottom" constant="5" id="Mk8-6U-GCT"/>
-                <constraint firstItem="dfb-u1-i4Q" firstAttribute="top" secondItem="kW7-t4-DET" secondAttribute="bottom" constant="3" id="Nao-Bq-HTA"/>
+                <constraint firstItem="dfb-u1-i4Q" firstAttribute="top" secondItem="kW7-t4-DET" secondAttribute="bottom" constant="2" id="Nao-Bq-HTA"/>
                 <constraint firstAttribute="bottom" secondItem="Ali-rf-U8v" secondAttribute="bottom" constant="6" id="OfW-bP-iQO"/>
                 <constraint firstItem="dfb-u1-i4Q" firstAttribute="centerY" secondItem="L5I-6n-mVu" secondAttribute="centerY" id="PcX-5S-THw"/>
-                <constraint firstItem="L5I-6n-mVu" firstAttribute="leading" secondItem="kW7-t4-DET" secondAttribute="leading" id="Suo-uX-dkK"/>
+                <constraint firstItem="L5I-6n-mVu" firstAttribute="leading" secondItem="kW7-t4-DET" secondAttribute="leading" constant="2" id="Suo-uX-dkK"/>
                 <constraint firstItem="Ali-rf-U8v" firstAttribute="leading" secondItem="dfb-u1-i4Q" secondAttribute="leading" id="ctj-nj-nXq"/>
                 <constraint firstItem="kW7-t4-DET" firstAttribute="top" secondItem="OAY-py-BDZ" secondAttribute="bottom" constant="2" id="eWt-nG-iv2"/>
                 <constraint firstItem="ccH-so-CjV" firstAttribute="leading" secondItem="Rdq-Pp-4T2" secondAttribute="trailing" constant="1" id="g3j-bI-zce"/>
                 <constraint firstItem="OAY-py-BDZ" firstAttribute="trailing" secondItem="kW7-t4-DET" secondAttribute="trailing" id="gnb-19-ogM"/>
-                <constraint firstItem="B1c-VQ-fcl" firstAttribute="centerX" secondItem="L5I-6n-mVu" secondAttribute="centerX" id="iCD-nB-6HM"/>
-                <constraint firstItem="Ali-rf-U8v" firstAttribute="centerY" secondItem="B1c-VQ-fcl" secondAttribute="centerY" constant="0.5" id="kff-lq-T8Y"/>
+                <constraint firstItem="Ali-rf-U8v" firstAttribute="centerY" secondItem="B1c-VQ-fcl" secondAttribute="centerY" id="kff-lq-T8Y"/>
                 <constraint firstAttribute="trailing" secondItem="ccH-so-CjV" secondAttribute="trailing" constant="1" id="l8q-B2-zA3"/>
                 <constraint firstAttribute="trailing" secondItem="kW7-t4-DET" secondAttribute="trailing" constant="5" id="ncV-Mu-j54"/>
                 <constraint firstItem="Rdq-Pp-4T2" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="6" id="olk-eP-Z9B"/>
@@ -137,7 +136,7 @@
                 <outlet property="lblSubtitle" destination="kW7-t4-DET" id="XHW-lK-SBe"/>
                 <outlet property="lblTitle" destination="Rdq-Pp-4T2" id="lYf-Hm-poA"/>
             </connections>
-            <point key="canvasLocation" x="-158" y="98"/>
+            <point key="canvasLocation" x="-158" y="88"/>
         </view>
         <view contentMode="scaleToFill" id="jXJ-tE-48P">
             <rect key="frame" x="0.0" y="0.0" width="140" height="24"/>

@@ -576,8 +576,6 @@ struct TopMargin {
 {
     CGFloat viewRestaurantsViewFrameHeight = POST_HEIGHT;
     
-//    [DEPost getPostFromPFObject:obj];
-    
     DEViewRestaurantsView *viewRestaurantsView = [[[NSBundle mainBundle] loadNibNamed:VIEW_RESTAURANTS_VIEW owner:self options:nil] objectAtIndex:0];
     [viewRestaurantsView setCurrentLocation:_currentLocation];
     [viewRestaurantsView setSearchBar:_searchBar];
@@ -627,7 +625,7 @@ struct TopMargin {
 - (CGFloat) getEventImageHeightDifferenceOfImage : (Restaurant *) restaurant
                                          AndView : (DEViewRestaurantsView *) view
 {
-    if (restaurant.image)
+    if (![restaurant.imageWidth isEqualToNumber:[NSNumber numberWithDouble:0]])
     {
         CGFloat height = [restaurant.imageHeight doubleValue];
         CGFloat width = [restaurant.imageWidth doubleValue];
@@ -646,7 +644,7 @@ struct TopMargin {
                         ImageWidth : (double) width
                        ImageHeight : (double) height
 {
-    CGFloat correctImageViewHeight = (view.imgMainImageView.frame.size.width / width) * height;
+    CGFloat correctImageViewHeight = (view.imgMainImageView.layer.frame.size.width / width) * height;
     
     if (correctImageViewHeight < view.imageViewHeightConstraint.constant) {
         [view.imgMainImageView setContentMode:UIViewContentModeScaleAspectFill];

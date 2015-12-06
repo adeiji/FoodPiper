@@ -82,6 +82,8 @@
 		F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BD6ABE1C1207C100321BE5 /* FoodPiperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */; settings = {ASSET_TAGS = (); }; };
+		F4BD6AC31C13B85F00321BE5 /* FlatIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */; settings = {ASSET_TAGS = (); }; };
+		F4BD6AC71C13B9E000321BE5 /* FoodPiperFlatIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */; settings = {ASSET_TAGS = (); }; };
 		F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; settings = {ASSET_TAGS = (); }; };
 		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; settings = {ASSET_TAGS = (); }; };
@@ -246,6 +248,9 @@
 		F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantViewController.swift; sourceTree = "<group>"; };
 		F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewIndividualRestaurantView.swift; sourceTree = "<group>"; };
 		F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperTextField.swift; sourceTree = "<group>"; };
+		F4BD6AC11C13B85F00321BE5 /* FlatIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlatIcons.h; path = "style classes/FlatIcons.h"; sourceTree = "<group>"; };
+		F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlatIcons.m; path = "style classes/FlatIcons.m"; sourceTree = "<group>"; };
+		F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperFlatIcons.swift; sourceTree = "<group>"; };
 		F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepPageViewController.swift; sourceTree = "<group>"; };
 		F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIHandler.h; sourceTree = "<group>"; };
 		F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIHandler.m; sourceTree = "<group>"; };
@@ -460,6 +465,8 @@
 		F4A2AF091BF1321F0006CBE8 /* PaintCode Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F4BD6AC11C13B85F00321BE5 /* FlatIcons.h */,
+				F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */,
 				F42A1DFB1BF15ED1002286BF /* FoodPiperLogo.h */,
 				F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */,
 				F42A1DF61BF149A2002286BF /* PaintCodeBackgrounds.h */,
@@ -484,6 +491,7 @@
 				F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */,
 				F43BE28D1C0F924900966D1F /* FoodPiperButtons.swift */,
 				F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */,
+				F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */,
 			);
 			name = "PaintCode Classes";
 			sourceTree = "<group>";
@@ -1073,10 +1081,12 @@
 				F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */,
 				F4D94B561BFFDE2F00637FEF /* AccountViewController.swift in Sources */,
 				F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */,
+				F4BD6AC31C13B85F00321BE5 /* FlatIcons.m in Sources */,
 				F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */,
 				F42A1DFD1BF15ED1002286BF /* FoodPiperLogo.m in Sources */,
 				F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */,
 				F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */,
+				F4BD6AC71C13B9E000321BE5 /* FoodPiperFlatIcons.swift in Sources */,
 				F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */,
 				F42A1E101BF28895002286BF /* Reservation.swift in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,

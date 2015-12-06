@@ -10,6 +10,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/PFObject+Subclass.h>
 #import "FoodPiperIcons.h"
+#import "FlatIcons.h"
 #import "PaintCodeBackgrounds.h"
 #import "DELoginViewController.h"
 #import "FoodPiperLogo.h"
