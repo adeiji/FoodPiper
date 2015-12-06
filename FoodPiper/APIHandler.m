@@ -54,7 +54,7 @@ NSString *const INITIAL_REQUEST = @"1";
         [queryObject setGeoFilter:coordinate radiusInMeters:5000];
     }
     
-    [queryObject setLimit:50];
+    [queryObject setLimit:5];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
     
 }
@@ -86,7 +86,7 @@ NSString *const INITIAL_REQUEST = @"1";
     
     // If we're just getting one single image
     if (_singleRequest) {
-//        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
+        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
     }
     
     if (_initialRequest) /* If the type of request is for the places*/
@@ -119,7 +119,7 @@ NSString *const INITIAL_REQUEST = @"1";
         _initialRequest = NO;
     }
     else {     // Get the yelp information from Foursquare API
-//        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
+        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
         restaurantsSaved = NO;
     }
     
@@ -144,7 +144,7 @@ NSString *const INITIAL_REQUEST = @"1";
             [restaurant setImage_url:[NSURL URLWithString:image_url]];
             [restaurant setImageWidth:photoWidth];
             [restaurant setImageHeight:photoHeight];
-            [self storeRestaurantImageWithURL:image_url factualId:factualId height:photoHeight width:photoWidth];
+            [self storeRestaurantImageWithURL:image_url factualId:factualId height:photoHeight width:photoWidth location:restaurant.location];
             
             // If this is the last request for the foursquare image than display the ViewRestaurants screen
             if (singleRequest) {
@@ -155,9 +155,8 @@ NSString *const INITIAL_REQUEST = @"1";
         NSString *factualId = [queryResult.rows[0] stringValueForName:@"factual_id"];
         if (factualId) {
             Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
-# warning use constant
             [restaurant setImage_url:[NSURL URLWithString:@"no_image"]];
-            [self storeRestaurantImageWithURL:@"no_image" factualId:factualId height:[NSNumber numberWithInt:0] width:[NSNumber numberWithInt:0]];
+            [self storeRestaurantImageWithURL:@"no_image" factualId:factualId height:[NSNumber numberWithInt:0] width:[NSNumber numberWithInt:0] location:_currentLocation];
         }
     }
 }
@@ -172,7 +171,6 @@ NSString *const INITIAL_REQUEST = @"1";
 
 - (BOOL) callCrossWalkForImagesWithQueryResult : (FactualQueryResult*) queryResult {
     int count = 0;
-    BOOL lastRequest = NO;
     
     for (id restaurant in queryResult.rows) {
         count ++;
@@ -186,14 +184,13 @@ NSString *const INITIAL_REQUEST = @"1";
             FactualQuery *queryObject = [FactualQuery query];
             [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id" equalTo:factualId]];
             [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace" equalTo:@"foursquare"]];
-//            [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
+            [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
             NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
         }
         else {
             PFObject *restaurantImage = restaurantImageDuplicates[0];
             Restaurant *restaurantObject = (Restaurant *) [_restaurants objectForKey:factualId];
             [restaurantObject setImage_url:[NSURL URLWithString: restaurantImage[@"image_url"]]];
-#warning Make sure you use constants for this
             [restaurantObject setImageHeight:restaurantImage[@"image_height"]];
             [restaurantObject setImageWidth:restaurantImage[@"image_width"]];
         }

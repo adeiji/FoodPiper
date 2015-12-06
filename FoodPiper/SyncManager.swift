@@ -87,7 +87,7 @@ class SyncManager: NSObject {
     queryType: The type of query that we're doing, for example whereKey(key, equalTo: value)
     
     */
-    class func getParseObjectsWithClass (parseClass: String, objectKeyValues: Dictionary<String, AnyObject>, queryType: ParseQueryType, containedInNot: [AnyObject]) -> [PFObject] {
+    class func getParseObjectsWithClass (parseClass: String, objectKeyValues: Dictionary<String, AnyObject>, queryType: ParseQueryType, containedInNot: [AnyObject], withinKilometers: Double) -> [PFObject] {
         let query = PFQuery(className: parseClass)
 
         for (key, value) in objectKeyValues {
@@ -98,6 +98,8 @@ class SyncManager: NSObject {
             case ParseQueryType.WhereKeyNotContainedIn:
                 query.whereKey(key, notContainedIn: value as! [AnyObject])
                 break
+            case ParseQueryType.WhereKeyNearGeoPointWithinKilometers:
+                query.whereKey(key, nearGeoPoint: value as! PFGeoPoint, withinKilometers: withinKilometers)
             default:
                 break
             }

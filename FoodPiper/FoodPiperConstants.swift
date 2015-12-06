@@ -24,6 +24,7 @@ let PIPE_RESTAURANT = "Restaurant"
 let PIPE_IMAGE = "image"
 let PIPE_USER = "user"
 let PIPE_RESTAURANT_FACTUAL_ID = "restaurantFactualId"
+let PARSE_RESTAURANT_LOCATION = "location"
 
 let VIEW_RESTAURANTS_VIEW_CONTROLLER = "ViewRestaurantsViewController"
 let VIEW_RESTAURANTS_STORYBOARD = "ViewRestaurants"
@@ -76,6 +77,7 @@ enum ParseQueryType {
     case WhereKeyContainedIn
     case WhereKeyNotContainedIn
     case WhereKeyContainsAllObjectsInArray
+    case WhereKeyNearGeoPointWithinKilometers
 }
 
 let FACTUAL_API_KEY = "MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM"

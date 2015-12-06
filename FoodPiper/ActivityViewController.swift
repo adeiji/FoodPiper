@@ -25,10 +25,10 @@ class ActivityViewController: UIViewController {
             let user = PFUser.currentUser()
             var objectKeyValues: [String : AnyObject!] = [ACTION_TO_USER:user, ACTION_VIEWED: NSNumber(bool: false)]
             self.actions = SyncManager.getParseObjectsWithClass(PARSE_CLASS_ACTION, objectKeyValues: objectKeyValues, queryType: ParseQueryType.WhereKeyEqualTo,
-                containedInNot: [AnyObject]()) as! [Action]
+                containedInNot: [AnyObject](), withinKilometers:0) as! [Action]
             objectKeyValues = [ACTION_TO_USER:user, ACTION_VIEWED: NSNumber(bool: true)]
             self.responses = SyncManager.getParseObjectsWithClass(PARSE_CLASS_ACTION, objectKeyValues: objectKeyValues, queryType: ParseQueryType.WhereKeyEqualTo,
-                containedInNot: [AnyObject]()) as! [Action]
+                containedInNot: [AnyObject](), withinKilometers:0) as! [Action]
             for action in self.actions {
                 do {
                     try action.fromUser.fetchIfNeeded()
@@ -195,7 +195,7 @@ extension ActivityViewController : UITableViewDataSource, UITableViewDelegate {
         let range = (message as NSString).rangeOfString(username)
         let attributedString = NSMutableAttributedString(string: message)
         attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 62/255, green: 151/255, blue: 175/255, alpha: 1), range: range)
-        attributedString.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(14), range: range)
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(17), range: range)
         
         return attributedString
     }
