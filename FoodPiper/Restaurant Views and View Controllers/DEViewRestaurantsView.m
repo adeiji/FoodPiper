@@ -8,7 +8,6 @@
 
 #import "DEViewRestaurantsView.h"
 #import <Parse/Parse.h>
-#import "FoodPiper-Swift.h"
 
 @implementation DEViewRestaurantsView
 
@@ -89,6 +88,9 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
 
     __block Restaurant *restaurant = myRestaurant;
     self.lblAddress.text = restaurant.address;
+    if ([[restaurant.address stringByReplacingOccurrencesOfString:@" " withString:@"" ] isEqualToString:@""]) {
+        _addressIcon.hidden = YES;
+    }
     
     double price = [restaurant.price doubleValue];
     NSString *priceString = [NSString new];

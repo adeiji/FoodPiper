@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DEScreenManager.h"
+#import "FoodPiper-Swift.h"
 
 @class Restaurant;
 
@@ -25,6 +26,7 @@
 @property BOOL isImageLoaded;
 @property BOOL rotateImage;
 @property (strong, nonatomic) Restaurant *restaurant;
+@property (weak, nonatomic) IBOutlet FoodPiperFlatIcons *addressIcon;
 
 /*
  

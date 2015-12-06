@@ -19,7 +19,7 @@ NSString *const VIEW_FILTER_CATEGORY = @"FilterCategoryView";
 
 @end
 
-#define POST_HEIGHT 251
+#define POST_HEIGHT 261
 #define POST_WIDTH 140
 #define IPHONE_DEVICE_WIDTH 320
 #define TOP_MARGIN 20
