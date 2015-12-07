@@ -239,7 +239,9 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EL3-MG-ZV0">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="187" id="JhL-sg-36n"/>
+                                <constraint firstAttribute="height" constant="187" id="JhL-sg-36n">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                                </constraint>
                                 <constraint firstAttribute="width" secondItem="EL3-MG-ZV0" secondAttribute="height" multiplier="399:314" id="X8I-4K-cek"/>
                             </constraints>
                             <variation key="default">
@@ -563,12 +565,14 @@
                         <constraint firstItem="Oy4-5Q-0Q3" firstAttribute="top" secondItem="b1z-yj-aQE" secondAttribute="bottom" constant="4" id="jdd-UF-pb7"/>
                         <constraint firstItem="CF0-5R-ODT" firstAttribute="top" secondItem="R2U-0P-Ydi" secondAttribute="bottom" constant="3" id="kVb-n9-d3c"/>
                         <constraint firstAttribute="bottom" secondItem="R2U-0P-Ydi" secondAttribute="bottom" constant="13" id="lg9-GL-zWe">
-                            <variation key="heightClass=regular-widthClass=compact" constant="54"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="42"/>
                         </constraint>
                         <constraint firstItem="b1z-yj-aQE" firstAttribute="height" secondItem="WR9-fd-u9u" secondAttribute="height" id="lh8-MT-awA"/>
                         <constraint firstAttribute="trailing" secondItem="z7h-t9-Zyq" secondAttribute="trailing" id="ll5-pu-n88"/>
                         <constraint firstItem="z7h-t9-Zyq" firstAttribute="top" secondItem="5CU-NH-V2c" secondAttribute="bottom" constant="12" id="mR6-KY-FzL"/>
-                        <constraint firstItem="R2U-0P-Ydi" firstAttribute="top" secondItem="EL3-MG-ZV0" secondAttribute="bottom" constant="8" id="myI-7q-ssI"/>
+                        <constraint firstItem="R2U-0P-Ydi" firstAttribute="top" secondItem="EL3-MG-ZV0" secondAttribute="bottom" constant="8" id="myI-7q-ssI">
+                            <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                        </constraint>
                         <constraint firstItem="ksA-Ni-aa3" firstAttribute="leading" secondItem="3gD-U6-fbe" secondAttribute="trailing" constant="8" id="n5E-bH-0t1">
                             <variation key="heightClass=regular-widthClass=compact" constant="23"/>
                         </constraint>
@@ -860,7 +864,9 @@
                 <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="0Qc-MU-rZy"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="KO0-BB-kJI" secondAttribute="top" id="3gg-mC-J94"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="KO0-BB-kJI" secondAttribute="centerX" id="47E-EJ-luT"/>
-                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Pav-xp-pBu"/>
+                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="Pav-xp-pBu">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="KO0-BB-kJI" secondAttribute="centerY" id="VvG-WF-mxC"/>
                 <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="XFv-JH-ExG">
                     <variation key="heightClass=regular-widthClass=compact" constant="187"/>
@@ -904,7 +910,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="500" y="4781.5"/>
+            <point key="canvasLocation" x="500" y="4987"/>
         </scrollView>
     </objects>
 </document>

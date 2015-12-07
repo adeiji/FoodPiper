@@ -152,7 +152,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         
         // Display the restaurant information
         restaurantView.imageView.image = restaurant.image
-        resizeImage(CGFloat(restaurant.imageWidth.doubleValue), height: CGFloat(restaurant.imageHeight))
+        if restaurant.imageWidth != nil {
+            resizeImage(CGFloat(restaurant.imageWidth.doubleValue), height: CGFloat(restaurant.imageHeight))
+        }
         restaurantView.txtAddress.text = restaurant.address
         restaurantView.txtCuisine.text = restaurant.getCuisine()
     }

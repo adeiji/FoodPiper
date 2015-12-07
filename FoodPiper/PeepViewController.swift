@@ -182,14 +182,14 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
             pictureFile.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
                 if error == nil {
                     // Add the image view to the view and get the calculated height of the imageview frame
-                    let view = UIView()
-                    self.peepView = view
-                    let imageHeight = self.addImageToView(data, view: view)
+                    self.peepView = UIView()
+                    self.peepView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
+                    let imageHeight = self.addImageToView(data, view: self.peepView)
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
                         // Add the rating views and get the yPos of where the added views leave off
                         let views = self.getRatingViews(myPipe, imageHeight: imageHeight)
                         // Add the comments underneath the ratings
-                        self.addRatingViewsAndComments(comments, ratingViews: views, imageHeight: imageHeight, myView: view)
+                        self.addRatingViewsAndComments(comments, ratingViews: views, imageHeight: imageHeight, myView: self.peepView)
                     })
                 }
             }
@@ -278,13 +278,13 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         return yPos
     }
     
-    func addRatingViews (ratingViews: [ViewPeepRatingTableCell], var yPos: CGFloat) -> CGFloat {
+    func addRatingViews (ratingViews: [ViewPeepRatingTableCell], var yPos: CGFloat, myView: UIView) -> CGFloat {
         for view in ratingViews {
             view.frame = CGRectMake(0, yPos, self.view.frame.size.width, view.frame.size.height)
             view.layer.borderColor = UIColor(red: 33/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
             view.borderWidth = 0.1
             self.displayFiveStarRating(view)
-            self.scrollView.addSubview(view)
+            myView.addSubview(view)
             view.ratingIcon.setNeedsDisplay()
             yPos += view.frame.height
         }
@@ -296,7 +296,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             var yPos = imageHeight
             yPos = self.addActionView(myView, yPos: yPos)
-            yPos = self.addRatingViews(ratingViews, yPos: yPos)
+            yPos = self.addRatingViews(ratingViews, yPos: yPos, myView: myView)
             yPos = self.addCommentsToView(comments, myView: myView, yPos: yPos)
             myView.frame = CGRectMake(0, 0, self.scrollView.frame.width, yPos)
             self.scrollView.contentSize = CGSizeMake(self.view.layer.frame.width, yPos)

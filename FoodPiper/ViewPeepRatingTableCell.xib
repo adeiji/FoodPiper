@@ -19,7 +19,7 @@
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-9y-EDF">
                     <rect key="frame" x="79" y="23" width="114" height="20"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="34c-mR-ie7"/>
                         <constraint firstAttribute="width" constant="114" id="et1-Ii-PGE"/>
@@ -42,7 +42,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0DW-9y-EDF" firstAttribute="centerY" secondItem="1oe-dq-hXE" secondAttribute="centerY" constant="8" id="2zR-DP-EKI"/>
                 <constraint firstItem="BmE-go-85C" firstAttribute="centerX" secondItem="1oe-dq-hXE" secondAttribute="centerX" id="39j-pI-bTE"/>
@@ -105,7 +105,7 @@
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="1dW-Sd-ade" firstAttribute="leading" secondItem="aV8-gj-HHe" secondAttribute="leading" constant="8" id="3iZ-EJ-IWF"/>
                 <constraint firstItem="nLp-dX-xZH" firstAttribute="centerY" secondItem="aV8-gj-HHe" secondAttribute="centerY" constant="-0.5" id="CHF-Ob-AZD"/>
@@ -131,7 +131,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Bcy-Vb-jtb" secondAttribute="trailing" constant="8" id="FUy-sC-iKz"/>
                 <constraint firstItem="Bcy-Vb-jtb" firstAttribute="centerY" secondItem="mz0-Ax-ekf" secondAttribute="centerY" id="gxU-me-o0n"/>
@@ -205,7 +205,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="70F-Ll-nKU" secondAttribute="trailing" constant="8" id="BiO-cL-4Et"/>
                 <constraint firstItem="TZl-uB-Pu9" firstAttribute="centerX" secondItem="kP6-qa-Eyi" secondAttribute="centerX" id="CfW-IB-GXt"/>
