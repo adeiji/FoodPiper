@@ -13,6 +13,13 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let accountView = self.view as! DESettingsAccount
+        if PFUser.currentUser() == nil {
+            accountView.btnSignOut?.setTitle("Log In", forState: UIControlState.Normal)
+            accountView.btnSignOut?.removeTarget(nil, action: "", forControlEvents: UIControlEvents.TouchUpInside)
+            accountView.btnSignOut?.addTarget(self, action: "login", forControlEvents: UIControlEvents.TouchUpInside)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +31,10 @@ class AccountViewController: UIViewController {
     @IBAction func viewActivityButtonPressed(sender: UIButton) {
         let viewController = ActivityViewController(nibName: VIEW_ACTIVITY, bundle: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func login () {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     /*

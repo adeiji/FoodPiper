@@ -80,6 +80,11 @@ enum ParseQueryType {
     case WhereKeyNearGeoPointWithinKilometers
 }
 
+enum Notifications : String {
+    case UserCommented = "foodpiper.notification.commented"
+    case KeyComment = "comment"
+}
+
 enum RestorationIdentifiers : String {
     case SmallFood = "smallfood"
     case WaitTime = "waittime"

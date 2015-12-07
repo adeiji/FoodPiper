@@ -18,6 +18,8 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     var pageIndex:Int!
     var scrollView:UIScrollView!
     let RATING_VIEW_INDEX = 0, ACTION_VIEW_INDEX = 1, COMMENT_VIEW_INDEX = 2, CROWD_VIEW_INDEX = 3
+    var lastYPos:CGFloat!
+    var peepView:UIView!
     
     override func viewDidLayoutSubviews() {
         self.scrollView = self.view as! UIScrollView
@@ -29,14 +31,48 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         }
         
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addComment:", name: Notifications.UserCommented.rawValue, object: nil)
+    }
 
+    func addComment(notification: NSNotification) {
+        let comment = notification.userInfo![Notifications.KeyComment.rawValue] as! String
+        lastYPos = addSingleCommentToView(comment, yPos: lastYPos, myView: peepView)
+        self.scrollView.contentSize.height = lastYPos
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
     
+    func displayRatingTypeCaption (view: ViewPeepRatingTableCell) {
+        switch view.ratingIcon.restorationIdentifier {
+        case RestorationIdentifiers.SmallFood.rawValue?:
+            view.lblRatingType.text = "Food"
+            break
+        case RestorationIdentifiers.Decor.rawValue?:
+            view.lblRatingType.text = "Decor"
+            break
+        case RestorationIdentifiers.WaitTime.rawValue?:
+            view.lblRatingType.text = "Wait Time"
+            break
+        case RestorationIdentifiers.CrowdSmall.rawValue?:
+            view.lblRatingType.text = "Crowd"
+            break
+        case RestorationIdentifiers.ServiceSmall.rawValue?:
+            view.lblRatingType.text = "Service"
+            break
+        default:break
+        }
+        
+        view.setNeedsDisplay()
+    }
+    
     func displayFiveStarRating (view: ViewPeepRatingTableCell) {
         let rating = Double(view.rating.rating)
-
+        displayRatingTypeCaption(view)
         if (rating != nil) { // If the rating is nil that means this is not a five star rating
             // If this rating is a double and not a whole number than set this to true
             let hasPoint = Double(rating!) % 1 == 0 ? false : true
@@ -75,12 +111,15 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         
         if waitTimeRating == "slow" {
             view.ratingDescriptionIcon.restorationIdentifier = RestorationIdentifiers.Slow.rawValue
+            view.lblRatingDescription.text = "Slow"
         }
         else if waitTimeRating == "so-so" {
             view.ratingDescriptionIcon.restorationIdentifier = RestorationIdentifiers.MediumFast.rawValue
+            view.lblRatingDescription.text = "SoSo"
         }
         else if waitTimeRating == "fast" {
             view.ratingDescriptionIcon.restorationIdentifier = RestorationIdentifiers.Fast.rawValue
+            view.lblRatingDescription.text = "Fast"
         }
         
         view.ratingDescriptionIcon.setNeedsDisplay()
@@ -93,12 +132,15 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         size = size!.componentsSeparatedByString(":").last!
         if size == "good" {
             view.ratingDescriptionIcon.restorationIdentifier = RestorationIdentifiers.GoodCrowdSmall.rawValue
+            view.lblRatingDescription.text = "Good"
         }
         else if size == "slow" {
             view.ratingDescriptionIcon.restorationIdentifier = RestorationIdentifiers.SlowCrowd.rawValue
+            view.lblRatingDescription.text = "Slow"
         }
         else if size == "packed" {
             view.ratingDescriptionIcon.restorationIdentifier = RestorationIdentifiers.PackedCrowd.rawValue
+            view.lblRatingDescription.text = "Packed"
         }
         view.ratingDescriptionIcon.setNeedsDisplay()
         
@@ -106,12 +148,15 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         quality = quality!.componentsSeparatedByString(":").last!
         if quality == "hot" {
             view.ratingDescriptionCrowdQualityIcon.restorationIdentifier = RestorationIdentifiers.HotCrowd.rawValue
+            view.lblRatingDescriptionCrowdQuality.text = "Hot"
         }
         else if quality == "so-so" {
             view.ratingDescriptionCrowdQualityIcon.restorationIdentifier = RestorationIdentifiers.SoSoCrowdSmall.rawValue
+            view.lblRatingDescriptionCrowdQuality.text = "So So"
         }
         else if quality == "not-hot" {
             view.ratingDescriptionCrowdQualityIcon.restorationIdentifier = RestorationIdentifiers.NotHotCrowd.rawValue
+            view.lblRatingDescriptionCrowdQuality.text = "Not Hot"
         }
         
         view.ratingDescriptionCrowdQualityIcon.setNeedsDisplay()
@@ -138,6 +183,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
                 if error == nil {
                     // Add the image view to the view and get the calculated height of the imageview frame
                     let view = UIView()
+                    self.peepView = view
                     let imageHeight = self.addImageToView(data, view: view)
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
                         // Add the rating views and get the yPos of where the added views leave off
@@ -155,62 +201,108 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         // Get all the ratings from the PFObject if there is a rating for that specific detail
         if myPipe.food != nil {
             let rating = self.loadRatingObject(myPipe.food)
-            views.append(self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.SmallFood.rawValue, rating: rating))
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.SmallFood.rawValue, rating: rating)
+            views.append(view)
         }
         if myPipe.decor != nil {
             let rating = self.loadRatingObject(myPipe.decor)
-            views.append(self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.Decor.rawValue, rating: rating))
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.Decor.rawValue, rating: rating)
+            views.append(view)
         }
         if myPipe.waitTime != nil {
             let rating = self.loadRatingObject(myPipe.waitTime)
-            views.append(self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.WaitTime.rawValue, rating: rating))
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.WaitTime.rawValue, rating: rating)
+            views.append(view)
         }
         if myPipe.crowd != nil {
             let rating = self.loadRatingObject(myPipe.crowd)
-            views.append(self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.CrowdSmall.rawValue, rating: rating))
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.CrowdSmall.rawValue, rating: rating)
+            views.append(view)
         }
         if myPipe.service != nil {
             let rating = self.loadRatingObject(myPipe.service)
-            views.append(self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.ServiceSmall.rawValue, rating: rating))
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.ServiceSmall.rawValue, rating: rating)
+            views.append(view)
         }
         
         return views
     }
     
+    func commentWithColoredUsername (message: String, username: String) -> NSMutableAttributedString {
+        let range = (message as NSString).rangeOfString(username)
+        let attributedString = NSMutableAttributedString(string: message)
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 62/255, green: 151/255, blue: 175/255, alpha: 1), range: range)
+        attributedString.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFontOfSize(14), range: range)
+        
+        return attributedString
+    }
+    
+    func addSingleCommentToView (comment: String, var yPos: CGFloat, myView: UIView) -> CGFloat {
+        let commentView = NSBundle.mainBundle().loadNibNamed(self.VIEW_PEEP_RATING_TABLE_CELL, owner: self, options: nil)[self.COMMENT_VIEW_INDEX] as! ViewPeepRatingTableCell
+        let commentComponents = comment.componentsSeparatedByString(":")
+        
+        if commentComponents.count != 1 {
+            let username = commentComponents.first
+            commentView.lblPipeComment.attributedText = self.commentWithColoredUsername(comment, username: username!)
+        } else {
+            commentView.lblPipeComment.text = comment
+        }
+        
+        commentView.lblPipeComment.layoutIfNeeded()
+        commentView.frame = CGRectMake(0, yPos, self.view.frame.width, commentView.lblPipeComment.frame.height + 2)
+        myView.addSubview(commentView)
+        commentView.lblPipeComment.preferredMaxLayoutWidth = self.view.frame.width
+        yPos += commentView.frame.size.height + 2
+        
+        return yPos
+    }
+    
+    func addCommentsToView (comments: [String]?, myView: UIView, var yPos: CGFloat) -> CGFloat{
+        if comments != nil {
+            for comment in comments! {
+                yPos = addSingleCommentToView(comment, yPos: yPos, myView: myView)
+            }
+        }
+
+        return yPos
+    }
+    
+    func addActionView (myView: UIView, var yPos: CGFloat) -> CGFloat {
+        let actionView = NSBundle.mainBundle().loadNibNamed(self.VIEW_PEEP_RATING_TABLE_CELL, owner: self, options: nil)[self.ACTION_VIEW_INDEX] as! ViewPeepRatingTableCell
+        actionView.frame = CGRectMake(0, yPos, self.view.layer.frame.width, actionView.layer.frame.height)
+        actionView.borderWidth = 0.2
+        actionView.layer.borderColor = UIColor.grayColor().CGColor
+        myView.addSubview(actionView)
+        yPos += actionView.frame.size.height
+        
+        return yPos
+    }
+    
+    func addRatingViews (ratingViews: [ViewPeepRatingTableCell], var yPos: CGFloat) -> CGFloat {
+        for view in ratingViews {
+            view.frame = CGRectMake(0, yPos, self.view.frame.size.width, view.frame.size.height)
+            view.layer.borderColor = UIColor(red: 33/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
+            view.borderWidth = 0.1
+            self.displayFiveStarRating(view)
+            self.scrollView.addSubview(view)
+            view.ratingIcon.setNeedsDisplay()
+            yPos += view.frame.height
+        }
+        
+        return yPos
+    }
+    
     func addRatingViewsAndComments (comments: [String]?, ratingViews: [ViewPeepRatingTableCell], imageHeight: CGFloat, myView: UIView) {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             var yPos = imageHeight
-            let actionView = NSBundle.mainBundle().loadNibNamed(self.VIEW_PEEP_RATING_TABLE_CELL, owner: self, options: nil)[self.ACTION_VIEW_INDEX] as! ViewPeepRatingTableCell
-            actionView.frame = CGRectMake(0, yPos, self.view.layer.frame.width, actionView.layer.frame.height)
-            actionView.borderWidth = 0.2
-            actionView.layer.borderColor = UIColor.grayColor().CGColor
-            myView.addSubview(actionView)
-            yPos += actionView.frame.size.height
-            
-            if comments != nil {
-                for comment in comments! {
-                    let commentView = NSBundle.mainBundle().loadNibNamed(self.VIEW_PEEP_RATING_TABLE_CELL, owner: self, options: nil)[self.COMMENT_VIEW_INDEX] as! ViewPeepRatingTableCell
-                    commentView.lblPipeComment.text = comment
-                    commentView.lblPipeComment.layoutIfNeeded()
-                    commentView.frame = CGRectMake(0, yPos, self.view.frame.width, commentView.lblPipeComment.frame.height + 2)
-                    myView.addSubview(commentView)
-                    commentView.lblPipeComment.preferredMaxLayoutWidth = self.view.frame.width
-                    yPos += commentView.frame.size.height + 2
-                }
-            }
-            
-            for view in ratingViews {
-                view.frame = CGRectMake(0, yPos, self.view.frame.size.width, view.frame.size.height)
-                view.layer.borderColor = UIColor(red: 33/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
-                self.displayFiveStarRating(view)
-                self.scrollView.addSubview(view)
-                view.ratingIcon.setNeedsDisplay()
-                yPos += view.frame.height
-            }
-            
+            yPos = self.addActionView(myView, yPos: yPos)
+            yPos = self.addRatingViews(ratingViews, yPos: yPos)
+            yPos = self.addCommentsToView(comments, myView: myView, yPos: yPos)
             myView.frame = CGRectMake(0, 0, self.scrollView.frame.width, yPos)
             self.scrollView.contentSize = CGSizeMake(self.view.layer.frame.width, yPos)
             self.scrollView.addSubview(myView)
+            
+            self.lastYPos = yPos
         })
     }
     
@@ -231,6 +323,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func getRatingViewWithButtonIdentifier (buttonIdentifier: String, rating: Rating) -> ViewPeepRatingTableCell {
+
         var view:ViewPeepRatingTableCell!
         
         if Double(rating.rating) != nil {
@@ -242,6 +335,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         view.ratingIcon.restorationIdentifier = buttonIdentifier
         view.lblRatingComment.text = rating.comment
         view.rating = rating
+        view.drawLine = true
         
         return view
     }
@@ -289,16 +383,5 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

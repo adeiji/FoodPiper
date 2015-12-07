@@ -31,6 +31,7 @@ const int PICTURE_ACTION_SHEET = 2;
         [self registerForKeyboardNotifications];
         [DEUserManager getUserRank : [myUser username]];
         [DESyncManager getNumberOfPostByUser : myUser.username];
+        
         self.lblRank.text = @"";
         [self setUpTextFields];
         [self setUpSocialNetworkingIcons];

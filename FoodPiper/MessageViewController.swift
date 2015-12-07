@@ -105,9 +105,16 @@ class MessageViewController: UIViewController {
         if pipe.comments == nil {
             pipe.comments = Array<String>()
         }
-        
-        pipe.comments.append(txtMessage!.text)
-        
+        var comment:String!
+        if PFUser.currentUser() != nil {
+            comment = (PFUser.currentUser()?.username!)! + ": " + txtMessage!.text
+            pipe.comments.append(comment)
+        }
+        else {
+            comment = "anonymous: " + txtMessage!.text
+            pipe.comments.append(comment)
+        }
+        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.UserCommented.rawValue, object: nil, userInfo: [ Notifications.KeyComment.rawValue : comment ])
         pipe.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
             if error == nil {
                 NSLog("Saved comment to pipe")
