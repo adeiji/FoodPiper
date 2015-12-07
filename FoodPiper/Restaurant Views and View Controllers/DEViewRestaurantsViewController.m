@@ -618,6 +618,9 @@ struct TopMargin {
     CGSize sizeThatFitsTextView = [[view lblSubtitle] sizeThatFits:CGSizeMake(view.frame.size.width, 1000)];
     // Get the heightDifference from what it's original size is and what it's size will be
     CGFloat heightDifference = ceilf(sizeThatFitsTextView.height) - [view lblSubtitle].frame.size.height;
+    sizeThatFitsTextView = [[view lblAddress] sizeThatFits:CGSizeMake(view.frame.size.width, 1000)];
+    heightDifference = heightDifference + ceilf(sizeThatFitsTextView.height - [view lblAddress].frame.size.height);
+    [[view lblAddress] sizeToFit];
     
     return heightDifference;
 }
@@ -793,6 +796,12 @@ struct TopMargin {
     }
 }
 
+- (IBAction)getDirections:(UIButton *)sender {
+    
+    DEViewRestaurantsView *restaurantView = (DEViewRestaurantsView *) sender.superview;
+    UIAlertController *alertController = [DirectionHandler getDirections:_currentLocation restaurant:restaurantView.restaurant];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 
 #pragma mark - Gesture Recognizer Delegate Methods 

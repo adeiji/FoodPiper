@@ -9,49 +9,15 @@
 import UIKit
 
 class FoodPiperButtons: UIButton {
-
-    enum RestorationIdentifiers : String {
-        case WaitTime = "waittime"
-        case Food = "food"
-        case Deals = "deals"
-        case Message = "message"
-        case Decor = "decor"
-        case Crowd = "crowd"
-        case CheckIn = "checkin"
-        case Picture = "picture"
-        case Service = "service"
-        case Email = "email"
-        case Call = "call"
-        case Website = "website"
-        case Hours = "hours"
-        case Directions = "directions"
-        case Favorites = "favorites"
-        case Reservation = "reservation"
-        case Peep = "peep"
-        case Percent = "percent"
-        case Free = "free"
-        case Dollar = "dollar"
-        case Profile = "profile"
-        case Fast = "fast"
-        case SoSo = "soso"
-        case Slow = "slow"
-        case SlowCrowd = "slowcrowd"
-        case GoodCrowd = "goodcrowd"
-        case PackedCrowd = "packedcrowd"
-        case NotHotCrowd = "nothotcrowd"
-        case HotCrowd = "hotcrowd"
-        case SoSoCrowd = "sosocrowd"
-        case Comment = "comment"
-        case Friends = "friends"
-        case Remove = "remove"
-        case Pipe = "pipe"
-    }
     
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
         switch self.restorationIdentifier {
+        case RestorationIdentifiers.SmallFood.rawValue?:
+            FoodPiperIcons.drawFoodIconSmallWithFrame(rect)
+            break
         case RestorationIdentifiers.WaitTime.rawValue?:
             FoodPiperIcons.drawHoursIconWithFrame(rect)
             break

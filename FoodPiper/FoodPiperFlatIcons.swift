@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodPiperFlatIcons: UIButton {
+class FoodPiperFlatIcons: UIView {
 
     
     enum RestorationIdentifiers : String {

@@ -12,6 +12,7 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
     
     var pageViewController:UIPageViewController!
     var pipes:[PFObject]?
+    let VIEW_PEEP_XIB = "ViewPeep"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +65,7 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
         if pipes?.count == 0 {
             return nil
         }
-        let peepViewController = PeepViewController.init(nibName:"ViewPeep", bundle: nil)
+        let peepViewController = PeepViewController(nibName: VIEW_PEEP_XIB, bundle: nil)
         peepViewController.pageIndex = index
         peepViewController.pipe = pipes?[index] as! Pipe
         return peepViewController

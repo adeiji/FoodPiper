@@ -59,9 +59,11 @@ NSString *const INITIAL_REQUEST = @"1";
     
 }
 
-- (void) getAllRestaurantsNearLocation:(CLLocation *)currentLocation {
+- (void) getAllRestaurantsNearLocation:(CLLocation *)currentLocation
+                                 Limit:(int) limit
+{
     FactualQuery *queryObject = [FactualQuery query];
-    [self getAllRestaurantsNearLocation:currentLocation queryObject:queryObject];
+    [self getAllRestaurantsNearLocation:currentLocation queryObject:queryObject limit: limit];
 }
 
 - (void) getAllRestaurantsBeginningWith : (NSString *) name
@@ -119,8 +121,10 @@ NSString *const INITIAL_REQUEST = @"1";
         _initialRequest = NO;
     }
     else {     // Get the yelp information from Foursquare API
-        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
-        restaurantsSaved = NO;
+        if (!_notifyWhenDone) {
+            [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
+            restaurantsSaved = NO;
+        }
     }
     
 }

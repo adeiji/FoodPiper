@@ -7,96 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4056AFA1C06516F004916FC /* ExpansionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4056AF91C06516F004916FC /* ExpansionView.swift */; settings = {ASSET_TAGS = (); }; };
-		F40764781BF58163001ED3FD /* ViewWithBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */; settings = {ASSET_TAGS = (); }; };
-		F407647A1BF584CD001ED3FD /* ViewComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40764791BF584CD001ED3FD /* ViewComments.xib */; settings = {ASSET_TAGS = (); }; };
-		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */; settings = {ASSET_TAGS = (); }; };
-		F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF41BF147DE002286BF /* CircularOrView.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */; settings = {ASSET_TAGS = (); }; };
-		F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1DFD1BF15ED1002286BF /* FoodPiperLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */; settings = {ASSET_TAGS = (); }; };
-		F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFE1BF15EDD002286BF /* Logo.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E011BF180AF002286BF /* CancelIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E001BF180AF002286BF /* CancelIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E041BF190DC002286BF /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E031BF190DC002286BF /* FilterView.xib */; settings = {ASSET_TAGS = (); }; };
-		F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E051BF1913B002286BF /* FilterCategoryView.xib */; settings = {ASSET_TAGS = (); }; };
-		F42A1E081BF24BB8002286BF /* FoodPiperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E071BF24BB8002286BF /* FoodPiperView.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E0A1BF250AF002286BF /* MakeReservationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E091BF250AF002286BF /* MakeReservationView.xib */; settings = {ASSET_TAGS = (); }; };
-		F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E0E1BF281B2002286BF /* CheckMarkIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E101BF28895002286BF /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0F1BF28895002286BF /* Reservation.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */; settings = {ASSET_TAGS = (); }; };
-		F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */; settings = {ASSET_TAGS = (); }; };
-		F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */; settings = {ASSET_TAGS = (); }; };
-		F43BE28E1C0F924900966D1F /* FoodPiperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BE28D1C0F924900966D1F /* FoodPiperButtons.swift */; settings = {ASSET_TAGS = (); }; };
-		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; settings = {ASSET_TAGS = (); }; };
-		F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4447D261BEAD646000042FF /* ViewPeep.xib */; settings = {ASSET_TAGS = (); }; };
-		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D2A1BEADD57000042FF /* ViewPeep.swift */; settings = {ASSET_TAGS = (); }; };
-		F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F4624FC21BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m */; settings = {ASSET_TAGS = (); }; };
-		F4624FC61BE83745001F26C4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4624FC41BE83745001F26C4 /* MessageViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4624FC51BE83745001F26C4 /* MessageViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		F4624FCB1BEA7FE8001F26C4 /* walking-26.png in Resources */ = {isa = PBXBuildFile; fileRef = F4624FCA1BEA7FE8001F26C4 /* walking-26.png */; settings = {ASSET_TAGS = (); }; };
-		F4624FCD1BEA8C34001F26C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */; settings = {ASSET_TAGS = (); }; };
-		F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F475C3391BE2F6FC00E159F6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3381BE2F6FC00E159F6 /* RatingView.swift */; settings = {ASSET_TAGS = (); }; };
-		F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */; settings = {ASSET_TAGS = (); }; };
-		F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */; settings = {ASSET_TAGS = (); }; };
-		F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33F1BE4023200E159F6 /* PipeButtonView.xib */; settings = {ASSET_TAGS = (); }; };
-		F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */; settings = {ASSET_TAGS = (); }; };
-		F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3431BE4393C00E159F6 /* WaitTimeView.xib */; settings = {ASSET_TAGS = (); }; };
-		F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3451BE43B3800E159F6 /* RateCrowdView.xib */; settings = {ASSET_TAGS = (); }; };
-		F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3471BE59D7400E159F6 /* SyncManager.swift */; settings = {ASSET_TAGS = (); }; };
-		F48A3F921C067EA100F048DD /* CreateDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F48A3F951C067EBD00F048DD /* CreateDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */; settings = {ASSET_TAGS = (); }; };
-		F48A3F971C07E5B700F048DD /* APIHandler+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */; settings = {ASSET_TAGS = (); }; };
-		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; settings = {ASSET_TAGS = (); }; };
-		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A20D1B1BF6A17F00D966D4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D201BF6AE6800D966D4 /* ViewSettingsAccount.xib */; settings = {ASSET_TAGS = (); }; };
-		F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */; settings = {ASSET_TAGS = (); }; };
-		F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A20D2A1BFAA35100D966D4 /* SearchFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D291BFAA35100D966D4 /* SearchFriendsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF141BF132A80006CBE8 /* PipeIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF191BF132C40006CBE8 /* FavoriteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF181BF132C40006CBE8 /* FavoriteIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF1D1BF132DA0006CBE8 /* MenuIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF1C1BF132DA0006CBE8 /* MenuIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF201BF133370006CBE8 /* StarIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF231BF133440006CBE8 /* DoneIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF221BF133440006CBE8 /* DoneIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF271BF133660006CBE8 /* PeepIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF261BF133660006CBE8 /* PeepIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF291BF133740006CBE8 /* ViewAllPeepsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF281BF133740006CBE8 /* ViewAllPeepsIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF2B1BF133850006CBE8 /* FriendsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF2A1BF133850006CBE8 /* FriendsIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF2D1BF133970006CBE8 /* HotDealsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF2C1BF133970006CBE8 /* HotDealsIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A2AF311BF133AC0006CBE8 /* CommentIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF301BF133AC0006CBE8 /* CommentIcon.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
-		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; settings = {ASSET_TAGS = (); }; };
-		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; settings = {ASSET_TAGS = (); }; };
-		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */; settings = {ASSET_TAGS = (); }; };
-		F4B18F9E1BEAAE8D00B1765E /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B18F9D1BEAAE8D00B1765E /* MapTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F4B18FA11BEACE7600B1765E /* ViewPeepMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */; settings = {ASSET_TAGS = (); }; };
-		F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */; settings = {ASSET_TAGS = (); }; };
-		F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */; settings = {ASSET_TAGS = (); }; };
-		F4BD6ABE1C1207C100321BE5 /* FoodPiperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */; settings = {ASSET_TAGS = (); }; };
-		F4BD6AC31C13B85F00321BE5 /* FlatIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */; settings = {ASSET_TAGS = (); }; };
-		F4BD6AC71C13B9E000321BE5 /* FoodPiperFlatIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */; settings = {ASSET_TAGS = (); }; };
-		F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F431BD9B948009F3B55 /* DEUserManager.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F461BD9BAA5009F3B55 /* DECreateAccountView.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F491BD9BB37009F3B55 /* DEAddProfileImageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F4D1BD9BB7A009F3B55 /* TextFieldValidator.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F511BD9BBDC009F3B55 /* DEScreenManager.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F561BD9BCAB009F3B55 /* DEAnimationManager.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F5D1BD9BEE7009F3B55 /* HPStyleKit.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F611BD9BF34009F3B55 /* DESyncManager.m */; settings = {ASSET_TAGS = (); }; };
-		F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F651BD9BF7F009F3B55 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		F4056AFA1C06516F004916FC /* ExpansionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4056AF91C06516F004916FC /* ExpansionView.swift */; };
+		F40764781BF58163001ED3FD /* ViewWithBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40764771BF58163001ED3FD /* ViewWithBorderColor.swift */; };
+		F407647A1BF584CD001ED3FD /* ViewComments.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40764791BF584CD001ED3FD /* ViewComments.xib */; };
+		F410A0531BE2D3AA00BA8FDB /* HoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410A0521BE2D3AA00BA8FDB /* HoursView.swift */; };
+		F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DED1BF145ED002286BF /* FoodPiperIcons.m */; };
+		F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF41BF147DE002286BF /* CircularOrView.swift */; };
+		F42A1DF81BF149A2002286BF /* PaintCodeBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF71BF149A2002286BF /* PaintCodeBackgrounds.m */; };
+		F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DF91BF14D8F002286BF /* FoodBackgroundView.swift */; };
+		F42A1DFD1BF15ED1002286BF /* FoodPiperLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFC1BF15ED1002286BF /* FoodPiperLogo.m */; };
+		F42A1DFF1BF15EDD002286BF /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1DFE1BF15EDD002286BF /* Logo.swift */; };
+		F42A1E011BF180AF002286BF /* CancelIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E001BF180AF002286BF /* CancelIcon.swift */; };
+		F42A1E041BF190DC002286BF /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E031BF190DC002286BF /* FilterView.xib */; };
+		F42A1E061BF1913B002286BF /* FilterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E051BF1913B002286BF /* FilterCategoryView.xib */; };
+		F42A1E081BF24BB8002286BF /* FoodPiperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E071BF24BB8002286BF /* FoodPiperView.swift */; };
+		F42A1E0A1BF250AF002286BF /* MakeReservationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E091BF250AF002286BF /* MakeReservationView.xib */; };
+		F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */; };
+		F42A1E0E1BF281B2002286BF /* CheckMarkIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0D1BF281B2002286BF /* CheckMarkIcon.swift */; };
+		F42A1E101BF28895002286BF /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E0F1BF28895002286BF /* Reservation.swift */; };
+		F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42A1E111BF2A271002286BF /* SuccessIndicatorView.xib */; };
+		F42A1E141BF2AD05002286BF /* FoodPiperPaintCodeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E131BF2AD05002286BF /* FoodPiperPaintCodeButton.swift */; };
+		F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */; };
+		F43BE28E1C0F924900966D1F /* FoodPiperButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43BE28D1C0F924900966D1F /* FoodPiperButtons.swift */; };
+		F4447D251BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */; };
+		F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D281BEADD47000042FF /* PeepViewController.swift */; };
+		F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4447D2A1BEADD57000042FF /* ViewPeep.swift */; };
+		F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = F4624FC21BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m */; };
+		F4624FC61BE83745001F26C4 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4624FC41BE83745001F26C4 /* MessageViewController.swift */; };
+		F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4624FC51BE83745001F26C4 /* MessageViewController.xib */; };
+		F4624FCB1BEA7FE8001F26C4 /* walking-26.png in Resources */ = {isa = PBXBuildFile; fileRef = F4624FCA1BEA7FE8001F26C4 /* walking-26.png */; };
+		F4624FCD1BEA8C34001F26C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */; };
+		F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */; };
+		F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */; };
+		F475C3391BE2F6FC00E159F6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3381BE2F6FC00E159F6 /* RatingView.swift */; };
+		F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33B1BE3FA8B00E159F6 /* PipeMenuView.xib */; };
+		F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C33D1BE3FC8700E159F6 /* PipeMenuView.swift */; };
+		F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C33F1BE4023200E159F6 /* PipeButtonView.xib */; };
+		F475C3421BE41AF900E159F6 /* FoodPiperConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3411BE41AF900E159F6 /* FoodPiperConstants.swift */; };
+		F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3431BE4393C00E159F6 /* WaitTimeView.xib */; };
+		F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3451BE43B3800E159F6 /* RateCrowdView.xib */; };
+		F475C3481BE59D7400E159F6 /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3471BE59D7400E159F6 /* SyncManager.swift */; };
+		F48A3F921C067EA100F048DD /* CreateDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F901C067EA100F048DD /* CreateDealsViewController.swift */; };
+		F48A3F951C067EBD00F048DD /* CreateDeals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */; };
+		F48A3F971C07E5B700F048DD /* APIHandler+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */; };
+		F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F49F00A61BEAA63A00EDDF8C /* MapView.xib */; };
+		F49F00A91BEAA73600EDDF8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F00A81BEAA73600EDDF8C /* MapView.swift */; };
+		F4A06B191BDAC87500825D74 /* NSArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */; };
+		F4A20D1B1BF6A17F00D966D4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */; };
+		F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */; };
+		F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A20D201BF6AE6800D966D4 /* ViewSettingsAccount.xib */; };
+		F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D231BF6AE9200D966D4 /* DESettingsAccount.m */; };
+		F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D251BF6AFC700D966D4 /* ProfileViewController.swift */; };
+		F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D271BFA990600D966D4 /* DEUserManager+Swift.swift */; };
+		F4A20D2A1BFAA35100D966D4 /* SearchFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A20D291BFAA35100D966D4 /* SearchFriendsViewController.swift */; };
+		F4A2AF151BF132A80006CBE8 /* PipeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF141BF132A80006CBE8 /* PipeIcon.swift */; };
+		F4A2AF191BF132C40006CBE8 /* FavoriteIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF181BF132C40006CBE8 /* FavoriteIcon.swift */; };
+		F4A2AF1D1BF132DA0006CBE8 /* MenuIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF1C1BF132DA0006CBE8 /* MenuIcon.swift */; };
+		F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF201BF133370006CBE8 /* StarIcon.swift */; };
+		F4A2AF231BF133440006CBE8 /* DoneIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF221BF133440006CBE8 /* DoneIcon.swift */; };
+		F4A2AF271BF133660006CBE8 /* PeepIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF261BF133660006CBE8 /* PeepIcon.swift */; };
+		F4A2AF291BF133740006CBE8 /* ViewAllPeepsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF281BF133740006CBE8 /* ViewAllPeepsIcon.swift */; };
+		F4A2AF2B1BF133850006CBE8 /* FriendsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF2A1BF133850006CBE8 /* FriendsIcon.swift */; };
+		F4A2AF2D1BF133970006CBE8 /* HotDealsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF2C1BF133970006CBE8 /* HotDealsIcon.swift */; };
+		F4A2AF311BF133AC0006CBE8 /* CommentIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2AF301BF133AC0006CBE8 /* CommentIcon.swift */; };
+		F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B571BD8103900DD5DAE /* Restaurant.swift */; };
+		F4A37B5C1BD8117000DD5DAE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37B5B1BD8117000DD5DAE /* Constants.m */; };
+		F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B621BD8299900DD5DAE /* ViewRestaurants.storyboard */; };
+		F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A37B641BD82A0D00DD5DAE /* ViewRestaurantsView.xib */; };
+		F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A731911BE1AB1D007F4722 /* ViewRestaurantHours.xib */; };
+		F4B18F9E1BEAAE8D00B1765E /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B18F9D1BEAAE8D00B1765E /* MapTableViewCell.xib */; };
+		F4B18FA11BEACE7600B1765E /* ViewPeepMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */; };
+		F4BBFFA01BDBF8B90056BF40 /* ViewIndividualRestaurant.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4BBFF9F1BDBF8B90056BF40 /* ViewIndividualRestaurant.xib */; };
+		F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA11BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift */; };
+		F4BBFFA41BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BBFFA31BDC02CB0056BF40 /* ViewIndividualRestaurantView.swift */; };
+		F4BD6ABE1C1207C100321BE5 /* FoodPiperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */; };
+		F4BD6AC31C13B85F00321BE5 /* FlatIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */; };
+		F4BD6AC71C13B9E000321BE5 /* FoodPiperFlatIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */; };
+		F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */; };
+		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; };
+		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; };
+		F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */; };
+		F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F431BD9B948009F3B55 /* DEUserManager.m */; };
+		F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F461BD9BAA5009F3B55 /* DECreateAccountView.m */; };
+		F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F491BD9BB37009F3B55 /* DEAddProfileImageViewController.m */; };
+		F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F4D1BD9BB7A009F3B55 /* TextFieldValidator.m */; };
+		F4C85F521BD9BBDC009F3B55 /* DEScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F511BD9BBDC009F3B55 /* DEScreenManager.m */; };
+		F4C85F571BD9BCAB009F3B55 /* DEAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F561BD9BCAB009F3B55 /* DEAnimationManager.m */; };
+		F4C85F5E1BD9BEE7009F3B55 /* HPStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F5D1BD9BEE7009F3B55 /* HPStyleKit.m */; };
+		F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F611BD9BF34009F3B55 /* DESyncManager.m */; };
+		F4C85F661BD9BF7F009F3B55 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F651BD9BF7F009F3B55 /* Reachability.m */; };
 		F4C85F701BD9EE71009F3B55 /* libPods-FoodPiper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4C85F6F1BD9EE71009F3B55 /* libPods-FoodPiper.a */; };
 		F4CBC3361BD182BB00FEBE36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */; };
 		F4CBC3381BD182BB00FEBE36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3371BD182BB00FEBE36 /* ViewController.swift */; };
@@ -105,43 +104,47 @@
 		F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */; };
 		F4CBC34B1BD182BC00FEBE36 /* FoodPiperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC34A1BD182BC00FEBE36 /* FoodPiperTests.swift */; };
 		F4CBC3561BD182BC00FEBE36 /* FoodPiperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3551BD182BC00FEBE36 /* FoodPiperUITests.swift */; };
-		F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		F4CBC36E1BD1C01500FEBE36 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC36D1BD1C01500FEBE36 /* LocationHandler.swift */; };
 		F4CBC3701BD1E85C00FEBE36 /* FactualSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CBC36F1BD1E85C00FEBE36 /* FactualSDK.framework */; };
-		F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5ADE1BD58B0F00109C61 /* JosefinSans-Bold.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AE91BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5ADF1BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AEA1BD58B0F00109C61 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE01BD58B0F00109C61 /* JosefinSans-Italic.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE11BD58B0F00109C61 /* JosefinSans-Light.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AEC1BD58B0F00109C61 /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE21BD58B0F00109C61 /* JosefinSans-LightItalic.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE31BD58B0F00109C61 /* JosefinSans-Regular.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AEE1BD58B0F00109C61 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE41BD58B0F00109C61 /* JosefinSans-SemiBold.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE51BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE61BD58B0F00109C61 /* JosefinSans-Thin.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */; settings = {ASSET_TAGS = (); }; };
-		F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B391BFD22C600637FEF /* UserProfileView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B3C1BFD248B00637FEF /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B3F1BFD2CDE00637FEF /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B401BFD2E5C00637FEF /* FriendView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B431BFD351B00637FEF /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B421BFD351B00637FEF /* FriendsListView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B451BFEBA3800637FEF /* UserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B441BFEBA3800637FEF /* UserManager+Swift.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B481BFEC20500637FEF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B471BFEC20500637FEF /* Action.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B4B1BFFB03500637FEF /* InviteEatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B4A1BFFB03500637FEF /* InviteEatView.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B4D1BFFB04200637FEF /* InviteEatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B4C1BFFB04200637FEF /* InviteEatView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B4F1BFFB15C00637FEF /* InviteEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B4E1BFFB15C00637FEF /* InviteEatViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B521BFFD28700637FEF /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B511BFFD28700637FEF /* ActivityViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B541BFFD2DD00637FEF /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B531BFFD2DD00637FEF /* MessageTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B561BFFDE2F00637FEF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B551BFFDE2F00637FEF /* AccountViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B581BFFDF8000637FEF /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B571BFFDF8000637FEF /* MessageTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B5A1BFFFC4B00637FEF /* InviteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B591BFFFC4B00637FEF /* InviteTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		F4D94B5C1C03E1E300637FEF /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5B1C03E1E300637FEF /* Categories.plist */; settings = {ASSET_TAGS = (); }; };
-		F4D94B5E1C03E58D00637FEF /* FactualCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5D1C03E58D00637FEF /* FactualCategories.json */; settings = {ASSET_TAGS = (); }; };
-		F4D94B601C03F11400637FEF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B5F1C03F11400637FEF /* FilterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F4D94B621C063B0E00637FEF /* FilteringAvailability.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B611C063B0D00637FEF /* FilteringAvailability.plist */; settings = {ASSET_TAGS = (); }; };
-		F4D94B641C063CAA00637FEF /* FilterAvailabilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B631C063CAA00637FEF /* FilterAvailabilityView.xib */; settings = {ASSET_TAGS = (); }; };
-		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; settings = {ASSET_TAGS = (); }; };
-		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */; };
+		F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5ADE1BD58B0F00109C61 /* JosefinSans-Bold.ttf */; };
+		F4CC5AE91BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5ADF1BD58B0F00109C61 /* JosefinSans-BoldItalic.ttf */; };
+		F4CC5AEA1BD58B0F00109C61 /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE01BD58B0F00109C61 /* JosefinSans-Italic.ttf */; };
+		F4CC5AEB1BD58B0F00109C61 /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE11BD58B0F00109C61 /* JosefinSans-Light.ttf */; };
+		F4CC5AEC1BD58B0F00109C61 /* JosefinSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE21BD58B0F00109C61 /* JosefinSans-LightItalic.ttf */; };
+		F4CC5AED1BD58B0F00109C61 /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE31BD58B0F00109C61 /* JosefinSans-Regular.ttf */; };
+		F4CC5AEE1BD58B0F00109C61 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE41BD58B0F00109C61 /* JosefinSans-SemiBold.ttf */; };
+		F4CC5AEF1BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE51BD58B0F00109C61 /* JosefinSans-SemiBoldItalic.ttf */; };
+		F4CC5AF01BD58B0F00109C61 /* JosefinSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE61BD58B0F00109C61 /* JosefinSans-Thin.ttf */; };
+		F4CC5AF11BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */; };
+		F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */; };
+		F4CC5AF61BD7F1F300109C61 /* GoogleAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */; };
+		F4D4D6571C13CA480075E23A /* DirectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D4D6561C13CA480075E23A /* DirectionHandler.swift */; };
+		F4D94B3A1BFD22C600637FEF /* UserProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B391BFD22C600637FEF /* UserProfileView.xib */; };
+		F4D94B3C1BFD248B00637FEF /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */; };
+		F4D94B3F1BFD2CDE00637FEF /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */; };
+		F4D94B411BFD2E5C00637FEF /* FriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B401BFD2E5C00637FEF /* FriendView.xib */; };
+		F4D94B431BFD351B00637FEF /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B421BFD351B00637FEF /* FriendsListView.xib */; };
+		F4D94B451BFEBA3800637FEF /* UserManager+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B441BFEBA3800637FEF /* UserManager+Swift.swift */; };
+		F4D94B481BFEC20500637FEF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B471BFEC20500637FEF /* Action.swift */; };
+		F4D94B4B1BFFB03500637FEF /* InviteEatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B4A1BFFB03500637FEF /* InviteEatView.swift */; };
+		F4D94B4D1BFFB04200637FEF /* InviteEatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B4C1BFFB04200637FEF /* InviteEatView.xib */; };
+		F4D94B4F1BFFB15C00637FEF /* InviteEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B4E1BFFB15C00637FEF /* InviteEatViewController.swift */; };
+		F4D94B521BFFD28700637FEF /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B511BFFD28700637FEF /* ActivityViewController.swift */; };
+		F4D94B541BFFD2DD00637FEF /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B531BFFD2DD00637FEF /* MessageTableViewCell.xib */; };
+		F4D94B561BFFDE2F00637FEF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B551BFFDE2F00637FEF /* AccountViewController.swift */; };
+		F4D94B581BFFDF8000637FEF /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B571BFFDF8000637FEF /* MessageTableViewCell.swift */; };
+		F4D94B5A1BFFFC4B00637FEF /* InviteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B591BFFFC4B00637FEF /* InviteTableViewCell.xib */; };
+		F4D94B5C1C03E1E300637FEF /* Categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5B1C03E1E300637FEF /* Categories.plist */; };
+		F4D94B5E1C03E58D00637FEF /* FactualCategories.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B5D1C03E58D00637FEF /* FactualCategories.json */; };
+		F4D94B601C03F11400637FEF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D94B5F1C03F11400637FEF /* FilterViewController.swift */; };
+		F4D94B621C063B0E00637FEF /* FilteringAvailability.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B611C063B0D00637FEF /* FilteringAvailability.plist */; };
+		F4D94B641C063CAA00637FEF /* FilterAvailabilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D94B631C063CAA00637FEF /* FilterAvailabilityView.xib */; };
+		F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */; };
+		F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */; };
+		F4F4D4EA1C1518C7002F19A8 /* ViewPeepRatingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F4D4E91C1518C7002F19A8 /* ViewPeepRatingTableCell.xib */; };
+		F4F4D4EC1C15196B002F19A8 /* ViewPeepRatingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4D4EB1C15196B002F19A8 /* ViewPeepRatingTableCell.swift */; };
+		F4F97BBC1C160B0800B53BE3 /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,7 +194,6 @@
 		F42A1E151BF56C2B002286BF /* MessageWithTextLimitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageWithTextLimitView.swift; sourceTree = "<group>"; };
 		F43BE28D1C0F924900966D1F /* FoodPiperButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperButtons.swift; sourceTree = "<group>"; };
 		F4447D241BEAD44A000042FF /* ViewRestaurantsViewController+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsViewController+Swift.swift"; sourceTree = "<group>"; };
-		F4447D261BEAD646000042FF /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4447D281BEADD47000042FF /* PeepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepViewController.swift; sourceTree = "<group>"; };
 		F4447D2A1BEADD57000042FF /* ViewPeep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPeep.swift; sourceTree = "<group>"; };
 		F4624FC11BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DEScrollOnShowKeyboard.h"; sourceTree = "<group>"; };
@@ -215,7 +217,6 @@
 		F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIHandler+Swift.swift"; sourceTree = "<group>"; };
 		F49F00A61BEAA63A00EDDF8C /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		F49F00A81BEAA73600EDDF8C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4A06B181BDAC87500825D74 /* NSArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArrayExtension.swift; sourceTree = "<group>"; };
 		F4A20D1A1BF6A17F00D966D4 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		F4A20D1C1BF6A27100D966D4 /* NoFriendsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoFriendsView.xib; sourceTree = "<group>"; };
@@ -310,6 +311,8 @@
 		F4CC5AE71BD58B0F00109C61 /* JosefinSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JosefinSans-ThinItalic.ttf"; path = "Resources/Fonts/josefin_sans/JosefinSans-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F4CC5AF31BD593AB00109C61 /* FoodPiperButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperButton.swift; sourceTree = "<group>"; };
 		F4CC5AF51BD7F1F300109C61 /* GoogleAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoogleAPIManager.swift; path = "Google API/GoogleAPIManager.swift"; sourceTree = "<group>"; };
+		F4D4D6521C13C29B0075E23A /* FoodPiper-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FoodPiper-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4D4D6561C13CA480075E23A /* DirectionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionHandler.swift; sourceTree = "<group>"; };
 		F4D94B391BFD22C600637FEF /* UserProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileView.xib; sourceTree = "<group>"; };
 		F4D94B3B1BFD248B00637FEF /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		F4D94B3E1BFD2CDE00637FEF /* ActivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
@@ -334,6 +337,9 @@
 		F4EA284B1BDA906700079658 /* DEViewRestaurantsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsView.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsView.m"; sourceTree = "<group>"; };
 		F4EA284C1BDA906700079658 /* DEViewRestaurantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEViewRestaurantsViewController.h; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.h"; sourceTree = "<group>"; };
 		F4EA284D1BDA906700079658 /* DEViewRestaurantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEViewRestaurantsViewController.m; path = "Restaurant Views and View Controllers/DEViewRestaurantsViewController.m"; sourceTree = "<group>"; };
+		F4F4D4E91C1518C7002F19A8 /* ViewPeepRatingTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeepRatingTableCell.xib; sourceTree = "<group>"; };
+		F4F4D4EB1C15196B002F19A8 /* ViewPeepRatingTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPeepRatingTableCell.swift; sourceTree = "<group>"; };
+		F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,11 +528,13 @@
 			isa = PBXGroup;
 			children = (
 				F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */,
-				F4447D261BEAD646000042FF /* ViewPeep.xib */,
 				F4447D281BEADD47000042FF /* PeepViewController.swift */,
 				F4447D2A1BEADD57000042FF /* ViewPeep.swift */,
 				F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */,
 				F40764791BF584CD001ED3FD /* ViewComments.xib */,
+				F4F4D4E91C1518C7002F19A8 /* ViewPeepRatingTableCell.xib */,
+				F4F4D4EB1C15196B002F19A8 /* ViewPeepRatingTableCell.swift */,
+				F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */,
 			);
 			name = Peeping;
 			sourceTree = "<group>";
@@ -634,6 +642,7 @@
 		F4CBC3291BD182BB00FEBE36 = {
 			isa = PBXGroup;
 			children = (
+				F4D4D6521C13C29B0075E23A /* FoodPiper-Bridging-Header.h */,
 				F4CBC36F1BD1E85C00FEBE36 /* FactualSDK.framework */,
 				F4CBC3341BD182BB00FEBE36 /* FoodPiper */,
 				F4CBC3491BD182BC00FEBE36 /* FoodPiperTests */,
@@ -662,7 +671,6 @@
 				F4B18F9F1BEACE6600B1765E /* Peeping */,
 				F475C3321BE2F0FE00E159F6 /* Piping */,
 				F4A06B171BDAC7C300825D74 /* Categories */,
-				F4A06B161BDA9F3800825D74 /* FoodPiper-Bridging-Header.h */,
 				F4C85F631BD9BF69009F3B55 /* Networking */,
 				F4C85F4F1BD9BBC4009F3B55 /* Screen Handling */,
 				F4C85F4B1BD9BB59009F3B55 /* Open Source Classes */,
@@ -672,7 +680,7 @@
 				F4CC5AF21BD5938700109C61 /* Custom View Classes */,
 				F4CC5ADA1BD58AE100109C61 /* Resources */,
 				F4CBC3351BD182BB00FEBE36 /* AppDelegate.swift */,
-				F4CBC3631BD182E800FEBE36 /* APIs */,
+				F4CBC3631BD182E800FEBE36 /* Handlers */,
 				F4CBC3371BD182BB00FEBE36 /* ViewController.swift */,
 				F4CBC33C1BD182BB00FEBE36 /* Assets.xcassets */,
 				F4CBC33E1BD182BB00FEBE36 /* LaunchScreen.storyboard */,
@@ -699,9 +707,10 @@
 			path = FoodPiperUITests;
 			sourceTree = "<group>";
 		};
-		F4CBC3631BD182E800FEBE36 /* APIs */ = {
+		F4CBC3631BD182E800FEBE36 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				F4D4D6551C13CA3B0075E23A /* Direction */,
 				F4C85F5F1BD9BF22009F3B55 /* Parse */,
 				F4C85F301BD87A46009F3B55 /* FourSquare */,
 				F4C85F211BD85092009F3B55 /* Yelp */,
@@ -710,7 +719,7 @@
 				F4CBC3641BD1830500FEBE36 /* Google Places */,
 				F48A3F961C07E5B700F048DD /* APIHandler+Swift.swift */,
 			);
-			name = APIs;
+			name = Handlers;
 			sourceTree = "<group>";
 		};
 		F4CBC3641BD1830500FEBE36 /* Google Places */ = {
@@ -786,6 +795,14 @@
 				F48A3F941C067EBD00F048DD /* CreateDeals.storyboard */,
 			);
 			name = Restaurant;
+			sourceTree = "<group>";
+		};
+		F4D4D6551C13CA3B0075E23A /* Direction */ = {
+			isa = PBXGroup;
+			children = (
+				F4D4D6561C13CA480075E23A /* DirectionHandler.swift */,
+			);
+			name = Direction;
 			sourceTree = "<group>";
 		};
 		F4D94B3D1BFD2CB700637FEF /* Profile and Friends */ = {
@@ -955,7 +972,6 @@
 			files = (
 				F4CBC3401BD182BB00FEBE36 /* LaunchScreen.storyboard in Resources */,
 				F4B18FA11BEACE7600B1765E /* ViewPeepMenu.xib in Resources */,
-				F4447D271BEAD646000042FF /* ViewPeep.xib in Resources */,
 				F4A37B651BD82A0D00DD5DAE /* ViewRestaurantsView.xib in Resources */,
 				F4CC5AE81BD58B0F00109C61 /* JosefinSans-Bold.ttf in Resources */,
 				F475C3401BE4023200E159F6 /* PipeButtonView.xib in Resources */,
@@ -988,6 +1004,7 @@
 				F4A731921BE1AB1D007F4722 /* ViewRestaurantHours.xib in Resources */,
 				F4D94B5A1BFFFC4B00637FEF /* InviteTableViewCell.xib in Resources */,
 				F475C3441BE4393C00E159F6 /* WaitTimeView.xib in Resources */,
+				F4F97BBC1C160B0800B53BE3 /* ViewPeep.xib in Resources */,
 				F4A37B631BD8299900DD5DAE /* ViewRestaurants.storyboard in Resources */,
 				F42A1E121BF2A271002286BF /* SuccessIndicatorView.xib in Resources */,
 				F475C3461BE43B3800E159F6 /* RateCrowdView.xib in Resources */,
@@ -999,6 +1016,7 @@
 				F475C33C1BE3FA8B00E159F6 /* PipeMenuView.xib in Resources */,
 				F49F00A71BEAA63A00EDDF8C /* MapView.xib in Resources */,
 				F4A20D211BF6AE6800D966D4 /* ViewSettingsAccount.xib in Resources */,
+				F4F4D4EA1C1518C7002F19A8 /* ViewPeepRatingTableCell.xib in Resources */,
 				F4A20D1D1BF6A27100D966D4 /* NoFriendsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1117,6 +1135,7 @@
 				F4A20D261BF6AFC700D966D4 /* ProfileViewController.swift in Sources */,
 				F4A2AF1D1BF132DA0006CBE8 /* MenuIcon.swift in Sources */,
 				F4A2AF311BF133AC0006CBE8 /* CommentIcon.swift in Sources */,
+				F4D4D6571C13CA480075E23A /* DirectionHandler.swift in Sources */,
 				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,
 				F4A2AF271BF133660006CBE8 /* PeepIcon.swift in Sources */,
 				F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */,
@@ -1143,6 +1162,7 @@
 				F4CC5AF41BD593AB00109C61 /* FoodPiperButton.swift in Sources */,
 				F4447D2B1BEADD57000042FF /* ViewPeep.swift in Sources */,
 				F4EA284E1BDA906700079658 /* DEViewRestaurantsView.m in Sources */,
+				F4F4D4EC1C15196B002F19A8 /* ViewPeepRatingTableCell.swift in Sources */,
 				F4C85F441BD9B948009F3B55 /* DEUserManager.m in Sources */,
 				F4C85F471BD9BAA5009F3B55 /* DECreateAccountView.m in Sources */,
 				F4A2AF2B1BF133850006CBE8 /* FriendsIcon.swift in Sources */,
@@ -1328,7 +1348,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "arm64 armv7s";
 			};
@@ -1362,7 +1382,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = DE.FoodPiper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodPiper/FoodPiper-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 				VALID_ARCHS = "arm64 armv7s";
 			};
 			name = Release;

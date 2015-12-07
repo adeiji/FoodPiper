@@ -15,6 +15,8 @@ class ViewIndividualRestaurantView: UIScrollView {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
+    
     var pipeButtonView:UIView!
     
     override func layoutSubviews() {

@@ -30,7 +30,7 @@ extension APIHandler {
     
     */
     
-    func getAllRestaurantsNearLocation (myCurrentLocation: CLLocation, queryObject: FactualQuery)
+    func getAllRestaurantsNearLocation (myCurrentLocation: CLLocation, queryObject: FactualQuery, limit: UInt)
     {
         restaurants = NSMutableDictionary()
         restaurantImages = NSMutableArray()
@@ -44,7 +44,7 @@ extension APIHandler {
                 queryObject.includeRowCount = true
                 let coordinate = CLLocationCoordinate2D(latitude: myCurrentLocation.coordinate.latitude, longitude: myCurrentLocation.coordinate.longitude)
                 queryObject.setGeoFilter(coordinate, radiusInMeters: 5000)
-                queryObject.limit = 20
+                queryObject.limit = limit
                 self.apiObject.queryTable("restaurants-us", optionalQueryParams: queryObject, withDelegate: self)
             })
         })

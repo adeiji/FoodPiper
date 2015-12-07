@@ -29,7 +29,8 @@
  
  */
 
-- (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation;
+- (void) getAllRestaurantsNearLocation : (CLLocation *) currentLocation
+                                  Limit:(int) limit;
 - (NSArray *) convertRestaurantsDictionaryToArray;
 - (void) getAllRestaurantsBeginningWith : (NSString *) name
                                 Location: (CLLocation *) currentLocation;

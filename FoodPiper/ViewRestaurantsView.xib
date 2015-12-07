@@ -73,8 +73,11 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="104" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-u1-i4Q">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" preferredMaxLayoutWidth="104" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-u1-i4Q">
                     <rect key="frame" x="31" y="215" width="104" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="cxv-Ie-koI"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -97,6 +100,9 @@
                             <real key="value" value="2"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="getDirections:" destination="-1" eventType="touchUpInside" id="cmp-7B-gqZ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.12941176470588234" green="0.54117647058823526" blue="0.64313725490196072" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
@@ -128,7 +134,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="addressIcon" destination="L5I-6n-mVu" id="Qbs-Og-ofO"/>
+                <outlet property="addressIcon" destination="L5I-6n-mVu" id="7F3-Mk-GiU"/>
                 <outlet property="imageViewHeightConstraint" destination="SPl-mj-GoB" id="D25-5W-sNc"/>
                 <outlet property="imgMainImageView" destination="MJ0-LB-RQz" id="eGy-qr-vHd"/>
                 <outlet property="lblAddress" destination="dfb-u1-i4Q" id="jan-Bk-Q5Y"/>

@@ -10,8 +10,6 @@ import UIKit
 
 class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewControllerDelegate, UIActionSheetDelegate, UIScrollViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
-    let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
-    let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
     let HOURS_NIB = "ViewRestaurantHours"
     let VIEW_INDIVIDUAL_RESTAURANT = "ViewIndividualRestaurant";
     
@@ -54,8 +52,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     func loadImageWithNotification (notification: NSNotification) {
         let userInfo:[NSObject : AnyObject ] = notification.userInfo!
         let myRestaurant = userInfo[NOTIFICATION_KEY_RESTAURANT] as! Restaurant
-        
-
+        resizeImage(CGFloat(myRestaurant.imageWidth.doubleValue), height: CGFloat(myRestaurant.imageHeight))
         // Load the images on the main thread asynchronously
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let image = UIImage(data: NSData(contentsOfURL: myRestaurant.image_url!)!)
@@ -155,6 +152,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         
         // Display the restaurant information
         restaurantView.imageView.image = restaurant.image
+        resizeImage(CGFloat(restaurant.imageWidth.doubleValue), height: CGFloat(restaurant.imageHeight))
         restaurantView.txtAddress.text = restaurant.address
         restaurantView.txtCuisine.text = restaurant.getCuisine()
     }
@@ -239,23 +237,6 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
 
     }
     
-    func getGoogleMapsAction () -> UIAlertAction {
-        let latitude:String = "\(restaurant.location.coordinate.latitude)"
-        let longitude:String = "\(restaurant.location.coordinate.longitude)"
-        
-        let googleMapsAction = UIAlertAction(title: "Google Maps", style: UIAlertActionStyle.Default) { (action) -> Void in
-            // Open Google Maps with the Current Location
-            let urlString = String(format: self.GOOGLE_MAPS_APP_URL, self.restaurant.address.stringByReplacingOccurrencesOfString(" ", withString: "+"), latitude, longitude)
-            let googleMapsUrl = NSURL(string: urlString)!
-            
-            if UIApplication.sharedApplication().canOpenURL(googleMapsUrl) {
-                UIApplication.sharedApplication().openURL(googleMapsUrl)
-            }
-        }
-        
-        return googleMapsAction
-
-    }
     
     @IBAction func viewRestaurantWebsite(sender: UIButton) {
     
@@ -268,35 +249,8 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         }
     }
     
-    func getAppleMapsAction () -> UIAlertAction {
-        
-        let latitude:String = "\(currentLocation.coordinate.latitude)"
-        let longitude:String = "\(currentLocation.coordinate.longitude)"
-        
-        let appleMapsAction = UIAlertAction(title: "Apple Maps", style: UIAlertActionStyle.Default) { (action) -> Void in
-            // Open Apple Maps with the Current Location
-            let urlString = String(format: self.APPLE_MAPS_APP_URL, self.restaurant.address.stringByReplacingOccurrencesOfString(" ", withString: "+"), latitude, longitude)
-            let appleMapsUrl = NSURL(string: urlString)!
-            
-            if UIApplication.sharedApplication().canOpenURL(appleMapsUrl) {
-                UIApplication.sharedApplication().openURL(appleMapsUrl)
-            }
-        }
-        
-        return appleMapsAction
-    }
-    
     @IBAction func getDirections (sender: UIButton) {
-        
-        let alertController = UIAlertController(title: "Directions", message: "Get Directions to Restaurant", preferredStyle: .ActionSheet)
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (_) in }
-        let googleMapsAction = getGoogleMapsAction()
-        let appleMapsAction = getAppleMapsAction()
-        
-        alertController.addAction(googleMapsAction)
-        alertController.addAction(cancelAction)
-        alertController.addAction(appleMapsAction)
-        
+        let alertController = DirectionHandler.getDirections(currentLocation, restaurant: restaurant)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -568,5 +522,20 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         DEAnimationManager.animateViewOut(makeReservationView, withInsets: UIEdgeInsetsZero)
         
         enableScreen()
+    }
+    
+    func resizeImage (width: CGFloat, height: CGFloat) -> CGFloat {
+        
+        let correctImageViewHeight = (self.restaurantView.layer.frame.size.width / width) * height
+        
+        if (correctImageViewHeight < self.restaurantView.imageViewHeightConstraint.constant) {
+            self.restaurantView.imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        }
+        else {
+            self.restaurantView.imageViewHeightConstraint.constant = correctImageViewHeight
+        }
+        
+        return self.restaurantView.imageViewHeightConstraint.constant - self.restaurantView.imageView.layer.frame.size.height;
+
     }
 }

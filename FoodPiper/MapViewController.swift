@@ -59,8 +59,9 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let apiHandler = appDelegate.apiHandler
         apiHandler.notifyWhenDone = true
+        apiHandler.initialRequest = true
         tappedLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        apiHandler.getAllRestaurantsNearLocation(tappedLocation)
+        apiHandler.getAllRestaurantsNearLocation(tappedLocation, limit: 10)
     }
     
     func displayMapView (location: CLLocation) {
@@ -153,16 +154,6 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

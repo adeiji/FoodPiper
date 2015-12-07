@@ -8,6 +8,7 @@
 
 #import "DEViewRestaurantsView.h"
 #import <Parse/Parse.h>
+#import "FoodPiper-Swift.h"
 
 @implementation DEViewRestaurantsView
 
