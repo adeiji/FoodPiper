@@ -45,6 +45,12 @@ class FoodPiperButtons: UIButton {
         case RestorationIdentifiers.Service.rawValue?:
             FoodPiperIcons.drawServiceIcon()
             break
+        case RestorationIdentifiers.ServiceSmall.rawValue?:
+            FoodPiperIcons.drawServiceIconSmall()
+            break
+        case RestorationIdentifiers.CrowdSmall.rawValue?:
+            FoodPiperIcons.drawCrowdIconSmallWithFrame(rect)
+            break
         case RestorationIdentifiers.Email.rawValue?:
             FoodPiperIcons.drawSendMessageIconWithFrame(rect)
             break
@@ -90,8 +96,8 @@ class FoodPiperButtons: UIButton {
         case RestorationIdentifiers.Fast.rawValue?:
             FoodPiperIcons.drawFastIconWithFrame(rect)
             break
-        case RestorationIdentifiers.SoSo.rawValue?:
-            FoodPiperIcons.drawSoSoIcon()
+        case RestorationIdentifiers.MediumFast.rawValue?:
+            FoodPiperIcons.drawMediumFastIconWithFrame(rect)
             break
         case RestorationIdentifiers.Slow.rawValue?:
             FoodPiperIcons.drawSlowIconWithFrame(rect)
@@ -125,6 +131,15 @@ class FoodPiperButtons: UIButton {
             break
         case RestorationIdentifiers.Pipe.rawValue?:
             FoodPiperIcons.drawPipeIconWithFrame(rect)
+            break
+        case RestorationIdentifiers.Share.rawValue?:
+            FoodPiperIcons.drawShareIconWithFrame(rect)
+            break
+        case RestorationIdentifiers.GoodCrowdSmall.rawValue?:
+            FoodPiperIcons.drawCrowdGoodIconSmall()
+            break
+        case RestorationIdentifiers.SoSoCrowdSmall.rawValue?:
+            FoodPiperIcons.drawSoSoIconSmall()
             break
         default:break
         }

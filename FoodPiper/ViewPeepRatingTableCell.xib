@@ -7,26 +7,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="IKw-oa-0x6" customClass="ViewPeepRatingTableCell" customModule="FoodPiper" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-dq-hXE" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
-                    <rect key="frame" x="14" y="12" width="40" height="40"/>
+                    <rect key="frame" x="14" y="0.0" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="cUy-dF-f6D"/>
                         <constraint firstAttribute="height" constant="40" id="uy1-3M-bjf"/>
                     </constraints>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-9y-EDF">
-                    <rect key="frame" x="69" y="19" width="114" height="26"/>
+                    <rect key="frame" x="69" y="10" width="114" height="20"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="26" id="34c-mR-ie7"/>
+                        <constraint firstAttribute="height" constant="20" id="34c-mR-ie7"/>
                         <constraint firstAttribute="width" constant="114" id="et1-Ii-PGE"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2W-lg-c8c">
-                    <rect key="frame" x="198" y="21" width="168" height="21"/>
+                    <rect key="frame" x="198" y="10" width="168" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                 <constraint firstItem="0DW-9y-EDF" firstAttribute="centerY" secondItem="1oe-dq-hXE" secondAttribute="centerY" id="2zR-DP-EKI"/>
                 <constraint firstItem="K2W-lg-c8c" firstAttribute="leading" secondItem="0DW-9y-EDF" secondAttribute="trailing" constant="15" id="5ZX-fb-ORM"/>
                 <constraint firstItem="0DW-9y-EDF" firstAttribute="leading" secondItem="1oe-dq-hXE" secondAttribute="trailing" constant="15" id="TTv-a7-UWh"/>
-                <constraint firstItem="1oe-dq-hXE" firstAttribute="centerY" secondItem="IKw-oa-0x6" secondAttribute="centerY" id="dxk-Eq-LqZ"/>
+                <constraint firstItem="1oe-dq-hXE" firstAttribute="centerY" secondItem="IKw-oa-0x6" secondAttribute="centerY" constant="-1" id="dxk-Eq-LqZ"/>
                 <constraint firstItem="1oe-dq-hXE" firstAttribute="leading" secondItem="IKw-oa-0x6" secondAttribute="leading" constant="14" id="g0L-VH-XTm"/>
                 <constraint firstItem="K2W-lg-c8c" firstAttribute="centerY" secondItem="0DW-9y-EDF" secondAttribute="centerY" id="hEZ-Qb-dlZ"/>
                 <constraint firstAttribute="trailing" secondItem="K2W-lg-c8c" secondAttribute="trailing" constant="8" id="uoj-ZJ-3tI"/>
@@ -46,39 +46,127 @@
             <connections>
                 <outlet property="fiveStarView" destination="0DW-9y-EDF" id="UJ9-ej-gnx"/>
                 <outlet property="fiveStarViewWidthConstraint" destination="et1-Ii-PGE" id="iez-NX-7ZC"/>
-                <outlet property="lblComment" destination="K2W-lg-c8c" id="duq-nG-Teo"/>
+                <outlet property="lblRatingComment" destination="K2W-lg-c8c" id="ate-Nv-NKw"/>
                 <outlet property="ratingIcon" destination="1oe-dq-hXE" id="0zz-Hm-q3k"/>
             </connections>
-            <point key="canvasLocation" x="192" y="146"/>
+            <point key="canvasLocation" x="192" y="139"/>
         </view>
         <view contentMode="scaleToFill" id="aV8-gj-HHe" customClass="ViewPeepRatingTableCell" customModule="FoodPiper" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="374" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="374" height="46"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="comment" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-Sd-ade" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
-                    <rect key="frame" x="8" y="17" width="30" height="30"/>
+                    <rect key="frame" x="8" y="5" width="35" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="8WH-tc-dB6"/>
-                        <constraint firstAttribute="width" constant="30" id="R3p-0L-tfb"/>
+                        <constraint firstAttribute="height" constant="35" id="8WH-tc-dB6"/>
+                        <constraint firstAttribute="width" constant="35" id="R3p-0L-tfb"/>
                     </constraints>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="favorites" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-dX-xZH" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
-                    <rect key="frame" x="336" y="17" width="30" height="30"/>
+                    <rect key="frame" x="55" y="5" width="35" height="35"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="BFN-Qn-rfi"/>
-                        <constraint firstAttribute="width" constant="30" id="aRm-Cx-RV2"/>
+                        <constraint firstAttribute="height" constant="35" id="BFN-Qn-rfi"/>
+                        <constraint firstAttribute="width" constant="35" id="aRm-Cx-RV2"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="share" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXh-hT-657" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="101" y="5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="AQI-za-dLc"/>
+                        <constraint firstAttribute="width" constant="35" id="ic8-C1-dIa"/>
                     </constraints>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="1dW-Sd-ade" firstAttribute="leading" secondItem="aV8-gj-HHe" secondAttribute="leading" constant="8" id="3iZ-EJ-IWF"/>
-                <constraint firstItem="nLp-dX-xZH" firstAttribute="centerY" secondItem="aV8-gj-HHe" secondAttribute="centerY" id="CHF-Ob-AZD"/>
-                <constraint firstAttribute="trailing" secondItem="nLp-dX-xZH" secondAttribute="trailing" constant="8" id="Uf6-g7-g83"/>
-                <constraint firstItem="1dW-Sd-ade" firstAttribute="centerY" secondItem="aV8-gj-HHe" secondAttribute="centerY" id="kJs-uz-hxC"/>
+                <constraint firstItem="nLp-dX-xZH" firstAttribute="centerY" secondItem="aV8-gj-HHe" secondAttribute="centerY" constant="-0.5" id="CHF-Ob-AZD"/>
+                <constraint firstItem="nLp-dX-xZH" firstAttribute="leading" secondItem="1dW-Sd-ade" secondAttribute="trailing" constant="12" id="e54-YJ-gXl"/>
+                <constraint firstItem="SXh-hT-657" firstAttribute="centerY" secondItem="nLp-dX-xZH" secondAttribute="centerY" id="gHc-8B-si7"/>
+                <constraint firstItem="1dW-Sd-ade" firstAttribute="centerY" secondItem="aV8-gj-HHe" secondAttribute="centerY" constant="-0.5" id="kJs-uz-hxC"/>
+                <constraint firstItem="SXh-hT-657" firstAttribute="leading" secondItem="nLp-dX-xZH" secondAttribute="trailing" constant="11" id="r9O-ze-YwW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="192" y="278"/>
+            <point key="canvasLocation" x="192" y="244"/>
+        </view>
+        <view contentMode="scaleToFill" id="mz0-Ax-ekf" customClass="ViewPeepRatingTableCell" customModule="FoodPiper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="400" translatesAutoresizingMaskIntoConstraints="NO" id="Bcy-Vb-jtb">
+                    <rect key="frame" x="8" y="0.0" width="358" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="500" constant="21" id="kRy-o9-LYa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Bcy-Vb-jtb" secondAttribute="trailing" constant="8" id="FUy-sC-iKz"/>
+                <constraint firstItem="Bcy-Vb-jtb" firstAttribute="centerY" secondItem="mz0-Ax-ekf" secondAttribute="centerY" id="gxU-me-o0n"/>
+                <constraint firstItem="Bcy-Vb-jtb" firstAttribute="leading" secondItem="mz0-Ax-ekf" secondAttribute="leading" constant="8" id="waD-KC-sq2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblPipeComment" destination="Bcy-Vb-jtb" id="0Fw-io-anG"/>
+            </connections>
+            <point key="canvasLocation" x="192" y="351.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="f9m-V7-c8F" customClass="ViewPeepRatingTableCell" customModule="FoodPiper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP6-qa-Eyi" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="14" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Afp-2y-FmJ"/>
+                        <constraint firstAttribute="width" constant="40" id="VdN-lH-Ntx"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ase-EK-RWU" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="59" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fck-VG-Tyr"/>
+                        <constraint firstAttribute="width" constant="40" id="oCR-2K-QGT"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zz-0U-hPg" customClass="FoodPiperButtons" customModule="FoodPiper" customModuleProvider="target">
+                    <rect key="frame" x="104" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="R0u-Uf-y0m"/>
+                        <constraint firstAttribute="width" constant="40" id="yRl-XD-ggN"/>
+                    </constraints>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70F-Ll-nKU">
+                    <rect key="frame" x="157" y="10" width="209" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="70F-Ll-nKU" secondAttribute="trailing" constant="8" id="BiO-cL-4Et"/>
+                <constraint firstItem="kP6-qa-Eyi" firstAttribute="centerY" secondItem="f9m-V7-c8F" secondAttribute="centerY" constant="-1" id="IEO-uK-30U"/>
+                <constraint firstItem="70F-Ll-nKU" firstAttribute="leading" secondItem="5zz-0U-hPg" secondAttribute="trailing" constant="13" id="ITG-Dt-vhh"/>
+                <constraint firstItem="5zz-0U-hPg" firstAttribute="leading" secondItem="ase-EK-RWU" secondAttribute="trailing" constant="5" id="NeO-Y1-c9S"/>
+                <constraint firstItem="kP6-qa-Eyi" firstAttribute="leading" secondItem="f9m-V7-c8F" secondAttribute="leading" constant="14" id="UhJ-Ht-pno"/>
+                <constraint firstItem="ase-EK-RWU" firstAttribute="centerY" secondItem="kP6-qa-Eyi" secondAttribute="centerY" id="blH-Rr-Km4"/>
+                <constraint firstItem="ase-EK-RWU" firstAttribute="leading" secondItem="kP6-qa-Eyi" secondAttribute="trailing" constant="5" id="ioj-MU-GOT"/>
+                <constraint firstItem="5zz-0U-hPg" firstAttribute="centerY" secondItem="ase-EK-RWU" secondAttribute="centerY" id="mrB-PL-FQe"/>
+                <constraint firstItem="70F-Ll-nKU" firstAttribute="centerY" secondItem="ase-EK-RWU" secondAttribute="centerY" id="vlg-xb-zrN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblRatingComment" destination="70F-Ll-nKU" id="nAs-tV-qio"/>
+                <outlet property="ratingDescriptionCrowdQualityIcon" destination="5zz-0U-hPg" id="4wB-sY-sf8"/>
+                <outlet property="ratingDescriptionIcon" destination="ase-EK-RWU" id="ia5-3P-gfL"/>
+                <outlet property="ratingIcon" destination="kP6-qa-Eyi" id="c2c-PE-ZBn"/>
+            </connections>
+            <point key="canvasLocation" x="192" y="425"/>
         </view>
     </objects>
 </document>
