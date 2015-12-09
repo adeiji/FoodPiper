@@ -58,6 +58,10 @@ let FILTER_DISTANCE_KEY = "distance"
 
 let STORYBOARD_ID_PROMPT_LOGIN = "promptLoginViewController"
 
+enum NibFileNames : String {
+    case ViewPeep = "ViewPeep"
+}
+
 enum UserAction : String {
     case Message = "message"
     case Invite = "invite"

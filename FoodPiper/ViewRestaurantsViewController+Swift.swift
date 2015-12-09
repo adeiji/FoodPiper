@@ -60,9 +60,9 @@ extension DEViewRestaurantsViewController  {
             let pipes = SyncManager.getAllParseObjects(PIPE_PARSE_CLASS)
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let peepPageViewController = PeepPageViewController()
-                peepPageViewController.pipes = pipes
-                self.navigationController?.pushViewController(peepPageViewController, animated: true)
+                let peepViewController = PeepViewController(nibName: NibFileNames.ViewPeep.rawValue, bundle: nil)
+                peepViewController.pipes = pipes
+                self.navigationController?.pushViewController(peepViewController, animated: true)
             })
         })
         
@@ -76,9 +76,9 @@ extension DEViewRestaurantsViewController  {
             return
         }
     
-        let peepPageViewController = PeepPageViewController()
-        peepPageViewController.pipes = favoritePipes
-        self.navigationController?.pushViewController(peepPageViewController, animated: true)
+        let peepViewController = PeepViewController(nibName: NibFileNames.ViewPeep.rawValue, bundle: nil)
+        peepViewController.pipes = favoritePipes
+        self.navigationController?.pushViewController(peepViewController, animated: true)
     }
     
     @IBAction func viewDeals () {
@@ -97,5 +97,4 @@ extension DEViewRestaurantsViewController  {
             count++
         }
     }
-    
 }

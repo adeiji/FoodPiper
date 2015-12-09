@@ -736,26 +736,11 @@ struct TopMargin {
     
 }
 
-- (void) searchBarTextDidBeginEditing:(UISearchBar *)searchBar
-{
-    _searchPosts = [NSMutableArray new];
-    _restaurantsCopy = [_restaurants copy];
-}
-
-- (void) searchBarTextDidEndEditing:(UISearchBar *)searchBar
-{
-    [self removeAllPostFromScreen];
-    
-    for (PFObject *obj in _restaurants)
-    {
-        obj[@"loaded"] = @NO;
-    }
-    
-    _isNewProcess = YES;
-    [self addEventsToScreen:0
-                  PostArray:_restaurants
-                  ShowBlank:NO];
-    [self loadVisiblePost:_scrollView];
+- (void) searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    SearchRestaurantsViewController *viewController = [[SearchRestaurantsViewController alloc] init];
+    viewController.currentLocation = _currentLocation;
+    [self.navigationController pushViewController:viewController animated:YES];
+    [searchBar resignFirstResponder];
 }
 
 #pragma mark - Search Bar Delegate Methods

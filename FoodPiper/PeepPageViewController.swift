@@ -67,7 +67,6 @@ class PeepPageViewController: UIViewController, UIPageViewControllerDataSource, 
         }
         let peepViewController = PeepViewController(nibName: VIEW_PEEP_XIB, bundle: nil)
         peepViewController.pageIndex = index
-        peepViewController.pipe = pipes?[index] as! Pipe
         return peepViewController
     }
     

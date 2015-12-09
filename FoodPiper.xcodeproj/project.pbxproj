@@ -83,7 +83,6 @@
 		F4BD6ABE1C1207C100321BE5 /* FoodPiperTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6ABD1C1207C100321BE5 /* FoodPiperTextField.swift */; };
 		F4BD6AC31C13B85F00321BE5 /* FlatIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */; };
 		F4BD6AC71C13B9E000321BE5 /* FoodPiperFlatIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */; };
-		F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */; };
 		F4C85F331BD87A57009F3B55 /* FourSquareAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */; };
 		F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3D1BD9B918009F3B55 /* DELoginView.m */; };
 		F4C85F411BD9B918009F3B55 /* DELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C85F3F1BD9B918009F3B55 /* DELoginViewController.m */; };
@@ -145,6 +144,7 @@
 		F4F4D4EA1C1518C7002F19A8 /* ViewPeepRatingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F4D4E91C1518C7002F19A8 /* ViewPeepRatingTableCell.xib */; };
 		F4F4D4EC1C15196B002F19A8 /* ViewPeepRatingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4D4EB1C15196B002F19A8 /* ViewPeepRatingTableCell.swift */; };
 		F4F97BBC1C160B0800B53BE3 /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */; };
+		F4F97BBF1C164F9500B53BE3 /* SearchRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F97BBE1C164F9500B53BE3 /* SearchRestaurantsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,7 +252,6 @@
 		F4BD6AC11C13B85F00321BE5 /* FlatIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlatIcons.h; path = "style classes/FlatIcons.h"; sourceTree = "<group>"; };
 		F4BD6AC21C13B85F00321BE5 /* FlatIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlatIcons.m; path = "style classes/FlatIcons.m"; sourceTree = "<group>"; };
 		F4BD6AC61C13B9E000321BE5 /* FoodPiperFlatIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodPiperFlatIcons.swift; sourceTree = "<group>"; };
-		F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeepPageViewController.swift; sourceTree = "<group>"; };
 		F4C85F311BD87A57009F3B55 /* FourSquareAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourSquareAPIHandler.h; sourceTree = "<group>"; };
 		F4C85F321BD87A57009F3B55 /* FourSquareAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourSquareAPIHandler.m; sourceTree = "<group>"; };
 		F4C85F3C1BD9B918009F3B55 /* DELoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DELoginView.h; sourceTree = "<group>"; };
@@ -340,6 +339,7 @@
 		F4F4D4E91C1518C7002F19A8 /* ViewPeepRatingTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeepRatingTableCell.xib; sourceTree = "<group>"; };
 		F4F4D4EB1C15196B002F19A8 /* ViewPeepRatingTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPeepRatingTableCell.swift; sourceTree = "<group>"; };
 		F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
+		F4F97BBE1C164F9500B53BE3 /* SearchRestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRestaurantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -515,6 +515,7 @@
 		F4A37B5D1BD8274000DD5DAE /* Restaurant Workflow */ = {
 			isa = PBXGroup;
 			children = (
+				F4F97BBD1C164F7D00B53BE3 /* Searching */,
 				F42A1E021BF190D1002286BF /* Filtering */,
 				F4BBFF9E1BDBF88B0056BF40 /* UI Elements */,
 				F4EA28411BDA8EE300079658 /* VIew and View Controller */,
@@ -530,7 +531,6 @@
 				F4B18FA01BEACE7600B1765E /* ViewPeepMenu.xib */,
 				F4447D281BEADD47000042FF /* PeepViewController.swift */,
 				F4447D2A1BEADD57000042FF /* ViewPeep.swift */,
-				F4BEE88D1BED416C0039B4EA /* PeepPageViewController.swift */,
 				F40764791BF584CD001ED3FD /* ViewComments.xib */,
 				F4F4D4E91C1518C7002F19A8 /* ViewPeepRatingTableCell.xib */,
 				F4F4D4EB1C15196B002F19A8 /* ViewPeepRatingTableCell.swift */,
@@ -863,6 +863,14 @@
 			name = "VIew and View Controller";
 			sourceTree = "<group>";
 		};
+		F4F97BBD1C164F7D00B53BE3 /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				F4F97BBE1C164F9500B53BE3 /* SearchRestaurantsViewController.swift */,
+			);
+			name = Searching;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1127,6 +1135,7 @@
 				F4A20D241BF6AE9200D966D4 /* DESettingsAccount.m in Sources */,
 				F4447D291BEADD47000042FF /* PeepViewController.swift in Sources */,
 				F4D94B4F1BFFB15C00637FEF /* InviteEatViewController.swift in Sources */,
+				F4F97BBF1C164F9500B53BE3 /* SearchRestaurantsViewController.swift in Sources */,
 				F4C85F4E1BD9BB7A009F3B55 /* TextFieldValidator.m in Sources */,
 				F4D94B521BFFD28700637FEF /* ActivityViewController.swift in Sources */,
 				F4A2AF2D1BF133970006CBE8 /* HotDealsIcon.swift in Sources */,
@@ -1142,7 +1151,6 @@
 				F475C33E1BE3FC8700E159F6 /* PipeMenuView.swift in Sources */,
 				F4A37B581BD8103900DD5DAE /* Restaurant.swift in Sources */,
 				F42A1DEE1BF145ED002286BF /* FoodPiperIcons.m in Sources */,
-				F4BEE88E1BED416C0039B4EA /* PeepPageViewController.swift in Sources */,
 				F4A2AF191BF132C40006CBE8 /* FavoriteIcon.swift in Sources */,
 				F42A1E161BF56C2B002286BF /* MessageWithTextLimitView.swift in Sources */,
 				F42A1E0C1BF26D91002286BF /* MakeReservationView.swift in Sources */,

@@ -489,9 +489,9 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
             
             if pipes.count != 0 {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    let peepPageViewController = PeepPageViewController()
-                    peepPageViewController.pipes = pipes
-                    self.navigationController?.pushViewController(peepPageViewController, animated: true)
+                    let viewController = PeepViewController(nibName: NibFileNames.ViewPeep.rawValue, bundle: nil)
+                    viewController.pipes = pipes
+                    self.navigationController?.pushViewController(viewController, animated: true)
                 })
             }
         })

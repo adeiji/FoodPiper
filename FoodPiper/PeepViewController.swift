@@ -14,32 +14,36 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     let VIEW_PEEP_RATING_TABLE_CELL = "ViewPeepRatingTableCell"
     var pipesToRecieve:String!
     var firstTimeOpening = true
-    var pipe:Pipe!
+    var pipes:[PFObject]!
     var pageIndex:Int!
     var scrollView:UIScrollView!
     let RATING_VIEW_INDEX = 0, ACTION_VIEW_INDEX = 1, COMMENT_VIEW_INDEX = 2, CROWD_VIEW_INDEX = 3
-    var lastYPos:CGFloat!
-    var peepView:UIView!
+    var lastYPos:CGFloat = 0
+    var peepViews:[UIView]!
+    var selectedPeepView:UIView!
     
     override func viewDidLayoutSubviews() {
         self.scrollView = self.view as! UIScrollView
         super.viewDidLayoutSubviews()
         // Do any additional setup after loading the view.
         if firstTimeOpening == true {
-            self.loadandViewPipe(pipe)
+            for pipe in pipes {
+                self.loadandViewPipe(pipe as! Pipe)
+            }
+            
             firstTimeOpening = false
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "addComment:", name: Notifications.UserCommented.rawValue, object: nil)
+        peepViews = [UIView]()
     }
 
     func addComment(notification: NSNotification) {
         let comment = notification.userInfo![Notifications.KeyComment.rawValue] as! String
-        lastYPos = addSingleCommentToView(comment, yPos: lastYPos, myView: peepView)
+        lastYPos = addSingleCommentToView(comment, yPos: lastYPos, myView: selectedPeepView)
         self.scrollView.contentSize.height = lastYPos
     }
     
@@ -165,7 +169,9 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func commentOnPipeButtonPressed(sender: UIButton) {
         let viewController = MessageViewController()
+        let pipe = (sender.superview as! ViewPeepRatingTableCell).rating.pipe
         viewController.pipe = pipe
+        selectedPeepView = sender.superview?.superview
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -181,18 +187,45 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         if pictureFile != nil {
             pictureFile.getDataInBackgroundWithBlock { (data: NSData?, error: NSError?) -> Void in
                 if error == nil {
-                    // Add the image view to the view and get the calculated height of the imageview frame
-                    self.peepView = UIView()
-                    self.peepView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
-                    let imageHeight = self.addImageToView(data, view: self.peepView)
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-                        // Add the rating views and get the yPos of where the added views leave off
-                        let views = self.getRatingViews(myPipe, imageHeight: imageHeight)
-                        // Add the comments underneath the ratings
-                        self.addRatingViewsAndComments(comments, ratingViews: views, imageHeight: imageHeight, myView: self.peepView)
+                        self.loadRatingObjects(myPipe)  // Fetch all the ratings if needed
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            // Add the image view to the view and get the calculated height of the imageview frame
+                            let myView = UIView()
+                            myView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
+                            let imageHeight = self.addImageToView(data, view: myView)
+                            let views = self.getRatingViews(myPipe, imageHeight: imageHeight)
+                            self.addRatingViewsAndComments(comments, ratingViews: views, imageHeight: imageHeight, myView: myView)
+                        })
                     })
                 }
             }
+        }
+    }
+    
+    func loadRatingObjects (myPipe: Pipe) {
+        let semaphore = dispatch_semaphore_create(0)
+
+        if myPipe.food != nil {
+            self.loadRatingObject(myPipe.food)
+        }
+        if myPipe.decor != nil {
+            self.loadRatingObject(myPipe.decor)
+        }
+        if myPipe.waitTime != nil {
+            self.loadRatingObject(myPipe.waitTime)
+        }
+        if myPipe.crowd != nil {
+            self.loadRatingObject(myPipe.crowd)
+        }
+        if myPipe.service != nil {
+            self.loadRatingObject(myPipe.service)
+        }
+        
+        dispatch_semaphore_signal(semaphore)
+        
+        if dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) == 0 {
+            NSLog("Received the parse objects")
         }
     }
 
@@ -200,28 +233,23 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         var views:[ViewPeepRatingTableCell]! = [ViewPeepRatingTableCell]()
         // Get all the ratings from the PFObject if there is a rating for that specific detail
         if myPipe.food != nil {
-            let rating = self.loadRatingObject(myPipe.food)
-            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.SmallFood.rawValue, rating: rating)
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.SmallFood.rawValue, rating: myPipe.food)
             views.append(view)
         }
         if myPipe.decor != nil {
-            let rating = self.loadRatingObject(myPipe.decor)
-            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.Decor.rawValue, rating: rating)
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.Decor.rawValue, rating: myPipe.decor)
             views.append(view)
         }
         if myPipe.waitTime != nil {
-            let rating = self.loadRatingObject(myPipe.waitTime)
-            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.WaitTime.rawValue, rating: rating)
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.WaitTime.rawValue, rating: myPipe.waitTime)
             views.append(view)
         }
         if myPipe.crowd != nil {
-            let rating = self.loadRatingObject(myPipe.crowd)
-            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.CrowdSmall.rawValue, rating: rating)
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.CrowdSmall.rawValue, rating: myPipe.crowd)
             views.append(view)
         }
         if myPipe.service != nil {
-            let rating = self.loadRatingObject(myPipe.service)
-            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.ServiceSmall.rawValue, rating: rating)
+            let view = self.getRatingViewWithButtonIdentifier(RestorationIdentifiers.ServiceSmall.rawValue, rating: myPipe.service)
             views.append(view)
         }
         
@@ -293,17 +321,15 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func addRatingViewsAndComments (comments: [String]?, ratingViews: [ViewPeepRatingTableCell], imageHeight: CGFloat, myView: UIView) {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
             var yPos = imageHeight
             yPos = self.addActionView(myView, yPos: yPos)
             yPos = self.addRatingViews(ratingViews, yPos: yPos, myView: myView)
             yPos = self.addCommentsToView(comments, myView: myView, yPos: yPos)
-            myView.frame = CGRectMake(0, 0, self.scrollView.frame.width, yPos)
-            self.scrollView.contentSize = CGSizeMake(self.view.layer.frame.width, yPos)
+            myView.frame = CGRectMake(0, self.lastYPos, self.scrollView.frame.width, yPos)
+            self.lastYPos += yPos        
+            self.scrollView.contentSize = CGSizeMake(self.view.layer.frame.width, lastYPos)
             self.scrollView.addSubview(myView)
-            
-            self.lastYPos = yPos
-        })
+            self.peepViews.append(myView)
     }
     
     func addImageToView (data: NSData?, view: UIView) -> CGFloat {
@@ -343,6 +369,8 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func savePipeToFavorites(sender: UIButton) {
         
         let user = PFUser.currentUser()
+        let pipe = (sender.superview as! ViewPeepRatingTableCell).rating.pipe
+        
         if var favoritePipes = user?.objectForKey(PARSE_USER_FAVORITE_PIPES) as? [Pipe] {
             favoritePipes.append(pipe)
             user?.setObject(favoritePipes, forKey: PARSE_USER_FAVORITE_PIPES)
@@ -355,20 +383,22 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         SyncManager.saveUserAndDisplayResultsWithMessage("Saved Pipe to Favorites", user: user!, errorDescription: "Error adding pipes to favorites")
         
     }
-    func loadRatingObject (myRatingObject: Rating ) -> Rating {
-        var rating:Rating!
+    func loadRatingObject (myRatingObject: Rating ) {
         let semaphore = dispatch_semaphore_create(0)
 
-        myRatingObject.fetchIfNeededInBackgroundWithBlock { (object:PFObject?, error:NSError?) -> Void in
-            rating = object as! Rating!
+        do {
+            try myRatingObject.fetchIfNeeded() as Rating!
             dispatch_semaphore_signal(semaphore)
+            
+            if dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) == 0 {
+                NSLog("Received the parse objects")
+            }
+            
+        }
+        catch {
+            // Do Nothing
         }
         
-        if dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) == 0 {
-            NSLog("Received the parse objects")
-        }
-        
-        return rating;
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
