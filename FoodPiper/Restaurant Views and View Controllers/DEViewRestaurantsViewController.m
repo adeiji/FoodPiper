@@ -36,22 +36,6 @@ struct TopMargin {
     int height;
 };
 
-- (void) addObservers {
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayPost:) name:NOTIFICATION_CENTER_ALL_EVENTS_LOADED object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addLaterEvents) name:NOTIFICATION_LATER_EVENTS_ADDED object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeSelectorToNewCity) name:kNOTIFICATION_CENTER_IS_CITY_CHANGE object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayUsersEvents:) name:NOTIFICATION_CENTER_USERS_EVENTS_LOADED object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orbClicked) name:NOTIFICATION_CENTER_ORB_CLICKED object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showNoInternetConnectionScreen:) name:kReachabilityChangedNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayPostFromNewCity) name:NOTIFICATION_CENTER_CITY_CHANGED object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayPastEpicEvents:) name:NOTIFICATION_CENTER_NO_DATA object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayNoDataInCategory:) name:NOTIFICATION_CENTER_NONE_IN_CATEGORY object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayUserSavedEvents:) name:NOTIFICATION_CENTER_SAVED_EVENTS_LOADED object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayNoSavedEvents) name:NOTIFICATION_CENTER_NO_SAVED_EVENTS object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeAllPostFromScreen) name:kNOTIFICATION_CENTER_USER_INFO_USER_PROCESS_NEW object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayPastEpicEvents:) name:NOTIFICATION_CENTER_PAST_EPIC_EVENTS_LOADED object:nil];
-}
-
 #pragma mark - Activity Spinners
 
 - (void) startActivitySpinner
@@ -102,6 +86,8 @@ struct TopMargin {
     [self.navigationItem setLeftBarButtonItem:leftButton];
     _isFirstTime = YES;
     _isNewProcess = YES;
+    APIHandler *apiHandler = [(AppDelegate *)[[UIApplication sharedApplication] delegate] apiHandler];
+    _restaurants = [Restaurant convertRestaurantsDictionaryToArray:apiHandler.restaurants];
 }
 
 - (void) displayFilterView {
@@ -198,12 +184,13 @@ struct TopMargin {
 
     [super viewWillDisappear:animated];
     [self.view setHidden:YES];
-    
+    [self removeObservers];
 }
 
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self addObservers];
     [self.scrollView setDelegate:self];
 
     if (_isFirstTime) {
@@ -332,7 +319,6 @@ struct TopMargin {
 
 
 - (void) displayRestaurant : (NSNotification *) notification {
-    
     if (_restaurants.count != 0)
     {
         [self removeAllPostFromScreen];

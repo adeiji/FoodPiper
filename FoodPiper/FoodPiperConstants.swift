@@ -86,7 +86,9 @@ enum ParseQueryType {
 
 enum Notifications : String {
     case UserCommented = "foodpiper.notification.commented"
+    case FinishedRetrievingRestaurants = "foodpiper.nofication.finishedretrievingrestaurant"
     case KeyComment = "comment"
+    case KeyRestaurants = "restaurants"
 }
 
 enum RestorationIdentifiers : String {

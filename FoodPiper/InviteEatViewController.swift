@@ -40,7 +40,7 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
     func updateTableView () {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let apiHandler = appDelegate.apiHandler
-        restaurants = apiHandler.convertRestaurantsDictionaryToArray() as! [Restaurant]
+        restaurants = Restaurant.convertRestaurantsDictionaryToArray(apiHandler.restaurants)
         self.tableView.reloadData()
     }
     

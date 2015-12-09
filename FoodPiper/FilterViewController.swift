@@ -62,9 +62,9 @@ class FilterViewController: UIViewController {
     }
     
     func displayFilteredRestaurants () {
-        let array = apiHandler.convertRestaurantsDictionaryToArray()
-        if array?.count != 0 {
-            viewRestaurantsViewController.restaurants = apiHandler.convertRestaurantsDictionaryToArray()
+        let array = Restaurant.convertRestaurantsDictionaryToArray(apiHandler.restaurants)
+        if array.count != 0 {
+            viewRestaurantsViewController.restaurants = Restaurant.convertRestaurantsDictionaryToArray(apiHandler.restaurants)
         }
         else {
             SyncManager.showSuccessIndicator("No Restaurants")

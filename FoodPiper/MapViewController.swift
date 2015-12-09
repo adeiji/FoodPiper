@@ -25,7 +25,7 @@ class MapViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func updateTableView () {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let apiHandler = appDelegate.apiHandler
-        restaurants = apiHandler.convertRestaurantsDictionaryToArray() as! [Restaurant]
+        restaurants = Restaurant.convertRestaurantsDictionaryToArray(apiHandler.restaurants)
         self.mapView.tableView.reloadData()
         displayMapView(tappedLocation)
     }

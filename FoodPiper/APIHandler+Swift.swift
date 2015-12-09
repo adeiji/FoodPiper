@@ -23,6 +23,10 @@ extension APIHandler {
         NSLog("Saving the restaurant image to the server")
     }
     
+    func notifyDone () {
+        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.FinishedRetrievingRestaurants.rawValue, object: nil)
+    }
+    
     /*
     
     Get all the restaurants within 20 miles of where the user currently is.
@@ -52,5 +56,4 @@ extension APIHandler {
         currentLocation = myCurrentLocation;
     }
 
-    
 }

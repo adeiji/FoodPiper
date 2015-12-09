@@ -121,6 +121,7 @@ class RatingViewController: UIViewController {
         // Get the description for this specific rating criteria
         let criteriaDescription = ratingDetails[criteria]
         ratingView.lblDescription.text = criteriaDescription
+        ratingView.txtComment.inputAccessoryView = DEScreenManager.createInputAccessoryView()
         setNextCriteria(ratingView)
     }
     

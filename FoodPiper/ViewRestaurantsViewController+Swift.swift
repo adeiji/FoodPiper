@@ -85,6 +85,19 @@ extension DEViewRestaurantsViewController  {
         
     }
     
+    @IBAction func viewNearbyRestaurants (sender: UIButton) {
+        let locationHandler = LocationHandler()
+        locationHandler.initializeLocationManager()
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    @IBAction func viewFavoriteRestaurants (sender: UIButton) {
+        let restaurantIds = PFUser.currentUser()![PARSE_USER_FAVORITE_RESTAURANTS]
+        let apiHandler = APIHandler_SingleRestaurant()
+        apiHandler.getRestaurantsWithIds(restaurantIds as! [String])
+    }
+    
     func removeRestaurantsWithNoImage () {
         var count = 0
         for restaurant in self.restaurants {
@@ -96,5 +109,19 @@ extension DEViewRestaurantsViewController  {
             
             count++
         }
+    }
+    
+    func addObservers () {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "getRestaurants:", name: Notifications.FinishedRetrievingRestaurants.rawValue, object: nil)
+    }
+    
+    func getRestaurants (notification: NSNotification) {
+        
+        let restaurantsDictionary = notification.userInfo![Notifications.KeyRestaurants.rawValue] as! [String : AnyObject]
+        restaurants = Restaurant.convertRestaurantsDictionaryToArray(restaurantsDictionary) as [AnyObject]
+    }
+    
+    func removeObservers () {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 }

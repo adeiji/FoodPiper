@@ -86,7 +86,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
             for var index = 0; index < Int(ceil(CGFloat(rating!))); ++index {
                 let star = StarIcon()
                 star.filled = true
-                star.frame = CGRectMake(CGFloat(index * Int(height + 5)), 0, height, height);
+                star.frame = CGRectMake(CGFloat( index * Int(height + 5)), 0, height, height);
                 view.fiveStarView.addSubview(star);
                 widthOfFrame += (height + 5)
             }
@@ -169,7 +169,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func commentOnPipeButtonPressed(sender: UIButton) {
         let viewController = MessageViewController()
-        let pipe = (sender.superview as! ViewPeepRatingTableCell).rating.pipe
+        let pipe = (sender.superview as! ViewPeepRatingTableCell).pipe
         viewController.pipe = pipe
         selectedPeepView = sender.superview?.superview
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -195,7 +195,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
                             myView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.7)
                             let imageHeight = self.addImageToView(data, view: myView)
                             let views = self.getRatingViews(myPipe, imageHeight: imageHeight)
-                            self.addRatingViewsAndComments(comments, ratingViews: views, imageHeight: imageHeight, myView: myView)
+                            self.addRatingViewsAndComments(comments, ratingViews: views, imageHeight: imageHeight, myView: myView, myPipe: myPipe)
                         })
                     })
                 }
@@ -295,11 +295,12 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         return yPos
     }
     
-    func addActionView (myView: UIView, var yPos: CGFloat) -> CGFloat {
+    func addActionView (myView: UIView, var yPos: CGFloat, myPipe: Pipe) -> CGFloat {
         let actionView = NSBundle.mainBundle().loadNibNamed(self.VIEW_PEEP_RATING_TABLE_CELL, owner: self, options: nil)[self.ACTION_VIEW_INDEX] as! ViewPeepRatingTableCell
         actionView.frame = CGRectMake(0, yPos, self.view.layer.frame.width, actionView.layer.frame.height)
         actionView.borderWidth = 0.2
         actionView.layer.borderColor = UIColor.grayColor().CGColor
+        actionView.pipe = myPipe
         myView.addSubview(actionView)
         yPos += actionView.frame.size.height
         
@@ -308,7 +309,20 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     
     func addRatingViews (ratingViews: [ViewPeepRatingTableCell], var yPos: CGFloat, myView: UIView) -> CGFloat {
         for view in ratingViews {
-            view.frame = CGRectMake(0, yPos, self.view.frame.size.width, view.frame.size.height)
+            var height:CGFloat! = 0
+            if view.lblPipeComment != nil {
+                view.lblPipeComment.sizeToFit()
+                view.lblPipeComment.layoutIfNeeded()
+                if view.lblPipeComment.frame.size.height > view.frame.size.height {
+                    height = view.lblPipeComment.frame.size.height
+                }
+            }
+            if height == 0 {
+                height = view.frame.size.height
+            }
+            
+            view.frame = CGRectMake(0, yPos, self.view.frame.size.width, height)
+ 
             view.layer.borderColor = UIColor(red: 33/255, green: 138/255, blue: 164/255, alpha: 1).CGColor
             view.borderWidth = 0.1
             self.displayFiveStarRating(view)
@@ -320,9 +334,9 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         return yPos
     }
     
-    func addRatingViewsAndComments (comments: [String]?, ratingViews: [ViewPeepRatingTableCell], imageHeight: CGFloat, myView: UIView) {
+    func addRatingViewsAndComments (comments: [String]?, ratingViews: [ViewPeepRatingTableCell], imageHeight: CGFloat, myView: UIView, myPipe: Pipe) {
             var yPos = imageHeight
-            yPos = self.addActionView(myView, yPos: yPos)
+            yPos = self.addActionView(myView, yPos: yPos, myPipe: myPipe)
             yPos = self.addRatingViews(ratingViews, yPos: yPos, myView: myView)
             yPos = self.addCommentsToView(comments, myView: myView, yPos: yPos)
             myView.frame = CGRectMake(0, self.lastYPos, self.scrollView.frame.width, yPos)
@@ -360,6 +374,13 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         }
         view.ratingIcon.restorationIdentifier = buttonIdentifier
         view.lblRatingComment.text = rating.comment
+        
+        if view.lblRatingComment.text == "" {
+            view.lblRatingComment.text = "No Comment"
+        }
+        if rating.comment == nil {
+            view.lblRatingComment.text = "No Comment"
+        }
         view.rating = rating
         view.drawLine = true
         
@@ -369,7 +390,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func savePipeToFavorites(sender: UIButton) {
         
         let user = PFUser.currentUser()
-        let pipe = (sender.superview as! ViewPeepRatingTableCell).rating.pipe
+        let pipe = (sender.superview as! ViewPeepRatingTableCell).pipe
         
         if var favoritePipes = user?.objectForKey(PARSE_USER_FAVORITE_PIPES) as? [Pipe] {
             favoritePipes.append(pipe)
@@ -387,7 +408,7 @@ class PeepViewController: UIViewController, UIScrollViewDelegate {
         let semaphore = dispatch_semaphore_create(0)
 
         do {
-            try myRatingObject.fetchIfNeeded() as Rating!
+            try myRatingObject.fetchIfNeeded()
             dispatch_semaphore_signal(semaphore)
             
             if dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER) == 0 {

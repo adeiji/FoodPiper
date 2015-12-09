@@ -15,6 +15,7 @@ import UIKit
     @IBOutlet weak var ratingIcon: FoodPiperButtons!
     @IBOutlet weak var fiveStarView: UIView!
     var rating:Rating!
+    var pipe:Pipe!
     @IBOutlet weak var lblPipeComment: UILabel!
     @IBOutlet weak var lblRatingType: UILabel!
     @IBOutlet weak var lblRatingDescription: UILabel!

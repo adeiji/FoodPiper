@@ -16,7 +16,7 @@ class FoodPiperButtons: UIButton {
         // Drawing code
         switch self.restorationIdentifier {
         case RestorationIdentifiers.SmallFood.rawValue?:
-            FoodPiperIcons.drawFoodIconSmallWithFrame(rect)
+            FoodPiperIcons.drawFoodIconSmall()
             break
         case RestorationIdentifiers.WaitTime.rawValue?:
             FoodPiperIcons.drawHoursIconWithFrame(rect)
@@ -49,7 +49,7 @@ class FoodPiperButtons: UIButton {
             FoodPiperIcons.drawServiceIconSmall()
             break
         case RestorationIdentifiers.CrowdSmall.rawValue?:
-            FoodPiperIcons.drawCrowdIconSmallWithFrame(rect)
+            FoodPiperIcons.drawCrowdIconSmall()
             break
         case RestorationIdentifiers.Email.rawValue?:
             FoodPiperIcons.drawSendMessageIconWithFrame(rect)

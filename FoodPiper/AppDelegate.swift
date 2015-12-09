@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if PFUser.currentUser() != nil {
             let storyboard = UIStoryboard(name: VIEW_RESTAURANTS_STORYBOARD, bundle: nil)
             let viewController = storyboard.instantiateViewControllerWithIdentifier(VIEW_RESTAURANTS_VIEW_CONTROLLER) as! DEViewRestaurantsViewController
-            viewController.restaurants = apiHandler.convertRestaurantsDictionaryToArray()
             viewController.currentLocation = apiHandler.currentLocation
             viewController.navigationController?.pushViewController(viewController, animated: true)
             let userManager = DEUserManager()

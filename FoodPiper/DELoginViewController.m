@@ -111,7 +111,7 @@ NSString *const VIEW_RESTAURANTS_STORYBOARD = @"ViewRestaurants";
     APIHandler *apiHandler = appDelegate.apiHandler;
     DEViewRestaurantsViewController *viewController = [[UIStoryboard storyboardWithName:VIEW_RESTAURANTS_STORYBOARD bundle:nil] instantiateViewControllerWithIdentifier:VIEW_RESTAURANTS_VIEW_CONTROLLER];
     
-    [viewController setRestaurants:[apiHandler convertRestaurantsDictionaryToArray]];
+    [viewController setRestaurants:[Restaurant convertRestaurantsDictionaryToArray:apiHandler.restaurants]];
     [viewController setCurrentLocation:apiHandler.currentLocation];
     [self.navigationController pushViewController:viewController animated:YES];
 }

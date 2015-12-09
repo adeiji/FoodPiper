@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingViewController" customModule="FoodPiper" customModuleProvider="target">
@@ -493,19 +493,44 @@
                         </mask>
                     </variation>
                 </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="33l-3a-Dtq">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="J4K-Im-huM"/>
+                        <constraint firstAttribute="height" constant="155" id="y95-Cs-ZgG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="J4K-Im-huM"/>
+                            <exclude reference="y95-Cs-ZgG"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="J4K-Im-huM"/>
+                            <include reference="y95-Cs-ZgG"/>
+                        </mask>
+                    </variation>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="33l-3a-Dtq" firstAttribute="top" secondItem="E6v-M0-Ac8" secondAttribute="bottom" constant="18" id="3Mo-0S-u1c"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="Aye-eW-ScI" secondAttribute="leading" id="CwJ-eO-e4X"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="Aye-eW-ScI" secondAttribute="top" id="Oki-Dk-YOJ"/>
                 <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="YgK-s9-Llv"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="Aye-eW-ScI" secondAttribute="centerY" id="boY-Up-Wia"/>
                 <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="Aye-eW-ScI" secondAttribute="centerX" id="csj-Af-Eze"/>
+                <constraint firstItem="33l-3a-Dtq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dbl-eN-a2d"/>
                 <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="ybU-bq-v0c"/>
             </constraints>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="iN0-l3-epB"/>
+                    <exclude reference="33l-3a-Dtq"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="CwJ-eO-e4X"/>
@@ -514,11 +539,14 @@
                     <exclude reference="boY-Up-Wia"/>
                     <exclude reference="csj-Af-Eze"/>
                     <exclude reference="ybU-bq-v0c"/>
+                    <exclude reference="3Mo-0S-u1c"/>
+                    <exclude reference="dbl-eN-a2d"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="iN0-l3-epB"/>
+                    <include reference="33l-3a-Dtq"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="CwJ-eO-e4X"/>
@@ -527,10 +555,13 @@
                     <include reference="boY-Up-Wia"/>
                     <include reference="csj-Af-Eze"/>
                     <include reference="ybU-bq-v0c"/>
+                    <include reference="3Mo-0S-u1c"/>
+                    <include reference="dbl-eN-a2d"/>
                 </mask>
             </variation>
             <connections>
                 <outlet property="btnNext" destination="dow-hC-hUV" id="KkA-5z-eX1"/>
+                <outlet property="txtComment" destination="33l-3a-Dtq" id="Hfj-7V-vqe"/>
             </connections>
             <point key="canvasLocation" x="-303" y="268"/>
         </scrollView>

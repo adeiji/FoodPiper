@@ -33,6 +33,8 @@
     [[_btnProfilePicture layer] setBorderWidth:2.0f];
     [[_btnProfilePicture layer] setCornerRadius:BUTTON_CORNER_RADIUS * 2];
     [[_btnContinue layer] setCornerRadius:BUTTON_CORNER_RADIUS];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
