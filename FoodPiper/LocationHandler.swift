@@ -49,7 +49,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         if (getNearbyRestaurants == true)
         {
             apiHandler.initialRequest = true
-            apiHandler.getAllRestaurantsNearLocation(currentLocation, limit: 20);
+            apiHandler.getAllRestaurantsNearLocation(currentLocation, limit: 50);
             getNearbyRestaurants = false;
         }
     }

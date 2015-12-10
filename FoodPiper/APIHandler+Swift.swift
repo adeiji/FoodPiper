@@ -39,7 +39,9 @@ extension APIHandler {
         restaurants = NSMutableDictionary()
         restaurantImages = NSMutableArray()
         // Create our API object and get all the restaurants in Las Vegas
-        apiObject = FactualAPI(APIKey: "MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM" , secret: "HKu1BsZY0Xzeo02mPRsywbC7LlzyZVcUrIjkTCt5")
+        apiObject = FactualAPI(APIKey: "MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM" , secret:
+            "HKu1BsZY0Xzeo02mPRsywbC7LlzyZVcUrIjkTCt5")
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let point = PFGeoPoint(latitude: myCurrentLocation.coordinate.latitude, longitude: myCurrentLocation.coordinate.longitude)
             let dictionary = [PARSE_RESTAURANT_LOCATION : point]
@@ -49,6 +51,7 @@ extension APIHandler {
                 queryObject.includeRowCount = true
                 let coordinate = CLLocationCoordinate2D(latitude: myCurrentLocation.coordinate.latitude, longitude: myCurrentLocation.coordinate.longitude)
                 queryObject.setGeoFilter(coordinate, radiusInMeters: 5000)
+                queryObject.primarySortCriteria = FactualSortCriteria(fieldName: "$distance", sortOrder: FactualSortOrder_Ascending)
                 queryObject.limit = limit
                 self.apiObject.queryTable("restaurants-us", optionalQueryParams: queryObject, withDelegate: self)
             })

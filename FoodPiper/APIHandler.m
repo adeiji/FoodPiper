@@ -81,6 +81,10 @@ NSString *const INITIAL_REQUEST = @"1";
 }
 
 
+- (void) requestComplete:(FactualAPIRequest *)request failedWithError:(NSError *)error {
+    
+}
+
 - (void) requestComplete:(FactualAPIRequest *)request receivedQueryResult:(FactualQueryResult *)queryResult {
 
     static BOOL restaurantsSaved = NO;
