@@ -37,6 +37,7 @@
 		F4624FC71BE83745001F26C4 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4624FC51BE83745001F26C4 /* MessageViewController.xib */; };
 		F4624FCB1BEA7FE8001F26C4 /* walking-26.png in Resources */ = {isa = PBXBuildFile; fileRef = F4624FCA1BEA7FE8001F26C4 /* walking-26.png */; };
 		F4624FCD1BEA8C34001F26C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */; };
+		F471BDB01C1A2EF300DF56BF /* ViewRestaurantsView+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471BDAF1C1A2EF300DF56BF /* ViewRestaurantsView+Swift.swift */; };
 		F475C3351BE2F12100E159F6 /* FiveStarRatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */; };
 		F475C3371BE2F6DF00E159F6 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */; };
 		F475C3391BE2F6FC00E159F6 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475C3381BE2F6FC00E159F6 /* RatingView.swift */; };
@@ -205,6 +206,7 @@
 		F4624FC51BE83745001F26C4 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		F4624FCA1BEA7FE8001F26C4 /* walking-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "walking-26.png"; path = "images/walking-26.png"; sourceTree = "<group>"; };
 		F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F471BDAF1C1A2EF300DF56BF /* ViewRestaurantsView+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewRestaurantsView+Swift.swift"; sourceTree = "<group>"; };
 		F475C3341BE2F12100E159F6 /* FiveStarRatingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveStarRatingView.xib; sourceTree = "<group>"; };
 		F475C3361BE2F6DF00E159F6 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		F475C3381BE2F6FC00E159F6 /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -872,6 +874,7 @@
 				F4624FCC1BEA8C34001F26C4 /* MapViewController.swift */,
 				F49F00A81BEAA73600EDDF8C /* MapView.swift */,
 				F42A1E0B1BF26D91002286BF /* MakeReservationView.swift */,
+				F471BDAF1C1A2EF300DF56BF /* ViewRestaurantsView+Swift.swift */,
 			);
 			name = "VIew and View Controller";
 			sourceTree = "<group>";
@@ -1139,6 +1142,7 @@
 				F4BBFFA21BDC00420056BF40 /* ViewIndividualRestaurantViewController.swift in Sources */,
 				F42A1DF51BF147DE002286BF /* CircularOrView.swift in Sources */,
 				F4C85F401BD9B918009F3B55 /* DELoginView.m in Sources */,
+				F471BDB01C1A2EF300DF56BF /* ViewRestaurantsView+Swift.swift in Sources */,
 				F4C85F621BD9BF34009F3B55 /* DESyncManager.m in Sources */,
 				F4EA284F1BDA906700079658 /* DEViewRestaurantsViewController.m in Sources */,
 				F42A1DFA1BF14D8F002286BF /* FoodBackgroundView.swift in Sources */,

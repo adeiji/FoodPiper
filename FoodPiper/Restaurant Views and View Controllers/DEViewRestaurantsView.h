@@ -26,6 +26,7 @@
 @property BOOL rotateImage;
 @property (strong, nonatomic) Restaurant *restaurant;
 @property (weak, nonatomic) IBOutlet UIView *addressIcon;
+@property (strong, nonatomic) NSArray *deals;
 
 /*
  

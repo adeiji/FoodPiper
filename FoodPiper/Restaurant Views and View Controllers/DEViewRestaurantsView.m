@@ -119,6 +119,7 @@ NSString *const VIEW_INDIVIDUAL_RESTAURANT_XIB = @"ViewIndividualRestaurant";
     // Set the UI outlets to the data from the restaurant
     
     _restaurant = myRestaurant;
+    [self loadDeals];
 }
 
 - (void) hideImage {

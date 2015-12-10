@@ -58,6 +58,15 @@ let FILTER_DISTANCE_KEY = "distance"
 
 let STORYBOARD_ID_PROMPT_LOGIN = "promptLoginViewController"
 
+enum ParseKey : String {
+    case DealRestaurantFactualId = "restaurant"
+    case DealDealDescription = "deal"
+}
+
+enum ParseClass : String {
+    case Deal = "Deal"
+}
+
 enum NibFileNames : String {
     case ViewPeep = "ViewPeep"
 }

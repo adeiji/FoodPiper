@@ -129,4 +129,13 @@ extension DEViewRestaurantsViewController  {
     func removeObservers () {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+    
+    func displayDeals () {
+        for view in self.view.subviews {
+            if view.isKindOfClass(DEViewRestaurantsView) {
+                (view as! DEViewRestaurantsView).displayDeals()
+            }
+            
+        }
+    }
 }
