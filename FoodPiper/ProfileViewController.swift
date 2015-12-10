@@ -79,6 +79,29 @@ class ProfileViewController: UIViewController {
     }
     
     
+    func removeFriend () {
+        let friends = PFUser.currentUser()![PARSE_USER_FRIENDS]
+        friends.removeObject(user)
+        PFUser.currentUser()![PARSE_USER_FRIENDS] = friends
+        self.navigationController?.popViewControllerAnimated(true)
+        SyncManager.saveParseObject(PFUser.currentUser(), message: "Friend Removed")
+    }
+    
+    @IBAction func removeFriendPressed(sender: UIButton) {
+        showRemoveUserActionSheet()
+    }
+    
+    func showRemoveUserActionSheet () {
+        let removeFriendAction = UIAlertAction(title: "Remove Friend", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.removeFriend()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        let alertController = UIAlertController(title: "Are You Sure?", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        alertController.addAction(cancelAction)
+        alertController.addAction(removeFriendAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     /*
     
     Add the user as a friend to the current user and then display that the friend request was sent

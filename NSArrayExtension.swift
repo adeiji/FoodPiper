@@ -25,4 +25,15 @@ extension Array
         
         return dataAsString
     }
+    
+    mutating func removeObject(objectToRemove: AnyObject) {
+        var index = 0
+        for object in self {            
+            if objectToRemove === (object as! AnyObject) {
+                self.removeAtIndex(index)
+                index++
+                break
+            }
+        }
+    }
 }
