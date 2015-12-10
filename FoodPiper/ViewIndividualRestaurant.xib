@@ -910,7 +910,7 @@
                 <outlet property="txtAddress" destination="OTs-1h-Ffv" id="22e-vZ-k7i"/>
                 <outlet property="txtCuisine" destination="ryd-pY-A6c" id="Cds-B7-MlK"/>
             </connections>
-            <point key="canvasLocation" x="500" y="4987"/>
+            <point key="canvasLocation" x="500" y="5193"/>
         </scrollView>
     </objects>
 </document>

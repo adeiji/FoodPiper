@@ -28,6 +28,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
     var pipe:Pipe = Pipe()
     var imagePicker:UIImagePickerController!
     var pipeMenu:PipeMenuView!
+    var checkedIn:Bool!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle:nibBundleOrNil);
@@ -358,6 +359,14 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         displayViewInWindow(hoursView)
     }
     
+    @IBAction func setReservation(sender: UIButton) {
+        
+        let reservation = PFObject(className: "Reservation");
+        reservation["details"] = "Name: " + restaurant.name + " Date and Time: " + makeReservationView.lblDateAndTime.text!
+        reservation["restaurant"] = restaurant.factualId
+        SyncManager.saveParseObject(reservation, message: "Reservation Request Sent")
+        closeReservationView(sender)
+    }
     @IBAction func makeReservationButtonPressed(sender: UIButton) {
         
         makeReservationView = NSBundle.mainBundle().loadNibNamed(VIEW_MAKE_RESERVATION, owner: self, options: nil).first as! MakeReservationView
@@ -382,7 +391,13 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         
         disableScreen()
     }
-
+    
+    @IBAction func closeReservationView(sender: UIButton) {
+        DEAnimationManager.animateViewOut(makeReservationView, withInsets: UIEdgeInsetsZero)
+        
+        enableScreen()
+    }
+    
     func enableScreen () {
         self.view.userInteractionEnabled = true
         self.navigationItem.hidesBackButton = false
@@ -520,11 +535,7 @@ class ViewIndividualRestaurantViewController: ViewController, MFMailComposeViewC
         sender.superview?.removeFromSuperview()
     }
     
-    @IBAction func closeReservationView(sender: UIButton) {
-        DEAnimationManager.animateViewOut(makeReservationView, withInsets: UIEdgeInsetsZero)
-        
-        enableScreen()
-    }
+
     
     func resizeImage (width: CGFloat, height: CGFloat) -> CGFloat {
         

@@ -84,7 +84,7 @@ class ProfileViewController: UIViewController {
         friends.removeObject(user)
         PFUser.currentUser()![PARSE_USER_FRIENDS] = friends
         self.navigationController?.popViewControllerAnimated(true)
-        SyncManager.saveParseObject(PFUser.currentUser(), message: "Friend Removed")
+        SyncManager.saveParseObject(PFUser.currentUser()!, message: "Friend Removed")
     }
     
     @IBAction func removeFriendPressed(sender: UIButton) {

@@ -11,7 +11,7 @@ import UIKit
 class DirectionHandler: NSObject {
 
     class func getGoogleMapsAction (currentLocation: CLLocation, restaurant: Restaurant) -> UIAlertAction {
-        let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%f,%f&zoom=10"
+        let GOOGLE_MAPS_APP_URL = "comgooglemaps://?saddr=&daddr=%@&center=%@,%@&zoom=10"
         let latitude:String = "\(restaurant.location.coordinate.latitude)"
         let longitude:String = "\(restaurant.location.coordinate.longitude)"
         
@@ -30,7 +30,7 @@ class DirectionHandler: NSObject {
     }
     
     class func getAppleMapsAction (currentLocation: CLLocation, restaurant: Restaurant) -> UIAlertAction {
-        let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%f,%f"
+        let APPLE_MAPS_APP_URL = "http://maps.apple.com/?daddr=%@&saddr=%@,%@"
         let latitude:String = "\(currentLocation.coordinate.latitude)"
         let longitude:String = "\(currentLocation.coordinate.longitude)"
         
