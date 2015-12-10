@@ -85,18 +85,26 @@ public class Restaurant: NSObject {
         myRestaurant.breakfast = restaurant.stringValueForName(FACTUAL_BREAKFAST)
         myRestaurant.lunch = restaurant.stringValueForName(FACTUAL_LUNCH)
         myRestaurant.factualId = restaurant.stringValueForName(FACTUAL_ID)
-        let url = NSURL(string: restaurant.stringValueForName(FACTUAL_WEBSITE))
-        myRestaurant.website = url
+        if ((restaurant.stringValueForName(FACTUAL_WEBSITE)) != nil) {
+            let url = NSURL(string: restaurant.stringValueForName(FACTUAL_WEBSITE))
+            myRestaurant.website = url
+        }
         
-        let cuisines = restaurant.stringValueForName(FACTUAL_CUISINE)
-        let trim = NSCharacterSet(charactersInString: "[]")
-        let cuisineArray = cuisines.componentsSeparatedByString(",")
-        myRestaurant.cuisine = cuisineArray
+        var cuisines = restaurant.stringValueForName(FACTUAL_CUISINE)
+        if cuisines != nil {
+            let trim = NSCharacterSet(charactersInString: "[]")
+            cuisines = cuisines.stringByTrimmingCharactersInSet(trim)
+            let cuisineArray = cuisines.componentsSeparatedByString(",")
+            myRestaurant.cuisine = cuisineArray
+        }
 
         var categories = restaurant.stringValueForName(FACTUAL_CATEGORIES)
-        categories = categories.stringByTrimmingCharactersInSet(trim)
-        let categoryArray = categories.componentsSeparatedByString(",")
-        myRestaurant.categories = categoryArray
+        if categories != nil {
+            let trim = NSCharacterSet(charactersInString: "[]")
+            categories = categories.stringByTrimmingCharactersInSet(trim)
+            let categoryArray = categories.componentsSeparatedByString(",")
+            myRestaurant.categories = categoryArray
+        }
         
         myRestaurant.price = restaurant.stringValueForName(FACTUAL_PRICE)
         myRestaurant.alcohol_bar = restaurant.stringValueForName(FACTUAL_ALCOHOL_BAR)
@@ -107,8 +115,10 @@ public class Restaurant: NSObject {
         
         
         let hours = restaurant.stringValueForName(FACTUAL_HOURS)
-        let hoursDictionary = convertHoursStringToDictionary(hours)
-        myRestaurant.hours = hoursDictionary as! [String : String]
+        if hours != nil {
+            let hoursDictionary = convertHoursStringToDictionary(hours)
+            myRestaurant.hours = hoursDictionary as! [String : String]
+        }
         myRestaurant.hoursDisplay = restaurant.stringValueForName(FACTUAL_HOURS_DISPLAY)
         myRestaurant.caters = restaurant.stringValueForName(FACTUAL_CATERS)
         myRestaurant.distanceFromUser = restaurant.stringValueForName(FACTUAL_DISTANCE_FROM_USER)

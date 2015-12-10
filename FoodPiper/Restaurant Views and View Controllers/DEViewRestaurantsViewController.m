@@ -194,7 +194,6 @@ struct TopMargin {
     [self.scrollView setDelegate:self];
 
     if (_isFirstTime) {
-        [self removeRestaurantsWithNoImage];
         [self displayRestaurant:nil];
         _isFirstTime = NO;
     }
@@ -322,6 +321,7 @@ struct TopMargin {
     if (_restaurants.count != 0)
     {
         [self removeAllPostFromScreen];
+        [self removeRestaurantsWithNoImage];
         [self stopActivitySpinner];
         [self displayRestaurantWithTopMargin:0 PostArray:nil];
         [_scrollView setContentOffset:CGPointMake(0, 0) animated:NO];

@@ -43,6 +43,7 @@ class FilterViewController: UIViewController {
     func doneSettingFiltersButtonPressed (sender: UIButton) {
         apiHandler = (UIApplication.sharedApplication().delegate as! AppDelegate).apiHandler
         apiHandler.notifyWhenDone = true
+        apiHandler.initialRequest = true
         apiHandler.getAllRestaurantsWithFilterData(filterCriteria, location: currentLocation)
     }
     
@@ -65,6 +66,8 @@ class FilterViewController: UIViewController {
         let array = Restaurant.convertRestaurantsDictionaryToArray(apiHandler.restaurants)
         if array.count != 0 {
             viewRestaurantsViewController.restaurants = Restaurant.convertRestaurantsDictionaryToArray(apiHandler.restaurants)
+            viewRestaurantsViewController.isNewProcess = true
+            viewRestaurantsViewController.displayRestaurant(nil)
         }
         else {
             SyncManager.showSuccessIndicator("No Restaurants")
@@ -215,17 +218,25 @@ class FilterViewController: UIViewController {
         
         let path = NSBundle.mainBundle().pathForResource("Categories", ofType: "plist")
         let myDict = NSDictionary(contentsOfFile: path!)
-        let categoryId = myDict?.objectForKey(category!) as! NSNumber
+        if let categoryId = myDict?.objectForKey(category!) as? NSNumber {
         
-        if categories.contains(categoryId.stringValue) == false {
+            if categories.contains(categoryId.stringValue) == false {
 
-            categories.append(categoryId.stringValue)
-            filterCriteria[FILTER_CATEGORY_KEY] = categories
-            
-            updateButtonHighlightedView(sender, highlighted: false)
-        }
-        else {
-            updateButtonHighlightedView(sender, highlighted: true)
+                categories.append(categoryId.stringValue)
+                filterCriteria[FILTER_CATEGORY_KEY] = categories
+                
+                updateButtonHighlightedView(sender, highlighted: false)
+            }
+            else {
+                updateButtonHighlightedView(sender, highlighted: true)
+            }
+        } else {
+            if sender.borderWidth == 0 {
+                updateButtonHighlightedView(sender, highlighted: true)
+            }
+            else {
+                updateButtonHighlightedView(sender, highlighted: false)
+            }
         }
     }
     

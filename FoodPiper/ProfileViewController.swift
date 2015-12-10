@@ -58,9 +58,14 @@ class ProfileViewController: UIViewController {
             let dictionary = [PIPE_USER : self.user!]
             let pipes = SyncManager.getParseObjectsWithClass(PIPE_PARSE_CLASS, objectKeyValues: dictionary, queryType: ParseQueryType.WhereKeyEqualTo, containedInNot: [AnyObject](), withinKilometers:0)
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                let viewController = PeepViewController(nibName: NibFileNames.ViewPeep.rawValue, bundle: nil)
-                viewController.pipes = pipes
-                self.navigationController?.pushViewController(viewController, animated: true)
+                if pipes.count == 0 {
+                    let viewController = PeepViewController(nibName: NibFileNames.ViewPeep.rawValue, bundle: nil)
+                    viewController.pipes = pipes
+                    self.navigationController?.pushViewController(viewController, animated: true)
+                }
+                else {
+                    SyncManager.showSuccessIndicator("User Has No Pipes")
+                }
             })
         })
     }

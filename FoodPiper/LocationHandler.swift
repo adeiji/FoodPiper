@@ -13,7 +13,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
 
     var currentLocation:CLLocation!
     var locationManager:CLLocationManager!
-    var isFirstRun:Bool!
+    var getNearbyRestaurants:Bool!
     var apiHandler:APIHandler!
     
     func initializeLocationManager () {
@@ -22,7 +22,7 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization();
         locationManager.startUpdatingLocation()
-        isFirstRun = true;
+        getNearbyRestaurants = true;
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -46,11 +46,11 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         currentLocation = mostRecentLocation;
         
         // If this is the first time that were getting the current location than get all the restaurants
-        if (isFirstRun == true)
+        if (getNearbyRestaurants == true)
         {
             apiHandler.initialRequest = true
             apiHandler.getAllRestaurantsNearLocation(currentLocation, limit: 20);
-            isFirstRun = false;
+            getNearbyRestaurants = false;
         }
     }
     

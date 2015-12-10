@@ -10,7 +10,7 @@ import UIKit
 
 extension DEViewRestaurantsViewController  {
        @IBAction func viewProfile (sender: UIButton) {
-        sender.superview?.removeFromSuperview()
+        hidePeepMenu(sender)
         
         let viewController = AccountViewController.init(nibName: VIEW_SETTINGS_ACCOUNT, bundle: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -39,7 +39,7 @@ extension DEViewRestaurantsViewController  {
             viewController.currentLocation = currentLocation
         }
 
-        sender.superview?.removeFromSuperview()
+        hidePeepMenu(sender)
     }
     
     enum PFUserError: ErrorType {
@@ -54,8 +54,7 @@ extension DEViewRestaurantsViewController  {
     */
     @IBAction func viewAllPipes (sender: UIButton) {
         
-        sender.superview?.removeFromSuperview()
-        
+        hidePeepMenu(sender)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let pipes = SyncManager.getAllParseObjects(PIPE_PARSE_CLASS)
             
@@ -69,7 +68,7 @@ extension DEViewRestaurantsViewController  {
     }
     
     @IBAction func viewFavoritePipes (sender: UIButton) {
-        sender.superview?.removeFromSuperview()
+        hidePeepMenu(sender)
         guard let favoritePipes = PFUser.currentUser()?.objectForKey(PARSE_USER_FAVORITE_PIPES) as? [Pipe] else {
             
             NSLog("User not logged in")
@@ -86,13 +85,18 @@ extension DEViewRestaurantsViewController  {
     }
     
     @IBAction func viewNearbyRestaurants (sender: UIButton) {
-        let locationHandler = LocationHandler()
+        let locationHandler = (UIApplication.sharedApplication().delegate as! AppDelegate).locationHandler
+        locationHandler.getNearbyRestaurants = true
         locationHandler.initializeLocationManager()
-        
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        hidePeepMenu(sender)
+    }
+    
+    func hidePeepMenu (sender: UIButton) {
+        sender.superview?.removeFromSuperview()
     }
     
     @IBAction func viewFavoriteRestaurants (sender: UIButton) {
+        hidePeepMenu(sender)
         let restaurantIds = PFUser.currentUser()![PARSE_USER_FAVORITE_RESTAURANTS]
         let apiHandler = (UIApplication.sharedApplication().delegate as! AppDelegate).apiHandler
         apiHandler.getRestaurantsWithIds(restaurantIds as! [String])
@@ -102,7 +106,7 @@ extension DEViewRestaurantsViewController  {
         var count = 0
         for restaurant in self.restaurants {
             let image_url = (restaurant as! Restaurant).image_url as NSURL?
-            if image_url == nil {
+            if image_url == nil || (restaurant as! Restaurant).imageHeight.doubleValue == 0 {
                 self.restaurants.removeAtIndex(count)
                 count--
             }

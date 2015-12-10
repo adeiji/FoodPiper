@@ -54,7 +54,7 @@ NSString *const INITIAL_REQUEST = @"1";
         [queryObject setGeoFilter:coordinate radiusInMeters:5000];
     }
     
-    [queryObject setLimit:5];
+    [queryObject setLimit:20];
     [_apiObject queryTable:@"restaurants-us" optionalQueryParams:queryObject withDelegate:self];
     
 }
@@ -109,7 +109,7 @@ NSString *const INITIAL_REQUEST = @"1";
                     }
                 }
             }
-            
+            _initialRequest = NO;
             [CrosswalkHandler callCrossWalkForImagesWithQueryResult:queryResult Delegate:self StoredRestaurantImages:_storedRestaurantImages APIObject:_apiObject Restaurants:_restaurants]; // Check to see if the images have already been stored and if not than call crosswalk
         }
         
@@ -117,13 +117,10 @@ NSString *const INITIAL_REQUEST = @"1";
             [self notifyDone];
         }
         
-        _initialRequest = NO;
     }
     else {     // Get the yelp information from Foursquare API
-        if (!_notifyWhenDone) {
-            [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
-            restaurantsSaved = NO;
-        }
+        [self getRestaurantImageFromFoursquareWithQueryResult : queryResult SaveImage:NO SingleRequest:_singleRequest ];
+        restaurantsSaved = NO;
     }
     
 }
@@ -148,7 +145,7 @@ NSString *const INITIAL_REQUEST = @"1";
             [restaurant setImageWidth:photoWidth];
             [restaurant setImageHeight:photoHeight];
             [self storeRestaurantImageWithURL:image_url factualId:factualId height:photoHeight width:photoWidth location:restaurant.location];
-            
+            [_restaurants setObject:restaurant forKey:factualId];
             // If this is the last request for the foursquare image than display the ViewRestaurants screen
             if (singleRequest) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_IMAGE_LOADED object:nil userInfo:@{ NOTIFICATION_KEY_RESTAURANT : restaurant }];

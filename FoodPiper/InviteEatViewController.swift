@@ -26,7 +26,7 @@ class InviteEatViewController: UIViewController, UITextFieldDelegate {
         datePicker.datePickerMode = UIDatePickerMode.DateAndTime
         self.inviteView.txtDateTime.inputView = datePicker
         datePicker.addTarget(self, action: "displayDateAndTime:", forControlEvents: UIControlEvents.ValueChanged)
-        
+        self.inviteView.txtRestaurant.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
 
