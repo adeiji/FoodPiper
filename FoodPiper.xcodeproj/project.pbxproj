@@ -146,6 +146,8 @@
 		F4F97BBC1C160B0800B53BE3 /* ViewPeep.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */; };
 		F4F97BBF1C164F9500B53BE3 /* SearchRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F97BBE1C164F9500B53BE3 /* SearchRestaurantsViewController.swift */; };
 		F4F97BC11C18E3CA00B53BE3 /* APIHandler+SingleRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F97BC01C18E3CA00B53BE3 /* APIHandler+SingleRestaurant.swift */; };
+		F4F97BCF1C18FB3100B53BE3 /* FactualQuery+MakeQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F97BCE1C18FB3100B53BE3 /* FactualQuery+MakeQuery.m */; };
+		F4F97BD21C18FFAF00B53BE3 /* CrosswalkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F97BD11C18FFAF00B53BE3 /* CrosswalkHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +344,10 @@
 		F4F97BBB1C160B0800B53BE3 /* ViewPeep.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewPeep.xib; sourceTree = "<group>"; };
 		F4F97BBE1C164F9500B53BE3 /* SearchRestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRestaurantsViewController.swift; sourceTree = "<group>"; };
 		F4F97BC01C18E3CA00B53BE3 /* APIHandler+SingleRestaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIHandler+SingleRestaurant.swift"; sourceTree = "<group>"; };
+		F4F97BCD1C18FB3100B53BE3 /* FactualQuery+MakeQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FactualQuery+MakeQuery.h"; sourceTree = "<group>"; };
+		F4F97BCE1C18FB3100B53BE3 /* FactualQuery+MakeQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FactualQuery+MakeQuery.m"; sourceTree = "<group>"; };
+		F4F97BD01C18FFAF00B53BE3 /* CrosswalkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrosswalkHandler.h; sourceTree = "<group>"; };
+		F4F97BD11C18FFAF00B53BE3 /* CrosswalkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrosswalkHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -738,6 +744,10 @@
 				F4CBC3721BD1EAF600FEBE36 /* APIHandler.h */,
 				F4CBC3731BD1EAF600FEBE36 /* APIHandler.m */,
 				F4F97BC01C18E3CA00B53BE3 /* APIHandler+SingleRestaurant.swift */,
+				F4F97BCD1C18FB3100B53BE3 /* FactualQuery+MakeQuery.h */,
+				F4F97BCE1C18FB3100B53BE3 /* FactualQuery+MakeQuery.m */,
+				F4F97BD01C18FFAF00B53BE3 /* CrosswalkHandler.h */,
+				F4F97BD11C18FFAF00B53BE3 /* CrosswalkHandler.m */,
 			);
 			name = "API Handler";
 			sourceTree = "<group>";
@@ -1117,6 +1127,7 @@
 				F4A2AF211BF133370006CBE8 /* StarIcon.swift in Sources */,
 				F4BD6AC71C13B9E000321BE5 /* FoodPiperFlatIcons.swift in Sources */,
 				F4624FC31BE81694001F26C4 /* UIView+DEScrollOnShowKeyboard.m in Sources */,
+				F4F97BD21C18FFAF00B53BE3 /* CrosswalkHandler.m in Sources */,
 				F42A1E101BF28895002286BF /* Reservation.swift in Sources */,
 				F4CBC3741BD1EAF600FEBE36 /* APIHandler.m in Sources */,
 				F4A20D2A1BFAA35100D966D4 /* SearchFriendsViewController.swift in Sources */,
@@ -1149,6 +1160,7 @@
 				F4A2AF1D1BF132DA0006CBE8 /* MenuIcon.swift in Sources */,
 				F4A2AF311BF133AC0006CBE8 /* CommentIcon.swift in Sources */,
 				F4D4D6571C13CA480075E23A /* DirectionHandler.swift in Sources */,
+				F4F97BCF1C18FB3100B53BE3 /* FactualQuery+MakeQuery.m in Sources */,
 				F4C85F4A1BD9BB37009F3B55 /* DEAddProfileImageViewController.m in Sources */,
 				F4A2AF271BF133660006CBE8 /* PeepIcon.swift in Sources */,
 				F4A20D281BFA990600D966D4 /* DEUserManager+Swift.swift in Sources */,

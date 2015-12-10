@@ -43,7 +43,8 @@ extension APIHandler {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
             let point = PFGeoPoint(latitude: myCurrentLocation.coordinate.latitude, longitude: myCurrentLocation.coordinate.longitude)
             let dictionary = [PARSE_RESTAURANT_LOCATION : point]
-            self.storedRestaurantImages = SyncManager.getParseObjectsWithClass(PARSE_CLASS_NAME_RESTAURANT, objectKeyValues: dictionary, queryType: ParseQueryType.WhereKeyNearGeoPointWithinKilometers, containedInNot: [AnyObject](), withinKilometers: 5)
+            self.storedRestaurantImages = NSMutableArray()
+            self.storedRestaurantImages.addObjectsFromArray(SyncManager.getParseObjectsWithClass(PARSE_CLASS_NAME_RESTAURANT, objectKeyValues: dictionary, queryType: ParseQueryType.WhereKeyNearGeoPointWithinKilometers, containedInNot: [AnyObject](), withinKilometers: 5))
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 queryObject.includeRowCount = true
                 let coordinate = CLLocationCoordinate2D(latitude: myCurrentLocation.coordinate.latitude, longitude: myCurrentLocation.coordinate.longitude)
@@ -56,4 +57,13 @@ extension APIHandler {
         currentLocation = myCurrentLocation;
     }
 
+    func getRestaurantsWithIds (restaurantIds: [String]) {
+        initialRequest = true
+        restaurants = NSMutableDictionary()
+        notifyWhenDone = true
+        let query = FactualQuery.makeQuery()
+        query.addRowFilter(FactualRowFilter.fieldName("factual_id", inArray: restaurantIds))
+        apiObject.queryTable("restaurants-us", optionalQueryParams: query, withDelegate: self)
+    }
+    
 }

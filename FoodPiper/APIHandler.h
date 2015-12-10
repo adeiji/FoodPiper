@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "FourSquareAPIHandler.h"
 #import "DEViewRestaurantsViewController.h"
+#import "CrosswalkHandler.h"
 
 @interface APIHandler : NSObject <FactualAPIDelegate>
 
@@ -18,7 +19,7 @@
 @property (strong, nonatomic) NSMutableDictionary *restaurants;
 @property (strong, nonatomic) NSMutableArray *restaurantImages;
 @property (strong, nonatomic) CLLocation *currentLocation;
-@property (strong, nonatomic) NSArray *storedRestaurantImages;
+@property (strong, nonatomic) NSMutableArray *storedRestaurantImages;
 @property BOOL notifyWhenDone;
 @property BOOL singleRequest;
 @property BOOL initialRequest;

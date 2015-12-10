@@ -13,12 +13,18 @@ class APIHandler_SingleRestaurant: NSObject, FactualAPIDelegate {
     var restaurants:[String : Restaurant]!
     var notifyWhenDone:Bool!
     
+    func requestDidReceiveData(request: FactualAPIRequest!) {
+        
+    }
+    
+    func requestComplete(request: FactualAPIRequest!, failedWithError error: NSError!) {
+        NSLog(error.description)
+    }
     func requestComplete(request: FactualAPIRequest!, receivedQueryResult queryResult: FactualQueryResult!) {
         if queryResult.rowCount > 0 {
-            let restaurantObject = queryResult.rows[0]
-            let restaurant = Restaurant.createRestaurantObjectFromFactualObject(restaurantObject)
-            if restaurant.name != nil {
-                restaurants[restaurant.factualId] = restaurant
+            for restaurantObject in queryResult.rows {
+                let restaurant = Restaurant.createRestaurantObjectFromFactualObject(restaurantObject)
+                restaurants[restaurant.factualId] = restaurant                
             }
             
             if notifyWhenDone == true {
@@ -28,15 +34,12 @@ class APIHandler_SingleRestaurant: NSObject, FactualAPIDelegate {
     }
     
     func getRestaurantsWithIds (restaurantIds: [String]) {
+        restaurants = [String : Restaurant]()
         let apiObject = FactualAPI(APIKey: "MleIByZblcsN1V7TRLMh58AezBg5OvqT1EtZzKRM" , secret: "HKu1BsZY0Xzeo02mPRsywbC7LlzyZVcUrIjkTCt5")
-        notifyWhenDone = false
-        for restaurantId in restaurantIds {
-            if restaurantId == restaurantIds.last {
-                notifyWhenDone = true
-            }
-            
-            apiObject.get("t/restaurants-us/" + restaurantId, params: [String: AnyObject!](), withDelegate: self)
-        }
+        notifyWhenDone = true
+        let query = FactualQuery.makeQuery()
+        query.addRowFilter(FactualRowFilter.fieldName("factual_id", inArray: restaurantIds))
+        apiObject.queryTable("restaurants-us", optionalQueryParams: query, withDelegate: self)
     }
     
 }

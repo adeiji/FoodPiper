@@ -15,3 +15,4 @@
 #import "DELoginViewController.h"
 #import "FoodPiperLogo.h"
 #import "DESettingsAccount.h"
+#import "FactualQuery+MakeQuery.h"

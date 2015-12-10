@@ -110,7 +110,7 @@ NSString *const INITIAL_REQUEST = @"1";
                 }
             }
             
-            [self callCrossWalkForImagesWithQueryResult:queryResult]; // Check to see if the images have already been stored and if not than call crosswalk
+            [CrosswalkHandler callCrossWalkForImagesWithQueryResult:queryResult Delegate:self StoredRestaurantImages:_storedRestaurantImages APIObject:_apiObject Restaurants:_restaurants]; // Check to see if the images have already been stored and if not than call crosswalk
         }
         
         if (_notifyWhenDone) { // Notify application that the process is done            
@@ -160,6 +160,7 @@ NSString *const INITIAL_REQUEST = @"1";
             Restaurant *restaurant = (Restaurant *) [_restaurants objectForKey:factualId];
             [restaurant setImage_url:[NSURL URLWithString:@"no_image"]];
             [self storeRestaurantImageWithURL:@"no_image" factualId:factualId height:[NSNumber numberWithInt:0] width:[NSNumber numberWithInt:0] location:_currentLocation];
+            [_restaurants removeObjectForKey:factualId];
         }
     }
 }
@@ -172,40 +173,7 @@ NSString *const INITIAL_REQUEST = @"1";
     [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
 }
 
-- (BOOL) callCrossWalkForImagesWithQueryResult : (FactualQueryResult*) queryResult {
-    int count = 0;
-    
-    for (id restaurant in queryResult.rows) {
-        count ++;
-        // Check to see if the restaurant factualId is already stored on the Parse Server
-        // Check to see if any of these restaurants have already had their images stored
-        NSString *factualId = [restaurant stringValueForName:@"factual_id"];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"factual_id == %@", factualId];
-        NSArray *restaurantImageDuplicates = [_storedRestaurantImages filteredArrayUsingPredicate:predicate];
-        
-        if (restaurantImageDuplicates.count == 0) {
-            FactualQuery *queryObject = [FactualQuery query];
-            [queryObject addRowFilter:[FactualRowFilter fieldName:@"factual_id" equalTo:factualId]];
-            [queryObject addRowFilter:[FactualRowFilter fieldName:@"namespace" equalTo:@"foursquare"]];
-            [_apiObject queryTable:@"crosswalk" optionalQueryParams:queryObject withDelegate:self];
-            NSLog(@"Getting the Foursquare information from crosswalk - object count %i", count);
-        }
-        else {
-            PFObject *restaurantImage = restaurantImageDuplicates[0];
-            Restaurant *restaurantObject = (Restaurant *) [_restaurants objectForKey:factualId];
-            [restaurantObject setImage_url:[NSURL URLWithString: restaurantImage[@"image_url"]]];
-            [restaurantObject setImageHeight:restaurantImage[@"image_height"]];
-            [restaurantObject setImageWidth:restaurantImage[@"image_width"]];
-        }
-        
-        // If this is the last restaurant than notify that this is the last request
-        if ([restaurant isEqual:queryResult.rows.lastObject]) {
-             return YES;
-        }
-    }
 
-    return NO;
-}
 
 
 @end

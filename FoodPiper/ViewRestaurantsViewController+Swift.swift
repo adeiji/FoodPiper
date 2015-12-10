@@ -94,7 +94,7 @@ extension DEViewRestaurantsViewController  {
     
     @IBAction func viewFavoriteRestaurants (sender: UIButton) {
         let restaurantIds = PFUser.currentUser()![PARSE_USER_FAVORITE_RESTAURANTS]
-        let apiHandler = APIHandler_SingleRestaurant()
+        let apiHandler = (UIApplication.sharedApplication().delegate as! AppDelegate).apiHandler
         apiHandler.getRestaurantsWithIds(restaurantIds as! [String])
     }
     
@@ -116,9 +116,10 @@ extension DEViewRestaurantsViewController  {
     }
     
     func getRestaurants (notification: NSNotification) {
-        
-        let restaurantsDictionary = notification.userInfo![Notifications.KeyRestaurants.rawValue] as! [String : AnyObject]
+        let restaurantsDictionary = (UIApplication.sharedApplication().delegate as! AppDelegate).apiHandler.restaurants
         restaurants = Restaurant.convertRestaurantsDictionaryToArray(restaurantsDictionary) as [AnyObject]
+        isNewProcess = true
+        displayRestaurant(nil)
     }
     
     func removeObservers () {

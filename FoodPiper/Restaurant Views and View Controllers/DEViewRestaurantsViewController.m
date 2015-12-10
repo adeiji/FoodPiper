@@ -633,16 +633,21 @@ struct TopMargin {
                         ImageWidth : (double) width
                        ImageHeight : (double) height
 {
-    CGFloat correctImageViewHeight = (view.imgMainImageView.layer.frame.size.width / width) * height;
     
-    if (correctImageViewHeight < view.imageViewHeightConstraint.constant) {
-        [view.imgMainImageView setContentMode:UIViewContentModeScaleAspectFill];
-    }
-    else {
-         view.imageViewHeightConstraint.constant = correctImageViewHeight;
+    if (height != 0) {
+        CGFloat correctImageViewHeight = (view.imgMainImageView.layer.frame.size.width / width) * height;
+        
+        if (correctImageViewHeight < view.imageViewHeightConstraint.constant) {
+            [view.imgMainImageView setContentMode:UIViewContentModeScaleAspectFill];
+        }
+        else {
+             view.imageViewHeightConstraint.constant = correctImageViewHeight;
+        }
+        
+        return view.imageViewHeightConstraint.constant - view.imgMainImageView.frame.size.height;
     }
     
-    return view.imageViewHeightConstraint.constant - view.imgMainImageView.frame.size.height;
+    return view.imageViewHeightConstraint.constant;
 }
 
 - (void) getDistanceFromCurrentLocationOfEvent : (PFObject *) event {
